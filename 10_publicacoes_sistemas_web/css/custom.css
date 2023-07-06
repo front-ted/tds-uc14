@@ -56,7 +56,6 @@ header{margin-top: 100px;}
   position: relative;
   z-index: 3;
 }
-
 .caixa-destaque2 p{
   color: #fff;
   padding-left: 60px;
@@ -73,7 +72,6 @@ header{margin-top: 100px;}
   z-index: 4;
   margin-top: 4px;
 }
-
 .item{
   background: url("../imgs/slide.svg") no-repeat;
   max-width: 800px;
@@ -92,7 +90,6 @@ top: 40%;
   position: absolute;
   top: 40%;
 }
-
 .carousel-caption {
  top: 1px; 
  right: 10px;
@@ -153,37 +150,13 @@ font-size: 14px;
 
 
 
-
-
-
-.imgBorder{
-  border-radius: 20px;
-}
-.codigo-destaque{
-  background: #000;
-  color: #a39e9b;
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
-}
-.code-destaque{
-  background-color: #071772 !important;
-}
-
-
 @media screen and (max-width: 430px){
-  .painelFundo{max-width: 380px;}
-  .painelCarteira{display: none;}
-  .bt-trello {margin-left: 55px;}
-  .bt-slack{margin-left: 30px;}
-  .dica{display: none;}
-  .dica2{display: none;}
+  .anota{display: none;}
   .desafio{display: none;}
 }
 
 @media screen and (max-width: 780px){
-  .dica{margin-left: 15px;}
-  .dica2{margin-left: 15px;}
+  .anota{margin-left: 15px;}
   .desafio{margin-left: 15px;}
 }
 
