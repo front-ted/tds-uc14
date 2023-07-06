@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Comunicação visual e imagens vetoriais e bitmap</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="container">
+          <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu
+            leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam
+            lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de
+            pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa
+            forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+          <h2><i>Web services</i> e API</h2>
+          <p>Os conteúdos abordados neste material visam auxiliá-lo na compreensão do que é uma API e um <i>web
+              service</i>, junto de outros temas intrinsecamente conectados, como protocolos de comunicação, padrões de
+            desenvolvimento de APIs, a popular estruturação JSON e os tão utilizados SAAS, consumidos com frequência no
+            cotidiano. Por meio deste conteúdo, você estará mais preparado para posteriormente seguir para a parte
+            prática do uso de um <i>web service</i> em seu sistema. Bons estudos! </p>
+          <h3>Conceitos e aplicações</h3>
+          <p>Na área da programação, muito se fala sobre uso de APIs e de <i>web services</i>. Essas duas tecnologias se
+            tornaram fundamentais para o desenvolvimento da maioria dos sistemas utilizados atualmente, especialmente se
+            tratando de <i>software web</i> e <i>mobile</i>. </p>
+          <p>Pode-se definir uma <strong>API (Application Programming Interface)</strong> como uma interface que permite
+            a comunicação entre dois sistemas diferentes. Em sua estrutura, a API é composta por conjuntos de rotinas e
+            padrões preestabelecidos, que permitem acesso às funcionalidades de outros sistemas. Para exemplificar, é
+            possível utilizar uma popular analogia a um restaurante: quando você está em uma mesa de restaurante
+            (Sistema A), você fará um pedido para o garçom. Quando o pedido estiver definido, o garçom realizará a
+            solicitação na cozinha (Sistema B, servidor), passando suas especificações sobre os pratos escolhidos.
+            Quando a cozinha retornar os pedidos realizados, o garçom levará suas solicitações até sua mesa. Se você
+            quiser pedir mais bebidas, esse processo ocorrerá também por meio do garçom. Nesse contexto, o garçom é quem
+            realiza toda a comunicação e as operações necessárias entre você e a cozinha para que os processos ocorram
+            com sucesso. O garçom é o equivalente à API, realizando a comunicação entre o sistema A e o sistema B. O
+            sistema A não precisa saber como o garçom (API) faz a solicitação no sistema B nem como o sistema B faz o
+            retorno, só precisa saber como realizar o pedido. </p>
+          <img src="imgs/fig1.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig1.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/fig1.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 1 – Analogia entre uma API e um restaurante <br>
+            Fonte: Kothalawala (2018)
+          </p>
+          <p class="acessivel no-print">
+            Comparação entre uso de API em um sistema e um Restaurante. Na primeira parte, um sistema mobile (front-end)
+            faz uma requisição para uma API. A API comunica-se com o servidor (sistema back-end). O servidor retorna uma
+            resposta para a API, ao qual é repassada para a aplicação mobile. Na segunda parte, os consumidores de um
+            restaurante são vinculados como equivalentes ao front-end, usuários. O consumidor solicita o menu e faz um
+            pedido de refeição. O garçom, equivalente à API, leva o pedido até a cozinha, equivalente ao servidor
+            back-end. A cozinha retorna o prato para o garçom, que entrega aos usuários.
+          </p>
+          <p>
+            As APIs são interfaces elaboradas com o objetivo de simplificar o desenvolvimento de programas e aplicações
+            por meio da abstração de diversos elementos que compõem um <i>software</i>. O desenvolvedor não precisa
+            saber como a API executará os serviços propostos, apenas como ele deve utilizá-los, conforme haja
+            necessidade de vincular a seu próprio projeto.
+          </p>
+          <img src="imgs/dica.png" class="dica img-responsive no-print">
+          <div class="caixa-destaque2 destaquedica">
+            <p>
+              É importante destacar que, embora existam padrões gerais, as APIs costumam ter seus próprios guias de
+              orientação de uso. Verifique, sempre que possível, a documentação da API que deseja explorar para checar
+              quais são as formas de integração e os exemplos de representação de dados.
+            </p>
+          </div>
+          <p>O conceito-base de um <strong>web service</strong> é muito similar ao conceito de uma API, pois o <i>web
+              service</i> também objetiva realizar conexão entre diferentes aplicativos de <i>software</i>. O que
+            diferencia um <i>web service</i> de uma API é a forma como as requisições são feitas. Um <i>web service</i>
+            obrigatoriamente tem suas <strong>requisições executadas em rede</strong>, porém não é obrigatório que toda
+            API utilize requisições por rede. Se uma API utilizar requisição por rede, ela é então um <i>web
+              service</i>. Dessa forma, pode-se concluir que todo <i>web service</i> é uma API, porém nem toda API se
+            trata de um <i>web service</i>.
+          </p>
+          <img src="imgs/fig-02.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-02.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/fig-02.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 2 – Comparação entre requisições por meio de <i>web services</i> e APIs <br>
+            Fonte: Kitrum (2020)
+          </p>
+          <p class="acessivel no-print">
+            Duas ilustrações, à esquerda, web services é apresentado ao cliente (usuário/front-end) realizando
+            requisições XML/JSON. As requisições são feitas na nuvem, comunicando-se com o sistema interno solicitado. À
+            direita, API é apresentado com acesso sendo realizado pelo seu dispositivo, realizando uma requisição
+            diretamente à API, obtendo dados de sua fonte de dados/servidor. Após a obtenção de dados ou execução de
+            procedimentos, a API retorna a resposta para o seu dispositivo.
+          </p>
+          <p>
+            Um <i>web service</i> funciona por meio de mensagens de requisição e resposta HTTP (GET, POST, PUT, DELETE),
+            em que
+            os dados são normalmente apresentados nos formatos XML ou JSON. O uso de <i>web services</i> ou APIs
+            <i>web</i> tem sido
+            fundamental não só para sistemas <i>desktop</i> e sistemas <i>web</i>, mas especialmente sistemas
+            <i>mobile</i>, em que a
+            interface gráfica e algumas funcionalidades são executadas no aparelho, mas que boa parte das
+            funcionalidades é realizada por chamadas na <i>web</i> e executadas em um servidor. É o caso dos aplicativos
+            de
+            transporte e das redes sociais e de <i>delivery</i>, apenas para citar alguns.
+          </p>
+          <p>
+            Outro aspecto importante que pode ser destacado são os <strong>microsserviços</strong>, que se tratam de
+            vários serviços e
+            funcionalidades desenvolvidos de forma individual, funcionando de forma independente, facilitando a
+            manutenção de código e ampliando a possibilidade de tecnologias utilizadas em cada microsserviço.
+          </p>
+          <p>
+            Um exemplo de <i>web service</i> muito utilizado atualmente é o <strong>AWS (Amazon Web Services)</strong>,
+            que abrange uma vasta
+            área de setores de atuação, proporcionando soluções tecnológicas para desenvolvedores de <i>softwares</i>,
+            publicidade e <i>marketing</i>, setores financeiros, tecnologia em jogos e outras diversas áreas e subáreas.
+          </p>
+          <h4><i>Web services versus</i> aplicações <i>web</i></h4>
+          <p>
+            Pode-se dizer que um projeto de <i>web service</i> é um tipo de aplicação <i>web</i>, no entanto,
+            normalmente, uma
+            aplicação <i>web</i> envolve mais elementos, como páginas e estilização, não presentes nos <i>web
+              services</i>.
+          </p>
+          <ul>
+            <li><i>Web services</i> podem ser usados para transferir dados entre aplicações <i>web</i>. Muitas vezes,
+              <i>web services</i> são aplicados para integrar dois sistemas distintos.
+            </li>
+            <li><i>Web services</i> podem ser acessados por qualquer linguagem de programação. Já a aplicação <i>web</i>
+              é um projeto mais autocontido, com uma linguagem de <i>back-end</i> definida e mecanismos de transferência
+              de informações entre a camada de <i>back-end</i> e a de <i>front-end</i>. </li>
+            <li>Aplicações <i>web</i> são destinadas para o uso de pessoas, enquanto os <i>web services</i> são para a
+              interação entre máquinas ou sistemas. </li>
+            <li>Aplicações <i>web</i> são sistemas completos com interface gráfica enquanto <i>web services</i>
+              geralmente não contam com interface visual para usuário.</li>
+            <li>As ações dos <i>web services</i> são acessadas por métodos HTTP (GET, POST, PUT, DELETE etc.), enquanto
+              aplicações <i>web</i> têm itens de interação, como botões e formulários que invocam operações. </li>
+          </ul>
+          <p>
+            Com o Spring MVC, você pode criar aplicações <i>web</i> completas, contando com <i>back-end</i> e
+            <i>front-end</i>. <i>Web services</i>, por outro lado, apesar de também poderem ser criados com Spring, não
+            contarão com a camada de visão.
+          </p>
+          <h4>Protocolo SOAP</h4>
+          <p>
+            Devido aos <i>web services</i> e as APIs realizarem a comunicação entre sistemas, nem sempre o sistema
+            cliente e servidor terão a mesma linguagem de programação. Dessa forma, foi necessário desenvolver uma
+            linguagem de protocolos para transmitir informações de uma ponta (cliente) a outra (servidor). Com base
+            nesse cenário, uma das primeiras formas de comunicação para padronizar a forma de envio e leitura de dados
+            foi o <strong>protocolo SOAP</strong>.
+          </p>
+          <img src="imgs/fig-03.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-03.png" target="_blank" class="no-print visible-sm imgBorder visible-xs" aria-hidden="true"><img
+              src="imgs/fig-03.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 3 – Processo do uso de um <i>web service</i> através do protocolo SOAP <br>
+            Fonte: Computing and Software Wiki McMaster University (2008)
+          </p>
+          <p class="acessivel no-print">
+            Ilustração de uma pesquisa sendo realizada no UDDI através de uma pesquisa por WSDL. O WSDL mantém as
+            informações sobre o web service que será utilizado, repassando as informações ao cliente, que pode realizar
+            uma requisição SOAP por XML. A requisição chega ao web service, que responde de acordo com a requisição
+            realizada.
+          </p>
+          <p>
+            Criado no ano 2000, o <strong>protocolo SOAP (Simple Object Access Protocol)</strong> popularizou-se como
+            uma recomendação
+            pela W3C (<i>World Wide Web Consortium</i>, organização de desenvolvimento de padrões <i>web</i>) de
+            utilização para
+            desenvolvimento de <i>web services</i>. Utiliza o XML (<i>Extensible Markup Language</i>) como
+            formato-padrão para a
+            transferência de objetos entre aplicações. Existem alguns componentes importantes nesse processo de
+            comunicação entre sistemas. Veja a seguir:
+          </p>
+          <ul>
+            <li>UDDI (<i>Universal Description, Discovery and Integration</i>): um diretório de serviço em que se
+              registra ou se busca um <i>web service</i>. É usado para disponibilizar, utilizar e pesquisar um serviço
+              na internet. </li>
+            <li>WSDL (<i>Web Services Description Language</i>): o arquivo que descreve <i>web services</i> disponíveis
+              para uso, contendo informações de como o cliente deve invocar o serviço, quais dados de entrada deve usar
+              e que saída esperar. </li>
+          </ul>
+          <p>
+            A partir do UDDI, então se descobre o serviço, e pelo WSDL, se verifica a interface. A partir dessas
+            informações, pode-se montar uma chamada SOAP, montando um documento XML com os dados necessários e
+            transmitindo pela rede.
+          </p>
+          <img src="imgs/fig-04.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/fig-04.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 4 – Representação da estrutura SOAP utilizada para comunicação com o <i>web service</i> <br>
+            Fonte: Wikipédia (2021)
+          </p>
+          <p class="acessivel no-print">
+            Representação de uma estrutura “SOAP-ENV:Envelope”, agrupando a estrutura “SOAP-ENV: Header” e a estrutura
+            “SOAP-ENV: Body”.
+          </p>
+          <p>
+            Embora o protocolo SOAP tenha se tornado popular em seu surgimento, com a chegada da arquitetura REST e dos
+            arquivos JSON, que apresentam uma estruturação mais rápida e leve, o protocolo SOAP tem sido abandonando,
+            sendo utilizado com maior frequência em projetos mais antigos ou que necessitem de características
+            específicas que só podem ser encontradas no XML.
+          </p>
+          <h4>REST e RESTful</h4>
+          <p>
+            A arquitetura REST (<i>Representational State Transfer</i>), embora seja comparada com protocolos de envio
+            de
+            dados, não é um protocolo de envio de dados, mas sim um conjunto de restrições e conceitos a serem aplicados
+            para a criação de um tipo especial de serviços <i>web</i>/API, denominados “Web Services/API RESTful”. Ou
+            seja, um
+            “Web Service/API” que aplica os padrões REST se torna um “Web Service/API RESTful”.
+          </p>
+          <p>
+            O uso de API RESTful é semelhante à navegação pela internet, com a diferença de que o acesso não é feito por
+            navegador, e sim pelo próprio código da aplicação que está usando o recurso. O primeiro ponto a se observar
+            é que os desenvolvedores da API precisam disponibilizar documentações de como usar os serviços, informando
+            endereço, métodos de autenticação, quando necessário, e dados de entrada para cada serviço. As etapas gerais
+            de uma chamada RESTful são:
+          </p>
+          <img src="imgs/infografico1.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/infografico1.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/infografico1.png" class="center-block img-responsive imgBorder"></a>
+          <div class="acessivel print">
+            <ol>
+              <li>O cliente envia uma solicitação ao servidor usando a URL correspondente
+                (http://servicos.api.com/algum-servico, por exemplo), o método adequado (POST, GET...) e os dados de
+                entrada necessários ao serviço desejado (geralmente em formato JSON ou em parâmetro na URL). </li>
+              <li>Caso haja necessidade autenticação, o servidor verifica as informações do cliente e realiza a
+                autorização. </li>
+              <li>O servidor usa os dados de entrada (se houverem) e realiza o processamento. </li>
+              <li>O servidor retorna a resposta ao cliente geralmente em formato JSON. A resposta conterá dados que
+                indicam se a requisição foi bem-sucedida e as informações solicitadas pelo cliente. </li>
+            </ol>
+          </div>
+          <img src="imgs/fig-05.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-05.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/fig-05.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 5 – Como funciona uma API RESTful <br>
+            Fonte: Howie Mann (2023)
+          </p>
+          <p class="acessivel no-print">
+            À esquerda, há um computador com rótulo “Cliente”, com uma seta à direita com um retângulo escrito “HTTP” e
+            abaixo dele “GET, POST, DELETE, PUT”; à direita, outro retângulo escrito “URL” com o texto abaixo:
+            “/surveys, /surveys/123, /surverys/123/resp ...”. A seta segue à direita até um ícone de servidor com o
+            rótulo “Server”. Deste sai uma seta com rótulo “JSON” de volta para o computador à esquerda. Abaixo de JSON,
+            há: {survey_id: 123, score: 9, message:”amaze...”, response_id:4 }.
+          </p>
+          <p>
+            A vantagem do REST sobre <i>web services</i> com SOAP é que a transação é muito simplificada, sem
+            necessidade de
+            trocas sucessivas de definições XML. Basta que o cliente saiba o endereço e os dados de entrada de um
+            serviço. Ao todo, são considerados seis itens como padrão para definir uma API como RESTful. Veja a seguir:
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group gaitinha" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Interface Uniforme
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Indica que o servidor transfere informações em um formato-padrão. As solicitações devem identificar
+                    recursos e enviar dados no formato definido (geralmente XML ou JSON). A resposta do servidor deverá
+                    ser no mesmo formato. Também devem ficar devidamente estabelecidos quais dados de entrada o serviço
+                    espera.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Cliente-Servidor
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    É recomendado que haja uma separação entre cliente e servidor, proporcionando independência a ambas
+                    as partes e fazendo com que a única informação que o cliente saiba seja a requisição, sem lidar
+                    diretamente com o servidor. Da mesma forma, o servidor não deverá poder manipular o cliente, somente
+                    passar dados através do HTTP. Essa organização facilita a possibilidade de portabilidade do sistema.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Comunicação <i>stateless </i>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Cada requisição feita pelo cliente deve conter toda a informação necessária para completar a
+                    requisição que foi realizada. Não deve ser possível reaproveitar dados armazenados anteriormente no
+                    servidor. Lembre-se de que o HTTP, por sua definição, não guarda dados da requisição anterior.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                      aria-expanded="false" aria-controls="collapse4">
+                      Dados em <i>cache</i>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    A memória <i>cache</i> serve para um armazenamento temporário e de rápido acesso em caso de
+                    necessidade e pode ser aplicada ao processamento de um serviço.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5"
+                      aria-expanded="false" aria-controls="collapse5">
+                      Sistema em camadas
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    Separar em camadas divide as responsabilidades do sistema. Pode-se, por exemplo, projetar um serviço
+                    RESTful com camadas de segurança e lógica de negócio, por exemplo, interagindo uma com a outra, mas
+                    cada uma cuidando apenas de sua própria responsabilidade.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6"
+                      aria-expanded="false" aria-controls="collapse6">
+                      Código sob demanda
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    O retorno dado por uma API normalmente trata-se de recursos estáticos, entretanto, em alguns casos,
+                    sob demanda, poderá retornar um código executável (como Java <i>applets</i>, javascript etc.) para o
+                    cliente executar. Sendo sob demanda, é uma característica opcional dessa listagem de padrões.
+                    Com a popularização da estrutura REST, embora também seja ainda possível utilizar XML, tornou-se
+                    mais comum o uso do JSON para a manipulação de dados. Conheça a seguir um pouco mais dessa
+                    tecnologia.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <p>Interface Uniforme </p>
+            <p>
+              Indica que o servidor transfere informações em um formato-padrão. As solicitações devem identificar
+              recursos e enviar dados no formato definido (geralmente XML ou JSON). A resposta do servidor deverá
+              ser no mesmo formato. Também devem ficar devidamente estabelecidos quais dados de entrada o serviço
+              espera.
+            </p>
+            <p>Cliente-Servidor </p>
+            <p>
+              É recomendado que haja uma separação entre cliente e servidor, proporcionando independência a ambas as
+              partes e fazendo com que a única informação que o cliente saiba seja a requisição, sem lidar diretamente
+              com o servidor. Da mesma forma, o servidor não deverá poder manipular o cliente, somente passar dados
+              através do HTTP. Essa organização facilita a possibilidade de portabilidade do sistema.
+            </p>
+            <p>Comunicação <i>stateless</i> </p>
+            <p>
+              Cada requisição feita pelo cliente deve conter toda a informação necessária para completar a requisição
+              que foi realizada. Não deve ser possível reaproveitar dados armazenados anteriormente no servidor.
+              Lembre-se de que o HTTP, por sua definição, não guarda dados da requisição anterior.
+            </p>
+            <p>Dados em <i>cache</i> </p>
+            <p>
+              A memória <i>cache</i> serve para um armazenamento temporário e de rápido acesso em caso de necessidade e
+              pode ser aplicada ao processamento de um serviço.
+            </p>
+            <p>Sistema em camadas </p>
+            <p>
+              Separar em camadas divide as responsabilidades do sistema. Pode-se, por exemplo, projetar um serviço
+              RESTful com camadas de segurança e lógica de negócio, por exemplo, interagindo uma com a outra, mas cada
+              uma cuidando apenas de sua própria responsabilidade.
+            </p>
+            <p>Código sob demanda </p>
+            <p>
+              O retorno dado por uma API normalmente trata-se de recursos estáticos, entretanto, em alguns casos, sob
+              demanda, poderá retornar um código executável (como Java <i>applets</i>, javascript etc.) para o cliente
+              executar. Sendo sob demanda, é uma característica opcional dessa listagem de padrões.
+            </p>
+            <p>
+              Com a popularização da estrutura REST, embora também seja ainda possível utilizar XML, tornou-se mais
+              comum o uso do JSON para a manipulação de dados. Conheça a seguir um pouco mais dessa tecnologia.
+            </p>
+          </div>
+          <h3>JSON</h3>
+          <p>
+            O JSON (<i>JavaScript Object Notation</i>) é um formato de textos com uma estruturação-padrão para
+            representar
+            dados, com base na sintaxe de objeto <i>javascript</i>, de modo a representar os dados em uma forma comum
+            para
+            todas as linguagens de programação, logo, esse formato de texto é independente de linguagens de programação
+            para sua interpretação, sendo um padrão autodescritivo e de fácil entendimento para todos que analisarem o
+            código. O arquivo conterá somente texto e sua extensão será “.json”. Sua utilização se aplica à transmissão
+            de dados (enviar dados do servidor para o cliente para que possam ser manipulados em uma página da
+            <i>web</i>, ou
+            vice-versa). Como é um recurso muito usado em serviços RESTful, estude ou reveja esse formato a seguir.
+          </p>
+          <p>
+            A sintaxe básica obedece a dois princípios:
+          </p>
+          <ul class="marcador">
+            <li>Utiliza-se chaves ({ }) para delimitar um objeto. </li>
+            <li>Utiliza-se dois-pontos (:) para separar o nome dos atributos dos valores (chave/valor). </li>
+          </ul>
+          <p>
+            Veja um exemplo da representação JSON de um objeto com dados de cliente de uma biblioteca:
+          </p>
+          <pre>
+            <code class="language-json">
+{ 
+      "Cliente": "Leticia Soares", 
+  
+      "Endereco": "Rua Alameda das Rosas 314", 
+  
+      "LivrosPendentes": 2 
+  
+  } 
+            </code>
+          </pre>
+          <p>Nesse trecho, percebe-se que: </p>
+          <ul class="marcador">
+            <li>O código é inicializado com a abertura de chaves, onde, posteriormente, aplicam-se as propriedades que
+              se deseja informar os valores. A notação do objeto encerra no símbolo de fechar chave (}). </li>
+            <li>Todos os nomes de propriedades precisam estar entre aspas para que o código seja válido. </li>
+            <li>Não é necessário colocar aspas nos valores que sejam do tipo numérico (inteiro ou real) ou booleano.
+            </li>
+            <li>Se for necessário colocar algum valor como nulo, basta utilizar o termo <i>null</i>, sem aspas. </li>
+            <li>Cada um dos conjuntos de atributo e valor são separados com vírgula até chegar ao último conjunto de
+              dados, sendo finalizado com o fechamento de chaves. </li>
+          </ul>
+          <p>Com esse exemplo, você é capaz de desenvolver estruturas simples de dados. </p>
+          <p>Agora expanda as informações de sua cliente! Acrescente dados. Serão definidas mais algumas informações,
+            pois será criada uma lista de telefones para contato.
+          </p>
+          <p>
+            Imagine que você queira incluir uma lista de telefones para seu cliente. Pode-se criar uma lista
+            (<i>array</i>/vetor), considerando alguns aspectos:
+          </p>
+          <ul class="marcador">
+            <li>O atributo é criado da mesma forma vista anteriormente. </li>
+            <li>O valor é inicializado com a abertura de colchete e finalizado com o fechamento de colchete. </li>
+            <li>Podem ser adicionados quantos valores forem necessários nessa <i>array</i>, devendo sempre separar cada
+              valor com uma vírgula. </li>
+          </ul>
+          <pre class="codigo-destaque">
+{ 
+      <span class="hljs-keyword">"Cliente":</span> <span class="hljs-string">"Leticia Soares", </span>
+  
+      <span class="hljs-keyword">"Endereco":</span> <span class="hljs-string">"Rua Alameda das Rosas 314", </span>
+  
+      <span class="hljs-keyword">"LivrosPendentes"</span> : <span class="hljs-number">2, </span>
+  
+      <span class="hljs-keyword">"Telefone" :</span> <span class="code-destaque"> [<span class="hljs-number">"(00)00000-0000", "(99)99999-9999"</span>] </span>
+  } 
+          </pre>
+          <p>
+            Um objeto pode carregar como propriedade outro objeto. Imagine que, no caso de um endereço, você quisesse
+            representar com atributos de rua, número e bairro. Poderia ter algo como a seguir:
+          </p>
+          <pre class="codigo-destaque">
+{ 
+      <span class="hljs-keyword">"Cliente":</span> <span class="hljs-string">"Leticia Soares", </span>
+  
+      <span class="hljs-keyword">"Endereco":</span> <span class="code-destaque">{ 
+  
+                    <span class="hljs-keyword">"Rua":</span> <span class="hljs-string">"Alameda das Rosas", </span>
+  
+                    <span class="hljs-keyword">"Numero":</span> <span class="hljs-number"> 314 </span>
+  
+                    <span class="hljs-keyword">"Bairro":</span> <span class="hljs-string">"Santa Maria" </span>
+  
+                  } </span>
+  
+      <span class="hljs-keyword">"LivrosPendentes" :</span> <span class="hljs-number">2, </span>
+  
+      <span class="hljs-keyword">"Telefone" </span>: [<span class="hljs-number">"(00)00000-0000", "(99)99999-9999"</span>]               
+  } 
+          </pre>
+          <p>
+            Imagine agora que você quer manter uma lista com o histórico de retiradas de livro do cliente da biblioteca.
+            Cada retirada tem um conjunto de informações. Isso pode ser representado como uma lista de objetos:
+          </p>
+          <pre class="codigo-destaque">
+{ 
+      <span class="hljs-keyword">"Nome": </span> <span class="hljs-string">"Leticia Soares", </span>
+  
+      <span class="hljs-keyword">"Endereco": </span>{ 
+  
+                    <span class="hljs-keyword">"Rua":</span> <span class="hljs-string">"Alameda das Rosas", </span>
+  
+                    <span class="hljs-keyword">"Numero":</span> <span class="hljs-number">314 </span>
+  
+                    <span class="hljs-keyword">"Bairro":</span> <span class="hljs-string">"Santa Maria"</span>
+  
+                  } 
+  
+      <span class="hljs-keyword">"LivrosPendentes" :</span> <span class="hljs-number">1, </span>
+  
+      <span class="hljs-keyword">"Telefone" :</span> [<span class="hljs-number">"(00)00000-0000", "(99)99999-9999"</span>], 
+  
+      <span class="code-destaque">"HistoricoRetiradas" : [ 
+  
+          { 
+  
+                <span class="hljs-keyword">"NomeLivro" :</span> <span class="hljs-string">"Os tres porquinhos", </span>
+  
+                <span class="hljs-keyword">"DataDevolucao" :</span>  <span class="hljs-number">"2025-03-22", </span>
+  
+                <span class="hljs-keyword">"StatusDevolucao" :</span> <span class="hljs-string">"Devolvido" </span>
+  
+          }, 
+  
+          { 
+  
+                <span class="hljs-keyword">"NomeLivro" : </span> <span class="hljs-string">"A menina que roubava livros", </span>
+  
+                <span class="hljs-keyword">"DataDevolucao" : </span> <span class="hljs-number">"2025-04-25", </span>
+  
+                <span class="hljs-keyword">"StatusDevolucao" : </span> <span class="hljs-string">"Pendente" </span>
+  
+          } 
+  
+      ] </span>
+  } 
+        </pre>
+          <p>
+            Observe que, nesse código, a estruturação do objeto inserido dentro da <i>array</i> segue o mesmo padrão de
+            estruturação de todas as outras combinações de atributo/valor.
+          </p>
+          <img src="imgs/dica.png" class="dica2 img-responsive no-print">
+          <div class="caixa-destaque2 destaquedica">
+            <p>
+              Quando são poucos os dados que precisam ser manipulados, é fácil analisar possíveis erros de código e
+              ajustes necessários na estrutura, entretanto, conforme o código ganha proporções maiores, pode ser um
+              tanto quanto difícil encontrar erros em detalhes. Nesses casos, uma alternativa para otimizar seu processo
+              de desenvolvimento é utilizar validadores de código JSON, como os <i>sites</i> JSON Formater & Validator e
+              o JSON
+              Lint, por exemplo. Existem diversos <i>sites</i> que auxiliam no processo de validação e, muitas vezes,
+              também
+              auxiliam na visualização da estrutura de forma mais organizada. Faça você mesmo alguns testes de validação
+              com os códigos de exemplo disponibilizados no material!
+            </p>
+          </div>
+          <p>
+            Ainda que a estruturação tenha sua complexidade aumentada em determinados contextos, ainda é possível
+            afirmar que é uma formatação mais simples e rápida em relação ao XML. Veja nos exemplos a seguir:
+          </p>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <pre>
+              <code class="language-json">
+{ 
+      "Emprestimos" : [ 
+  
+          { 
+  
+              "Nome": "Leticia Soares ", 
+  
+              "Endereco": "Avenida Alameda das Rosas 314", 
+  
+          }, 
+  
+          { 
+  
+              "Nome": "Vanessa da Silva", 
+  
+              "Endereco": "Rua Exemplar dos Exemplos 1001", 
+  
+          }, 
+  
+          { 
+  
+              "Nome": "João Pedro Tavares", 
+  
+              "Endereco": "Rua José Bonifácio 380", 
+  
+          } 
+  
+      ] 
+  
+  } 
+              </code>
+            </pre>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <pre>
+                <code class="language-xml">
+&lt;emprestimos> 
+    &lt;cliente> 
+  
+        &lt;nome>Leticia Soares&lt;/nome>&lt;endereco>Avenida Alameda das Rosas 314&lt;/endereco> 
+  
+    &lt;/cliente> 
+  
+    &lt;cliente> 
+  
+        &lt;nome>Vanessa da Silva&lt;/nome>&lt;endereco>Rua Exemplar dos Exemplos 1001&lt;/endereco> 
+  
+    &lt;/cliente> 
+  
+    &lt;cliente> 
+  
+       &lt;nome>João Pedro Tavares&lt;/nome>&lt;endereco>Rua José Bonifácio 380&lt;/endereco> 
+  
+     &lt;/cliente> 
+  
+   &lt;/emprestimos> 
+                </code>
+              </pre>
+            </div>
+          </div>
+          <p>
+            Comparando o JSON e o XML lado a lado, é possível perceber que existe uma maior simplicidade no JSON. A
+            leitura e a manipulação de dados acontecem mais rapidamente, sendo, portanto, uma forma que recentemente tem
+            sido muito utilizada na hora de transmitir grandes volumes de dados. Veja como ocorre essa requisição:
+          </p>
+          <img src="imgs/fig-06.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/fig-06.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 6 – Comunicação entre cliente e servidor utilizando arquivo JSON para requisição e resposta <br>
+            Fonte: Javarevisited (2018)
+          </p>
+          <p class="acessivel no-print">
+            Cliente faz uma requisição HTTP POST enviando como informação a cidade Paris e a unidade de temperatura C. A
+            requisição chega ao servidor (interface REST) pelo caminho “/servico/clima” e retorna como resposta ao
+            cliente o arquivo JSON contendo informações sobre temperatura mínima de 16 e máxima de 23.
+          </p>
+          <p>
+            Embora o JSON tenha muita popularidade, é sempre necessário analisar o contexto em que seu projeto está
+            inserido. Se você tem um projeto que já utiliza corretamente requisições SOAP, trabalha com validações
+            complexas e uso de recursos encontrados somente em XML, talvez não seja o ideal realizar uma troca de
+            estruturação, pois precisaria de muitas adaptações, por exemplo. Em contrapartida, se você está
+            desenvolvendo um <i>site</i> com manipulação frequente de um grande número de dados, o JSON pode se encaixar
+            melhor
+            devido a sua praticidade. Sempre observe o contexto!
+          </p>
+          <img src="imgs/desafio.png" class="desafio img-responsive no-print">
+          <div class="caixa-destaque2 destaquedica">
+            <p>
+              Pesquise APIs RESTful gratuitas e abertas na internet e verifique formas de testá-las, seja por meio do
+              navegador, seja por ferramentas como o Postman, abordado no conteúdo “Linguagem de Programação”. Quando
+              houver entrada e saída de dados por JSON, observe com atenção a estrutura necessária desses dados.
+            </p>
+          </div>
+          <h3>SaaS</h3>
+          <p>
+            SaaS (<i>Software as a Service</i>, ou <i>Software</i> como serviço) é um modelo de <i>software</i> baseado
+            em nuvem que
+            disponibiliza aplicações aos usuários por meio de um navegador da internet. Nessas circunstâncias, o serviço
+            é hospedado de forma que seja possível realizar acesso na aplicação sob demanda, sem necessidade de
+            instalações nem qualquer outra possível configuração nos computadores dos clientes. Para o usuário final, a
+            utilização de um SaaS é atrativa, pois não é necessário se preocupar sobre como o serviço é mantido ou como
+            a infraestrutura é gerenciada. O foco principal estará em como usar o <i>software</i>. Aplicações como essa
+            fazem
+            uso de <i>web services</i> e APIs REST.
+          </p>
+          <img src="imgs/fig7.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig7.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true"><img
+              src="imgs/fig7.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 7 – Comparação entre uma aplicação normal e uma SaaS <br>
+            Fonte: Cloudflare (c2023)
+          </p>
+          <p class="acessivel no-print">
+            Duas ilustrações, à esquerda, há uma aplicação não SaaS executada no computador do usuário. À direita, uma
+            aplicação SaaS, que roda em nuvem e qualquer dispositivo consegue acessá-la.
+          </p>
+          <p>
+            Outro aspecto característico que pode ser atribuído ao modelo SaaS é a cobrança por uso do <i>software</i>,
+            e não
+            por sua compra. O usuário não tem posse do <i>software</i>, apenas tem direito de usá-lo (alguns, inclusive,
+            são
+            gratuitos), podendo investir mais em recursos extras, caso seja de interesse.
+          </p>
+          <p>
+            Trata-se de um modelo que tem sido amplamente adotado. A seguir, veja alguns exemplos populares de SaaS que
+            você provavelmente conhece, mas sem saber que é um SaaS:
+          </p>
+          <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+          <div class="no-print painelFundo" aria-hidden="true">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <button type="button" class="bt-netflix btn-default center-block" data-toggle="modal"
+                  data-target="#modal-netflix"></button>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <button type="button" class="bt-slack btn-default" data-toggle="modal"
+                  data-target="#modal-slack"></button>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <img src="imgs/painelcarteira.png" class="img-responsive painelCarteira">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <button type="button" class="bt-trello btn-default center-block" data-toggle="modal"
+                  data-target="#modal-trello"></button>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <button type="button" class="bt-erp btn-default" data-toggle="modal" data-target="#modal-erp"></button>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-netflix" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Netflix</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>A Netflix é um serviço de <i>streaming</i> que tem se tornado cada vez mais popular
+                      atualmente
+                      e é muito
+                      similar a diversos outros que você já deve ter ouvido falar (Amazon Prime, Disney+, HBO Max
+                      etc.).
+                      Você pode utilizar em qualquer computador, em qualquer lugar, e as atualizações do catálogo
+                      são
+                      constantes. Para que os aplicativos de celular ou TV tenham acesso aos dados, são usados
+                      diversos
+                      <i> web services</i> para autenticar usuário, recuperar listas, entre outras funções.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="modal-trello" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Trello</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      O Trello é uma ferramenta popular voltada para o gerenciamento de projetos, tanto pessoais como
+                      profissionais. Tem diversos planos para aprimorar suas funcionalidades e acrescentar ainda mais
+                      benefícios. Disponibiliza ainda um API Web em que é possível integrar um sistema ao Trello,
+                      automatizando algumas ações.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="modal-slack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Slack</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      O Slack é uma ferramenta com base em <i>chats</i> para realizar comunicação ágil entre áreas de
+                      uma
+                      empresa. É utilizado para organizar times de forma colaborativa dentro do ambiente de trabalho.
+                      Embora o acesso inicial seja gratuito, com sua assinatura é possível desbloquear diversas
+                      vantagens
+                      de organização de times, fluxo de trabalho e, até mesmo, de conexão com outras empresas.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="modal-erp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">ERPs</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Existem também sistemas empresariais, conhecidos como ERP (planejamento de recursos empresariais)
+                      sob modelo SaaS. Os sistemas ERP trabalham com gerenciamento de funções diárias e automatização de
+                      processos, gestão de finanças, contabilidade etc. Entre os exemplos de ERP SaaS destacam-se o
+                      Totvs
+                      ERP Cloud, Sankhya Cloud e Oracle Cloud ERP.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <p>Netflix </p>
+            <p>A Netflix é um serviço de <i>streaming</i> que tem se tornado cada vez mais popular
+              atualmente
+              e é muito
+              similar a diversos outros que você já deve ter ouvido falar (Amazon Prime, Disney+, HBO Max
+              etc.).
+              Você pode utilizar em qualquer computador, em qualquer lugar, e as atualizações do catálogo
+              são
+              constantes. Para que os aplicativos de celular ou TV tenham acesso aos dados, são usados
+              diversos
+              <i> web services</i> para autenticar usuário, recuperar listas, entre outras funções.
+            </p>
+            <p>Trello </p>
+            <p>
+              O Trello é uma ferramenta popular voltada para o gerenciamento de projetos, tanto pessoais como
+              profissionais. Tem diversos planos para aprimorar suas funcionalidades e acrescentar ainda mais
+              benefícios. Disponibiliza ainda um API Web em que é possível integrar um sistema ao Trello,
+              automatizando algumas ações.
+            </p>
+            <p>Slack</p>
+            <p>
+              O Slack é uma ferramenta com base em <i>chats</i> para realizar comunicação ágil entre áreas de
+              uma
+              empresa. É utilizado para organizar times de forma colaborativa dentro do ambiente de trabalho.
+              Embora o acesso inicial seja gratuito, com sua assinatura é possível desbloquear diversas
+              vantagens
+              de organização de times, fluxo de trabalho e, até mesmo, de conexão com outras empresas.
+            </p>
+            <p>ERPs </p>
+            <p>
+              Existem também sistemas empresariais, conhecidos como ERP (planejamento de recursos empresariais)
+              sob modelo SaaS. Os sistemas ERP trabalham com gerenciamento de funções diárias e automatização de
+              processos, gestão de finanças, contabilidade etc. Entre os exemplos de ERP SaaS destacam-se o
+              Totvs
+              ERP Cloud, Sankhya Cloud e Oracle Cloud ERP.
+            </p>
+          </div>
+          <p>
+            É importante diferenciar um SaaS de <i>softwares</i> com licença. Em um SaaS, não existe uma licença para
+            ser
+            vendida, mas sim um pagamento decorrente de seu uso. Já a venda de uma licença caracteriza-se como a venda
+            de um produto. Com o crescimento do uso de SaaS, muitos sistemas têm sido disponibilizados nessa forma de
+            tecnologia, sendo uma forma mais prática de uso e divulgação desses úteis sistemas.
+          </p>
+          <h3>Encerramento</h3>
+          <p>
+            Com os conceitos bem consolidados, você será capaz de compreender melhor a estruturação dos códigos e a
+            lógica de comunicação juntamente de sua importância no mercado atual e os benefícios da comunicação entre
+            diferentes sistemas. Alguns termos vistos neste conteúdo serão explorados mais detalhadamente para um
+            aprofundamento maior sobre o tema nos conteúdos a seguir, visando aumentar sua aptidão na interpretação de
+            problemas e desenvolvimento de soluções práticas com a integração de APIs em seu sistema.
+          </p>
+        </div>
+      </div>
+  </div>
+
+  </div>
+
+  </section>
+  <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+  <footer class="text-center no-print">
+
+    <ul class="pagination">
+
+    </ul>
+
+  </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>
