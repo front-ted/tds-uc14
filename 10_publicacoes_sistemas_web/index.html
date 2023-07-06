@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Comunicação visual e imagens vetoriais e bitmap</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="container">
+          <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu
+            leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam
+            lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de
+            pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa
+            forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+          <h2>Publicação de sistema web</h2>
+          <p>
+            Publicar um sistema <i>web</i> envolve disponibilizar a aplicação para acesso via internet, por meio de um
+            servidor
+            que armazena os arquivos e executa as tarefas solicitadas pelos usuários. Trata-se de etapa fundamental, já
+            que não faz sentido criar um sistema <i>web</i> que será acessado apenas no próprio computador.
+          </p>
+          <p>
+            Esse processo, também chamado de <i>deploy</i>, envolve conceitos de servidores, hospedagem, portas,
+            domínio, entre
+            outros fatores e tecnologias. Em Java, ferramentas extras e o próprio NetBeans podem ajudar no processo. Em
+            um contexto mais sofisticado e profissional, é válida a implantação da técnica de Continuous Delivery (CD),
+            uma abordagem para entrega contínua e confiável de <i>software</i>, que envolve a automação do processo de
+            <i>deploy</i>.
+            A implementação bem-sucedida desses conceitos e ferramentas pode ajudar a garantir a entrega eficiente de
+            <i>software</i> de qualidade em um ritmo acelerado. Esses são os temas do conteúdo a seguir.
+          </p>
+          <h3>Conceitos</h3>
+          <p>
+            O <strong>deploy</strong> em JAVA para uma aplicação <i>web</i> envolve a preparação e a implantação da
+            aplicação em um servidor de
+            aplicação <i>web</i>, de modo que ela possa ser executada e acessada pelos usuários por meio de um navegador
+            da
+            <i>web</i>. O processo de <i>deploy</i> geralmente segue as seguintes etapas:
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group gaitinha" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Empacotamento
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Primeiramente, é necessário empacotar a aplicação <i>web</i> em um formato apropriado, como um
+                    arquivo
+                    .WAR. Esse arquivo contém todos os arquivos e os recursos necessários para a execução da aplicação,
+                    incluindo <i>servlets</i>, páginas HTML, imagens, CSS etc. O empacotamento pode ser realizado
+                    manualmente
+                    ou com o auxílio de ferramentas de build, como o Apache Maven ou o Gradle.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Servidor de aplicação
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    Em seguida, é necessário selecionar um servidor de aplicação <i>web</i> que seja compatível com a
+                    plataforma JAVA, como o Apache Tomcat, o JBoss/WildFly, o Jetty, o GlassFish, entre outros.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Configuração do servidor de aplicação
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Antes de implantar a aplicação, é necessário configurar o servidor de aplicação. Isso pode envolver
+                    a definição de portas de acesso, configurações de segurança, configurações de banco de dados,
+                    conexões com outros sistemas, entre outras personalizações específicas para a aplicação.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                      aria-expanded="false" aria-controls="collapse4">
+                      Implantação da aplicação
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    Com o servidor de aplicação configurado, o próximo passo é implantar a aplicação <i>web</i>. Isso
+                    geralmente envolve a transferência do arquivo .WAR para um diretório específico no servidor de
+                    aplicação. O servidor de aplicação então descompacta o arquivo .WAR e configura a aplicação para
+                    execução.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5"
+                      aria-expanded="false" aria-controls="collapse5">
+                      Teste e verificação
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    Após a implantação, é importante realizar testes para garantir que a aplicação esteja funcionando
+                    corretamente no servidor de aplicação. Isso pode envolver o acesso à aplicação por meio de um
+                    navegador, a execução de funcionalidades-chave e a verificação de <i>logs</i> e possíveis erros.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading6">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6"
+                      aria-expanded="false" aria-controls="collapse6">
+                      Publicação
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                  <div class="panel-body">
+                    Uma vez que a aplicação tenha sido testada e verificada com sucesso, ela pode ser publicada para os
+                    usuários finais. Isso pode envolver a configuração de um domínio personalizado, a definição de DNS
+                    para direcionar o tráfego para o servidor de aplicação e a configuração de segurança, como
+                    certificados SSL.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <p>Empacotamento</p>
+            <p>
+              Primeiramente, é necessário empacotar a aplicação <i>web</i> em um formato apropriado, como um arquivo
+              .WAR. Esse
+              arquivo contém todos os arquivos e os recursos necessários para a execução da aplicação, incluindo
+              <i>servlets</i>, páginas HTML, imagens, CSS etc. O empacotamento pode ser realizado manualmente ou com o
+              auxílio de
+              ferramentas de build, como o Apache Maven ou o Gradle.
+            </p>
+            <p>Servidor de aplicação </p>
+            <p>
+              Em seguida, é necessário selecionar um servidor de aplicação <i>web</i> que seja compatível com a
+              plataforma
+              JAVA, como o Apache Tomcat, o JBoss/WildFly, o Jetty, o GlassFish, entre outros.
+            </p>
+            <p>Configuração do servidor de aplicação </p>
+            <p>
+              Antes de implantar a aplicação, é necessário configurar o servidor de aplicação. Isso pode envolver a
+              definição de portas de acesso, configurações de segurança, configurações de banco de dados, conexões com
+              outros sistemas, entre outras personalizações específicas para a aplicação.
+            </p>
+            <p>Implantação da aplicação </p>
+            <p>
+              Com o servidor de aplicação configurado, o próximo passo é implantar a aplicação <i>web</i>. Isso
+              geralmente
+              envolve a transferência do arquivo .WAR para um diretório específico no servidor de aplicação. O servidor
+              de aplicação então descompacta o arquivo .WAR e configura a aplicação para execução.
+            </p>
+            <p>Teste e verificação</p>
+            <p>
+              Após a implantação, é importante realizar testes para garantir que a aplicação esteja funcionando
+              corretamente no servidor de aplicação. Isso pode envolver o acesso à aplicação por meio de um navegador, a
+              execução de funcionalidades-chave e a verificação de <i>logs</i> e possíveis erros.
+            </p>
+            <p>Publicação</p>
+            <p>
+              Uma vez que a aplicação tenha sido testada e verificada com sucesso, ela pode ser publicada para os
+              usuários
+              finais. Isso pode envolver a configuração de um domínio personalizado, a definição de DNS para direcionar
+              o
+              tráfego para o servidor de aplicação e a configuração de segurança, como certificados SSL.
+            </p>
+          </div>
+          <p>
+            É importante ressaltar que o processo de <i>deploy</i> pode variar dependendo do servidor de aplicação
+            utilizado e
+            das ferramentas específicas do projeto. Além disso, é fundamental seguir as melhores práticas de segurança,
+            configurar adequadamente as permissões e monitorar o desempenho da aplicação em produção.
+          </p>
+          <h4>Servidores, hospedagens e deploy de uma aplicação JAVA</h4>
+          <p>
+            No contexto do <i>deploy</i> de uma aplicação JAVA, além dos servidores e hospedagens, existem outros
+            elementos
+            importantes a serem considerados, como portas, DNS, domínios e aquisição de domínios.
+          </p>
+          <p>
+            Um <strong>servidor</strong> é um computador configurado para fornecer serviços de rede, como o acesso às
+            páginas da <i>web</i>,
+            envio de <i>e-mails</i> ou armazenamento de arquivos. No caso específico de uma aplicação JAVA, é comum
+            utilizar
+            servidores de aplicação, como o Apache <strong>Tomcat</strong> ou o JBoss, que são otimizados para executar
+            aplicativos
+            desenvolvidos em JAVA. Quando um servidor está em execução, ele escuta em <strong>portas</strong>
+            específicas para receber
+            solicitações de conexão. A porta 8080 é frequentemente utilizada como uma porta padrão Java para acesso
+            <i>web</i>.
+            É necessário configurar adequadamente as portas para garantir a conectividade correta.
+          </p>
+          <p>
+            Além disso, o <strong>DNS (Sistema de Nomes de Domínio)</strong> desempenha um papel importante na
+            disponibilidade e
+            acessibilidade da aplicação, convertendo nomes de domínio legíveis para humanos em endereços IP numéricos
+            que os servidores podem entender. Ao registrar um domínio, você adquire um nome único que pode ser usado
+            para acessar a sua aplicação. É necessário configurar corretamente as entradas de DNS para direcionar o
+            tráfego do seu domínio para o servidor onde a aplicação está hospedada.
+          </p>
+          <p>
+            No processo de <i>deploy</i> de uma aplicação JAVA, é comum utilizar serviços de hospedagem, incluindo a
+            opção de
+            servidores <strong>VPS (Servidor Virtual Privado)</strong>, máquinas virtuais que compartilham recursos
+            físicos com outros
+            servidores virtuais, mas operam de forma independente. Com um servidor VPS, você pode instalar e configurar
+            o ambiente necessário para executar a sua aplicação JAVA de forma personalizada.
+          </p>
+          <p>
+            Ao adquirir um domínio, você precisa registrá-lo por meio de um provedor de serviços de registro de domínio.
+            Isso envolve a escolha de um nome disponível, fornecendo as informações necessárias e efetuando o pagamento
+            do registro. O <strong>registro do domínio</strong> é válido por um determinado período, e você precisa
+            renová-lo
+            regularmente para manter a posse do domínio.
+          </p>
+          <p>
+            Em resumo, no <i>deploy</i> de uma aplicação JAVA, além dos servidores e hospedagens, é necessário
+            considerar a
+            configuração correta das portas, a configuração do DNS para direcionar o tráfego do domínio e a aquisição de
+            um domínio por meio de um provedor de registro de domínio. Além disso, a opção de utilizar servidores VPS
+            pode fornecer maior controle e flexibilidade para o ambiente de hospedagem da aplicação.
+          </p>
+          <h4>Tomcat e GlassFish</h4>
+          <p>
+            Tanto Tomcat quanto GlassFish são servidores de aplicação em Java, projetados para hospedar e executar
+            aplicativos <i>web</i>. Eles são executados em um ambiente de servidor, fornecendo um conjunto de serviços
+            necessários para atender às solicitações de usuários, como gerenciamento de sessões, comunicação com bancos
+            de dados e suporte a diferentes tecnologias <i>web</i>.
+          </p>
+          <p>
+            O <strong>Apache Tomcat</strong> é um servidor de aplicação <i>open source</i> desenvolvido pela Apache
+            Software Foundation. É uma
+            implementação do servlet e JSP (Java Server Pages) muito popular entre os desenvolvedores Java para hospedar
+            aplicativos web. O Tomcat é leve e fácil de configurar e pode ser integrado a diferentes tecnologias de
+            servidor web, como o Apache HTTP Server.
+          </p>
+          <p>
+            Já o <strong>GlassFish</strong> é um servidor de aplicação <i>open source</i> desenvolvido pela Oracle. É
+            uma implementação de
+            referência para as tecnologias Java EE (Enterprise Edition) e é conhecido por sua escalabilidade e suporte a
+            recursos avançados. O GlassFish oferece um conjunto completo de serviços para aplicações Java EE, como EJB
+            (Enterprise JavaBeans), JPA (Java Persistence API) e JMS (Java Message Service).
+          </p>
+          <p>
+            Em termos de diferenças entre Tomcat e GlassFish, a principal é que o Tomcat é um servidor de aplicação mais
+            simples e leve, enquanto o GlassFish é uma solução mais robusta e completa, que oferece suporte a um
+            conjunto completo de tecnologias Java EE. Outra diferença é que o GlassFish é um servidor de aplicação mais
+            pesado e pode consumir mais recursos do sistema do que o Tomcat.
+          </p>
+          <h3>Arquivos WAR e JAR para deploy</h3>
+          <p>
+            Imagine que você está preparando um bolo para uma festa. Existem diferentes etapas para preparar e servir o
+            bolo. O arquivo .JAR (Java ARchive) e o arquivo .WAR (Web ARchive) são semelhantes a diferentes formas de
+            servir esse bolo.
+          </p>
+          <p>
+            O arquivo .JAR é como uma porção individual do bolo, que pode ser facilmente consumida por uma pessoa. Ele é
+            usado principalmente para empacotar e distribuir bibliotecas Java, classes e recursos associados a uma
+            aplicação Java. Um arquivo .JAR é como uma unidade modular, contendo tudo o que é necessário para a execução
+            da aplicação em um ambiente Java. Ele pode ser executado independentemente e ser reutilizado em diferentes
+            contextos.
+          </p>
+          <p>
+            Por outro lado, o arquivo .WAR é como uma bandeja inteira de bolo, pronta para ser servida a várias pessoas.
+            Ele é usado especificamente para empacotar e implantar aplicativos <i>web</i> Java. Um arquivo .WAR contém
+            todos os
+            componentes necessários para executar a aplicação <i>web</i> em um servidor de aplicação Java, como
+            <i>servlets</i>,
+            páginas JSP, arquivos HTML, imagens, CSS e outros recursos relacionados. Ele também inclui um arquivo de
+            configuração chamado “web.xml”, que descreve a estrutura e as configurações da aplicação <i>web</i>.
+          </p>
+          <p>
+            Tradicionalmente, usa-se empacotamento WAR para implantação em um servidor web. No entanto, com o advento do
+            Spring Boot que cria arquivos JAR autocontidos (com um próprio minisservidor Tomcat embutido), hoje já é
+            possível publicar arquivos JAR executáveis.
+          </p>
+          <h4>Como criar um arquivo WAR para um projeto Spring</h4>
+          <p>
+            Caso na configuração de seu projeto com Spring Boot a partir do Spring Initializr tenha sido escolhida a
+            opção “Packaging : WAR”, ao compilar o projeto, o arquivo WAR deve ser criado. Caso o projeto tenha sido
+            configurado com “Packaging: Jar”, então é necessário realizar algumas alterações para a criação de arquivo
+            WAR.
+          </p>
+          <ul>
+            <li>No arquivo pom.xml, deve-se acrescentar, dentro do <i>tag</i> principal &lt;project> (pode ser após
+              &lt;/description>), o <i>tag</i> &lt;packaging>, indicando que você quer empacotar o projeto em arquivo
+              WAR.
+              <pre>
+                <code class="language-xml">
+                  &lt;packaging>war&lt;/packaging> 
+                </code>
+              </pre>
+            </li>
+            <li>Use a opção “Clean and Build” para o projeto. O arquivo WAR deve ser gerado na pasta [caminho do
+              projeto]/target. Por exemplo:
+              C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war. </li>
+            <li>
+              O arquivo pode aparecer nomeado com a versão indicada no tag &lt;version> do arquivo pom.xml (por exemplo:
+              projetomvc-0.0.1-SNAPSHOT.war). Para evitar isso, inclua o seguinte tag entre &lt;buld> e &lt;/build>:
+              <pre>
+                <code class="language-xml">
+                  &lt;finalName>${artifactId}&lt;/finalName> 
+                </code>
+              </pre>
+            </li>
+          </ul>
+          <p>
+            Você pode, posteriormente, comentar ou remover o tag &lt;packaging> para conseguir executar diretamente o
+            projeto pelo IDE NetBeans.
+          </p>
+          <img src="imgs/desafio.png" class="img-responsive desafio">
+          <div class="caixa-destaque2">
+            <p>
+              Crie pacotes WAR para os projetos desenvolvidos nos exemplos dos outros conhecimentos ou desafios desta
+              unidade.
+            </p>
+          </div>
+          <h3>Publicando um sistema Web Java com arquivo WAR</h3>
+          <p>
+            Neste exemplo, será criada uma máquina virtual Linux Ubuntu para ser o servidor, ela estará hospedada no
+            <i>site</i> Linode, que presta o serviço de locação de servidores.
+          </p>
+          <img src="imgs/anotar.png" class="img-responsive anota">
+          <div class="caixa-destaque2">
+            <p>
+              Os sites de <i>hosting</i> para servidores virtuais podem exigir o cadastramento de cartão de crédito e
+              posteriores cobranças. Verifique com cuidado as condições do <i>hosting</i> escolhido e só informe esses
+              dados
+              caso tenha certeza de seu propósito.
+            </p>
+          </div>
+          <p>
+            Após a criação da máquina Ubuntu, o <i>site</i> mostra os dados do servidor, inclusive mostrando como
+            acessar
+            através do ssh.
+          </p>
+          <img src="imgs/fig1.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig1.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig1.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 1 – Tela de configuração da máquina virtual instanciada no Linode <br>
+            Fonte: Senac EAD (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela de configuração da máquina virtual instanciada no serviço de aluguel de servidores Linode. Há o IP da
+            máquina e seu acesso SSH.
+          </p>
+          <p>
+            O acesso ao servidor será por meio do terminal Windows ou Windows <i>powershell</i>, através da conexão ssh.
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque nas setas para visualizar o conteúdo.</p>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div class="carousel-caption">
+                    <p><i>Passo 1</i>: Preparação do servidor </p>
+                    <p>
+                      1.1 - Primeiramente, você precisa ter um servidor Ubuntu instalado e configurado. Certifique-se de
+                      ter acesso <i>root</i> ou acesso de superusuário ao servidor (o usuário é <i>root</i> e a senha é
+                      escolhida na
+                      hora de criar a máquina no <i>site</i> da Linode).
+                    </p>
+                    <p>
+                      1.2 - Verifique se o servidor está com todas as atualizações instaladas. Use o seguinte comando
+                      para atualizar os pacotes do sistema:
+                    </p>
+                    <code>
+ sudo apt update 
+ sudo apt upgrade 
+                      </code>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption">
+                    <p><i>Passo 2</i>: Instalação do Java Development Kit (JDK) </p>
+                    <p>
+                      2.1 - O Java Development Kit é necessário para executar o arquivo .war. Instale o OpenJDK usando o
+                      seguinte comando:
+                    </p>
+                    <code>
+sudo apt install openjdk-17-jdk 
+                      </code>
+                    <p>
+                      2.2 - Verifique se a instalação foi concluída executando o seguinte comando:
+                    </p>
+                    <code>
+java -version 
+                      </code>
+                    <p>
+                      A saída do comando deve mostrar algo como “openjdk vertion 17.0.7”. O servidor está pronto para
+                      instalar o Tomcat para executar no arquivo .war.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption">
+                    <p><i>Passo 3</i>: Configuração do servidor de aplicativos </p>
+                    <p>
+                      3.1 - Agora você precisa escolher um servidor de aplicativos para executar o arquivo .war. Neste
+                      exemplo, será usado o Apache Tomcat. Instale o Tomcat usando o seguinte comando:
+                    </p>
+                    <code>
+sudo apt install tomcat9 
+                      </code>
+                    <p>
+                      3.2 - Após a instalação, o Tomcat será iniciado automaticamente. Verifique se ele está em execução
+                      usando o seguinte comando:
+                    </p>
+                    <code>
+sudo systemctl status tomcat9 
+                      </code>
+                    <p>
+                      Você deve ver uma mensagem indicando que o Tomcat está em execução. Acesse então o IP do servidor
+                      no navegador e veja que o Tomcat está rodando.
+                    </p>
+                    <img src="imgs/fig2.png" class="center-block img-responsive hidden-sm hidden-xs print img2">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig2.png" target="_blank" class="no-print visible-sm visible-xs img2"
+                      aria-hidden="true"><img src="imgs/fig2.png" class="center-block img-responsive img2"></a>
+                    <div class="legenda-imagem legenda">
+                      Figura 2 – Servidor Tomcat instalado e rodando no servidor Ubuntu <br>
+                      Fonte: Senac EAD (2023)
+                    </div>
+                    <p class="acessivel no-print">
+                      Navegador web com a página inicial de exemplo do Tomcat rodando, mostrando que a configuração está
+                      correta e o Tomcat está rodando. Há um menu no topo com o título Apache Tomcat 10.1.8 e o símbolo
+                      do Tomcat, que é um gatinho laranja.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption">
+                    <p><i>Passo 4</i>: Criação e upload do arquivo WAR. </p>
+                    <p>
+                      4.1 No NetBeans, use “Clean and Build” para criar um pacote WAR do projeto. Caso necessário,
+                      ajuste a configuração de pom.xml no seu projeto Spring.
+                    </p>
+                    <p>
+                      4.2 Agora no terminal do Windows ou na <i>powershell</i>, é feito o envio do arquivo para a pasta
+                      do
+                      Tomcat.
+                    </p>
+                    <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs"
+                      aria-hidden="true"><img src="imgs/fig3.png" class="center-block img-responsive"></a>
+                    <div class="legenda-imagem legenda">
+                      Figura 3 – Comando scp executado em conjunto com ssh para envio do arquivo .war ao servidor <br>
+                      Fonte: Senac EAD (2023)
+                    </div>
+                    <p class="acessivel no-print">
+                      Tela do terminal com a execução do comando para o envio do arquivo .war para o servidor. No caso o
+                      comando executado, segue scp
+                      C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war
+                      root@172.105.135.80:/var/lib/tomcat9/webapps.
+                    </p>
+                    <p>
+                      No caso, foi usado o comando scp e o ssh para enviar o arquivo. A sintaxe segue:
+                    </p>
+                    <code>
+scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/diretório/webapps 
+                    </code>
+                    <p>No caso deste projeto de exemplo e do servidor criado para teste, o comando ficou: </p>
+                    <code>
+                      scp C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war root@172.105.135.80:/var/lib/tomcat9/webapps 
+                    </code>
+                    <p>
+                      Repare que foi usado o comando scp, seguido do caminho do arquivo .war gerado e depois do comando
+                      ssh seguido do caminho de onde deve ser colocado o arquivo .war para rodar no servidor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="sr-only">Próximo</span>
+              </a>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <p><i>Passo 1</i>: Preparação do servidor </p>
+            <p>
+              1.1 - Primeiramente, você precisa ter um servidor Ubuntu instalado e configurado. Certifique-se de
+              ter acesso <i>root</i> ou acesso de superusuário ao servidor (o usuário é <i>root</i> e a senha é
+              escolhida na
+              hora de criar a máquina no <i>site</i> da Linode).
+            </p>
+            <p>
+              1.2 - Verifique se o servidor está com todas as atualizações instaladas. Use o seguinte comando
+              para atualizar os pacotes do sistema:
+            </p>
+            <code>
+ sudo apt update 
+ sudo apt upgrade 
+            </code>
+            <p><i>Passo 2</i>: Instalação do Java Development Kit (JDK) </p>
+            <p>
+              2.1 - O Java Development Kit é necessário para executar o arquivo .war. Instale o OpenJDK usando o
+              seguinte comando:
+            </p>
+            <code>
+sudo apt install openjdk-17-jdk 
+            </code>
+            <p>
+              2.2 - Verifique se a instalação foi concluída executando o seguinte comando:
+            </p>
+            <code>
+java -version 
+            </code>
+            <p>
+              A saída do comando deve mostrar algo como “openjdk vertion 17.0.7”. O servidor está pronto para
+              instalar o Tomcat para executar no arquivo .war.
+            </p>
+            <p><i>Passo 3</i>: Configuração do servidor de aplicativos </p>
+            <p>
+              3.1 - Agora você precisa escolher um servidor de aplicativos para executar o arquivo .war. Neste
+              exemplo, será usado o Apache Tomcat. Instale o Tomcat usando o seguinte comando:
+            </p>
+            <code>
+sudo apt install tomcat9 
+            </code>
+            <p>
+              3.2 - Após a instalação, o Tomcat será iniciado automaticamente. Verifique se ele está em execução
+              usando o seguinte comando:
+            </p>
+            <code>
+sudo systemctl status tomcat9 
+            </code>
+            <p>
+              Você deve ver uma mensagem indicando que o Tomcat está em execução. Acesse então o IP do servidor
+              no navegador e veja que o Tomcat está rodando.
+            </p>
+            <img src="imgs/fig2.png" class="center-block img-responsive hidden-sm hidden-xs print img2">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+            </p>
+            <a href="imgs/fig2.png" target="_blank" class="no-print visible-sm visible-xs img2" aria-hidden="true"><img
+                src="imgs/fig2.png" class="center-block img-responsive img2"></a>
+            <div class="legenda-imagem legenda">
+              Figura 2 – Servidor Tomcat instalado e rodando no servidor Ubuntu <br>
+              Fonte: Senac EAD (2023)
+            </div>
+            <p class="acessivel no-print">
+              Navegador web com a página inicial de exemplo do Tomcat rodando, mostrando que a configuração está
+              correta e o Tomcat está rodando. Há um menu no topo com o título Apache Tomcat 10.1.8 e o símbolo
+              do Tomcat, que é um gatinho laranja.
+            </p>
+            <p><i>Passo 4</i>: Criação e upload do arquivo WAR. </p>
+            <p>
+              4.1 No NetBeans, use “Clean and Build” para criar um pacote WAR do projeto. Caso necessário,
+              ajuste a configuração de pom.xml no seu projeto Spring.
+            </p>
+            <p>
+              4.2 Agora no terminal do Windows ou na <i>powershell</i>, é feito o envio do arquivo para a pasta
+              do
+              Tomcat.
+            </p>
+            <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+            </p>
+            <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/fig3.png" class="center-block img-responsive"></a>
+            <div class="legenda-imagem legenda">
+              Figura 3 – Comando scp executado em conjunto com ssh para envio do arquivo .war ao servidor <br>
+              Fonte: Senac EAD (2023)
+            </div>
+            <p class="acessivel no-print">
+              Tela do terminal com a execução do comando para o envio do arquivo .war para o servidor. No caso o
+              comando executado, segue scp
+              C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war
+              root@172.105.135.80:/var/lib/tomcat9/webapps.
+            </p>
+            <p>
+              No caso, foi usado o comando scp e o ssh para enviar o arquivo. A sintaxe segue:
+            </p>
+            <code>
+scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/diretório/webapps 
+            </code>
+            <p>No caso deste projeto de exemplo e do servidor criado para teste, o comando ficou: </p>
+            <code>
+             scp C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war root@172.105.135.80:/var/lib/tomcat9/webapps 
+            </code>
+            <p>
+              Repare que foi usado o comando scp, seguido do caminho do arquivo .war gerado e depois do comando
+              ssh seguido do caminho de onde deve ser colocado o arquivo .war para rodar no servidor.
+            </p>
+          </div>
+          <p>
+            Feito isso, o servidor Tomcat, descompactará e organizará os arquivos automaticamente. É possível acessar a
+            aplicação de qualquer lugar do mundo por meio do IP do servidor seguido de dois pontos e da porta 8080 e o
+            nome do arquivo .war enviado. No caso deste exemplo, o caminho para acesso ficou:
+          </p>
+          <p>
+            http://172.105.135.80:8080/mavenproject1-1/
+          </p>
+          <p>
+            Acessando este servidor por meio do navegador <i>web</i>, é possível ver a aplicação funcionando:
+          </p>
+          <img src="imgs/fig4.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig4.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig4.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">
+            Figura 4 – Servidor rodando com o aplicativo .war disponível para acesso de qualquer parte do mundo <br>
+            Fonte: Senac EAD (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela de um navegador web acessando o IP do servidor criado na barra de URL
+            http://172.105.135.80:8080/mavenproject1-1/. Na página do navegador, há a mensagem “Hello World!”.
+          </p>
+          <p>
+            Enquanto esse servidor estiver ligado e com o Tomcat rodando, a aplicação estará <i>on-line</i> para
+            qualquer pessoa que queira acessá-la no planeta.
+          </p>
+          <h4>Aplicando Domínio</h4>
+          <p>
+            Não é interessante informar um IP para quem quiser acessar seu sistema <i>web</i>, não é mesmo? Para
+            resolver esse
+            problema, é possível comprar um domínio e direcionar esse domínio, por exemplo, “meuappjava.com” para o
+            servidor criado. Para fazer isso, será usado o IP do servidor criado neste exemplo:
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque nas setas para visualizar o conteúdo.</p>
+            <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                <li data-target="#myCarousel2" data-slide-to="2"></li>
+                <li data-target="#myCarousel2" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item active">
+                  <div class="carousel-caption">
+                    <p>
+                      <i>Passo 1: Escolha um provedor de registro de domínio.</i> Pesquise e escolha um provedor
+                      confiável de registro de domínio. Veja alguns provedores populares brasileiros de registro de
+                      domínio:
+                    </p>
+                    <ul class="lista">
+                      <li>Registro.br: é o registro oficial de domínios no Brasil. É operado pelo Núcleo de Informação e
+                        Coordenação do Ponto BR (NIC.br) e é responsável pelos domínios com a extensão “.br”. Você pode
+                        registrar domínios diretamente com o Registro.br. </li>
+                      <li>UOL Host: oferece serviços de registro de domínio, hospedagem <i>web</i> e outros serviços
+                        relacionados. É uma empresa reconhecida no mercado brasileiro de hospedagem e domínios. </li>
+                      <li>Locaweb: é uma das maiores empresas de hospedagem <i>web</i> do Brasil e também oferece
+                        serviços de
+                        registro de domínio. Tem uma ampla gama de serviços e recursos para atender às necessidades dos
+                        usuários. </li>
+                      <li>HostGator Brasil: a HostGator é uma empresa global de hospedagem <i>web</i> que também atua no
+                        Brasil. Oferece serviços de registro de domínio, hospedagem compartilhada, hospedagem VPS e
+                        outros serviços relacionados. </li>
+                      <li>KingHost: é uma empresa brasileira de hospedagem <i>web</i> que também oferece serviços de
+                        registro
+                        de domínio. Tem uma boa reputação no mercado e fornece soluções de hospedagem para diferentes
+                        tipos de projetos. </li>
+                    </ul>
+                    <p>
+                      Esses são apenas alguns exemplos de provedores de registro de domínio no Brasil. É importante
+                      fazer uma pesquisa e comparar recursos, preços e suporte oferecidos por cada provedor antes de
+                      tomar uma decisão.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="carousel-caption slideCentro">
+                    <p>
+                      <i>Passo 2: Verifique a disponibilidade do domínio</i>. Acesse o site do provedor escolhido e
+                      utilize a
+                      ferramenta de busca de domínios para verificar se o domínio desejado está disponível. Se estiver
+                      disponível, prossiga para o próximo passo.
+                    </p>
+                    <p>
+                      <i>Passo 3: Registre o domínio</i>. Siga as instruções fornecidas pelo provedor para registrar o
+                      domínio
+                      escolhido. Preencha as informações necessárias, incluindo seus dados pessoais e informações de
+                      pagamento. Certifique-se de fornecer informações precisas durante o registro.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption slideCentro">
+                    <p>
+                      <i>Passo 4: Acesse as configurações de DNS</i>. Após o registro do domínio, acesse as
+                      configurações de
+                      DNS no painel de controle do seu provedor de domínio. Procure por opções relacionadas a
+                      gerenciamento de DNS, Zona DNS ou Configurações de DNS.
+                    </p>
+                    <p>
+                      <i>Passo 5: Crie um registro de tipo A</i>. Dentro das configurações de DNS, encontre a opção para
+                      adicionar um novo registro de DNS. Selecione o tipo de registro “A” (endereço IP) e insira o nome
+                      do <i>host</i> como o domínio que você registrou. No campo do endereço IP, insira
+                      “172.105.135.80”.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="carousel-caption slideCentro">
+                    <p>
+                      <i> Passo 6: Salve as alterações</i>. Após adicionar o registro de tipo A, salve as alterações de
+                      DNS. As
+                      alterações podem levar algum tempo para se propagar e se tornar ativas em toda a internet. Esse
+                      período é conhecido como propagação de DNS e geralmente leva algumas horas, embora possa levar até
+                      24-48 horas em alguns casos.
+                    </p>
+                    <p>
+                      Passo 7: Verifique o redirecionamento. Após a propagação do DNS, abra um navegador e digite o
+                      domínio que você registrou (por exemplo: www.meuappjava.com). O domínio deve redirecionar
+                      automaticamente para o endereço http://172.105.135.80:8080/mavenproject1 do seu servidor
+                      <i>web</i>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                <span class="sr-only">Próximo</span>
+              </a>
+            </div>
+            <div class="acessivel print">
+              <p>
+                <i>Passo 1: Escolha um provedor de registro de domínio.</i> Pesquise e escolha um provedor
+                confiável de registro de domínio. Veja alguns provedores populares brasileiros de registro de
+                domínio:
+              </p>
+              <ul>
+                <li>Registro.br: é o registro oficial de domínios no Brasil. É operado pelo Núcleo de Informação e
+                  Coordenação do Ponto BR (NIC.br) e é responsável pelos domínios com a extensão “.br”. Você pode
+                  registrar domínios diretamente com o Registro.br. </li>
+                <li>UOL Host: oferece serviços de registro de domínio, hospedagem <i>web</i> e outros serviços
+                  relacionados. É uma empresa reconhecida no mercado brasileiro de hospedagem e domínios. </li>
+                <li>Locaweb: é uma das maiores empresas de hospedagem <i>web</i> do Brasil e também oferece
+                  serviços de
+                  registro de domínio. Tem uma ampla gama de serviços e recursos para atender às necessidades dos
+                  usuários. </li>
+                <li>HostGator Brasil: a HostGator é uma empresa global de hospedagem <i>web</i> que também atua no
+                  Brasil. Oferece serviços de registro de domínio, hospedagem compartilhada, hospedagem VPS e
+                  outros serviços relacionados. </li>
+                <li>KingHost: é uma empresa brasileira de hospedagem <i>web</i> que também oferece serviços de
+                  registro
+                  de domínio. Tem uma boa reputação no mercado e fornece soluções de hospedagem para diferentes
+                  tipos de projetos. </li>
+              </ul>
+              <p>
+                Esses são apenas alguns exemplos de provedores de registro de domínio no Brasil. É importante
+                fazer uma pesquisa e comparar recursos, preços e suporte oferecidos por cada provedor antes de
+                tomar uma decisão.
+              </p>
+              <p>
+                <i>Passo 2: Verifique a disponibilidade do domínio</i>. Acesse o site do provedor escolhido e
+                utilize a
+                ferramenta de busca de domínios para verificar se o domínio desejado está disponível. Se estiver
+                disponível, prossiga para o próximo passo.
+              </p>
+              <p>
+                <i>Passo 3: Registre o domínio</i>. Siga as instruções fornecidas pelo provedor para registrar o
+                domínio
+                escolhido. Preencha as informações necessárias, incluindo seus dados pessoais e informações de
+                pagamento. Certifique-se de fornecer informações precisas durante o registro.
+              </p>
+              <p>
+                <i>Passo 4: Acesse as configurações de DNS</i>. Após o registro do domínio, acesse as
+                configurações de
+                DNS no painel de controle do seu provedor de domínio. Procure por opções relacionadas a
+                gerenciamento de DNS, Zona DNS ou Configurações de DNS.
+              </p>
+              <p>
+                <i>Passo 5: Crie um registro de tipo A</i>. Dentro das configurações de DNS, encontre a opção para
+                adicionar um novo registro de DNS. Selecione o tipo de registro “A” (endereço IP) e insira o nome
+                do <i>host</i> como o domínio que você registrou. No campo do endereço IP, insira
+                “172.105.135.80”.
+              </p>
+              <p>
+                <i> Passo 6: Salve as alterações</i>. Após adicionar o registro de tipo A, salve as alterações de
+                DNS. As
+                alterações podem levar algum tempo para se propagar e se tornar ativas em toda a internet. Esse
+                período é conhecido como propagação de DNS e geralmente leva algumas horas, embora possa levar até
+                24-48 horas em alguns casos.
+              </p>
+              <p>
+                Passo 7: Verifique o redirecionamento. Após a propagação do DNS, abra um navegador e digite o
+                domínio que você registrou (por exemplo: www.meuappjava.com). O domínio deve redirecionar
+                automaticamente para o endereço http://172.105.135.80:8080/mavenproject1 do seu servidor <i>web</i>.
+              </p>
+            </div>
+            <p>
+              Pronto, agora seu <i>app</i> pode ser acessado pelo domínio “meuappjava.com/mavenproject1-1/”, em vez do
+              IP, como usado antes.
+            </p>
+            <img src="imgs/desafio.png" class="img-responsive desafio">
+            <div class="caixa-destaque2">
+              <p>Pesquise alternativas ao Linode e estude semelhanças e diferenças com o processo descrito
+                anteriormente. </p>
+            </div>
+            <h3>Publicação pacotes JAR</h3>
+            <p>
+              Alguns serviços permitem a publicação dos pacotes autocontidos JAR, que incluem o próprio servidor <i>web</i>
+              embutido. Um desses serviços é o Heroku, uma plataforma de nuvem que permite <i>deploy</i> de aplicação em
+              máquinas virtuais ajustadas ao tamanho e à necessidade da aplicação. Cada serviço terá suas configurações
+              específicas para a publicação, mas geralmente envolverá não muito mais que o <i>upload</i> do arquivo JAR gerado
+              pelo projeto.
+            </p>
+            <h3>Hospedagem gratuita e paga para projetos em JAVA</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  </section>
+  <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+  <footer class="text-center no-print">
+
+    <ul class="pagination">
+
+    </ul>
+
+  </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

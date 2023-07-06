@@ -1,0 +1,192 @@
+
+.paginas .container {
+background-color:url("../imgs/bg.svg") repeat;
+background-size: cover;
+}
+
+#booklet{
+  background:url("../imgs/bg.svg") repeat;
+  padding: 4px;
+  z-index: 2;
+  background-size: cover;
+}
+.paginas{
+  background: url('../imgs/bg_esq.png') left bottom no-repeat, url('../imgs/bg_dir.png') right bottom no-repeat;
+  z-index: 4;
+  background-attachment: fixed;
+}
+
+.grupo-imprimir{
+  margin-bottom: 10px;
+}
+h1 i,
+h2 i,
+h3 i,
+h4 i {
+  font-weight: bold;
+}
+h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+h4 {
+  margin: 0px;
+  margin-top: 40px;
+}
+h2, h3, h4, h5{color: #4170b4;}
+pre {
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+header{margin-top: 100px;}
+.mt-20{margin-top: 20px;}
+.mt-40{margin-top: 40px;}
+.mt-60{margin-top: 60px;}
+
+.caixa-destaque2{
+  background-color:#2875c5;
+  padding:2px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.4em;
+  border-radius: 1em;
+  position: relative;
+  z-index: 3;
+}
+
+.caixa-destaque2 p{
+  color: #fff;
+  padding-left: 60px;
+}
+.desafio{
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 40px;
+  z-index: 4;
+}
+.anota{
+  position: absolute;
+  margin-left: 40px;
+  z-index: 4;
+  margin-top: 4px;
+}
+
+.item{
+  background: url("../imgs/slide.svg") no-repeat;
+  max-width: 800px;
+  height: 463px;
+  position: relative;
+  background-size: 95%;
+  margin-left: 7%;
+}
+.carousel-control.left{
+background: url("../imgs/seta_esq.png") no-repeat;
+position: absolute;
+top: 40%;
+}
+.carousel-control.right{
+  background: url("../imgs/seta_dir.png") no-repeat;
+  position: absolute;
+  top: 40%;
+}
+
+.carousel-caption {
+ top: 1px; 
+ right: 10px;
+ left: 10px;
+ padding-left: 15px;
+ padding-right: 60px;
+}
+
+.carousel-caption p{
+  color: #000;
+  text-align: left;
+  font-size: 13px;
+  padding-left: 20px;
+  line-height: 1.0em;
+}
+
+.imgLeft{
+  background: url("../imgs/seta_esq.png");
+  z-index: 5;
+}
+
+.imgRight{
+  background: url("../imgs/seta_dir.png");
+  z-index: 5;
+}
+.carousel-indicators li {
+  border: 1px solid #2875c5;
+  background-color: #2875c5;
+}
+
+.carousel-indicators {
+  bottom: -45px;
+  left: 45%;
+}
+.img2{
+max-width: 60%;
+}
+.legenda{
+  color: #000;
+  margin-bottom: unset !important;
+}
+
+.lista li{
+font-size: 13px;
+color: #000;
+}
+
+.slideCentro{
+padding: 50px;
+padding-right: 70px;
+margin-top: 10%;
+font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+.imgBorder{
+  border-radius: 20px;
+}
+.codigo-destaque{
+  background: #000;
+  color: #a39e9b;
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+.code-destaque{
+  background-color: #071772 !important;
+}
+
+
+@media screen and (max-width: 430px){
+  .painelFundo{max-width: 380px;}
+  .painelCarteira{display: none;}
+  .bt-trello {margin-left: 55px;}
+  .bt-slack{margin-left: 30px;}
+  .dica{display: none;}
+  .dica2{display: none;}
+  .desafio{display: none;}
+}
+
+@media screen and (max-width: 780px){
+  .dica{margin-left: 15px;}
+  .dica2{margin-left: 15px;}
+  .desafio{margin-left: 15px;}
+}
+
+
+
+  
