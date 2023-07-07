@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Comunicação visual e imagens vetoriais e bitmap</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="container">
+          <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu
+            leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam
+            lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de
+            pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa
+            forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+          <h2>Segurança da informação</h2>
+          <p>
+            A segurança da informação é um tema crucial no desenvolvimento de aplicações <i>web</i>, especialmente em um
+            mundo
+            onde a internet é uma parte integrante do cotidiano das pessoas. Para garantir que as informações
+            confidenciais dos usuários sejam protegidas, é necessário implementar medidas de segurança adequadas no
+            processo de desenvolvimento de aplicativos.
+          </p>
+          <p>
+            Neste conhecimento, serão abordadas algumas das boas práticas de segurança da informação no desenvolvimento
+            de aplicações <i>web</i>, incluindo XSS, SSL/HTTPS, tráfego de dados pela <i>web</i> e Spring Security.
+          </p>
+          <h3>Segurança da informação na <i>web</i></h3>
+          <p>
+            A segurança na <i>web</i> é um conjunto de técnicas e medidas projetadas para proteger aplicativos
+            <i>web</i> de ameaças
+            externas. Isso inclui vulnerabilidades, como injeção de SQL, já estudada anteriormente no curso, e outras
+            ameaças das quais os desenvolvedores devem estar cientes.
+          </p>
+          <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+          <div class="no-print painelBotoes" aria-hidden="true">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" class="bt-01 btn-default" data-toggle="modal" data-target="#modal-01"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" class="bt-02 btn-default" data-toggle="modal" data-target="#modal-02"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" class="bt-03 btn-default" data-toggle="modal" data-target="#modal-03"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button type="button" class="bt-04 btn-default" data-toggle="modal" data-target="#modal-04"></button>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal-100 fade" id="modal-01">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="modal-header no-print">
+                      <button type="button" class="close" data-dismiss="modal">
+                        <img src="imgs/bt_fechar_modal.png" alt="">
+                      </button>
+                    </div>
+                    <h3>XSS (<i>cross-site scripting</i>) </h3>
+                    <p>
+                      O XSS é uma vulnerabilidade comum em aplicações <i>web</i>, que permite que um invasor injete
+                      <i>scripts</i>
+                      maliciosos em uma página da <i>web</i>, o que pode ser usado para roubar informações do usuário,
+                      como
+                      nomes de usuário e senhas. Existem três tipos de XSS: armazenado, refletido e DOM.
+                    </p>
+                    <p>
+                      O <strong>XSS armazenado</strong> ocorre quando o invasor injeta o <i>script</i> malicioso em um
+                      banco de dados ou
+                      servidor. O <strong>XSS refletido</strong> ocorre quando o invasor “engana” o usuário para que
+                      insira informações
+                      em um formulário que contém o script malicioso. O <strong>XSS DOM</strong> ocorre quando o
+                      <i>script</i> malicioso é
+                      executado pelo navegador do usuário, sem a necessidade de interagir com o servidor.
+                    </p>
+                    <p>
+                      Para evitar o XSS, os desenvolvedores devem validar todas as entradas de usuário e filtrar
+                      caracteres especiais. Além disso, as aplicações <i>web</i> devem usar o HTTPOnly Cookie, o que
+                      significa
+                      que os <i>cookies</i> só podem ser acessados pelo servidor e não pelo JavaScript. Outra medida
+                      preventiva
+                      é usar o Content Security Policy (CSP), que restringe quais recursos podem ser carregados em uma
+                      página da <i>web</i>.
+                    </p>
+                    <div class="modal-footer no-print">
+                      <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal-100 fade" id="modal-02">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="modal-header no-print">
+                      <button type="button" class="close" data-dismiss="modal">
+                        <img src="imgs/bt_fechar_modal.png" alt="">
+                      </button>
+                    </div>
+                    <h3>SSL/HTTPS</h3>
+                    <p>
+                      O <strong>SSL</strong> (<i>secure socket layer</i>) e o <strong>HTTPS</strong> (<i>hypertext
+                        transfer protocol secure</i>) são protocolos de
+                      segurança que protegem as comunicações na <i>web</i>. O SSL é um protocolo de criptografia que
+                      garante
+                      que as informações enviadas entre o navegador do usuário e o servidor da <i>web</i> estejam
+                      criptografadas. O HTTPS é o uso do SSL em conjunto com o HTTP, que é a maneira padrão de comunicar
+                      informações na <i>web</i>.
+                    </p>
+                    <p>
+                      Para garantir a segurança do SSL/HTTPS, os desenvolvedores devem implementar certificados SSL em
+                      seus servidores da <i>web</i>. Esses certificados são emitidos por autoridades de certificação e
+                      verificam a identidade do servidor da <i>web</i>. Além disso, é importante que os desenvolvedores
+                      usem a
+                      versão mais recente do SSL (atualmente TLS 1.3) e configurem o servidor da <i>web</i> corretamente
+                      para
+                      evitar vulnerabilidades, como o ataque POODLE (Padding Oracle On Downgraded Legacy Encryption).
+                    </p>
+                    <p>
+                      Configurar SSL/HTTPS para uma aplicação <i>web</i> envolve a aquisição de um certificado SSL de
+                      uma
+                      autoridade de certificação confiável e a configuração do servidor <i>web</i> para usá-lo. O
+                      processo
+                      exato de configuração varia dependendo do servidor <i>web</i> específico e do sistema operacional
+                      que
+                      está sendo usado. Em seguida você terá uma visão geral do processo.
+                    </p>
+                    <h4>Aquisição do certificado SSL</h4>
+                    <p>
+                      O primeiro passo para configurar o SSL/HTTPS é adquirir um certificado SSL de uma autoridade de
+                      certificação confiável que seja válida e atualizada. Existem muitas autoridades de certificação
+                      que oferecem certificados SSL, como Let's Encrypt, DigiCert e Comodo.
+                    </p>
+                    <h4>Configuração do servidor <i>web</i></h4>
+                    <p>
+                      Depois de adquirir o certificado SSL, é necessário configurar o servidor <i>web</i> para usá-lo. O
+                      processo exato de configuração varia dependendo do servidor <i>web</i> que está sendo usado. A
+                      seguir
+                      estão os passos gerais de configuração para alguns dos servidores <i>web</i> mais populares:
+                    </p>
+                    <ul>
+                      <li> Apache
+                        <p>
+                          O Apache é um dos servidores <i>web</i> mais populares. Para configurar o SSL/HTTPS no Apache
+                          é
+                          necessário habilitar o módulo SSL e configurar o arquivo de configuração do Apache. O arquivo
+                          de configuração do Apache geralmente é chamado de "httpd.conf" ou "apache2.conf". As seguintes
+                          linhas devem ser adicionadas ao arquivo de configuração para habilitar o SSL:
+                        </p>
+                        <pre>
+                          <code>
+LoadModule ssl_module modules/mod_ssl.so Listen 443 
+                          </code>
+                        </pre>
+                        <p>
+                          Em seguida, as seguintes linhas devem ser adicionadas ao arquivo de configuração para
+                          configurar o SSL:
+                        </p>
+                        <pre>
+                          <code>
+&lt;VirtualHost *:443> SSLEngine on SSLCertificateFile /path/to/your_domain_name.crt SSLCertificateKeyFile /path/to/your_private.key &lt;/VirtualHost> 
+                          </code>
+                        </pre>
+                      </li>
+                      <li> Tomcat
+                        <p>
+                          O Tomcat é um servidor <i>web</i> de código aberto usado para aplicações Java Web. Para
+                          configurar o
+                          SSL/HTTPS no Tomcat é necessário gerar um certificado e configurar o arquivo de configuração
+                          "server.xml" pelos seguintes passos:
+                        </p>
+                        <ol>
+                          <li>Gere um certificado usando ferramentas, como o <i>keytool</i>, ou terceiros, como o Let’s
+                            Encrypt. </li>
+                          <li>No arquivo "server.xml", busque o elemento <strong>&lt;Connector></strong>, que se refere
+                            ao protocolo HTTP. </li>
+                          <li>Adicione um novo elemento <strong>&lt;Connector></strong> com os atributos
+                            <strong>protocol</strong> (geralmente <strong>HTTP/1.1</strong>),
+                            <strong>port</strong> (geralmente <strong>443</strong>), <strong>scheme</strong> (geralmente
+                            <strong>https</strong>) e o caminho para o certificado e a chave
+                            privada.
+                          </li>
+                          <li>Certifique-se de que o atributo <strong>secure</strong> esteja definido como
+                            <strong>true</strong> para o novo elemento <strong>&lt;Connector></strong>.
+                          </li>
+                          <li>Salve as alterações no arquivo "server.xml" e reinicie o servidor</li>
+                        </ol>
+                        <p>
+                          Para garantir que seus aplicativos <i>web</i> funcionem corretamente com SSL/HTTPS, é
+                          importante
+                          verificar se eles estão usando URLs seguras (https://) em vez de URLs não seguras (http://)
+                          para acessar recursos protegidos. Além disso, se seus aplicativos web usam <i>cookies</i>, é
+                          necessário definir o atributo <strong>secure</strong> como <strong>true</strong> para garantir
+                          que os <i>cookies</i> sejam enviados
+                          apenas por conexões SSL/HTTPS seguras.
+                        </p>
+                        <p>
+                          Também é importante assegurar-se de que o certificado usado seja confiável e válido para
+                          garantir a segurança das conexões SSL/HTTPS.
+                        </p>
+                      </li>
+                      <li>GlassFish
+                        <p>
+                          O GlassFish também é usado para Java Web e, para configurar o SSL/HTTPS nesse servidor
+                          <i>web</i>, é
+                          necessário gerar um certificado e configurar seu arquivo de configuração.
+                        </p>
+                        <p>
+                          Depois de gerar o certificado, a configuração do SSL/HTTPS no GlassFish pode ser feita por
+                          meio da interface de administração (acessando https://localhost:4848) ou por meio do arquivo
+                          de configuração "domain.xml”.
+                        </p>
+                        <p>
+                          Para configurar o SSL/HTTPS por meio do arquivo de configuração "domain.xml", siga estas
+                          etapas:
+                        </p>
+                        <ol>
+                          <li>Abra o arquivo "domain.xml" em um editor de texto. </li>
+                          <li>Procure o elemento <strong>&lt;network-listeners></strong>. </li>
+                          <li>Adicione um novo elemento <strong>&lt;network-listeners></strong> com os atributos
+                            <strong>protocol</strong> (<strong>HTTPS</strong>), <strong>port</strong>
+                            (geralmente <strong>443</strong>) e o caminho para o certificado e a chave privada.
+                          </li>
+                        </ol>
+                        <p>
+                          Depois de configurar o SSL/HTTPS no GlassFish, reinicie o servidor para que as alterações
+                          entrem em vigor.
+                        </p>
+                      </li>
+                    </ul>
+                    <h4>Renovação do certificado SSL</h4>
+                    <p>
+                      Os certificados SSL têm uma validade limitada e precisam ser renovados regularmente. A maioria das
+                      autoridades de certificação oferece certificados com validade de um ano ou mais. É importante
+                      renovar o certificado SSL antes de expirar para garantir que a segurança da aplicação web não seja
+                      comprometida.
+                    </p>
+                    <div class="modal-footer no-print">
+                      <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal-100 fade" id="modal-03">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="modal-header no-print">
+                      <button type="button" class="close" data-dismiss="modal">
+                        <img src="imgs/bt_fechar_modal.png" alt="">
+                      </button>
+                    </div>
+                    <h3>Tráfego de dados pela <i>web</i></h3>
+                    <p>
+                      Os dados enviados e recebidos pela <i>web</i> podem ser interceptados por invasores. Para garantir
+                      a
+                      segurança desses dados, os desenvolvedores devem criptografá-los antes de enviá-los. A
+                      criptografia é o processo de transformar dados legíveis em um formato ilegível que só pode ser
+                      decodificado por uma chave de criptografia.
+                    </p>
+                    <p>
+                      Existem duas maneiras de criptografar os dados: criptografia simétrica e criptografia assimétrica.
+                      A criptografia simétrica usa uma única chave para criptografar e descriptografar os dados. A
+                      criptografia assimétrica usa uma chave pública para criptografar os dados e uma chave privada para
+                      descriptografá-los.
+                    </p>
+                    <p>
+                      É preferível usar a criptografia assimétrica, também conhecida como criptografia de chave pública,
+                      em que a chave pública pode ser compartilhada com qualquer pessoa, enquanto a chave privada deve
+                      ser mantida em segredo pelo proprietário. Esse método de criptografia é amplamente utilizado em
+                      projetos de segurança da informação, incluindo projetos Java Web.
+                    </p>
+                    <p>
+                      Para implementar a criptografia assimétrica em projetos Java Web, é necessário seguir os seguintes
+                      passos:
+                    </p>
+                    <h4>Gerar um par de chaves pública/privada </h4>
+                    <p>
+                      O primeiro passo é gerar um par de chaves pública/privada. Isso pode ser feito usando a biblioteca
+                      de criptografia Java KeyStore (JKS) e a ferramenta de linha de comando <i>keytool</i>. O seguinte
+                      comando
+                      pode ser usado para gerar um novo par de chaves:
+                    </p>
+                    <pre>
+                      <code>
+keytool -genkeypair -alias mykey -keyalg RSA -keysize 2048 -keystore mykeystore.jks 
+                      </code>
+                    </pre>
+                    <p>
+                      Esse comando gera um novo par de chaves RSA com tamanho de 2048 <i>bits</i> e armazena-o no
+                      arquivo
+                      mykeystore.jks. A chave privada é armazenada no arquivo de <i>keystore</i>, enquanto a chave
+                      pública pode
+                      ser exportada para uso posterior.
+                    </p>
+                    <h4>Exportar a chave pública</h4>
+                    <p>
+                      Para usar a chave pública em uma aplicação Java Web, é necessário exportá-la em um formato
+                      apropriado. Isso pode ser feito usando a ferramenta <i>keytool</i> da seguinte forma.
+                    </p>
+                    <pre>
+                      <code>
+keytool -exportcert -alias mykey -keystore mykeystore.jks -file mykey.cer 
+                      </code>
+                    </pre>
+                    <p>
+                      Esse comando exporta a chave pública para o arquivo mykey.cer no formato X.509, que pode ser
+                      facilmente lido por aplicativos Java.
+                    </p>
+                    <h4>Importar a chave pública</h4>
+                    <p>
+                      Depois de exportar a chave pública, ela pode ser importada para o aplicativo Java Web. Isso pode
+                      ser feito usando a classe <strong>java.security.KeyStore</strong>, que permite acessar o arquivo
+                      de <i>keystore</i> e
+                      recuperar a chave pública.
+                    </p>
+                    <pre>
+                      <code>
+KeyStore keystore = KeyStore.getInstance("JKS");  
+keystore.load(new FileInputStream("mykeystore.jks"),  
+"mystorepassword".toCharArray());  
+PublicKey publicKey = keystore.getCertificate("mykey").getPublicKey(); 
+                      </code>
+                    </pre>
+                    <p>
+                      Esse código carrega o arquivo de <i>keystore</i> mykeystore.jks e obtém a chave pública com o
+                      alias
+                      <i>mykey</i>. A chave pública pode ser usada para criptografar dados que só podem ser
+                      descriptografados
+                      pela chave privada correspondente.
+                    </p>
+                    <h4>Criptografar dados com a chave pública</h4>
+                    <p>
+                      Para criptografar dados com a chave pública, a classe <strong>javax.crypto.Cipher</strong> pode
+                      ser usada. Essa
+                      classe permite criptografar dados com a chave pública e descriptografá-los com a chave privada
+                      correspondente.
+                    </p>
+                    <pre>
+                      <code>
+byte[] data = "Dados a serem criptografados".getBytes("UTF-8");  
+Cipher cipher = Cipher.getInstance("RSA");  
+cipher.init(Cipher.ENCRYPT_MODE, publicKey);  
+byte[] encryptedData = cipher.doFinal(data); 
+                      </code>
+                    </pre>
+                    <p>
+                      Esse código criptografa a <i>string</i> "Dados a serem criptografados" com a chave pública e
+                      armazena o resultado em <strong>encryptedData</strong>.
+                    </p>
+                    <h4>Descriptografar dados com a chave privada</h4>
+                    <p>
+                      Para descriptografar os dados criptografados com a chave pública, a classe
+                      <strong>javax.crypto.Cipher</strong>
+                      pode ser usada novamente, dessa vez no modo de descriptografia.
+                    </p>
+                    <pre>
+                      <code>
+Cipher cipher = Cipher.getInstance("RSA"); 
+cipher.init(Cipher.DECRYPT_MODE, privateKey); 
+byte[] decryptedData = cipher.doFinal(encryptedData); 
+String originalData = new String(decryptedData, "UTF-8"); 
+                      </code>
+                    </pre>
+                    <p>
+                      Esse código descriptografa os dados criptografados em <strong>encryptedData</strong> usando a
+                      chave privada e
+                      armazena o resultado na variável <i>string</i> <strong>originalData</strong>.
+                    </p>
+                    <h4>Armazenar a chave privada de forma segura</h4>
+                    <p>
+                      A chave privada deve ser armazenada de forma segura, de preferência em um arquivo protegido por
+                      senha. A classe <strong>java.security.KeyStore</strong> pode ser usada para criar um arquivo de
+                      <i>keystore</i> protegido por senha e armazenar a chave privada nele.
+                    </p>
+                    <pre>
+                      <code>
+KeyStore keystore = KeyStore.getInstance("JKS"); 
+keystore.load(null, null); 
+PrivateKey privateKey = /* obter a chave privada */; 
+Certificate[] chain = /* obter a cadeia de certificados */; 
+keystore.setKeyEntry("mykey", privateKey, "mypassword".toCharArray(), chain); 
+keystore.store(new FileOutputStream("mykeystore.jks"), "mystorepassword".toCharArray()); 
+                      </code>
+                    </pre>
+                    <p>
+                      Esse código cria um novo arquivo de <i>keystore</i> e armazena a chave privada com o alias
+                      <i>mykey</i> e a
+                      senha <strong>mypassword</strong>. A cadeia de certificados é armazenada junto à chave privada
+                      para permitir a
+                      verificação da identidade do proprietário da chave.
+                    </p>
+                    <p>
+                      Em resumo, a criptografia assimétrica é um método seguro para proteger dados em projetos Java Web.
+                      Ao gerar um par de chaves pública/privada, exportar a chave pública, importá-la no aplicativo,
+                      criptografar e descriptografar dados e armazenar a chave privada de forma segura, os
+                      desenvolvedores podem garantir que os dados sensíveis estejam protegidos contra acesso não
+                      autorizado.
+                    </p>
+                    <div class="modal-footer no-print">
+                      <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal modal-100 fade" id="modal-04">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="modal-header no-print">
+                      <button type="button" class="close" data-dismiss="modal">
+                        <img src="imgs/bt_fechar_modal.png" alt="">
+                      </button>
+                    </div>
+                    <h3>Spring Security</h3>
+                    <p>
+                      O Spring Security é um <i>framework</i> de segurança de código aberto que fornece uma ampla gama
+                      de
+                      recursos de segurança para aplicações Java. Ele fornece uma camada de segurança em nível de
+                      aplicação que protege as aplicações contra ameaças externas, como XSS e CSRF.
+                    </p>
+                    <p>
+                      O Spring Security fornece recursos, como autenticação e autorização de usuários, gerenciamento de
+                      sessões de usuário e prevenção de ataques de força bruta. Ele também suporta a integração com
+                      outros <i>frameworks</i>, como Spring MVC e Spring Boot.
+                    </p>
+                    <p>
+                      Ao usar o Spring Security, os desenvolvedores devem seguir as melhores práticas de segurança, como
+                      o uso de senhas fortes e a criptografia de dados confidenciais. Também devem monitorar
+                      regularmente os <i>logs</i> de segurança para detectar atividades suspeitas.
+                    </p>
+                    <h4> Spring Security em aplicações Java </h4>
+                    <p>
+                      O Spring Security é um <i>framework</i> de segurança amplamente utilizado para proteger aplicações
+                      Java.
+                      Ele oferece uma ampla gama de recursos e funcionalidades para autenticação (verificação de
+                      identidade) e autorização (controle de acesso).
+                    </p>
+                    <p>
+                      A implementação do Spring Security em aplicações Java envolve a configuração de vários
+                      componentes-chave:
+                    </p>
+                    <p>
+                      <strong>Configuração de dependências</strong>: antes de tudo, como qualquer outra dependência, é
+                      necessário incluir
+                      o Spring Security como dependência em um projeto por meio do Maven ou Gradle.
+                    </p>
+                    <p>
+                      <strong>Configuração do contexto de segurança</strong>: com Spring Security, é possível criar uma
+                      classe
+                      (geralmente herdeira de <strong>WebSecurityConfigurereAdapter</strong> e com anotação
+                      <strong>@EnableWebSecurity</strong>), na qual
+                      se configuram aspectos como regras de autenticação, autorização, gerenciamento de sessões e
+                      configurações específicas do aplicativo.
+                    </p>
+                    <p>
+                      <strong>Autenticação</strong>: o Spring Security fornece várias opções para autenticação de
+                      usuários, como
+                      autenticação baseada em banco de dados, autenticação baseada em formulário, autenticação com OAuth
+                      (um protocolo de autorização que permite que os usuários concedam acesso a recursos protegidos a
+                      aplicativos de terceiros sem compartilhar suas credenciais de <i>login</i>), entre outras. Você
+                      pode configurar um provedor de autenticação personalizado ou usar um provedor fornecido pelo
+                      Spring Security.
+                    </p>
+                    <p>
+                      <strong>Autorização</strong>: depois que um usuário é autenticado, o Spring Security permite que
+                      você defina regras
+                      de autorização para controlar quais recursos e funcionalidades ele pode acessar. Você pode
+                      configurar permissões e papéis (<i>roles</i>) para diferentes partes do aplicativo, como URLs,
+                      APIs,
+                      métodos de serviço etc. Isso é feito usando anotações, expressões de segurança ou configurações
+                      específicas.
+                    </p>
+                    <p>
+                      <strong>Proteção contra ataques</strong>: o Spring Security também oferece recursos de proteção
+                      contra ataques
+                      comuns, como ataques de falsificação de solicitação entre <i>sites</i> (CSRF), ataques de injeção
+                      (SQL,
+                      XSS), ataques de força bruta e muito mais. Ele inclui mecanismos de segurança integrados para
+                      lidar com esses ataques e ajuda a fortalecer a segurança da sua aplicação.
+                    </p>
+                    <p>
+                      Esses são apenas alguns dos aspectos básicos da implementação do Spring Security em aplicações
+                      Java. O Spring Security oferece uma ampla gama de recursos adicionais, como autenticação de dois
+                      fatores, auditoria, proteção de API, integração com provedores de identidade externos e muito
+                      mais. A documentação oficial do Spring Security é uma ótima fonte de referência para explorar
+                      esses recursos com mais detalhes.
+                    </p>
+                    <div class="modal-footer no-print">
+                      <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acessivel print">
+          </div>
+
+          <h3>Encerramento</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error enim. Iure quidem quisquam,
+          architecto cum officiis necessitatibus doloremque atque, vero, placeat veniam dolores provident nemo sunt
+          corporis earum? Modi?
+        </div>
+      </div>
+  </div>
+
+  </div>
+
+  </section>
+  <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+  <footer class="text-center no-print">
+
+    <ul class="pagination">
+
+    </ul>
+
+  </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

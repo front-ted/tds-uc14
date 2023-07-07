@@ -1,0 +1,176 @@
+
+.paginas .container {
+background: linear-gradient(#ffff,#dae8f7);
+}
+
+.modal-100 .modal-content{
+  background: linear-gradient(#ffff,#dae8f7);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.modal-100 .container{
+  background: unset;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+#booklet{
+  background:url('../imgs/bg.png');
+  padding: 4px;
+  z-index: 2;
+  background-attachment: fixed;
+}
+.grupo-imprimir{
+  margin-bottom: 5px;
+}
+h1 i,
+h2 i,
+h3 i,
+h4 i {
+  font-weight: bold;
+}
+h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+h4 {
+  margin: 0px;
+  margin-top: 40px;
+}
+h2, h3, h4, h5{color: #4170b4;}
+pre {
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+header{margin-top: 100px;}
+.mt-20{margin-top: 20px;}
+.mt-40{margin-top: 40px;}
+.mt-60{margin-top: 60px;}
+
+
+
+
+
+
+
+.caixa-destaque2{
+  background-color: #fff !important;
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 1em;
+}
+.caixadestaque{
+  position: relative !important;
+}
+
+
+.desafio{
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.espacoimg{
+  margin-top: 30px;
+}
+
+.imgBorder{
+  border-radius: 20px;
+}
+
+.painelFundo{
+  background: url("../imgs/painelfundo.png") no-repeat center;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 5px;
+  position: relative;
+  z-index: 3;
+  width: 614px;
+  height: 275px;
+}
+
+.bt-01{
+  background: url("../imgs/bt1.png") no-repeat;
+  border: none;
+  z-index: 4;
+  width: 100px;
+  height: 114px;
+  margin-left: 10px;
+}
+.bt-01:hover{
+  opacity: 0.6;
+  color: #fff;
+}
+
+.bt-02{
+  background: url("../imgs/bt2.png") no-repeat;
+  border: none;
+  z-index: 4;
+  width: 148px;
+  height: 148px;
+  margin-left: 100px;
+  margin-top: -15px;
+}
+.bt-02:hover{
+  opacity: 0.6;
+  color: #fff;
+}
+
+.bt-03{
+  background: url("../imgs/bt3.png") no-repeat;
+  border: none;
+  z-index: 4;
+  width: 148px;
+  height: 148px;
+}
+
+.bt-03:hover{
+  opacity: 0.6;
+  color: #fff;
+}
+
+.bt-04{
+  background: url("../imgs/bt4.png") no-repeat;
+  border: none;
+  z-index: 4;
+  width: 148px;
+  height: 148px;
+  margin-left: 100px;
+  margin-top: -15px;
+}
+.bt-04:hover{
+  opacity: 0.6;
+  color: #fff;
+}
+.painelCarteira{
+  position: absolute;
+  margin-left: 70px;
+  margin-top: -55px;
+}
+
+@media screen and (max-width: 430px){
+  .painelFundo{max-width: 380px;}
+  .painelCarteira{display: none;}
+  .bt-trello {margin-left: 55px;}
+  .bt-slack{margin-left: 30px;}
+  .dica{display: none;}
+  .dica2{display: none;}
+  .desafio{display: none;}
+}
+
+@media screen and (max-width: 780px){
+  .dica{margin-left: 15px;}
+  .dica2{margin-left: 15px;}
+  .desafio{margin-left: 15px;}
+}
+
+
+
+  
