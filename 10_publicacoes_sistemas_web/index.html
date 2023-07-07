@@ -406,7 +406,7 @@
             Você pode, posteriormente, comentar ou remover o tag &lt;packaging> para conseguir executar diretamente o
             projeto pelo IDE NetBeans.
           </p>
-          <img src="imgs/desafio.png" class="img-responsive desafio">
+          <img src="imgs/desafio.png" class="img-responsive desafio no-print">
           <div class="caixa-destaque2">
             <p>
               Crie pacotes WAR para os projetos desenvolvidos nos exemplos dos outros conhecimentos ou desafios desta
@@ -418,7 +418,7 @@
             Neste exemplo, será criada uma máquina virtual Linux Ubuntu para ser o servidor, ela estará hospedada no
             <i>site</i> Linode, que presta o serviço de locação de servidores.
           </p>
-          <img src="imgs/anotar.png" class="img-responsive anota">
+          <img src="imgs/anotar.png" class="img-responsive anota no-print">
           <div class="caixa-destaque2">
             <p>
               Os sites de <i>hosting</i> para servidores virtuais podem exigir o cadastramento de cartão de crédito e
@@ -450,7 +450,7 @@
           </p>
           <div class="no-print" aria-hidden="true">
             <p>Clique ou toque nas setas para visualizar o conteúdo.</p>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel" class="carousel slide carouselDesktop" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -459,7 +459,7 @@
               </ol>
               <div class="carousel-inner">
                 <div class="item active">
-                  <div class="carousel-caption">
+                  <div class="carousel-caption slideCentro">
                     <p><i>Passo 1</i>: Preparação do servidor </p>
                     <p>
                       1.1 - Primeiramente, você precisa ter um servidor Ubuntu instalado e configurado. Certifique-se de
@@ -478,7 +478,7 @@
                   </div>
                 </div>
                 <div class="item">
-                  <div class="carousel-caption">
+                  <div class="carousel-caption slideCentro">
                     <p><i>Passo 2</i>: Instalação do Java Development Kit (JDK) </p>
                     <p>
                       2.1 - O Java Development Kit é necessário para executar o arquivo .war. Instale o OpenJDK usando o
@@ -586,6 +586,159 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
               <a class="right carousel-control" href="#myCarousel" data-slide="next">
                 <span class="sr-only">Próximo</span>
               </a>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group gaitinha painelMobile2" id="accordion3" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading14">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14"
+                      aria-expanded="true" aria-controls="collapse14">
+                      Passo 1: Preparação do servidor
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse14" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading14">
+                  <div class="panel-body">
+                    1.1 - Primeiramente, você precisa ter um servidor Ubuntu instalado e configurado. Certifique-se de
+                    ter acesso <i>root</i> ou acesso de superusuário ao servidor (o usuário é <i>root</i> e a senha é
+                    escolhida na
+                    hora de criar a máquina no <i>site</i> da Linode).
+
+                    1.2 - Verifique se o servidor está com todas as atualizações instaladas. Use o seguinte comando
+                    para atualizar os pacotes do sistema:
+                    <pre>
+                    <code>
+ sudo apt update 
+ sudo apt upgrade 
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading15">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3"
+                      href="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                      Passo 2: Instalação do Java Development Kit (JDK)
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
+                  <div class="panel-body">
+                    2.1 - O Java Development Kit é necessário para executar o arquivo .war. Instale o OpenJDK usando o
+                    seguinte comando:
+                    <pre>
+                    <code>
+sudo apt install openjdk-17-jdk 
+                    </code>
+                    </pre>
+                    2.2 - Verifique se a instalação foi concluída executando o seguinte comando:
+                    <pre>
+                    <code>
+java -version 
+                    </code>
+                    </pre>
+                    A saída do comando deve mostrar algo como “openjdk vertion 17.0.7”. O servidor está pronto para
+                    instalar o Tomcat para executar no arquivo .war.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading16">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3"
+                      href="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                      Passo 3: Configuração do servidor de aplicativos
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
+                  <div class="panel-body">
+                    3.1 - Agora você precisa escolher um servidor de aplicativos para executar o arquivo .war. Neste
+                    exemplo, será usado o Apache Tomcat. Instale o Tomcat usando o seguinte comando:
+                    <pre>
+                    <code>
+sudo apt install tomcat9 
+                    </code>
+                    </pre>
+                    3.2 - Após a instalação, o Tomcat será iniciado automaticamente. Verifique se ele está em execução
+                    usando o seguinte comando:
+                    <pre>
+                    <code>
+sudo systemctl status tomcat9 
+                    </code>
+                    </pre>
+                    Você deve ver uma mensagem indicando que o Tomcat está em execução. Acesse então o IP do servidor
+                    no navegador e veja que o Tomcat está rodando.
+                    <img src="imgs/fig2.png" class="center-block img-responsive hidden-sm hidden-xs print img2">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig2.png" target="_blank" class="no-print visible-sm visible-xs img2"
+                      aria-hidden="true"><img src="imgs/fig2.png" class="center-block img-responsive img2"></a>
+                    <p class="legenda-imagem legenda">
+                      Figura 2 – Servidor Tomcat instalado e rodando no servidor Ubuntu <br>
+                      Fonte: Senac EAD (2023)
+                    </p>
+                    <p class="acessivel no-print">
+                      Navegador web com a página inicial de exemplo do Tomcat rodando, mostrando que a configuração está
+                      correta e o Tomcat está rodando. Há um menu no topo com o título Apache Tomcat 10.1.8 e o símbolo
+                      do Tomcat, que é um gatinho laranja.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading17">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion3"
+                      href="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                      Passo 4: Criação e upload do arquivo WAR
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
+                  <div class="panel-body">
+                    4.1 No NetBeans, use “Clean and Build” para criar um pacote WAR do projeto. Caso necessário,
+                    ajuste a configuração de pom.xml no seu projeto Spring.
+                    4.2 Agora no terminal do Windows ou na <i>powershell</i>, é feito o envio do arquivo para a pasta
+                    do
+                    Tomcat.
+                    <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs"
+                      aria-hidden="true"><img src="imgs/fig3.png" class="center-block img-responsive"></a>
+                    <p class="legenda-imagem legenda">
+                      Figura 3 – Comando scp executado em conjunto com ssh para envio do arquivo .war ao servidor <br>
+                      Fonte: Senac EAD (2023)
+                    </p>
+                    <p class="acessivel no-print">
+                      Tela do terminal com a execução do comando para o envio do arquivo .war para o servidor. No caso o
+                      comando executado, segue scp
+                      C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war
+                      root@172.105.135.80:/var/lib/tomcat9/webapps.
+                    </p>
+                    No caso, foi usado o comando scp e o ssh para enviar o arquivo. A sintaxe segue:
+                    <pre>
+                    <code>
+scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/diretório/webapps 
+                    </code>
+                    </pre>
+                    No caso deste projeto de exemplo e do servidor criado para teste, o comando ficou:
+                    <pre>
+                    <code>
+                    scp C:\Users\vine_\Documents\NetBeansProjects\mavenproject1\target\mavenproject1-1.war root@172.105.135.80:/var/lib/tomcat9/webapps 
+                    </code>
+                    </pre>
+                    Repare que foi usado o comando scp, seguido do caminho do arquivo .war gerado e depois do comando
+                    ssh seguido do caminho de onde deve ser colocado o arquivo .war para rodar no servidor.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="acessivel print">
@@ -730,7 +883,7 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
             problema, é possível comprar um domínio e direcionar esse domínio, por exemplo, “meuappjava.com” para o
             servidor criado. Para fazer isso, será usado o IP do servidor criado neste exemplo:
           </p>
-          <div class="no-print" aria-hidden="true">
+          <div class="no-print slidesDesktop" aria-hidden="true">
             <p>Clique ou toque nas setas para visualizar o conteúdo.</p>
             <div id="myCarousel2" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -772,7 +925,6 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
                     </p>
                   </div>
                 </div>
-
                 <div class="item">
                   <div class="carousel-caption slideCentro">
                     <p>
@@ -830,127 +982,355 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
                 <span class="sr-only">Próximo</span>
               </a>
             </div>
-            <div class="acessivel print">
-              <p>
-                <i>Passo 1: Escolha um provedor de registro de domínio.</i> Pesquise e escolha um provedor
-                confiável de registro de domínio. Veja alguns provedores populares brasileiros de registro de
-                domínio:
-              </p>
-              <ul>
-                <li>Registro.br: é o registro oficial de domínios no Brasil. É operado pelo Núcleo de Informação e
-                  Coordenação do Ponto BR (NIC.br) e é responsável pelos domínios com a extensão “.br”. Você pode
-                  registrar domínios diretamente com o Registro.br. </li>
-                <li>UOL Host: oferece serviços de registro de domínio, hospedagem <i>web</i> e outros serviços
-                  relacionados. É uma empresa reconhecida no mercado brasileiro de hospedagem e domínios. </li>
-                <li>Locaweb: é uma das maiores empresas de hospedagem <i>web</i> do Brasil e também oferece
-                  serviços de
-                  registro de domínio. Tem uma ampla gama de serviços e recursos para atender às necessidades dos
-                  usuários. </li>
-                <li>HostGator Brasil: a HostGator é uma empresa global de hospedagem <i>web</i> que também atua no
-                  Brasil. Oferece serviços de registro de domínio, hospedagem compartilhada, hospedagem VPS e
-                  outros serviços relacionados. </li>
-                <li>KingHost: é uma empresa brasileira de hospedagem <i>web</i> que também oferece serviços de
-                  registro
-                  de domínio. Tem uma boa reputação no mercado e fornece soluções de hospedagem para diferentes
-                  tipos de projetos. </li>
-              </ul>
-              <p>
-                Esses são apenas alguns exemplos de provedores de registro de domínio no Brasil. É importante
-                fazer uma pesquisa e comparar recursos, preços e suporte oferecidos por cada provedor antes de
-                tomar uma decisão.
-              </p>
-              <p>
-                <i>Passo 2: Verifique a disponibilidade do domínio</i>. Acesse o site do provedor escolhido e
-                utilize a
-                ferramenta de busca de domínios para verificar se o domínio desejado está disponível. Se estiver
-                disponível, prossiga para o próximo passo.
-              </p>
-              <p>
-                <i>Passo 3: Registre o domínio</i>. Siga as instruções fornecidas pelo provedor para registrar o
-                domínio
-                escolhido. Preencha as informações necessárias, incluindo seus dados pessoais e informações de
-                pagamento. Certifique-se de fornecer informações precisas durante o registro.
-              </p>
-              <p>
-                <i>Passo 4: Acesse as configurações de DNS</i>. Após o registro do domínio, acesse as
-                configurações de
-                DNS no painel de controle do seu provedor de domínio. Procure por opções relacionadas a
-                gerenciamento de DNS, Zona DNS ou Configurações de DNS.
-              </p>
-              <p>
-                <i>Passo 5: Crie um registro de tipo A</i>. Dentro das configurações de DNS, encontre a opção para
-                adicionar um novo registro de DNS. Selecione o tipo de registro “A” (endereço IP) e insira o nome
-                do <i>host</i> como o domínio que você registrou. No campo do endereço IP, insira
-                “172.105.135.80”.
-              </p>
-              <p>
-                <i> Passo 6: Salve as alterações</i>. Após adicionar o registro de tipo A, salve as alterações de
-                DNS. As
-                alterações podem levar algum tempo para se propagar e se tornar ativas em toda a internet. Esse
-                período é conhecido como propagação de DNS e geralmente leva algumas horas, embora possa levar até
-                24-48 horas em alguns casos.
-              </p>
-              <p>
-                Passo 7: Verifique o redirecionamento. Após a propagação do DNS, abra um navegador e digite o
-                domínio que você registrou (por exemplo: www.meuappjava.com). O domínio deve redirecionar
-                automaticamente para o endereço http://172.105.135.80:8080/mavenproject1 do seu servidor <i>web</i>.
-              </p>
-            </div>
-            <p>
-              Pronto, agora seu <i>app</i> pode ser acessado pelo domínio “meuappjava.com/mavenproject1-1/”, em vez do
-              IP, como usado antes.
-            </p>
-            <img src="imgs/desafio.png" class="img-responsive desafio">
-            <div class="caixa-destaque2">
-              <p>Pesquise alternativas ao Linode e estude semelhanças e diferenças com o processo descrito
-                anteriormente. </p>
-            </div>
-            <h3>Publicação pacotes JAR</h3>
-            <p>
-              Alguns serviços permitem a publicação dos pacotes autocontidos JAR, que incluem o próprio servidor <i>web</i>
-              embutido. Um desses serviços é o Heroku, uma plataforma de nuvem que permite <i>deploy</i> de aplicação em
-              máquinas virtuais ajustadas ao tamanho e à necessidade da aplicação. Cada serviço terá suas configurações
-              específicas para a publicação, mas geralmente envolverá não muito mais que o <i>upload</i> do arquivo JAR gerado
-              pelo projeto.
-            </p>
-            <h3>Hospedagem gratuita e paga para projetos em JAVA</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
+          <div class="no-print painelMobile" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group gaitinha" id="accordion2" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading7">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse7"
+                      aria-expanded="true" aria-controls="collapse7">
+                      Passo 1: Escolha um provedor de registro de domínio
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading7">
+                  <div class="panel-body">
+                    Pesquise e escolha um provedor
+                    confiável de registro de domínio. Veja alguns provedores populares brasileiros de registro de
+                    domínio:
+                    <ul>
+                      <li>Registro.br: é o registro oficial de domínios no Brasil. É operado pelo Núcleo de Informação e
+                        Coordenação do Ponto BR (NIC.br) e é responsável pelos domínios com a extensão “.br”. Você pode
+                        registrar domínios diretamente com o Registro.br. </li>
+                      <li>UOL Host: oferece serviços de registro de domínio, hospedagem <i>web</i> e outros serviços
+                        relacionados. É uma empresa reconhecida no mercado brasileiro de hospedagem e domínios. </li>
+                      <li>Locaweb: é uma das maiores empresas de hospedagem <i>web</i> do Brasil e também oferece
+                        serviços de
+                        registro de domínio. Tem uma ampla gama de serviços e recursos para atender às necessidades dos
+                        usuários. </li>
+                      <li>HostGator Brasil: a HostGator é uma empresa global de hospedagem <i>web</i> que também atua no
+                        Brasil. Oferece serviços de registro de domínio, hospedagem compartilhada, hospedagem VPS e
+                        outros serviços relacionados. </li>
+                      <li>KingHost: é uma empresa brasileira de hospedagem <i>web</i> que também oferece serviços de
+                        registro
+                        de domínio. Tem uma boa reputação no mercado e fornece soluções de hospedagem para diferentes
+                        tipos de projetos. </li>
+                    </ul>
+                    Esses são apenas alguns exemplos de provedores de registro de domínio no Brasil. É importante
+                    fazer uma pesquisa e comparar recursos, preços e suporte oferecidos por cada provedor antes de
+                    tomar uma decisão.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading8">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2"
+                      href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                      Passo 2: Verifique a disponibilidade do domínio
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                  <div class="panel-body">
+
+                    Acesse o site do provedor escolhido e utilize a
+                    ferramenta de busca de domínios para verificar se o domínio desejado está disponível. Se estiver
+                    disponível, prossiga para o próximo passo.
+
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading9">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2"
+                      href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                      Passo 3: Registre o domínio
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                  <div class="panel-body">
+                    Siga as instruções fornecidas pelo provedor para registrar o domínio
+                    escolhido. Preencha as informações necessárias, incluindo seus dados pessoais e informações de
+                    pagamento. Certifique-se de fornecer informações precisas durante o registro.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading10">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2"
+                      href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                      Passo 4: Acesse as configurações de DNS
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                  <div class="panel-body">
+                    Após o registro do domínio, acesse as configurações de
+                    DNS no painel de controle do seu provedor de domínio. Procure por opções relacionadas a
+                    gerenciamento de DNS, Zona DNS ou Configurações de DNS.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading11">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2"
+                      href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                      Passo 5: Crie um registro de tipo A
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                  <div class="panel-body">
+                    Dentro das configurações de DNS, encontre a opção para
+                    adicionar um novo registro de DNS. Selecione o tipo de registro “A” (endereço IP) e insira o nome
+                    do <i>host</i> como o domínio que você registrou. No campo do endereço IP, insira
+                    “172.105.135.80”.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading12">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2"
+                      href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                      Passo 6: Salve as alterações
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+                  <div class="panel-body">
+                    Após adicionar o registro de tipo A, salve as alterações de
+                    DNS. As alterações podem levar algum tempo para se propagar e se tornar ativas em toda a internet.
+                    Esse
+                    período é conhecido como propagação de DNS e geralmente leva algumas horas, embora possa levar até
+                    24-48 horas em alguns casos.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading13">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2"
+                      href="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                      Passo 7: Verifique o redirecionamento
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
+                  <div class="panel-body">
+                    Após a propagação do DNS, abra um navegador e digite o
+                    domínio que você registrou (por exemplo: www.meuappjava.com). O domínio deve redirecionar
+                    automaticamente para o endereço http://172.105.135.80:8080/mavenproject1 do seu servidor
+                    <i>web</i>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <p>
+              <i>Passo 1: Escolha um provedor de registro de domínio.</i> Pesquise e escolha um provedor
+              confiável de registro de domínio. Veja alguns provedores populares brasileiros de registro de
+              domínio:
+            </p>
+            <ul>
+              <li>Registro.br: é o registro oficial de domínios no Brasil. É operado pelo Núcleo de Informação e
+                Coordenação do Ponto BR (NIC.br) e é responsável pelos domínios com a extensão “.br”. Você pode
+                registrar domínios diretamente com o Registro.br. </li>
+              <li>UOL Host: oferece serviços de registro de domínio, hospedagem <i>web</i> e outros serviços
+                relacionados. É uma empresa reconhecida no mercado brasileiro de hospedagem e domínios. </li>
+              <li>Locaweb: é uma das maiores empresas de hospedagem <i>web</i> do Brasil e também oferece
+                serviços de
+                registro de domínio. Tem uma ampla gama de serviços e recursos para atender às necessidades dos
+                usuários. </li>
+              <li>HostGator Brasil: a HostGator é uma empresa global de hospedagem <i>web</i> que também atua no
+                Brasil. Oferece serviços de registro de domínio, hospedagem compartilhada, hospedagem VPS e
+                outros serviços relacionados. </li>
+              <li>KingHost: é uma empresa brasileira de hospedagem <i>web</i> que também oferece serviços de
+                registro
+                de domínio. Tem uma boa reputação no mercado e fornece soluções de hospedagem para diferentes
+                tipos de projetos. </li>
+            </ul>
+            <p>
+              Esses são apenas alguns exemplos de provedores de registro de domínio no Brasil. É importante
+              fazer uma pesquisa e comparar recursos, preços e suporte oferecidos por cada provedor antes de
+              tomar uma decisão.
+            </p>
+            <p>
+              <i>Passo 2: Verifique a disponibilidade do domínio</i>. Acesse o site do provedor escolhido e
+              utilize a
+              ferramenta de busca de domínios para verificar se o domínio desejado está disponível. Se estiver
+              disponível, prossiga para o próximo passo.
+            </p>
+            <p>
+              <i>Passo 3: Registre o domínio</i>. Siga as instruções fornecidas pelo provedor para registrar o
+              domínio
+              escolhido. Preencha as informações necessárias, incluindo seus dados pessoais e informações de
+              pagamento. Certifique-se de fornecer informações precisas durante o registro.
+            </p>
+            <p>
+              <i>Passo 4: Acesse as configurações de DNS</i>. Após o registro do domínio, acesse as
+              configurações de
+              DNS no painel de controle do seu provedor de domínio. Procure por opções relacionadas a
+              gerenciamento de DNS, Zona DNS ou Configurações de DNS.
+            </p>
+            <p>
+              <i>Passo 5: Crie um registro de tipo A</i>. Dentro das configurações de DNS, encontre a opção para
+              adicionar um novo registro de DNS. Selecione o tipo de registro “A” (endereço IP) e insira o nome
+              do <i>host</i> como o domínio que você registrou. No campo do endereço IP, insira
+              “172.105.135.80”.
+            </p>
+            <p>
+              <i> Passo 6: Salve as alterações</i>. Após adicionar o registro de tipo A, salve as alterações de
+              DNS. As
+              alterações podem levar algum tempo para se propagar e se tornar ativas em toda a internet. Esse
+              período é conhecido como propagação de DNS e geralmente leva algumas horas, embora possa levar até
+              24-48 horas em alguns casos.
+            </p>
+            <p>
+              Passo 7: Verifique o redirecionamento. Após a propagação do DNS, abra um navegador e digite o
+              domínio que você registrou (por exemplo: www.meuappjava.com). O domínio deve redirecionar
+              automaticamente para o endereço http://172.105.135.80:8080/mavenproject1 do seu servidor <i>web</i>.
+            </p>
+          </div>
+          <p>
+            Pronto, agora seu <i>app</i> pode ser acessado pelo domínio “meuappjava.com/mavenproject1-1/”, em vez do
+            IP, como usado antes.
+          </p>
+          <img src="imgs/desafio.png" class="img-responsive desafio no-print">
+          <div class="caixa-destaque2">
+            <p>Pesquise alternativas ao Linode e estude semelhanças e diferenças com o processo descrito
+              anteriormente. </p>
+          </div>
+          <h3>Publicação pacotes JAR</h3>
+          <p>
+            Alguns serviços permitem a publicação dos pacotes autocontidos JAR, que incluem o próprio servidor
+            <i>web</i>
+            embutido. Um desses serviços é o Heroku, uma plataforma de nuvem que permite <i>deploy</i> de aplicação em
+            máquinas virtuais ajustadas ao tamanho e à necessidade da aplicação. Cada serviço terá suas configurações
+            específicas para a publicação, mas geralmente envolverá não muito mais que o <i>upload</i> do arquivo JAR
+            gerado
+            pelo projeto.
+          </p>
+          <h3>Hospedagem gratuita e paga para projetos em JAVA</h3>
+          <p>
+            Alguns <i>sites</i> oferecem serviços de hospedagem em que o usuário deve apenas configurar e realizar
+            <i>upload</i> do
+            sistema, sem a criação de uma máquina virtual. Boa parte desses serviços é pago, mas há opções gratuitas,
+            que podem variar em recursos e dificuldade de configuração.
+          </p>
+          <p>
+            Veja alguns exemplos de hospedagem gratuita para projetos Java Web.
+          </p>
+          <div class="destaque1">
+            <ul>
+              <li> <strong>Heroku</strong>
+                <p>
+                  Oferece hospedagem gratuita em seu serviço de nuvem para aplicativos Java, com suporte ao Tomcat e
+                  ao Jetty e integração com diferentes bancos de dados.
+                </p>
+              </li>
+              <li><strong>OpenShift</strong>
+                <p>
+                  Em seu serviço de nuvem, suporta Tomcat, Wildfly e outros servidores de aplicativos Java Web.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Veja exemplos de hospedagens pagas.
+          </p>
+          <div class="destaque2">
+            <ul>
+              <li><strong>Amazon Web Services (AWS) </strong>
+                <p>
+                  Oferece diferentes opções de hospedagem para aplicativos Java, incluindo o Elastic Beanstalk, que
+                  permite implantar aplicativos Java em um ambiente gerenciado.
+                </p>
+              </li>
+              <li> <strong>Google Cloud Platform </strong>
+                <p>
+                  Oferece o App Engine Standard Environment e o App Engine Flexible Environment para hospedar
+                  aplicativos Java. Além disso, oferece suporte ao Tomcat e ao Jetty.
+                </p>
+              </li>
+              <li><strong> Microsoft Azure</strong>
+                <p>
+                  Oferece hospedagem para aplicativos Java em seu serviço de nuvem, incluindo opções gerenciadas, como
+                  o Azure App Service.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <h3>CD (Continuous Delivery) </h3>
+          <p>
+            Continuous Delivery (CD) é uma prática de desenvolvimento de <i>software</i> que busca garantir a entrega
+            contínua de funcionalidades para os usuários finais de forma eficiente e confiável. Isso é feito por meio
+            da automação do processo de implantação e testes, permitindo que novas funcionalidades sejam entregues
+            rapidamente ao cliente e com alta qualidade. Trata-se de uma técnica especialmente útil para projetos
+            <i>web</i>
+            que não necessitam de instalação e podem ter versões disponibilizadas automaticamente aos usuários tão
+            logo as funcionalidades e os ajustes estejam prontos. Para implementar o Continuous Delivery em um projeto
+            Java usando o NetBeans como IDE, você pode seguir os seguintes passos:
+          </p>
+          <p>
+            <i>Utilize um sistema de controle de versão</i>, como o GIT/GitHub, preferivelmente com auxílio de
+            serviços como o GitHub Actions.
+          </p>
+          <p>
+            <i>Configure um servidor de integração contínua</i> usando ferramentas como o Jenkins para automatizar a
+            compilação e os testes do código a cada alteração incluída.
+          </p>
+          <p>
+            <i> Automatize a construção do software</i> com ferramentas como o Maven, que pode ser usado para
+            automatizar o
+            processo de construção do <i>software</i>, definindo dependências, compilação, testes e empacotamento do
+            código
+            em um arquivo JAR ou WAR.
+          </p>
+          <p>
+            <i>Configure o ambiente de deploy</i>, que deve estar devidamente testado para que o <i>deploy</i> ocorra
+            sem problemas. Ferramentas como Docker podem ser usadas.
+          </p>
+          <p>
+            <i>Crie testes automatizados</i> para garantir que o <i>software</i> está funcionando corretamente em
+            todos os aspectos, incluindo funcionalidade, desempenho e segurança.
+          </p>
+          <p>
+            <i>Configure o Continuous Delivery</i> a partir das ferramentas aplicadas. Geralmente, a configuração
+            passa por <i>scripts</i> próprios.
+          </p>
+          <p>
+            <i>Monitore o processo de Continuous Delivery</i> para identificar possíveis problemas e melhorias na
+            automação.
+          </p>
+          <p>
+            É importante lembrar-se de que o processo de implementação pode variar dependendo das necessidades
+            específicas do projeto e da equipe de desenvolvimento. É possível fazer o Continuous Delivery usando
+            serviços de <i>cloud computing</i>, como Google Cloud Platform, AWS e Azure, que oferecem várias
+            ferramentas que
+            podem facilitar a implementação do CD em seus projetos.
+          </p>
+          <h3>Encerramento</h3>
+          <p>
+            Em resumo, a publicação de sistemas <i>web</i> em Java envolve uma série de conceitos e ferramentas que
+            permitem
+            disponibilizar a aplicação para acesso via internet. Além disso, a implementação do Continuous Delivery
+            (CD) pode ajudar a automatizar o processo de <i>deploy</i>, tornando a entrega de <i>software</i> mais
+            rápida e
+            confiável. A adoção dessas práticas pode melhorar significativamente a eficiência do desenvolvimento de
+            <i>software</i>, garantindo que as aplicações sejam entregues rapidamente e com alta qualidade.
+          </p>
         </div>
       </div>
+  </div>
 
   </div>
 

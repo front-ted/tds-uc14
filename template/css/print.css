@@ -98,6 +98,11 @@
     right: 20px;
     color: white;
 }
+.legenda{
+  color: #000;
+  margin-bottom: unset !important;
+  text-align: center;
+}
 /* FIM-/ESTRUTURA PARA ELEMENTOS RELACIONADOS AOS BOTÕES E AJUDA DA IMPRESSÃO */
 
 /*------------------------------*/

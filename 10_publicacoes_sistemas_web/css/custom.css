@@ -72,6 +72,7 @@ header{margin-top: 100px;}
   z-index: 4;
   margin-top: 4px;
 }
+
 .item{
   background: url("../imgs/slide.svg") no-repeat;
   max-width: 800px;
@@ -130,6 +131,7 @@ max-width: 60%;
 .legenda{
   color: #000;
   margin-bottom: unset !important;
+  text-align: center;
 }
 
 .lista li{
@@ -144,21 +146,107 @@ margin-top: 10%;
 font-size: 14px;
 }
 
+.destaque1{
+  background: url("../imgs/destaque1.svg") no-repeat center;
+  background-size: 90%;
+}
 
+.destaque1 li {
+  color: #fff;
+}
 
+.destaque1 p {
+margin: unset;
+}
 
+.destaque1 ul{
+  padding-left:90px;
+  padding-right:90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.destaque2{
+  background: url("../imgs/destaque2.svg") no-repeat center;
+  background-size: 90%;
+}
+.destaque2 li {
+  color: #fff;
+}
+
+.destaque2 p {
+margin: unset;
+}
+
+.destaque2 ul{
+  padding-left:90px;
+  padding-right:90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
 
 
 
 @media screen and (max-width: 430px){
   .anota{display: none;}
   .desafio{display: none;}
+  .slidesDesktop{display: none;}
+  .carouselDesktop{display: none;}
+  .gaitinha li{font-size: 12px;
+}}
+
+@media screen and (min-width: 440px){
+  .painelMobile{display: none;}
+  .painelMobile2{display: none;}
 }
+
 
 @media screen and (max-width: 780px){
   .anota{margin-left: 15px;}
   .desafio{margin-left: 15px;}
+  .destaque1{background-size: cover;}
+  .destaque2{background-size: cover;}
+  .img2{margin-left: 20%;}
+  .carousel-caption p{
+    font-size: 11px;
+    margin-top: unset;
+  }
+  .carousel-caption li{
+    font-size: 10px;}
+  li {
+    word-wrap: break-word;
+  }
+  .carousel-caption code{
+    font-size: 10px;
+  }
+  
+  .carousel-caption.slideCentro p{
+    font-size: 13px;
+  }
+  .carousel-caption.slideCentro code{
+  font-size: 13px;
+  }
+  .carousel-indicators {
+    bottom: 30px;
+    left: 48%;}
+.item{
+  margin-left: 3%;
+  margin-right: 5%;
 }
+
+}
+
+
+@media screen and (max-width: 1445px){
+ .paginas{background: unset;}
+ .carousel-caption.slideCentro p{
+  font-size: 13px;
+}
+.carousel-caption.slideCentro code{
+font-size: 13px;
+}
+}
+
 
 
 

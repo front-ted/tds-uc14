@@ -161,6 +161,12 @@ header.senac{
     color: white;
 }
 
+.legenda{
+  color: #000;
+  margin-bottom: unset !important;
+  text-align: center;
+}
+
 /*----------------*/
 
 
