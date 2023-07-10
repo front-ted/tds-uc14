@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title> Banco de dados: integração, manipulação, registros</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title> Banco de dados: integração, manipulação, registros</title>
 
-    <!-- Bootstrap -->
-    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
-    <link href="../template/css/cores.css" rel="stylesheet">
-    <link href="../template/css/modal-100.css" rel="stylesheet">
-    <link href="../template/css/devibeans.min.css" rel="stylesheet">
-      <!--Extras - novas classes para facilitar-->
-      <link rel="stylesheet" href="../template/css/extras.css">
-    <link href="../template/css/sncload.css" rel="stylesheet">
-    <link href="../template/css/magnific-popup.css" rel="stylesheet">
-    <!-- referencia ao arquivo css com estilos especificos da pagina -->
-    <link href="css/custom.css" type="text/css" rel="stylesheet">
-    <!-- css necessario para o print -->
-    <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <link href="../template/css/print.css" type="text/css" rel="stylesheet">
-    <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
-  
-<!--[if gte mso 9]><xml>
+
+  <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
 <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
 <mso:Order msdt:dt="string">46914400.0000000</mso:Order>
@@ -44,407 +45,830 @@
 </head>
 
 <body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
-    <!-- MARCA D´ÁGUA -->
-    <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
-    <!-- /MARCA D´ÁGUA -->
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
 
-    <div id='sncloader' class='over-loader'><div class="over-cell"><div id="sncload"></div></div></div>
-    <header id="topo" class="senac no-print">
-        <div  class="header-tecnicos container">
-        	  <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
-            <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
-        </div>
-        <div id="sombra"></div>
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
     </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
 
-    <div id="booklet">
-        <header class="no-print container">
-          <!-- BTO IMPRIMIR -->
-          <div class="grupo-imprimir no-print">
-            <button type="button" data-pdf="true" class="bto-imprimir" name="button">
-                <span class="fa fa-print"></span> <span>Imprimir</span>
-            </button>
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <!-- Menu -->
+        <div class="bg-fundo"></div>
+        <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+        <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+        <div class="menu no-print" aria-hidden="true">
+          <div id="style-2" class="scroll-bar">
+            <div class="force-overflow">
+
+              <ul class="eng-item-menu">
+                <li class="item1">
+                  <a href="#t1" class="fundo-item">Banco de dados: integração, manipulação, registros </a>
+                  <hr>
+                </li>
+                <li class="item2">
+                  <a href="#t2" class="fundo-item">Criando um projeto Spring Boot com banco de dados</a>
+                  <hr>
+                </li>
+                <li class="item3">
+                  <a href="#t3" class="fundo-item">Estrutura de camadas em um projeto spring boot com banco de dados
+                  </a>
+                  <hr>
+                </li>
+                <li class="item4">
+                  <a href="#t4" class="fundo-item">Testando API de Funcionários com o Postman </a>
+                  <hr>
+                </li>
+                <li class="item5">
+                  <a href="#t5" class="fundo-item">Criando validações e personalizando mensagens com exceptions </a>
+                  <hr>
+                </li>
+                <li class="item6">
+                  <a href="#t6" class="fundo-item">Criando consultas avançadas</a>
+                  <hr>
+                </li>
+                <li class="item7">
+                  <a href="#t7" class="fundo-item">Criando uma aplicação web com Spring MVC </a>
+                  <hr>
+                </li>
+                <li class="item8">
+                  <a href="#t8" class="fundo-item">Encerramento</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <!-- /BTO IMPRIMIR -->
-        </header>
-<!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
-        <section class="paginas">
+        </div>
 
-          <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
-          <div class="pagina">
-            <!-- Menu -->
-            <div class="bg-fundo"></div>
-            <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
-            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
-            <div class="menu no-print" aria-hidden="true">
-              <div id="style-2" class="scroll-bar">
-                <div class="force-overflow">
-                  
-                  <ul class="eng-item-menu">
-                    <li class="item1">
-                      <a href="#t1" class="fundo-item">Banco de dados: integração, manipulação, registros </a>
-                      <hr>
-                    </li>
-                    <li class="item2">
-                      <a href="#t2" class="fundo-item">Criando um projeto Spring Boot com banco de dados</a>
-                      <hr>
-                    </li>
-                    <li class="item3">
-                      <a href="#t3" class="fundo-item">Estrutura de camadas em um projeto spring boot com banco de dados </a>
-                      <hr>
-                    </li>
-                    <li class="item4">
-                      <a href="#t4" class="fundo-item">Testando API de Funcionários com o Postman </a>
-                      <hr>
-                    </li>
-                    <li class="item5">
-                      <a href="#t5" class="fundo-item">Criando validações e personalizando mensagens com exceptions </a>
-                      <hr>
-                    </li>
-                    <li class="item6">
-                      <a href="#t6" class="fundo-item">Criando consultas avançadas</a>
-                      <hr>
-                    </li>
-                    <li class="item7">
-                      <a href="#t7" class="fundo-item">Criando uma aplicação web com Spring MVC  </a>
-                      <hr>
-                    </li>
-                    <li class="item8">
-                      <a href="#t8" class="fundo-item">Encerramento</a>
-                    </li>
-                  </ul>
+        <div class="container">
+          <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu
+            leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam
+            lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de
+            pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa
+            forma, o leitor passará a ler os segmentos de código em sua totalidade.
+          </p>
+          <h2 id="t1">Banco de dados: integração, manipulação, registros</h2>
+          <p>
+            Neste conteúdo, você verá como criar uma API com Spring Boot integrando ao banco de dados com Spring Data
+            JPA e uma aplicação web utilizando Spring MVC. Será criado inicialmente o projeto na página do Spring
+            Initializr e aberto o projeto na IDE NetBeans. O projeto que você desenvolverá consiste em uma API de
+            Funcionários, no qual haverá as rotas, endpoints, de um CRUD para cadastrar, atualizar, excluir, buscar
+            todos os registros e buscar um funcionário específico. Na sequência, a API será expandida, criando recursos
+            avançados de validações de dados e personalização de mensagens de erros por exception. Além disso, serão
+            criadas consultas avançadas com Spring Data JPA. Na última seção deste material, haverá a criação de uma
+            aplicação web utilizando Spring MVC.
+          </p>
+          <h3 id="t2">Criando um projeto Spring Boot com banco de dados </h3>
+          <p>
+            Para começar, você precisa acessar a página do Spring Initializr (https://start.spring.io/), onde serão
+            definidas todas as configurações iniciais do seu projeto:
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <div class="container-fluid no-print">
+              <div class="row">
+                <div class="col-xs-12">
+                  <p class="avisoInteracao">Clique ou toque nos títulos para expandir o conteúdo</p>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                  <button data-target="#m1" data-toggle="modal"
+                    class="btoPainelClicavel botao01 text-center center-block">
+                    <img src="imgs/bt1.png" alt="" class="img-responsive center-block">
+                  </button>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                  <button data-target="#m2" data-toggle="modal"
+                    class="btoPainelClicavel botao02 text-center center-block">
+                    <img src="imgs/bt2.png" alt="" class="img-responsive center-block">
+                  </button>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                  <button data-target="#m3" data-toggle="modal"
+                    class="btoPainelClicavel botao02 text-center center-block">
+                    <img src="imgs/bt3.png" alt="" class="img-responsive center-block">
+                  </button>
                 </div>
               </div>
             </div>
-            
-            <div class="container">
-              
-              <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
-              
-              <h2 class="acessivel print">Banco de dados: integração, manipulação, registros</h2>
-              <p>
-                Neste conteúdo, você verá como criar uma API com Spring Boot integrando ao banco de dados com Spring Data JPA e uma aplicação web utilizando Spring MVC. Será criado inicialmente o projeto na página do Spring Initializr e aberto o projeto na IDE NetBeans. O projeto que você desenvolverá consiste em uma API de Funcionários, no qual haverá as rotas, endpoints, de um CRUD para cadastrar, atualizar, excluir, buscar todos os registros e buscar um funcionário específico.  Na sequência, a API será expandida, criando recursos avançados de validações de dados e personalização de mensagens de erros por exception. Além disso, serão criadas consultas avançadas com Spring Data JPA. Na última seção deste material, haverá a criação de uma aplicação web utilizando Spring MVC. 
-              </p>
-
-              <h3>Criando um projeto Spring Boot com banco de dados </h3>
-              <p>
-                Para começar, você precisa acessar a página do Spring Initializr (https://start.spring.io/), onde serão definidas todas as configurações iniciais do seu projeto: 
-              </p>
-              <ul>
-                <li>Em Project, selecione o Maven. </li>
-                <li>Em Language, escolha o Java. </li>
-                <li>Em Spring Boot, escolha a versão mais atualizada, a 3.0.6. </li>
-                <li>Em Project Metadata, defina alguns metadados para a criação do projeto.  </li>
-                <ul>
-                  <li>Group: informar com.api </li>
-                  <li>Artifact e Name: informar senac </li>
-                  <li>Description: informar API Rest de Projeto de Funcionários </li>
-                  <li>Package name: com.api.senac </li>
-                  <li>Packaging: selecionar Jar </li>
-                  <li>Java: indicar a versão 17 </li>
-                </ul>
-              </ul>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela da seção de configurações da página do Spring Initializr, com as informações preenchidas como citado no texto. "></a>
-              <p class="legenda-imagem">
-                Figura 1 – Site do Spring Initializr  
-Fonte: Spring Initializr (s.d.) 
-              </p>
-              <p>
-                Por fim, devem ser definidas as dependências do projeto: 
-              </p>
-              <ul>
-                <li>Spring Web (spring-boot-starter-web): utilizada para criação de API em Spring Boot, incluindo REST em aplicações utilizando o Spring MVC e Tomcat como um servidor-padrão. </li>
-                <li>Spring Data JPA (spring-boot-starter-data-jpa): permite persistir dados em bancos de dados SQL usando Spring Data e Hibernate, que é uma implementação do JPA. </li>
-                <li>MySQL Driver (mysql-connector-java) é um driver para conexão com banco de dados MySQL para Spring Boot. </li>
-                <li>Validation (spring-boot-starter-validation) é uma dependência usada para validar os campos de um objeto antes de persistir no banco de dados. </li>
-                <li>Lombok é uma biblioteca auxiliar para adicionar automaticamente diversos métodos, como get e set, toString e construtores, ou seja, toda vez que é adicionada a anotação @Data em uma classe, você não vai mais precisar escrever métodos getter, setter, equals, hashCode, construtores de classe etc.</li>
-              </ul>
-              <p>
-                Após selecionar o Spring Web, a dependência aparecerá abaixo na lista de dependências. 
-              </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela com detalhe para a seção “Dependencies” do site do Spring Initializr mostrando a lista de dependências incluídas como citado no texto. "></a>
-                            <p class="legenda-imagem">
-                              Figura 2 – Site do Spring Initializr  
-                              Fonte: Spring Initializr (s.d.) 
-                            </p>
-              
-                          
-              <p>Após concluir todas as configurações, clique em Generate e será feito o download de uma pasta compactada (.zip) contendo o projeto completo. Finalizado o download, você pode extrair o conteúdo no computador e abrir a pasta do projeto com a IDE do NetBeans. </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela da aba “Projects” do NetBeans, com projeto “senac” criado, mostrando pacote “com.api.senac”, com classe SenacApplication.java e item “Other Sources” expandido, com “src/main/resources” contendo “<default package>”, “static” e “templates”. De “<default package>”, há o arquivo “application.properties”. Mais abaixo, o item “Project Files” aparece expandido com o arquivo “pom.xml”"></a>
-                            <p class="legenda-imagem">
-                              Figura 3 – Estrutura do projeto no NetBeans  
-                              Fonte: NetBeans (2023) 
-                            </p>
-              <h4>Arquivo “pom.xml”</h4>
-              <p>O arquivo “pom.xml”, disponível na pasta <strong>ProjectFiles</strong>, abriga as dependências e os plug-ins do Maven no projeto. A seção de dependência simplesmente contém as dependências adicionadas ao projeto. A seguir, veja um exemplo do arquivo pow.xml: </p>
-              <h1>XML foto</h1>
-              <H4>Configurando o MySQL, JPA e Hibernate</H4>
-              <p>
-                Na pasta de recursos dentro de <strong>Other Sources > src/main/resources > default package > application.properties</strong>, abra o arquivo e escreva as propriedades a seguir para configurações específicas de algumas das dependências adicionadas: 
-              </p>
-              <h1>XML foto</h1>
-              <ul>
-                <li><strong>spring.datasource.url</strong>: o Spring Boot usa a URL juntamente com as credenciais para estabelecer uma conexão de banco de dados com o banco de dados MySQL. Aqui, o MySQL está configurado com a porta 3306 e o ​​nome do banco de dados como senac_db. </li>
-                <li><strong>spring.datasource.username e spring.datasource.password</strong>: as propriedades são o nome de usuário e a senha do banco de dados MySQL (use o nome de usuário e senha corretos do servidor MySQL instalado em seu computador). </li>
-                <li><strong>server.port</strong>: a porta-padrão de inicialização do Spring é 8080. </li>
-                <li><strong>spring.jpa.properties.hibernate.dialect</strong>: usar o valor “MySQLDialect” faz com que o Hibernate gere um SQL melhor para o banco de dados escolhido. </li>
-                <li><strong>spring.jpa.hibernate.ddl-auto</strong>: é usado para a inicialização do banco de dados. Foi definido o valor como <strong>update</strong> para que uma tabela seja criada no banco de dados automaticamente correspondente ao modelo de dados definido. Qualquer alteração no modelo (criação de um novo campo, alteração ou exclusão de campos da tabela) também ocasionará uma atualização no banco de dados. </li>
-                <li><strong>server.error.include-message</strong>: essa configuração, quando adotada pelo valor de Always, é usada para sempre permitir a inclusão das mensagens de erros produzidas pelas exceções. </li>
-              </ul>
-              <h4>Executando o projeto</h4>
-              <p>
-                Agora que você finalizou as configurações, execute o arquivo principal do projeto para verificar se está tudo funcionando. Para isso, na pasta <strong>Source Packages > com.api.senac</strong>, clique com o botão direito do mouse sobre <strong>SenacApplication</strong> na opção <strong>Run File</strong> ou Shift+F6. 
-              </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela com detalhe da aba Projects do NetBeans mostrando projeto “senac”, arquivo SenacApplication.java e um menu de contexto com o item “Run File...” selecionado. "></a>
-                            <p class="legenda-imagem">
-                              Figura 4 – Executando no NetBeans  
-                              Fonte: NetBeans (2023) 
-                            </p>
-              <p>
-                Ao executar o projeto, o Spring Boot iniciará um servidor <i>web</i> embutido (por padrão, o Tomcat) e implantará o seu aplicativo nesse servidor, na porta que foi configurada em <strong>application.properties</strong>. Estando tudo funcionando, aparecerá a seguinte mensagem: <strong>Started SenacApplication</strong>, conforme figura a seguir: 
-              </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela com área “Output” do NetBeans mostrando várias mensagens de status, com destaque para a última linha, dizendo “Started Senac Application in”. "></a>
-                            <p class="legenda-imagem">
-                              Figura 5 – Terminal do NetBeans executando o projeto 
-                              Fonte: NetBeans (2023) 
-                            </p>
-              <p class="paper">Caso seu projeto esteja com um sinal de exclamação no nome ou caso tenha aparecido uma tela informando problemas com dependências, clique com o botão direito do mouse sobre o projeto e escolha “Resolve Problems...”. Na tela que surgir, clique no botão “Resolve...”. O Maven ajustará as dependências, o problema será solucionado e você poderá executar o projeto. </p>
-              <h3>Estrutura de camadas em um projeto spring boot com banco de dados </h3>
-              <p>
-                Agora que a configuração está pronta, é possível estruturar as camadas do projeto. Para isso, na pasta <strong>Source Packages</strong>, crie três pacotes:  
-              </p>
-              <ul>
-                <li><strong>com.api.senac.controller</strong>: terá a camada de Controller, que abrigará os controladores ou <i> endpoints</i>. </li>
-                <li><strong>com.api.senac.data</strong>: abrigará toda a camada de acesso aos dados, intitulada Data, que terá <i>entity</i> e <i>repository</i>, que serão detalhados mais à frente. </li>
-                <li><strong>com.api.senac.service</strong>: será a camada <strong>Service</strong>, que terá toda a regra de negócio.</li>
-              </ul>
-              <p>
-                Essa estrutura garantirá que o cliente não tenha acesso direto ao banco de dados, e a solicitação seja redirecionada via controladores. O controlador chama o serviço (com a lógica de negócio) usando o repositório, que, por sua vez, faz uma chamada para o banco de dados, implementando toda persistência necessária no projeto. A seguir, veja a estrutura do projeto: 
-              </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Detalhe do projeto no Netbeans mostrando pacotes com.api.senac, com classe SenacApplication.java; com.api.senac.controller, com classe FuncionarioController.java, com.api.senac.data, com classes FuncionarioEntity.java e FuncionarioRepository.java, com.api.senac.service, com classe FuncionarioService.java. "></a>
-                            <p class="legenda-imagem">
-                              Figura 6 – Estrutura do projeto no NetBeans 
-                              Fonte: NetBeans (2023) 
-                            </p>
-              <h4>Camada “Data” </h4>
-              <p>
-                Essa camada permite o acesso aos dados da API, que incluirá desde a entity, que contém a definição da classe com os respectivos atributos – FuncionarioEntity, e a repository, que é uma interface em que são herdados os métodos de manipulação com o banco de dados – FuncionarioRepository. 
-              </p>
-              <p>
-                Está sendo usado no projeto o Spring Data, que tem por objetivo facilitar o trabalho com a persistência de dados. Dentro dele, há o Spring Data JPA, que permite implementar projetos em JPA de forma simples, por meio de anotações já estudadas anteriormente em ORM, como @Entity, @Table, @Id, @GeneratedValue e @Column.	 
-              </p>
-              <p>
-                Crie a classe FuncionarioEntity em com.api.senac.data com o seguinte código: 
-              </p>
-              <h4>XML foto</h4>
-              <ul>
-                <li>A anotação <strong>@Data</strong> na classe possibilita que você não precise escrever os métodos <i>getter, setter, equals, hashCode</i> e construtores de classe, pois serão criados implicitamente devido a essa anotação. Essa facilidade é alcançada graças à biblioteca Lombok, incluída na criação do projeto. </li>
-                <li>A anotação <strong>@Entity</strong> diz ao Spring que a classe FuncionarioEntity representa uma tabela do banco de dados. </li>
-                <li>A anotação <strong>@Table</strong> indica o nome da tabela que será criada automaticamente pelo Spring Boot através do JPA e Hibernate. </li>
-                <li>A anotação <strong>@Id</strong> torna o campo ID uma chave primária da tabela de funcionários quando persistida no banco de dados. </li>
-                <li>A anotação <strong>@GeneratedValue</strong> especifica a estratégia de geração de chave primária. O valor <strong>GenerationType.AUTO</strong> instrui o banco de dados MySQL para definir o autoincremento automaticamente. </li>
-                <li>Quando a anotação <strong>@Column</strong> não é adicionada, indica que serão assumidas as propriedades-padrão de cada coluna, ou seja, os nomes do atributo e da coluna no banco de dados devem ser iguais, caso contrário, a aplicação não funcionará. </li>
-              </ul>
-              <h4>Repository</h4>
-              <p>
-                Repositórios do Spring são interfaces que podem ser definidas para acessar dados. Eles disponibilizam métodos comuns para persistência e podem criar queries a partir do nome de métodos personalizados em tempo de execução. O Spring Data permite criar um repositório para uma entidade estendendo outra interface a <strong>JpaRepository</strong>. 
-              </p>
-              <p>
-                O JpaRepository tem várias operações e, ao ser estendido, são obtidos os métodos mais relevantes do CRUD e buscas por parâmetros com suas classes. Alguns desses métodos são: 
-              </p>
-              <ul>
-                <li>findAll() – retorna uma lista com todos os elementos da classe. </li>
-                <li>findById() – busca um elemento por meio do seu ID e o retorna. </li>
-                <li>save() – salva um elemento na tabela ou cria um novo, caso o ID não seja enviado. </li>
-                <li>deleteById() – exclui um elemento por meio do seu ID. </li>
-              </ul>
-              <p>
-                É importante ressaltar que esses métodos deverão ser chamados na camada service, em que estão as regras de negócios. 
-              </p>
-              <p>
-                Agora será criada a interface <strong>FuncionarioRepository</strong>, em <strong>com.api.senac.data</strong>, que deve ser anotada com @Repository e estender a JpaRepository	&#60;FuncionarioEntity, Integer>, no qual deve ser passada a entidade e o tipo do ID, no caso, “FuncionarioEntity” e “Integer”. Note que o primeiro parâmetro é a classe que precisa se comunicar com o banco de dados e o segundo é o ID dessa classe, que o banco fará a referência.  
-              </p>
-              <p>
-                Veja, a seguir, o código da classe <strong>FuncionarioRepository</strong>. 
-              </p>
-              <h4>Camada “Service”</h4>
-              <p>
-                Essa camada abrigará a lógica de negócios. Nessa fase inicial da API de Funcionários, haverá apenas as regras para validar se um funcionário existe <strong>getFuncionarioId</strong>, ou seja, antes de atualizar, deletar e pesquisar um funcionário, esse método será chamado e retornado <i>null</i>, caso não exista.  
-              </p>
-              <p>
-                Contudo, embora tendo apenas esse método, é importante seguir uma boa padronização, ou seja, os <i>endpoints</i> da API que pertencem à camada da <i>controller</i> não terão acesso direto a <i>repository</i>, isso não é uma boa prática, por isso é criada a camada de serviço que faz uma ponte entre os <i>endpoints</i> e a <i>repository</i>. 
-              </p>
-              <p>
-                Na camada de serviço, deve ser criada, para cada classe <i>entity</i> do projeto, sua classe de serviço. Até o momento, há a classe <strong>FuncionarioEntity</strong>, então devem ter na classe de serviço os métodos “criarFuncionario()”, “atualizarFuncionario()”, “deletarFuncionario()”, “listarTodosFuncionarios()” e “getFuncionarioId()”. 
-              </p>
-              <p>
-                Crie a classe <strong>FuncionarioService</strong> em <strong>com.api.senac.service</strong> com o seguinte código: 
-              </p>
-              <h3>xml foto</h3>
-
-              <ul>
-                <li>A anotação <strong>@Service</strong> especifica que essa classe será uma classe de serviço, que tratará das regras de negócio e comunicação com banco de dados. </li>
-                <li>A anotação <strong>@autowire</strong> faz com que o repositório <strong>FuncionarioRepository</strong> seja instanciado automaticamente pelo Spring. </li>
-              </ul>
-              <p>
-                <i> “listarTodosFuncionarios”</i>: para criar esse serviço, é necessário usar apenas o método <strong>findAll</strong>. Veja que não é preciso criar nenhuma linha em SQL. 
-              </p>
-              <h3>xml foto</h3>
-              <p>
-              <i>Serviço “criarFuncionario”</i>: para criar esse serviço, é necessário receber o objeto a ser gravado, atribuir para o atributo ID como <i>null</i> e chamar o método <strong>save</strong>. Note que não é preciso usar o comando <i>insert</i> do SQL. 
-              </p>
-              <h3>xml foto</h3>
-              <p>
-              <i>Serviço “getFuncionarioId”</i>: o método <strong>findById</strong> retorna um funcionário pelo ID informado. Entretanto, caso não exista, por meio do método <strong>orElse</strong>, você pode usar uma expressão em Lambda e instanciar sua classe indicando com o erro <i>null</i>.  
-              </p>
-              <h3>xml foto</h3>
-              <p>
-                Mais adiante, neste conteúdo, será retornado esse serviço com uma exceção personalizada, porém usando agora o método <strong>orElseThrow()</strong>. 
-              </p>
-              <p>
-              <i>Serviço “deletarFuncionario”</i>: recebe como parâmetro o ID do funcionário, que verifica se ele existe ou não pelo método <strong>getFuncionarioId</strong>. Caso exista, ele deleta, caso contrário, retorna o erro. 
-              </p>
-              <h3>xml foto</h3>
-              <p>
-                <i> Serviço “atualizarFuncionario”</i>: inicialmente, é preciso validar se o funcionário existe no banco de dados, por isso, se chama o método <strong>getFuncionarioId</strong>. Caso não exista, uma exceção é disparada, caso contrário, o objeto localizado deve receber em cada um dos seus atributos os dados que foram enviados para atualização. Por fim, se chama o método <strong>save</strong>. 
-              </p>
-              <h3>xml foto</h3>
-              <h4>Camada “Controller” </h4>
-              <p>
-                É a classe que disponibilizará as rotas ou <i>endpoints</i> da API de Funcionários. Os serviços disponibilizados serão acessados conforme a tabela a seguir. 
-              </p>
-              <table class="senac">
-                <tbody>
-                  <tr>
-                    <th>URL</th>
-                    <th>HTTP</th>
-                    <th>Função</th>
-                  </tr>
-                  <tr>
-                    <td>localhost:8080/funcionario/listar </td>
-                    <td>GET</td>
-                    <td>Retorna uma lista com todos os funcionários cadastrados </td>
-                  </tr>
-                  <tr>
-                    <td>localhost:8080/funcionario/pesquisar/1 </td>
-                    <td>GET</td>
-                    <td>Retorna um único funcionário por meio do ID informado </td>
-                  </tr>
-                  <tr>
-                    <td>localhost:8080/funcionario/adicionar </td>
-                    <td>POST</td>
-                    <td>Cadastra um novo funcionário </td>
-                  </tr>
-                  <tr>
-                    <td>localhost:8080/funcionario/atualizar/1 </td>
-                    <td>PUT</td>
-                    <td>Atualiza um funcionário por meio do ID informado </td>
-                  </tr>
-                  <tr>
-                    <td>localhost:8080/funcionario/deletar/2  </td>
-                    <td>DELETE </td>
-                    <td>Exclui um funcionário por meio do ID informado </td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>
-                Crie uma classe <strong>FuncionarioController</strong> em <strong>com.api.senac.controller</strong> com o seguinte código: 
-              </p>
-              <h3>XML</h3>
-              <ul>
-                <li><strong>RestController</strong>: a anotação marca o <strong>“FuncionarioController”</strong> como um manipulador de solicitação HTTP e permite que o Spring o reconheça como um serviço REST. </li>
-                <li><strong>@RequestMapping("/funcionario")</strong>: a anotação define o caminho-base para os terminais de recurso no controlador como endereço:porta/funcionário, no caso, <strong>localhost:8080/funcionario.</strong> </li>
-                <li>Em seguida, é conectada automaticamente a classe “FuncionarioService” no controlador para usar os métodos declarados, implementados nele. Isso é injeção de dependência. </li>
-                <li><strong>@GetMapping</strong>: é um atalho para @RequestMapping(method = RequestMethod.GET) e é usado para mapear solicitações <strong>HTTP GET</strong> para os métodos mapeados do controlador. É usado para devolver todos os funcionários e um único funcionário. </li>
-                <li><strong>@PathVariable</strong>: a anotação mostra que um parâmetro do método deve ser vinculado a uma variável de modelo de URI. </li>
-                <li><strong>@PostMapping</strong>: é uma abreviação de @RequestMapping, em que o método é igual a POST. Ele é usado para mapear a solicitação HTTP POST para os métodos do controlador mapeado. </li>
-                <li><strong>@PutMapping</strong>: é uma abreviação de @RequestMapping onde o método é igual a PUT. Ele é usado para mapear a solicitação HTTP PUT para os métodos do controlador mapeado. </li>
-                <li><strong>@RequestBody</strong>: a anotação indica que o valor do objeto virá no corpo da requisição. Portanto, quando você faz uma solicitação POST ou PUT, o HttpMessageConverters converte o corpo da solicitação JSON em um objeto e passa para o método solicitado. </li>
-                <li><strong>@DeleteMapping</strong>: usar essa anotação faz com que o método solicitado esteja pronto para uma operação de exclusão. É um atalho para @RequestMapping(method = RequestMethod.DELETE). </li>
-              </ul>
-              <h3>Testando API de Funcionários com o Postman</h3>
-              <p>
-                Agora, teste sua API com o Postman. Para isso, certifique-se de que o serviço da API de Funcionários esteja em execução. 
-              </p>
-              <p><strong>Adicionando um registro de funcionário </strong></p>
-              <p>
-                Adicione um funcionário fazendo uma solicitação  <strong>POST</strong> para <strong>localhost:8080/funcionario/adicionar</strong>. Em <i>body</i> , selecione a opção <strong>raw</strong>, selecione JSON e inclua o seguinte código JSON no editor do Postman: 
-              </p>
-              <h3>XML</h3>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela do Postman mostrando a configuração de uma requisição Post para endereço localhost:8080/funcionário/adicionar. Abaixo, na seção body, mostra o JSON exposto no texto. "></a>
-                            <p class="legenda-imagem">
-                              Figura 7 – Requisição POST no Postman 
-                              Fonte: Postman (2023) 
-                            </p>
-              <p>
-                Agora execute clicando em <strong> SEND</strong>. 
-              </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Tela com a área de resultado do Postman mostrando no topo “Status: 201 Created” e na região “body” o JSON: {,“id”: 53, “cpf”: “01234567890”, “nome”: “aaaaa”, “telefone”: “51 987654”, “email”: “claudio@gmail.com”, “salario”: 1254.6,}. "></a>
-                            <p class="legenda-imagem">
-                              Figura 8 – Resultado da requisição  
-                              Fonte: Postman (2023) 
-                            </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <!-- painel clicavel -->
-
-
-
-           
-              
+            <div class="no-print">
+              <div class="modal fade" id="m1" tabindex="-1" role="dialog" aria-labelledby="labelm1">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="labelm1">De janela ou WRAC</h4>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="marcador">
+                        <li>Em <strong>Project</strong>, selecione o <strong>Maven</strong>. </li>
+                        <li>Em <strong>Language</strong>, escolha o <strong>Java</strong>. </li>
+                        <li>Em <strong>Spring Boot</strong>, escolha a versão mais atualizada, a<strong> 3.0.6</strong>.
+                        </li>
+                        <li>Em <strong>Project Metadata</strong>, defina alguns metadados para a criação do projeto.
+                        </li>
+                        <ul class="marcador">
+                          <li>Group: informar <strong>com.api</strong> </li>
+                          <li>Artifact e Name: informar <strong>senac</strong> </li>
+                          <li>Description: <strong>informar API Rest de Projeto de Funcionários</strong> </li>
+                          <li>Package name: com.api.senac<strong></strong> </li>
+                          <li>Packaging: selecionar <strong>Jar</strong> </li>
+                          <li>Java: indicar a versão <strong>17</strong> </li>
+                        </ul>
+                      </ul>
+                      <img src="imgs/fig-01.png"
+                        class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                      </p>
+                      <a href="imgs/fig-01.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+                        aria-hidden="true"><img src="imgs/fig-01.png"
+                          class="center-block img-responsive espacoimg imgBorder"></a>
+                      <p class="legenda-imagem">
+                        Figura 1 – <i>Site</i> do Spring Initializr <br>
+                        Fonte: Spring Initializr (s.d.)
+                      </p>
+                      <p class="acessivel no-print">
+                        Tela da seção de configurações da página do Spring Initializr, com as informações preenchidas
+                        como citado
+                        no texto.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
+            <div class="no-print">
+              <div class="modal fade" id="m2" tabindex="-1" role="dialog" aria-labelledby="labelm1">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="labelm1">De janela ou WRAC</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        Por fim, devem ser definidas as dependências do projeto:
+                      </p>
+                      <ul class="marcador">
+                        <li>Spring Web (spring-boot-starter-web): utilizada para criação de API em Spring Boot,
+                          incluindo REST
+                          em
+                          aplicações utilizando o Spring MVC e Tomcat como um servidor-padrão. </li>
+                        <li>Spring Data JPA (spring-boot-starter-data-jpa): permite persistir dados em bancos de dados
+                          SQL
+                          usando
+                          Spring Data e Hibernate, que é uma implementação do JPA. </li>
+                        <li>MySQL Driver (mysql-connector-java) é um driver para conexão com banco de dados MySQL para
+                          Spring
+                          Boot.
+                        </li>
+                        <li>Validation (spring-boot-starter-validation) é uma dependência usada para validar os campos
+                          de um
+                          objeto
+                          antes de persistir no banco de dados. </li>
+                        <li>Lombok é uma biblioteca auxiliar para adicionar automaticamente diversos métodos, como get
+                          e set,
+                          toString e construtores, ou seja, toda vez que é adicionada a anotação @Data em uma classe,
+                          você não
+                          vai
+                          mais precisar escrever métodos getter, setter, equals, hashCode, construtores de classe etc.
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="m3" tabindex="-1" role="dialog" aria-labelledby="labelm1">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="labelm1">De janela ou WRAC</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Após selecionar o Spring Web, a dependência aparecerá abaixo na lista de dependências.
+                    </p>
+                    <img src="imgs/fig-02.png"
+                      class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig-02.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+                      aria-hidden="true"><img src="imgs/fig-02.png"
+                        class="center-block img-responsive espacoimg imgBorder"></a>
+                    <div class="legenda-imagem legenda text-center">
+                      Figura 2 – Site do Spring Initializr <br>
+                      Fonte: Spring Initializr (s.d.)
+                    </div>
+                    <p class="acessivel no-print">
+                      Tela com detalhe para a seção “Dependencies” do site do Spring Initializr mostrando a lista de
+                      dependências incluídas como citado no texto.
+                    </p>
+                    <p>Após concluir todas as configurações, clique em Generate e será feito o download de uma pasta
+                      compactada
+                      (.zip) contendo o projeto completo. Finalizado o download, você pode extrair o conteúdo no
+                      computador e
+                      abrir a pasta do projeto com a IDE do NetBeans. </p>
+                    <img src="imgs/fig-03.png"
+                      class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig-03.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+                      aria-hidden="true"><img src="imgs/fig-03.png"
+                        class="center-block img-responsive espacoimg imgBorder"></a>
+                    <div class="legenda-imagem legenda text-center">
+                      Figura 3 – Estrutura do projeto no NetBeans <br>
+                      Fonte: NetBeans (2023)
+                    </div>
+                    <p class="acessivel no-print">
+                      Tela da aba “Projects” do NetBeans, com projeto “senac” criado, mostrando pacote
+                      “com.api.senac”, com
+                      classe SenacApplication.java e item “Other Sources” expandido, com “src/main/resources”
+                      contendo “
+                      &lt;default package>”, “static” e “templates”. De “ &lt;default package>”, há o arquivo
+                      “application.properties”. Mais abaixo, o item “Project Files” aparece expandido com o arquivo
+                      “pom.xml”.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <h4>Arquivo “pom.xml”</h4>
+          <p>
+            O arquivo “pom.xml”, disponível na pasta <strong>ProjectFiles</strong>, abriga as dependências e os plug-ins
+            do Maven no
+            projeto. A seção de dependência simplesmente contém as dependências adicionadas ao projeto. A seguir, veja
+            um exemplo do arquivo pow.xml:
+          </p>
+          <pre>
+            <code>
+&lt;?xml version="1.0" encoding="UTF-8"?> 
 
-        </section>
-<!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
-        <footer class="text-center no-print">
-          
-          <ul class="pagination">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> 
+
+    &lt;modelVersion>4.0.0&lt;/modelVersion> 
+
+    &lt;parent> 
+
+        &lt;groupId>org.springframework.boot&lt;/groupId> 
+
+        &lt;artifactId>spring-boot-starter-parent&lt;/artifactId> 
+
+        &lt;version>3.0.6&lt;/version> 
+
+        &lt;relativePath/> <!-- lookup parent from repository --> 
+
+    &lt;/parent> 
+
+    &lt;groupId>com.api&lt;/groupId> 
+
+    &lt;artifactId>senac&lt;/artifactId> 
+
+    &lt;version>0.0.1-SNAPSHOT&lt;/version> 
+
+    &lt;name>senac&lt;/name> 
+
+    &lt;description>API Rest de Projeto de Funcionários&lt;/description> 
+
+    &lt;properties> 
+
+        &lt;java.version>17&lt;/java.version> 
+
+    &lt;/properties> 
+
+    &lt;dependencies> 
+
+        &lt;dependency> 
+
+            &lt;groupId>org.springframework.boot&lt;/groupId> 
+
+            &lt;artifactId>spring-boot-starter-data-jpa&lt;/artifactId> 
+
+        &lt;/dependency> 
+
+        &lt;dependency> 
+
+            &lt;groupId>org.springframework.boot&lt;/groupId> 
+
+            &lt;artifactId>spring-boot-starter-validation&lt;/artifactId> 
+
+        &lt;/dependency> 
+
+        &lt;dependency> 
+
+            &lt;groupId>org.springframework.boot&lt;/groupId> 
+
+            &lt;artifactId>spring-boot-starter-web&lt;/artifactId> 
+
+        &lt;/dependency> 
+
+ 
+
+        &lt;dependency> 
+
+            &lt;groupId>com.mysql&lt;/groupId> 
+
+            &lt;artifactId>mysql-connector-j&lt;/artifactId> 
+
+            &lt;scope>runtime&lt;/scope> 
+
+        &lt;/dependency> 
+
+        &lt;dependency> 
+
+            &lt;groupId>org.projectlombok&lt;/groupId> 
+
+            &lt;artifactId>lombok&lt;/artifactId> 
+
+            &lt;optional>true&lt;/optional> 
+
+        &lt;/dependency> 
+
+        &lt;dependency> 
+
+            &lt;groupId>org.springframework.boot&lt;/groupId> 
+
+            &lt;artifactId>spring-boot-starter-test&lt;/artifactId> 
+
+            &lt;scope>test&lt;/scope> 
+
+        &lt;/dependency> 
+
+    &lt;/dependencies> 
+
+ 
+
+    &lt;build> 
+
+        &lt;plugins> 
+
+            &lt;plugin> 
+
+                &lt;groupId>org.springframework.boot&lt;/groupId> 
+
+                &lt;artifactId>spring-boot-maven-plugin&lt;/artifactId> 
+
+                &lt;configuration> 
+
+                    &lt;excludes> 
+
+                        &lt;exclude> 
+
+                            &lt;groupId>org.projectlombok&lt;/groupId> 
+
+                            &lt;artifactId>lombok&lt;/artifactId> 
+
+                        &lt;/exclude> 
+
+                    &lt;/excludes> 
+
+                &lt;/configuration> 
+
+            &lt;/plugin> 
+
+        &lt;/plugins> 
+
+    &lt;/build> 
+
+&lt;/project> 
+            </code>
+          </pre>
+          <h4> Configurando o MySQL, JPA e Hibernate</h4>
+          <p>
+            Na pasta de recursos dentro de <strong>Other Sources > src/main/resources > default package >
+              application.properties </strong>, abra o arquivo e escreva as propriedades a seguir para configurações
+            específicas de
+            algumas das dependências adicionadas:
+          </p>
+          <pre>
+            <code>
+              spring.datasource.url=jdbc:mysql://localhost:3306/senac_db 
+
+spring.datasource.username=root 
+
+spring.datasource.password=root 
+
+ 
+
+server.port=8080 
+
+ 
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect 
+
+spring.jpa.hibernate.ddl-auto=update 
+
+ 
+
+server.error.include-message = Always 
+            </code>
+          </pre>
+          <ul class="marcador">
+            <li>spring.datasource.url: o Spring Boot usa a URL juntamente com as credenciais para estabelecer uma
+              conexão de banco de dados com o banco de dados MySQL. Aqui, o MySQL está configurado com a porta 3306 e o
+              ​​nome do banco de dados como senac_db. </li>
+            <li>spring.datasource.username e spring.datasource.password: as propriedades são o nome de usuário e a senha
+              do banco de dados MySQL (use o nome de usuário e senha corretos do servidor MySQL instalado em seu
+              computador). </li>
+            <li>server.port: a porta-padrão de inicialização do Spring é 8080. </li>
+            <li>spring.jpa.properties.hibernate.dialect: usar o valor “MySQLDialect” faz com que o Hibernate gere um SQL
+              melhor para o banco de dados escolhido. </li>
+            <li>spring.jpa.hibernate.ddl-auto: é usado para a inicialização do banco de dados. Foi definido o valor como
+              <strong>update</strong> para que uma tabela seja criada no banco de dados automaticamente correspondente
+              ao modelo de dados
+              definido. Qualquer alteração no modelo (criação de um novo campo, alteração ou exclusão de campos da
+              tabela) também ocasionará uma atualização no banco de dados.
+            </li>
+            <li>server.error.include-message: essa configuração, quando adotada pelo valor de <strong>Always</strong>, é
+              usada para
+              sempre permitir a inclusão das mensagens de erros produzidas pelas exceções</li>
           </ul>
-         
-        </footer>
+          <h4>Executando o projeto</h4>
+          <p>
+            Agora que você finalizou as configurações, execute o arquivo principal do projeto para verificar se está
+            tudo funcionando. Para isso, na pasta <strong>Source Packages > com.api.senac</strong>, clique com o botão
+            direito do <i>mouse</i>
+            sobre <strong>SenacApplication</strong> na opção <strong>Run File</strong> ou Shift+F6.
+          </p>
+          <img src="imgs/fig-04.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-04.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 4 – Executando no NetBeans <br>
+            Fonte: NetBeans (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com detalhe da aba Projects do NetBeans mostrando projeto “senac”, arquivo SenacApplication.java e um
+            menu de contexto com o item “Run File...” selecionado.
+          </p>
+          <p>
+            Ao executar o projeto, o Spring Boot iniciará um servidor web embutido (por padrão, o Tomcat) e implantará o
+            seu aplicativo nesse servidor, na porta que foi configurada em <strong>application.properties</strong>.
+            Estando tudo
+            funcionando, aparecerá a seguinte mensagem: <strong>Started SenacApplication</strong>, conforme figura a
+            seguir:
+          </p>
+          <img src="imgs/fig-05.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-05.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-05.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 5 – Terminal do NetBeans executando o projeto <br>
+            Fonte: NetBeans (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com área “Output” do NetBeans mostrando várias mensagens de status, com destaque para a última linha,
+            dizendo “Started Senac Application in”.
+          </p>
+          <div class="caixa-destaque">
+            <img src="imgs/nota.png" class="img-responsive no-print imgNota">
+            <p>
+              Caso seu projeto esteja com um sinal de exclamação no nome ou caso tenha aparecido uma tela informando
+              problemas com dependências, clique com o botão direito do <i>mouse</i> sobre o projeto e escolha “Resolve
+              Problems...”. Na tela que surgir, clique no botão “Resolve...”. O Maven ajustará as dependências, o
+              problema será solucionado e você poderá executar o projeto.
+            </p>
+          </div>
+          <h3 id="t3">Estrutura de camadas em um projeto <i>spring boot</i> com banco de dados </h3>
+          <p>
+            Agora que a configuração está pronta, é possível estruturar as camadas do projeto. Para isso, na pasta
+            <strong>Source Packages</strong>, crie três pacotes:
+          </p>
+          <div class="caixa-destaque2">
+            <ul class="marcador">
+              <li><strong>com.api.senac.controller</strong>: terá a camada de <strong>Controller</strong>, que abrigará
+                os controladores ou <i>endpoints</i>. </li>
+              <li><strong>com.api.senac.data</strong>: abrigará toda a camada de acesso aos dados, intitulada
+                <strong>Data</strong>, que terá <i>entity</i> e <i>repository</i>, que serão detalhados mais à frente.
+              </li>
+              <li> <strong>com.api.senac.service</strong>: será a camada <strong>Service</strong>, que terá toda a regra
+                de negócio. </li>
+            </ul>
+          </div>
+          <p>
+            Essa estrutura garantirá que o cliente não tenha acesso direto ao banco de dados, e a solicitação seja
+            redirecionada via controladores. O controlador chama o serviço (com a lógica de negócio) usando o
+            repositório, que, por sua vez, faz uma chamada para o banco de dados, implementando toda persistência
+            necessária no projeto. A seguir, veja a estrutura do projeto:
+          </p>
+          <img src="imgs/fig-06.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-06.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 6 – Estrutura do projeto no NetBeans <br>
+            Fonte: NetBeans (2023)
+          </p>
+          <p class="acessivel no-print">
+            Detalhe do projeto no Netbeans mostrando pacotes com.api.senac, com classe SenacApplication.java;
+            com.api.senac.controller, com classe FuncionarioController.java, com.api.senac.data, com classes
+            FuncionarioEntity.java e FuncionarioRepository.java, com.api.senac.service, com classe
+            FuncionarioService.java.
+          </p>
+          <h4>Camada “Data” </h4>
+          <p>
+            Essa camada permite o acesso aos dados da API, que incluirá desde a <i>entity</i>, que contém a definição da
+            classe
+            com os respectivos atributos – <strong>FuncionarioEntity</strong>, e a <i>repository</i>, que é uma
+            interface em que são herdados os
+            métodos de manipulação com o banco de dados – <strong>FuncionarioRepository</strong>.
+          </p>
+          <p>
+            Está sendo usado no projeto o <strong>Spring Data</strong>, que tem por objetivo facilitar o trabalho com a
+            persistência de
+            dados. Dentro dele, há o <strong>Spring Data JPA</strong>, que permite implementar projetos em JPA de forma
+            simples, por meio
+            de anotações já estudadas anteriormente em ORM, como @Entity, @Table, @Id, @GeneratedValue e @Column.
+          </p>
+          <p>Crie a classe <strong>FuncionarioEntity</strong> em <strong>com.api.senac.data</strong> com o seguinte
+            código: </p>
+          <pre>
+            <code>
+package com.api.senac.data; 
 
-    </div>
+import jakarta.persistence.Entity; 
 
-    <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+import jakarta.persistence.GeneratedValue; 
+
+import jakarta.persistence.GenerationType; 
+
+import jakarta.persistence.Id; 
+
+import jakarta.persistence.Table; 
+
+import lombok.Data; 
+
+@Data 
+
+@Entity 
+
+@Table(name="Funcionario") 
+
+public class FuncionarioEntity { 
+
+    @Id 
+
+    @GeneratedValue(strategy = GenerationType.AUTO) 
+
+    private Integer id; 
+
+    private String cpf; 
+
+    private String nome; 
+
+    private String telefone; 
+
+    private String email; 
+
+    private double salario; 
+
+} 
+            </code>
+          </pre>
+          <ul class="marcador">
+            <li>A anotação <strong>@Data</strong> na classe possibilita que você não precise escrever os métodos
+              <i>getter</i>, <i>setter</i>, <i>equals</i>,
+              <i>hashCode</i> e construtores de classe, pois serão criados implicitamente devido a essa anotação. Essa
+              facilidade é alcançada graças à biblioteca Lombok, incluída na criação do projeto.
+            </li>
+            <li>A anotação <strong>@Entity</strong> diz ao Spring que a classe <strong>FuncionarioEntity</strong>
+              representa uma tabela do banco de dados. </li>
+            <li>A anotação <strong>@Table</strong> indica o nome da tabela que será criada automaticamente pelo Spring
+              Boot através do JPA e Hibernate. </li>
+            <li>A anotação <strong>@Id</strong> torna o campo ID uma chave primária da tabela de funcionários quando
+              persistida no banco de dados. </li>
+            <li>A anotação <strong>@GeneratedValue</strong> especifica a estratégia de geração de chave primária. O
+              valor <strong>GenerationType.AUTO</strong> instrui o banco de dados MySQL para definir o autoincremento
+              automaticamente. </li>
+            <li>Quando a anotação <strong>@Column</strong> não é adicionada, indica que serão assumidas as
+              propriedades-padrão de cada coluna, ou seja, os nomes do atributo e da coluna no banco de dados devem ser
+              iguais, caso contrário, a aplicação não funcionará. </li>
+          </ul>
+          <h4>Repository</h4>
+          <p>
+            Repositórios do Spring são interfaces que podem ser definidas para acessar dados. Eles disponibilizam
+            métodos comuns para persistência e podem criar <i>queries</i> a partir do nome de métodos personalizados em
+            tempo
+            de execução. O Spring Data permite criar um repositório para uma entidade estendendo outra interface a
+            <strong>JpaRepository</strong>.
+          </p>
+          <p>
+            O JpaRepository tem várias operações e, ao ser estendido, são obtidos os métodos mais relevantes do CRUD e
+            buscas por parâmetros com suas classes. Alguns desses métodos são:
+          </p>
+          <div class="caixa-destaque3">
+            <ul class="marcadorCircular">
+              <li>findAll() – retorna uma lista com todos os elementos da classe. </li>
+              <li>findById() – busca um elemento por meio do seu ID e o retorna. </li>
+              <li>save() – salva um elemento na tabela ou cria um novo, caso o ID não seja enviado. </li>
+              <li>deleteById() – exclui um elemento por meio do seu ID. </li>
+            </ul>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <img src="imgs/infografico1_imagem.png" class="img-responsive no-print imgInfografico">
+              </div>
+            </div>
+          </div>
+          <p class="espacamento">
+            É importante ressaltar que esses métodos deverão ser chamados na camada <i>service</i>, em que estão as
+            regras de
+            negócios.
+          </p>
+          <p>
+            Agora será criada a interface <strong>FuncionarioRepository</strong>, em
+            <strong>com.api.senac.data</strong>, que deve ser anotada com
+            @Repository e estender a JpaRepository&lt;FuncionarioEntity,Integer>, no qual deve ser passada a entidade e
+            o
+            tipo do ID, no caso, “FuncionarioEntity” e “Integer”. Note que o primeiro parâmetro é a classe que precisa
+            se comunicar com o banco de dados e o segundo é o ID dessa classe, que o banco fará a referência.
+          </p>
+          <p>
+            Veja, a seguir, o código da classe <strong>FuncionarioRepository</strong>.
+          </p>
+          <pre>
+            <code>
+package com.api.senac.data; 
+
+import org.springframework.data.jpa.repository.JpaRepository; 
+import org.springframework.stereotype.Repository; 
+
+@Repository 
+public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntity, Integer> { 
+
+} 
+            </code>
+          </pre>
+          <h4>Camada “Service”</h4>
+          <p>
+            Essa camada abrigará a lógica de negócios. Nessa fase inicial da API de Funcionários, haverá apenas as
+            regras para validar se um funcionário existe <strong>getFuncionarioId</strong>, ou seja, antes de atualizar,
+            deletar e pesquisar um funcionário, esse método será chamado e retornado <i>null</i>, caso não exista.
+          </p>
+          <p>
+            Contudo, embora tendo apenas esse método, é importante seguir uma boa padronização, ou seja, os
+            <i>endpoints</i> da
+            API que pertencem à camada da <i>controller</i> não terão acesso direto a <i>repository</i>, isso não é uma
+            boa prática,
+            por isso é criada a camada de serviço que faz uma ponte entre os <i>endpoints</i> e a <i>repository</i>.
+          </p>
+          <p>
+            Na camada de serviço, deve ser criada, para cada classe <i>entity</i> do projeto, sua classe de serviço. Até o
+            momento, há a classe <strong>FuncionarioEntity</strong>, então devem ter na classe de serviço os métodos
+            “criarFuncionario()”, “atualizarFuncionario()”, “deletarFuncionario()”, “listarTodosFuncionarios()” e
+            “getFuncionarioId()”.
+          </p>
+          <p>Crie a classe <strong>FuncionarioService</strong> em <strong>com.api.senac.service </strong> com o seguinte código: </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <table class="senac">
+            <tbody>
+              <tr>
+                <th>URL</th>
+                <th>HTTP</th>
+                <th>Função</th>
+              </tr>
+              <tr>
+                <td>localhost:8080/funcionario/listar </td>
+                <td>GET</td>
+                <td>Retorna uma lista com todos os funcionários cadastrados </td>
+              </tr>
+              <tr>
+                <td>localhost:8080/funcionario/pesquisar/1 </td>
+                <td>GET</td>
+                <td>Retorna um único funcionário por meio do ID informado </td>
+              </tr>
+              <tr>
+                <td>localhost:8080/funcionario/adicionar </td>
+                <td>POST</td>
+                <td>Cadastra um novo funcionário </td>
+              </tr>
+              <tr>
+                <td>localhost:8080/funcionario/atualizar/1 </td>
+                <td>PUT</td>
+                <td>Atualiza um funcionário por meio do ID informado </td>
+              </tr>
+              <tr>
+                <td>localhost:8080/funcionario/deletar/2 </td>
+                <td>DELETE </td>
+                <td>Exclui um funcionário por meio do ID informado </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- painel clicavel -->
+
+
+
+
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
+
+      <ul class="pagination">
+
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
     <footer>
     </footer>
 	-->
-<!-- carrega todas as imagens dos icones nesta div
+  <!-- carrega todas as imagens dos icones nesta div
  caso queira adicionar mais imagens de novos icones do css,
  ou qualquer imagem que deva ser contabilizada durante a fase
  de loading, referenciar aqui.
  -->
-<div class="ico-div-loader">
-	<img src="../template/images/atencao.png">
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
     <img src="../template/images/bg-content.jpg">
     <img src="../template/images/bg-topo.jpg">
     <img src="../template/images/black-zoom-in-256.png">
@@ -485,21 +909,23 @@ Fonte: Spring Initializr (s.d.)
   </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../template/js/jquery.min.js"></script>
-    <script src="../template/js/bootstrap.min.js"></script>
-    <script src="../template/js/jquery.magnific-popup.min.js"></script>
-    <script src="../template/js/print.js"></script>
-    <script src="../template/js/template.config.js"></script>
-    <script src="../template/js/images.loader.js"></script>
-    <script src="../template/js/highlight.min.js"></script>
-    <script src="js/parallax.min.js"></script>
-    <script src="js/custom.js"></script>
-    <noscript>
-      <style media="screen">
-        .over-loader { display: none;}    
-      </style>
-    </noscript>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
   <script>
 
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -509,38 +935,38 @@ Fonte: Spring Initializr (s.d.)
     });
     //inicializa zoom na imagem
     $('.zoom-imagem').magnificPopup({
-     type: 'image',
-       mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
       zoom: {
-      enabled: true, // By default it's false, so don't forget to enable it
-  
-      duration: 300, // duration of the effect, in milliseconds
-      easing: 'ease-in-out', // CSS transition easing function
-  
-      // The "opener" function should return the element from which popup will be zoomed in
-      // and to which popup will be scaled down
-      // By defailt it looks for an image tag:
-      opener: function(openerElement) {
-        // openerElement is the element on which popup was initialized, in this case its <a> tag
-        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-        return openerElement.is('img') ? openerElement : openerElement.find('img');
-      }
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
       },
-       image: {
-        markup: '<div class="mfp-figure">'+
-            '<div class="mfp-close"></div>'+
-            '<div class="mfp-img"></div>'+ // Floated left
-            '<div class="mfp-bottom-bar">'+'<figcaption>'+'<div class="mfp-title" style="text-align:center"></div>'+
-              '<div class="mfp-counter"></div>'+'</figcaption>'+
-            '</div>'+
-            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
-  
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
         cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
-  
+
         tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
-       }
+      }
     });
-  
+
     //inicializa popover
     $(function () {
       $('[data-toggle="popover"]').popover()
@@ -549,28 +975,28 @@ Fonte: Spring Initializr (s.d.)
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
-  
-  
+
+
     /*------- Script de animação do botão -------*/
     var root = document.documentElement;
     root.className += ' js';
-  
+
     function boxTop(idBox) {
       var boxOffset = $(idBox).offset().top;
       return boxOffset;
     }
-  
-    $(document).ready(function() {
+
+    $(document).ready(function () {
       var $target = $('.animeStart'),
-          $target2 = $('.animeStop'),
-          targetBox = $('.box'),
-          animationClass = 'anime-init',
-          windowHeight = $(window).height(),
-          offset = windowHeight - (windowHeight / 4);
-  
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
       function animeScroll() {
         var documentTop = $(document).scrollTop();
-        $target.each(function() {
+        $target.each(function () {
           if (documentTop > boxTop(this) - offset) {
             targetBox.addClass(animationClass);
           } else {
@@ -578,42 +1004,45 @@ Fonte: Spring Initializr (s.d.)
           }
           if (documentTop > boxTop($target2) - offset) {
             targetBox.removeClass(animationClass);
-          } 
+          }
         });
       }
       animeScroll();
-  
-      $(document).scroll(function() {
+
+      $(document).scroll(function () {
         animeScroll();
       });
     });
-  
-  
+
+
   </script>
-  
+
   <script>
-    var scriptElem=document.createElement("script");
-    scriptElem.src="https://plugin.handtalk.me/web/latest/handtalk.min.js",
-    scriptElem.charset="UTF-8",
-    scriptElem.onload=function(){
-          window.ht = new HT({
-              token:"bf5b7efb148a829a126a0e0c9fd533bf",
-              align:"top",
-              videoEnabled: true,
-              ytEmbedReplace: true,           
-              mobileConfig:{align:"right",
-                            actionsAlign:"top",
-                            customButtonStyle:{
-                                  borderRadius:"6px",
-                                  size:"38px",
-                                  horizontalMargin:"13px",
-                                  bottomMargin:"140px",
-                                  rightMargin:"40px"}
-                            }
-            });        
-        $('.ht-skip').attr("aria-hidden","true")
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
       },
-    document.body.appendChild(scriptElem);
+      document.body.appendChild(scriptElem);
   </script>
-  </body>
+</body>
+
 </html>

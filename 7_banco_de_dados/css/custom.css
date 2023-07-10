@@ -31,55 +31,112 @@ header{margin-top: 100px;}
 .mt-40{margin-top: 40px;}
 .mt-60{margin-top: 60px;}
 
-.parallax{
-  min-height: 400px;
-  background: transparent;
-  width: 100%;
-  margin: 50px auto;
-}
-
-.info1{
-  background: #6491D8;
-  border-radius: 20px;
-  margin: auto;
-  margin-top: 200px;
-  margin-bottom: 50px;
-  padding: 35px 30px;
-  width: 80%;
-  position: relative;
-}
-.info1 img{
-  position: absolute;
-  margin: auto;
-  left:0;
-  right: 0;
-  top: -160px;
-}
-.info1 ul{
-  margin: 0;
-  padding: 0;
-}
-.info1 li{color: #fff;}
-.info2{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 50px auto;
-}
-.info2 img{margin-bottom: 40px;}
-ul.checklist li{
-  background: url('../imgs/checklist.png') no-repeat left top;
-  background-size: 25px;
+ul.marcador li{
+  background: url('../imgs/marcador.png') no-repeat left center;
+  background-size: 35px;
   min-height: 25px;
-  padding-left: 35px;
+  padding-left: 45px;
   list-style: none;
 }
-.icone-concluindo{
-  background-image: url('../imgs/ico_finalizando.png');
-  background-size: 176px 86px;
-  padding-left: 220px;
+.botao01{
+  border: none;
 }
+
+.botao01:hover{
+  color: #fff;
+  opacity: 0.7;
+}
+
+.botao02{
+  border: none;
+}
+
+.botao02:hover{
+  color: #fff;
+  opacity: 0.7;
+}
+
+.botao03{
+  border: none;
+}
+
+.botao03:hover{
+  color: #fff;
+  opacity: 0.7;
+}
+
+.imgBorder{
+  border: #004b8a 3px solid;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.caixa-destaque{
+  background-color: #e8e8e8;
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 1em;
+  position: relative;
+  padding-left: 100px;
+}
+.caixa-destaque2{
+  background-color: #e8e8e8;
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 1em;
+  position: relative;
+}
+.caixa-destaque3{
+  background-color: #e8e8e8;
+  padding: 2em;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 1em;
+  position: relative;
+  padding-right: 35px;
+}
+
+ul.marcadorCircular li{
+  background: url('../imgs/infografico1.png') no-repeat left center;
+  background-size: 20px;
+  min-height: 25px;
+  padding-left: 45px;
+  list-style: none;
+}
+.caixa-destaque2 ul{margin-left: unset;}
+.caixa-destaque3 ul{margin-left: unset;}
+
+.imgNota{
+position: absolute;
+margin-left: -175px;
+margin-top: 20px;
+}
+.imgInfografico{
+  position: absolute;
+  margin-top: -120px;
+  margin-left: 93px;
+}
+
+.espacamento{margin-top: 55px;}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .codigo-destaque{
   background: #000;
@@ -102,12 +159,11 @@ ul.checklist li{
 .eng-item-menu hr {
   width: 75%;
   position: relative;
-  background-color: #008da2;
+  background-color: #004b8a;
   margin: 0 auto;
   height: 1px;
   border: none;
 }
-
 .item1,
 .item2,
 .item3,
@@ -123,7 +179,7 @@ ul.checklist li{
 .item13,
 .item14 {
   width: 100%;
-  background-color: #007798;
+  background-color: #004b8a;
   cursor: pointer;
   position: relative;
   margin-bottom: 0 !important;
@@ -143,7 +199,7 @@ ul.checklist li{
 .item13:hover,
 .item14:hover {
   transition: 0.3s;
-  background-color: #008da2;
+  background-color: #ffff;
 }
 
 .fundo-item {
@@ -151,6 +207,7 @@ ul.checklist li{
   position: relative;
   color: #fff;
   font-size: 16px;
+  text-transform: uppercase;
   padding: 15px;
   text-align: center;
   height: calc(100% - 10px);
@@ -163,7 +220,7 @@ ul.checklist li{
   text-decoration: none;
 }
 .fundo-item:hover {
-  color: #fff;
+  color: #004b8a;
   text-decoration: none;
 }
 
@@ -229,7 +286,7 @@ label.menu-toggle {
   padding: 0;
   cursor: pointer;
   text-indent: -9999px;
-  background: #fff url("../imgs/menu-alt.png") 50% 50%/25px 25px no-repeat;
+  background: #004b8a url("../imgs/menu-alt.png") 50% 50%/25px 25px no-repeat;
 }
 .menu ul li > label {
   background: url("../imgs/icon-arrow-right.png") 95% 50%/16px 16px no-repeat;
@@ -260,9 +317,7 @@ label.menu-toggle {
 
 /*---------- FIM MENU ----------*/
 
-@media screen and (max-width: 780px){
-  .parallax{display: none;}
-}
+@media screen and (max-width: 780px){}
 @media screen and (max-width: 480px){
   .caixa-destaque code{
     word-break: break-word;
@@ -271,16 +326,3 @@ label.menu-toggle {
     margin-left: unset;
   }
 }
-
-
-@media screen and (max-width: 980px){
-  .icone-concluindo {
-    background-position: top 10px center;
-    padding-top: 120px;
-    padding-left: 5px;
-  }}
-
-  @media screen and (max-width: 1000px){
-    .parallax {display: none;}
-   
-  }
