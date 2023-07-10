@@ -125,9 +125,13 @@ margin-top: 20px;
 }
 
 .espacamento{margin-top: 55px;}
+table.senac td {
+  border-color: #004b8a;
+}
 
-
-
+table.senac {
+  border-color: #004b8a;
+}
 
 
 

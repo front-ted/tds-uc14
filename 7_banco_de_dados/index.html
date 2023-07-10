@@ -757,30 +757,198 @@ public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntit
             por isso é criada a camada de serviço que faz uma ponte entre os <i>endpoints</i> e a <i>repository</i>.
           </p>
           <p>
-            Na camada de serviço, deve ser criada, para cada classe <i>entity</i> do projeto, sua classe de serviço. Até o
+            Na camada de serviço, deve ser criada, para cada classe <i>entity</i> do projeto, sua classe de serviço. Até
+            o
             momento, há a classe <strong>FuncionarioEntity</strong>, então devem ter na classe de serviço os métodos
             “criarFuncionario()”, “atualizarFuncionario()”, “deletarFuncionario()”, “listarTodosFuncionarios()” e
             “getFuncionarioId()”.
           </p>
-          <p>Crie a classe <strong>FuncionarioService</strong> em <strong>com.api.senac.service </strong> com o seguinte código: </p>
+          <p>Crie a classe <strong>FuncionarioService</strong> em <strong>com.api.senac.service </strong> com o seguinte
+            código: </p>
+          <pre>
+            <code>
+package com.api.senac.service; 
 
+import com.api.senac.data.FuncionarioEntity; 
 
+import com.api.senac.data.FuncionarioRepository; 
 
+import java.util.List; 
 
+import org.springframework.beans.factory.annotation.Autowired; 
 
+import org.springframework.stereotype.Service; 
 
+@Service 
 
+public class FuncionarioService { 
 
+    @Autowired 
 
+    FuncionarioRepository funcionarioRepository; 
 
+    public FuncionarioEntity criarFuncionario(FuncionarioEntity func) { 
 
+  func.setId(null); 
 
+        funcionarioRepository.save(func); 
 
+        return func; 
 
+    } 
 
+    public FuncionarioEntity atualizarFuncionario(Integer funcId, FuncionarioEntity funcionarioRequest) { 
 
+        FuncionarioEntity func = getFuncionarioId(funcId); 
 
+        func.setNome(funcionarioRequest.getNome()); 
 
+        func.setCpf(funcionarioRequest.getCpf()); 
+
+        func.setTelefone(funcionarioRequest.getTelefone()); 
+
+        func.setEmail(funcionarioRequest.getEmail()); 
+
+        func.setSalario(funcionarioRequest.getSalario()); 
+
+        funcionarioRepository.save(func); 
+
+        return func; 
+
+    } 
+
+    public FuncionarioEntity getFuncionarioId(Integer funcId) { 
+
+        return funcionarioRepository.findById(funcId).orElse(null); 
+
+    } 
+
+    public List<FuncionarioEntity> listarTodosFuncionarios() { 
+
+        return funcionarioRepository.findAll(); 
+
+    } 
+
+    public void deletarFuncionario(Integer funcId) { 
+
+        FuncionarioEntity func = getFuncionarioId(funcId); 
+
+        funcionarioRepository.deleteById(func.getId()); 
+
+    } 
+
+} 
+            </code>
+          </pre>
+          <ul class="marcador">
+            <li>A anotação <strong>@Service</strong> especifica que essa classe será uma classe de serviço, que tratará
+              das regras de negócio e comunicação com banco de dados. </li>
+            <li>A anotação <strong>@autowire</strong> faz com que o repositório <strong>FuncionarioRepository</strong>
+              seja instanciado automaticamente pelo Spring. </li>
+          </ul>
+          <p>
+            <i> Serviço “listarTodosFuncionarios”</i>: para criar esse serviço, é necessário usar apenas o método
+            <strong>findAll</strong>. Veja
+            que não é preciso criar nenhuma linha em SQL.
+          </p>
+          <pre>
+            <code>
+public List&lt;FuncionarioEntity> listarTodosFuncionarios() { 
+
+        return funcionarioRepository.findAll(); 
+                
+} 
+            </code>
+          </pre>
+          <p>
+            <i> Serviço “criarFuncionario”</i>: para criar esse serviço, é necessário receber o objeto a ser gravado,
+            atribuir
+            para o atributo ID como <i>null</i> e chamar o método <strong>save</strong>. Note que não é preciso usar o
+            comando <i>insert</i> do SQL.
+          </p>
+          <pre>
+            <code>
+    public FuncionarioEntity criarFuncionario(FuncionarioEntity func) { 
+
+        func.setId(null); 
+                
+        funcionarioRepository.save(func); 
+                
+        return func; 
+                
+    } 
+            </code>
+          </pre>
+          <p>
+            <i>Serviço “getFuncionarioId”</i>: o método <strong>findById</strong> retorna um funcionário pelo ID
+            informado. Entretanto, caso não
+            exista, por meio do método <strong>orElse</strong>, você pode usar uma expressão em Lambda e instanciar sua
+            classe indicando
+            com o erro <i>null</i>.
+          </p>
+          <pre>
+            <code>
+public FuncionarioEntity getFuncionarioId(Integer funcId) { 
+
+        return funcionarioRepository.findById(funcId).orElse(null); 
+                
+    } 
+            </code>
+          </pre>
+          <p>
+            Mais adiante, neste conteúdo, será retornado esse serviço com uma exceção personalizada, porém usando agora
+            o método <strong>orElseThrow()</strong>.
+          </p>
+          <p><i>Serviço “deletarFuncionario”</i>: recebe como parâmetro o ID do funcionário, que verifica se ele existe
+            ou não
+            pelo método <strong>getFuncionarioId</strong>. Caso exista, ele deleta, caso contrário, retorna o erro. </p>
+          <pre>
+              <code>
+public void deletarFuncionario(Integer funcId) { 
+
+        FuncionarioEntity func = getFuncionarioId(funcId); 
+                  
+        funcionarioRepository.deleteById(func.getId()); 
+                  
+    } 
+              </code>
+            </pre>
+          <p>
+            <i>Serviço “atualizarFuncionario”</i>: inicialmente, é preciso validar se o funcionário existe no banco de
+            dados,
+            por isso, se chama o método <strong>getFuncionarioId</strong>. Caso não exista, uma exceção é disparada,
+            caso contrário, o
+            objeto localizado deve receber em cada um dos seus atributos os dados que foram enviados para atualização.
+            Por fim, se chama o método <strong>save</strong>.
+          </p>
+          <pre>
+            <code>
+    public FuncionarioEntity atualizarFuncionario(Integer funcId, FuncionarioEntity funcionarioRequest) { 
+
+        FuncionarioEntity func = getFuncionarioId(funcId); 
+
+        func.setNome(funcionarioRequest.getNome()); 
+
+        func.setCpf(funcionarioRequest.getCpf()); 
+
+        func.setTelefone(funcionarioRequest.getTelefone()); 
+
+        func.setEmail(funcionarioRequest.getEmail()); 
+
+        func.setSalario(funcionarioRequest.getSalario()); 
+
+        funcionarioRepository.save(func); 
+
+        return func; 
+
+    } 
+            </code>
+          </pre>
+          <h4>Camada “Controller”</h4>
+          <p>
+            É a classe que disponibilizará as rotas ou <i>endpoints</i> da API de Funcionários. Os serviços
+            disponibilizados serão acessados conforme a tabela a seguir.
+          </p>
           <table class="senac">
             <tbody>
               <tr>
@@ -816,6 +984,8 @@ public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntit
             </tbody>
           </table>
           <p>
+            Crie uma classe <strong>FuncionarioController</strong> em <strong>com.api.senac.controller</strong> com o seguinte código: 
+          </p>
 
 
 
