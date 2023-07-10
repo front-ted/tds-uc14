@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+    <link href="../template/css/cores.css" rel="stylesheet">
+    <link href="../template/css/modal-100.css" rel="stylesheet">
+    <link href="../template/css/devibeans.min.css" rel="stylesheet">
+      <!--Extras - novas classes para facilitar-->
+      <link rel="stylesheet" href="../template/css/extras.css">
+    <link href="../template/css/sncload.css" rel="stylesheet">
+    <link href="../template/css/magnific-popup.css" rel="stylesheet">
+    <!-- referencia ao arquivo css com estilos especificos da pagina -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <!-- css necessario para o print -->
+    <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+    <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+    <!-- MARCA D´ÁGUA -->
+    <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+    <!-- /MARCA D´ÁGUA -->
+
+    <div id='sncloader' class='over-loader'><div class="over-cell"><div id="sncload"></div></div></div>
+    <header id="topo" class="senac no-print">
+        <div  class="header-tecnicos container">
+        	  <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+            <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+        </div>
+        <div id="sombra"></div>
+    </header>
+
+    <div id="booklet">
+        <header class="no-print container">
+          <!-- BTO IMPRIMIR -->
+          <div class="grupo-imprimir no-print">
+            <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+                <span class="fa fa-print"></span> <span>Imprimir</span>
+            </button>
+          </div>
+          <!-- /BTO IMPRIMIR -->
+        </header>
+<!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+        <section class="paginas">
+
+          <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+          <div class="pagina">
+            <!-- Menu -->
+            <div class="bg-fundo"></div>
+            <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+            
+            <div class="container">
+             
+            <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+            
+            <h2>Memória da aplicação web </h2>
+            <p>
+              Sistemas web são, por natureza, sem estado (stateless), ou seja, não guardam uma memória, como uma variável, um vetor ou outras estruturas comuns na programação desktop, que mantenham seus valores entre requisições diferentes. Cada requisição é tratada como uma ação única, e todas as informações necessárias devem ser repassadas do front-end para o back-end.  
+            </p>
+            <p>
+              Há recursos, no entanto, que permitem guardar dados de um usuário e reutilizá-los nas páginas dos sistemas ou até compartilhá-los com outros sistemas web. No conteúdo a seguir, serão tratados os dois recursos mais importantes para isso: os Cookies e as Sessões. 
+            </p>
+            <h3>Armazenamento de dados entre requisições</h3>
+            <p>O recurso de armazenamento temporário de informações do usuário de um website ou sistema web são os famosos Cookies. Eles guardam informações no lado do cliente (no navegador) e reenviam essas informações de maneira automática ao servidor.  </p>
+            <p>
+              Hoje, cookies são muito usados para identificar ações de um usuário e o comportamento deles em um ou mais sites. Veja alguns exemplos de uso de cookies. 
+            </p>
+            <ul>
+              <li>Configurar a preferência de linguagem do usuário  </li>
+              <li>
+                Lembrar de itens de um carrinho de compras </li>
+              <li>
+                Autenticar um usuário </li>
+              <li>
+                Mostrar propagandas com base no comportamento do usuário </li>
+              <li>
+                Monitorar como o usuário interage com as propagandas </li>
+              <li>
+                Preencher automaticamente campos em formulários
+              </li>
+            </ul>
+            <p>
+              Há grande discussão quanto ao uso de cookies e a privacidade dos usuários de internet, tanto que se tornou padrão incluir um consentimento de uso desse recurso nas páginas (o usuário informa se quer continuar usando cookies, se não deseja usar ou se deseja selecionar para quais usos podem ser aplicados). 
+            </p>
+            <a href="imgs/assets/fig-01.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-01.png" class="center-block img-responsive" alt="Página inicial do site BBC News Brasil mostrando, na parte de baixo, uma faixa sobreposta ao conteúdo com o texto “Diga-nos se concorda com o uso de cookies” em destaque, um texto descritivo abaixo e, no rodapé, um botão “Concordo” e um link “Não concordo, volte para Configurações”. "></a>
+            <p class="legenda-imagem">
+              Figura 1 – Consentimento de uso de cookies no site da BBC Brasil  
+              Fonte: https://www.bbc.com/portuguese  
+            </p>
+            <p>
+              Tecnicamente, cookies são pequenos arquivos de texto contendo informações únicas que identificam o computador ou o usuário de um site. Esses arquivos são armazenados pelo navegador e são criados quando se acessa pela primeira vez um site que use cookies. Nas vezes posteriores em que se acessa esse mesmo site, os dados de cookie serão transmitidos e o site identificará o usuário de alguma maneira, usará esses dados para alguma personalização no website ou registrará em banco de dados alguma informação relativa. 
+            </p>
+            <a href="imgs/assets/fig-02.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-02.png" class="center-block img-responsive" alt="Infográfico com um ícone de computador com seta com o texto “1- Você conecta à internet”, aponta para um globo de onde sai uma seta com texto “2- ... e requisita uma informação de um website” apontando para um ícone de servidor, de onde sai uma seta com texto “3- Quando o servidor website responde, ele te envia um cookie” apontando para um ícone de interrogação, de onde sai uma seta apontando para um ícone de globo, de onde sai uma seta com texto “4- ...que é gravado no seu computador” apontando para um ícone de computador. Em seguida, um ícone de computador apresenta uma seta com texto “5- Quando você fica online e volta a acessar o website”, de onde sai uma seta com texto “6-...seu computador envia o cookie de volta...” apontando para um ícone de globo, que aponta uma seta para um ícone de interrogação, de onde sai uma seta com texto “7-...e então o servidor do website identifica você e suas informações gravados no cookie que podem ser usadas pelo site ou compartilhadas com sites parceiros” apontando para um ícone de servidor. "></a>
+            <p class="legenda-imagem">Figura 2 – Funcionamento de cookies 
+
+              Fonte: Rai (2019)</p>
+
+            <p>
+              Os cookies são criados no lado do servidor e precisam ser incluídos na resposta (response) enviada do servidor ao cliente. Quando houver uma requisição para uma página que lê cookies, o navegador enviará nos dados da requisição (request) as informações de cookies presentes. 
+            </p>
+            <p class="caixa-destaque icone-doc">
+              Você pode verificar os cookies escritos por uma página a partir da propriedade set-cookie do response e os lidos por uma página a partir de cookies do request. Eles podem ser vistos em ferramentas de desenvolvimento, como o Chrome Devtools. 
+            </p>
+            <p>A estrutura de um cookie consiste de três elementos: </p>
+            <ul>
+              <li><strong> Nome</strong> : a identificação de um cookie. A partir desse nome, em requisições posteriores, são recuperados os dados armazenados. </li>
+              <li><strong> Valor</strong>: os dados gravados no cookie. </li>
+              <li><strong> Atributos</strong>: opcionais, são usados para configurações do cookie, como tempo de expiração, domínio ao qual pertence, se são visíveis apenas a partir de requisições HTTP, entre outras. </li>
+            </ul>
+            <p>
+              Ao criar cookies, pode-se informar alguns atributos que alteram seu funcionamento. Um cookie pode ter limitado o seu tempo de vida, ou seja, pode-se informar quando um cookie expira e é excluído do navegador usando o atributo Expires. É possível restringir se o cookie será entregue apenas em conexões seguras (usando HTTPS) por meio do atributo Secure. Também pode-se definir se ele será invisível ao Javascript (atributo HttpOnly). Veja um exemplo de cookie definindo expiração e segurança. 
+            </p>
+            <p>
+              Set-Cookie: id-cookie=meu-id-123; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly 
+            </p>
+            <p>
+              Outros atributos normalmente usados são Domain, para definir que o cookie só será enviado em determinado domínio e subdomínios de internet, e Path, que implica que os cookies só existam em um caminho específico no website (por exemplo, apenas em páginas que estão em “/docs”). 
+            </p>
+            <p>
+              Por serem recursos de navegador (lado cliente), o controle sobre os cookies está nas mãos do usuário, ele poderá decidir se os sites devem gravar ou não essas informações e poderá excluí-las quando quiser. Assim, trata-se de um recurso que não deve ser usado com finalidades vitais ao funcionamento de um sistema web, pois não há garantia de que a informação estará lá quando uma nova requisição ao sistema acontecer (o usuário pode ter apagado).  
+            </p>
+            <p>
+              Um uso muito comum, no entanto, é para manter a autenticação de um usuário entre várias páginas. Lembra-se de como seria possível fazer isso em um sistema desktop? Basicamente ao realizar login, se guardava uma variável, o valor da autenticação e os dados do usuário e, ao abrir novas telas, eram consultadas essas variáveis para verificar quem está usando o sistema, suas permissões etc. Em sistemas web, como dito anteriormente, não há variáveis que persistam entre requisições. No entanto, pode-se usar o conceito de sessões para manter esses dados, e as sessões podem usar cookies. 
+            </p>
+            <h3>Cookies</h3>
+            <p>
+              A criação e o uso de cookies em Java dependem de algumas classes específicas. A primeira é a classe Cookie (jakarta.servlet.http.Cookie), responsável pela criação de um cookie, permitindo configurações, como tempo de expiração e domínio. Outra classe fundamental é HttpServletResponse (jakarta.servlet.http.HttpServletResponse), que envia o cookie como resposta à requisição do usuário para que ele seja gravado no navegador. Veja um exemplo genérico de criação de cookie. 
+            </p>
+            <p>
+              Cookie novoCookie = new Cookie("nome", "valor"); 
+
+novoCookie.setMaxAge(3600); 
+
+novoCookie.setDomain("localhost"); 
+
+novoCookie.setPath("/"); 
+
+novoCookie.setHttpOnly(true); 
+
+novoCookie.setSecure(true); 
+
+ 
+
+//HttpServletResponse response 
+
+response.addCookie(novoCookie); 
+            </p>
+            <p>
+              Para a leitura de cookies, pode ser usada a classe HttpServletRequest (jakarta.servlet.http.HttpServletRequest) e usar o método getCookies(), que traz todos os cookies enviados pela requisição. É necessário percorrer uma lista se quiser encontrar um cookie específico. Veja a sintaxe a seguir, simulando o método que retorna um cookie específico. 
+            </p>
+            <code><br>
+              Cookie[] cookies = request.getCookies();  <br>
+for (Cookie cookie : cookies ) {  <br>
+    if (cookie.getName().equals("nome")) {  <br>
+        return cookie;  <br>
+    } <br>
+} <br>
+            </code>
+            <p>
+              Porém, pelo framework Spring, há uma maneira mais simples quando é necessário obter valor de um cookie específico, que é uma anotação @CookieValue (org.springframework.web.bind.annotation.CookieValue) aplicada a parâmetros de métodos. Veja um exemplo de sintaxe. 
+            </p>
+            <code>
+              @CookieValue(name="nome", defaultValue="", required=true) String valorCookie 
+            </code>
+            <h4>Propriedades do Cookie </h4>
+            <p>
+              Alguns métodos da classe Cookie podem ser usados para configurar as propriedades do cookie na criação dele. São os seguintes: 
+            </p>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h3 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                      aria-controls="collapseOne">
+                      <i>setDomain(String):  </i>
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p>Atributo Domain, que recebe por texto a qual domínio de internet o cookie ficará restrito. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h3 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      <i>setHttpOnly(boolean):  </i>
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p>
+                      Atributo HttpOnly, que define (true ou false) se o cookie deve ser restrito a requisições diretas de HTTP (via navegador). 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h3 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseThree">
+                      <i>setMaxAge(int):  </i>
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <div class="icone-atencao texto-com-icone">
+                      <p>
+                        Define o atributo Max-Age, um tempo de expiração para o cookie expresso em segundos (o cookie será excluído após esse tempo).  
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingfor">
+                  <h3 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefor"
+                      aria-expanded="false" aria-controls="collapsefor">
+                      <i>setPath(String):  </i>
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapsefor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfor">
+                  <div class="panel-body">
+                    <div class="icone-atencao texto-com-icone">
+                      <p>Atributo Path, que define em qual caminho de URL o cookie deve ser usado. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingfive">
+                  <h3 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive"
+                      aria-expanded="false" aria-controls="collapsefive">
+                      <i>setSecure(boolean):  </i>
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+                  <div class="panel-body">
+                    <div class="icone-atencao texto-com-icone">
+                      <p>Atributo Secure, que restringe o cookie a requisições com HTTPS. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
+
+
+
+          
+                <!-- painel clicavel -->
+         
+              
+            </div>
+            
+          </div>
+
+        </section>
+<!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+        <footer class="text-center no-print">
+          
+          <ul class="pagination">
+
+          </ul>
+         
+        </footer>
+
+    </div>
+
+    <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+<!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+<div class="ico-div-loader">
+	<img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../template/js/jquery.min.js"></script>
+    <script src="../template/js/bootstrap.min.js"></script>
+    <script src="../template/js/jquery.magnific-popup.min.js"></script>
+    <script src="../template/js/print.js"></script>
+    <script src="../template/js/template.config.js"></script>
+    <script src="../template/js/images.loader.js"></script>
+    <script src="../template/js/highlight.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/custom.js"></script>
+    <noscript>
+      <style media="screen">
+        .over-loader { display: none;}    
+      </style>
+    </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+     type: 'image',
+       mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+  
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+  
+      // The "opener" function should return the element from which popup will be zoomed in
+      // and to which popup will be scaled down
+      // By defailt it looks for an image tag:
+      opener: function(openerElement) {
+        // openerElement is the element on which popup was initialized, in this case its <a> tag
+        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+      },
+       image: {
+        markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+ // Floated left
+            '<div class="mfp-bottom-bar">'+'<figcaption>'+'<div class="mfp-title" style="text-align:center"></div>'+
+              '<div class="mfp-counter"></div>'+'</figcaption>'+
+            '</div>'+
+            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+  
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+  
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+       }
+    });
+  
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  
+  
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+  
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+  
+    $(document).ready(function() {
+      var $target = $('.animeStart'),
+          $target2 = $('.animeStop'),
+          targetBox = $('.box'),
+          animationClass = 'anime-init',
+          windowHeight = $(window).height(),
+          offset = windowHeight - (windowHeight / 4);
+  
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function() {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          } 
+        });
+      }
+      animeScroll();
+  
+      $(document).scroll(function() {
+        animeScroll();
+      });
+    });
+  
+  
+  </script>
+  
+  <script>
+    var scriptElem=document.createElement("script");
+    scriptElem.src="https://plugin.handtalk.me/web/latest/handtalk.min.js",
+    scriptElem.charset="UTF-8",
+    scriptElem.onload=function(){
+          window.ht = new HT({
+              token:"bf5b7efb148a829a126a0e0c9fd533bf",
+              align:"top",
+              videoEnabled: true,
+              ytEmbedReplace: true,           
+              mobileConfig:{align:"right",
+                            actionsAlign:"top",
+                            customButtonStyle:{
+                                  borderRadius:"6px",
+                                  size:"38px",
+                                  horizontalMargin:"13px",
+                                  bottomMargin:"140px",
+                                  rightMargin:"40px"}
+                            }
+            });        
+        $('.ht-skip').attr("aria-hidden","true")
+      },
+    document.body.appendChild(scriptElem);
+  </script>
+  </body>
+</html>
