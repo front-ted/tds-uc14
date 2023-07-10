@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Comunicação visual e imagens vetoriais e bitmap</title>
+
+    <!-- Bootstrap -->
+    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+    <link href="../template/css/cores.css" rel="stylesheet">
+    <link href="../template/css/modal-100.css" rel="stylesheet">
+    <link href="../template/css/devibeans.min.css" rel="stylesheet">
+      <!--Extras - novas classes para facilitar-->
+      <link rel="stylesheet" href="../template/css/extras.css">
+    <link href="../template/css/sncload.css" rel="stylesheet">
+    <link href="../template/css/magnific-popup.css" rel="stylesheet">
+    <!-- referencia ao arquivo css com estilos especificos da pagina -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <!-- css necessario para o print -->
+    <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+    <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+    <!-- MARCA D´ÁGUA -->
+    <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+    <!-- /MARCA D´ÁGUA -->
+
+    <div id='sncloader' class='over-loader'><div class="over-cell"><div id="sncload"></div></div></div>
+    <header id="topo" class="senac no-print">
+        <div  class="header-tecnicos container">
+        	  <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+            <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+        </div>
+        <div id="sombra"></div>
+    </header>
+
+    <div id="booklet">
+        <header class="no-print container">
+          <!-- BTO IMPRIMIR -->
+          <div class="grupo-imprimir no-print">
+            <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+                <span class="fa fa-print"></span> <span>Imprimir</span>
+            </button>
+          </div>
+          <!-- /BTO IMPRIMIR -->
+        </header>
+<!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+        <section class="paginas">
+
+          <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+          <div class="pagina">
+            <!-- Menu -->
+            <div class="bg-fundo"></div>
+            <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+            <!-- <div class="menu no-print" aria-hidden="true">
+              <div id="style-2" class="scroll-bar">
+                <div class="force-overflow">
+                  
+                  <ul class="eng-item-menu">
+                    <li class="item1">
+                      <a href="#t1" class="fundo-item">Introdução</a>
+                      <hr>
+                    </li>
+                    <li class="item2">
+                      <a href="#t2" class="fundo-item">Conceito de classes e objetos</a>
+                      <hr>
+                    </li>
+                    <li class="item3">
+                      <a href="#t3" class="fundo-item">Os quatro pilares da orientação a objetos</a>
+                      <hr>
+                    </li>
+                    <li class="item4">
+                      <a href="#t4" class="fundo-item">As vantagens da orientação a objetos</a>
+                      <hr>
+                    </li>
+                    <li class="item5">
+                      <a href="#t5" class="fundo-item">UML</a>
+                      <hr>
+                    </li>
+                    <li class="item6">
+                      <a href="#t6" class="fundo-item">Diagramas</a>
+                      <hr>
+                    </li>
+                    <li class="item7">
+                      <a href="#t7" class="fundo-item">Uso do aplicativo Diagrams</a>
+                      <hr>
+                    </li>
+                    <li class="item8">
+                      <a href="#t8" class="fundo-item">Encerramento</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+            
+            <div class="container">
+              
+              <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+              
+              <h2 class="acessivel print">MVC (MODEL-VIEW-CONTROLLER)</h2>
+              <p>
+                Durante esta jornada de aprendizado, você estudou diversas maneiras de criar projetos, incluindo o uso de conexões e a criação de interfaces com Java ou na web. No entanto, para que um projeto possa ser constantemente melhorado e ampliado para poder oferecer mais recursos aos usuários da aplicação, é essencial compreender um modelo que permeia muitos projetos, seja na web ou em desktops, o padrão de projeto Model-View-Controller (MVC). 
+              </p>
+              <p>
+                O padrão Model-View-Controller (MVC) ajuda a estruturar o seu código de maneira lógica e eficiente, separando as preocupações e permitindo desenvolvimento, manutenção e escalabilidade mais fáceis. Este estudo se concentrará em como o MVC é aplicado no desenvolvimento de aplicações web usando o Spring. Você vai estudar também a relação do padrão MVC com projetos já desenvolvidos em outras UCs. Além disso, será explorado como as camadas de modelo, visão e controlador do MVC se relacionam entre si e como usar o Spring para implementar efetivamente esse padrão. 
+              </p>
+              <h3>Conceitos</h3>
+              <p>
+                O padrão MVC de arquitetura de software propõe uma maneira de se pensar na divisão das responsabilidades de diferentes componentes que formam o sistema. No caso, separam-se três componentes principais: Modelo (manipulação de dados e regras de negócio), Visão (interface gráfica de interação) e Controle (orquestração entre as duas camadas). O modelo é amplamente utilizado no desenvolvimento de aplicações web, pois esse tipo de aplicação tem, por sua natureza, uma separação bastante clara de processamento (back-end) e visão (front-end). Muitos frameworks modernos de aplicação web, como o Spring Framework, incorporam o padrão MVC em sua arquitetura. Veja mais detalhadamente as definições a seguir. 
+              </p>       
+              <p>
+                Clique ou toque para visualizar o conteúdo. 
+              </p>
+              <a href="imgs/layout_fig1.png" target="_blank" class="" aria-hidden="true"><img src="imgs/layout_fig1.png" class="center-block img-responsive" alt="Ciclo da ligação do MVC em três etapas, uma no topo e duas abaixo, à direita e à esquerda. Na parte superior, há o “Model”, com o seguinte texto: “Model representa os dados e a lógica de negócio da aplicação. É responsável por armazenar e manipular informações, além de notificar a View quando houver alterações nos dados.”. Abaixo, à esquerda, há o “View”, com o seguinte texto: “View, por sua vez, representa a interface gráfica do usuário (GUI). É responsável por exibir as informações provenientes do Model e receber a interação do usuário.”. Abaixo, à direita, há o “Controller”, com o seguinte texto: “Controller atua como intermediário entre o Model e a View. É responsável por receber as requisições do usuário, processá-las e atualizar o Model e/ou a View de acordo.”. "></a>
+              <ul class="acessivel only-print">
+                <li><strong>Model</strong> representa os dados e a lógica de negócio da aplicação. É responsável por armazenar e manipular informações, além de notificar a View quando houver alterações nos dados. 
+                </li>
+                <li><strong>View</strong>, por sua vez, representa a interface gráfica do usuário (GUI). É responsável por exibir as informações provenientes do Model e receber a interação do usuário. 
+                  </li>
+                <li><strong>Controller</strong> atua como intermediário entre o Model e a View. É responsável por receber as requisições do usuário, processá-las e atualizar o Model e/ou a View de acordo. 
+                </li>
+              </ul>
+
+              
+        <table class="senac">
+          <tbody>
+            <tr>
+              <th>Camada </th>
+              <th>Descrição</th>
+            </tr>
+            <tr>
+              <td>Camada de Apresentação (V) </td>
+              <td>Responsável por exibir a interface do usuário para o usuário e manipular a entrada do usuário. </td>
+            </tr>
+            <tr>
+              <td>Camada de lógica de negócios (C) </td>
+              <td>Responsável por executar a lógica de negócios do aplicativo. </td>
+            </tr>
+            <tr>
+              <td>Camada de acesso a dados (M) </td>
+              <td>Responsável pela interação com o banco de dados. </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="legenda-imagem">Tabela 1 – Definição das camadas MVC (Model, View e Controller)  Fonte: Senac EAD (2023) </p>
+        <h4>História do MVC </h4>
+        <p>
+          O padrão Model-View-Controller (MVC) foi inicialmente proposto por Trygve Reenskaug, em 1979, durante seu trabalho com Smalltalk-80 no Xerox PARC. Essa proposta de design representou uma inovação significativa para a época, ao introduzir a ideia de separar as responsabilidades na estruturação do software. Esse conceito ganhou amplo reconhecimento e passou a influenciar diversas tecnologias e frameworks que surgiram posteriormente. Entre eles, destacam-se Ruby on Rails, ASP.NET MVC e Java Web com uso do Spring. O MVC se tornou assim uma abordagem fundamental, que é utilizada em inúmeros frameworks e aplicações de sistemas em geral. 
+        </p>
+        <h4>Vantagens no uso do padrão MVC </h4>
+        <p>
+          Uma das principais vantagens do padrão MVC é a facilidade na gestão de diferentes interfaces de usuário, sem precisar alterar o código responsável pela lógica de negócios. Isso torna a manutenção, os testes e as atualizações de sistemas complexos mais fáceis e eficientes. Quando um novo tipo de interface de usuário precisa ser adicionado ao sistema, basta criar um novo componente responsável pela apresentação dos dados (a "View") e outro componente responsável por gerenciar a interação entre essa nova view e o código existente (o "Controller").  
+        </p>
+        <p>
+          Essa arquitetura modular torna a aplicação escalável e permite o desenvolvimento em paralelo das diferentes partes do sistema. O reúso do código é facilitado, tornando o processo de desenvolvimento mais ágil e econômico. Além disso, a arquitetura modular permite que desenvolvedores e designers trabalhem em paralelo, o que acelera o processo de desenvolvimento.  
+        </p>
+        <p>
+          Veja suas principais vantagens: 
+        </p>
+        <div class="caixa-destaque">
+            <ul>
+              <li><strong> Facilidade:</strong>  MVC facilita a gestão de diferentes interfaces de usuário. </li>
+              <li><strong>Não modificação de código:</strong> não há necessidade de modificar o código de lógica de negócios ao adicionar novas interfaces.</li>
+              <li><strong>Escalabilidade:</strong> a arquitetura modular do MVC torna a aplicação escalável e permite o desenvolvimento em paralelo. </li>
+              <li><strong>Reúso de código:</strong> o reúso de código é facilitado e o processo de desenvolvimento é mais ágil e econômico. </li>
+              <li><strong>Simplificação da interface:</strong> a transformação da interface é simplificada sem a necessidade de modificar a lógica de negócios. </li>
+              <li><strong>Melhora de desempenho:</strong> a estrutura de pacotes modulares melhora o desempenho e a produtividade da aplicação. </li>
+              <li><strong>Trabalho em paralelo:</strong> a arquitetura modular permite que desenvolvedores e designers trabalhem em paralelo, acelerando o processo de desenvolvimento. </li>
+              <li><strong>Eficiência na manutenção:</strong> partes específicas da aplicação podem ser modificadas sem alterar outras, tornando a manutenção mais eficiente e econômica. </li>
+            </ul>
+
+          </div>
+        <h4>Desvantagens no uso do padrão MVC </h4>
+        <p>
+          Por outro lado, uma das desvantagens do padrão MVC é que pode haver uma sobrecarga de trabalho e complexidade adicionais no processo de desenvolvimento, o que pode não ser justificável para projetos simples ou pequenos. Isso pode levar a um aumento no tempo e no custo do desenvolvimento, além de aumentar a curva de aprendizado para a equipe. Pode-se considerar também como desvantagem que se o padrão MVC não for bem implementado, pode levar a um código acoplado, ou seja, componentes do sistema que estão fortemente interconectados e dependem uns dos outros. Isso pode tornar o código difícil de entender, testar e manter, além de tornar a evolução do sistema mais difícil. Portanto, é importante que os desenvolvedores sigam boas práticas de implementação do padrão MVC para evitar o acoplamento excessivo e garantir um código modular e escalável. 
+        </p>
+        <div class="caixa-destaque">
+          <ul>
+            <li><strong> Sobrecarga de trabalho e complexidade:</strong> MVC pode adicionar complexidade desnecessária a projetos simples ou pequenos. </li>
+            <li><strong>Custo e tempo:</strong> a sobrecarga do MVC pode aumentar o tempo e custo do desenvolvimento. </li>
+            <li><strong>Código acoplado:</strong> a implementação ruim do MVC pode levar a código acoplado e dificultar sua compreensão, teste e manutenção. </li>
+            <li><strong>Boas práticas:</strong> desenvolvedores devem seguir boas práticas para evitar o acoplamento excessivo e garantir um código modular e escalável. </li>
+          </ul>
+        </div>
+        <h3>Aplicabilidade</h3>
+        <p>
+          Como mencionado anteriormente, MVC pode ser aplicado em uma variedade de tipos de projetos de software. Em projetos Java, é possível aplicar tanto para desktop quanto para web, e a separação das classes acontece por pacotes. É importante uma estruturação adequada do projeto para a boa utilização do padrão MVC. A seguir, veja um comparativo entre a estrutura de projetos Java desktop e web. 
+        </p>
+        <p>
+          Clique ou toque para visualizar o conteúdo. 
+        </p>
+        
+<div class="painel-bts">
+  <img src="imgs/painel_bg.png" alt="">
+  <img src="imgs/bt1.png" class="imgbt1"  data-toggle="modal" data-target="#myModal" alt="">
+  <img src="imgs/bt2.png" class="imgbt2"  data-toggle="modal" data-target="#myModal2" alt="">
+
+</div>>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        
+        <div>
+          <p>
+            No exemplo a seguir, será demonstrada a implementação prática do padrão MVC em um exemplo de aplicação desktop em Java com uso do JPA, explorando a dinâmica de interação entre esses componentes. 
+          </p>
+          <p><strong>Model</strong>: as classes de entidade representam objetos de domínio e são mapeadas para registros de banco de dados usando JPA. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, endereço e número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. 
+
+          </p>
+          <p>
+          <strong>View</strong>: a interface do usuário é construída usando componentes gráficos como o Swing. Nessa camada, são criadas telas e formulários, como JForms, que permitem a interação do usuário com a aplicação. Por exemplo, uma visão do cliente pode exibir uma lista de clientes ou um formulário que permite aos usuários criar um novo cliente. 
+          </p>
+          <p>
+          <strong>Controller</strong>: a interação entre o Model e a View é implementada em classes separadas, chamadas de controllers. Os controladores são responsáveis por gerenciar as ações do usuário, atualizar o modelo e visualizar conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. 
+          </p>
+          <a href="imgs/assets/fig-02.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-02.png" class="center-block img-responsive" alt="Projeto Netbeans com nome ModeloMVC_JPA apresentando pacotes br.com.controller com classe ClienteController.java; br.com.model com classe Cliente.java; br.com.utils com classe JAPUtils e br.com.view com classe ClienteForm.java.  "></a>
+        <p class="legenda-imagem">Figura 2 – Exemplo de Estrutura de pacotes em um projeto Java desktop com JPA  
+
+          Fonte: Senac EAD (2023) </p>
+          <p>
+            Nesta estrutura, o pacote model contém a classe Cliente.java, que representa a entidade Cliente mapeada para a tabela correspondente no banco de dados via JPA. A classe ClienteForm.java, no pacote view, é responsável pela interface do usuário, criada com Swing, para inserir ou editar informações do cliente. A classe ClienteController.java, no pacote controller, manipula as interações do usuário com a interface, atualiza o modelo Cliente e reflete as mudanças na visão. A classe JPAUtil.java, no pacote utils, administra a conexão com o banco de dados usando JPA. 
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModal2Label"></h4>
+      </div>
+      <div class="modal-body">
+        
+        <div>
+          <p>O desenvolvimento de aplicações web em Java é um processo complexo que exige a interação de diversas camadas de software. O uso do padrão de arquitetura MVC (Model-View-Controller) é uma abordagem comum e eficaz para estruturar projetos de aplicações web em Java.  </p>
+          <p>A utilização do framework Spring em projetos Java web oferece aos desenvolvedores uma plataforma poderosa e flexível, que simplifica várias tarefas comuns, como o mapeamento objeto-relacional e o processamento de solicitações HTTP. Ao utilizar o padrão MVC, em conjunto com o Spring, é possível desenvolver aplicações web Java escaláveis e fáceis de manter. A organização clara do código e a separação eficiente das responsabilidades em camadas bem definidas tornam a aplicação mais modular e flexível.  </p>
+          <p>A seguir, será demonstrado como o padrão MVC pode ser organizado dentro da estrutura de pacotes em uma aplicação Java Web. </p>
+          <p><strong> Model:</strong> em projetos para web, as classes de entidade também representam objetos de domínio e podem ser mapeadas para registros de banco de dados usando diferentes abordagens, como JPA ou DAO. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, o endereço e o número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. </p>
+          <p><strong> View:</strong>  a interface do usuário é criada usando tecnologias como HTML, CSS e JavaScript. A parte de visualização de uma aplicação web tem a função de apresentar dados ao usuário e, ocasionalmente, coletar dados do usuário. Uma alternativa popular para gerar essas visualizações em aplicações Spring é usar o Thymeleaf, uma biblioteca para processamento de templates HTML, que possibilita a criação de páginas web dinâmicas e interativas, que são renderizadas pelo navegador. Por exemplo, uma view de cliente usando Thymeleaf pode exibir uma lista de clientes ou um formulário para a criação de um novo cliente. </p>
+          <p><strong> Controller:</strong> em aplicativos da web, os controladores geralmente são implementados como classes de controle. Eles são responsáveis por receber as solicitações dos usuários, processar a lógica de negócios e atualizar o modelo e a visualização conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. </p>
+
+          <a href="imgs/assets/fig-03.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-03.png" class="center-block img-responsive" alt="Projeto Netbeans com nome ModeloMVC_Spring, com a criação de pacotes e classes que são descritos em sequência no parágrafo seguinte."></a>
+          <p class="legenda-imagem">Figura 3 – Estrutura de pacotes em um projeto Java Spring WEB  
+
+            Fonte: Senac EAD (2023) </p>
+            <p>
+              Na estrutura apresentada na figura, a classe UsuarioController.java corresponde à camada Controller do padrão MVC, sendo responsável por gerenciar as requisições e as respostas HTTP. A classe Usuario.java é a camada Model, representando a estrutura de dados e regras de negócio. No diretório resources, há arquivos de configuração (application.properties), recursos estáticos (css, js, images), que são utilizados na apresentação dos dados, e os templates (home.html), que compõem a camada View, responsáveis pela representação visual das informações ao usuário, sendo, nesse caso específico, gerados por meio do Thymeleaf, um motor de templates para aplicações Spring. 
+            </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <h3> Outros padrões de projeto </h3>
+        <p>
+          Uma alternativa ao padrão MVC é o Model-View-ViewModel (MVVM), largamente aplicado em aplicações móveis e de desktop. Nesse padrão, a View é responsável apenas pela apresentação dos dados e pela interação com o usuário, enquanto uma camada chamada ViewModel faz a comunicação com o Model, transformando os dados e disponibilizando-os para a View. O Model, por sua vez, mantém as regras de negócio e a lógica de armazenamento dos dados. 
+        </p>
+        
+        <a href="imgs/assets/fig-04.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-04.png" class="center-block img-responsive" alt="Fluxograma ilustrando a arquitetura MVVM com três componentes principais: View, ViewModel e Model. A View se comunica com o ViewModel através de “Ligação de Dados e Comandos”. O ViewModel interage com a Model.  "></a>
+        <p class="legenda-imagem">Figura 4 – Fluxograma do modelo e MVVM 
+
+          Fonte: Web Programiranje (s.d.) </p>
+          <p>
+            No fluxograma da figura, é demonstrado, de forma resumida, o fluxo entre os três componentes principais da arquitetura MVVM da seguinte forma: 
+          </p>
+          
+        <div class="caixa-destaque">
+          <ul>
+            <li>
+              <strong> View:</strong> é a representação visual da aplicação, responsável pela interface do usuário e pela apresentação dos dados. 
+            </li>
+            <li>
+              <strong> ViewModel:</strong> atua como intermediário entre a View e a Model. Gerencia a lógica de apresentação, como a manipulação de dados e comandos, e envia notificações para a View quando há atualizações. 
+            </li>
+            <li>
+              <strong> Model:</strong> representa os dados e a lógica de negócios da aplicação. Ela é responsável por armazenar e gerenciar os dados, bem como realizar operações e validações. 
+            </li>
+          </ul>
+        </div>
+        <p>O fluxograma mostra a interação entre esses componentes da seguinte forma: </p>
+        <ul>
+          <li>A View se comunica com o ViewModel por meio da “Ligação de Dados e Comandos”, que permite que a View atualize o ViewModel com as informações do usuário e receba atualizações do ViewModel quando os dados são alterados. </li>
+          <li>O ViewModel atualiza a Model com as informações recebidas da View e envia uma notificação para a Model. </li>
+          <li>A Model, após ser atualizada, envia uma notificação de volta ao ViewModel, que, por sua vez, atualiza a View com os novos dados. </li>
+        </ul>  
+        <p>
+          Além do MVVM, existem outros padrões de projeto que podem ser aplicados no desenvolvimento de aplicações, como o MVP (Model-View-Presenter), o Flux, o Redux, entre outros. Cada um desses padrões tem suas próprias características e vantagens, e a escolha de um deles deve levar em consideração as necessidades específicas do projeto em questão. É importante que os desenvolvedores conheçam as diversas alternativas e escolham o padrão de projeto mais adequado para a aplicação em questão, levando em consideração suas necessidades e requisitos específicos. 
+        </p>
+        <h3>Encerramento</h3>
+        <p>
+          O estudo do padrão de arquitetura MVC aplicado a projetos em Java, tanto desktop quanto web, ao longo deste material, permitiram uma compreensão mais profunda da importância do design de software eficaz.  Ao explorar o uso do padrão MVC em conjunto com o framework Spring para aplicações web em Java, ficou demonstrado o quão versátil e robusto esse padrão pode ser.  
+        </p>
+        <p>
+          O padrão não apenas contribui para a criação de software de alta qualidade, mas também serve como um guia para a organização efetiva do código e para a implementação de práticas de programação eficientes e sustentáveis.  
+        </p>
+
+
+
+
+
+                <!-- painel clicavel -->
+
+
+
+           
+              
+            </div>
+            
+          </div>
+
+        </section>
+<!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+        <footer class="text-center no-print">
+          
+          <ul class="pagination">
+
+          </ul>
+         
+        </footer>
+
+    </div>
+
+    <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+<!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+<div class="ico-div-loader">
+	<img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../template/js/jquery.min.js"></script>
+    <script src="../template/js/bootstrap.min.js"></script>
+    <script src="../template/js/jquery.magnific-popup.min.js"></script>
+    <script src="../template/js/print.js"></script>
+    <script src="../template/js/template.config.js"></script>
+    <script src="../template/js/images.loader.js"></script>
+    <script src="../template/js/highlight.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/custom.js"></script>
+    <noscript>
+      <style media="screen">
+        .over-loader { display: none;}    
+      </style>
+    </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+     type: 'image',
+       mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+  
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+  
+      // The "opener" function should return the element from which popup will be zoomed in
+      // and to which popup will be scaled down
+      // By defailt it looks for an image tag:
+      opener: function(openerElement) {
+        // openerElement is the element on which popup was initialized, in this case its <a> tag
+        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+      },
+       image: {
+        markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+ // Floated left
+            '<div class="mfp-bottom-bar">'+'<figcaption>'+'<div class="mfp-title" style="text-align:center"></div>'+
+              '<div class="mfp-counter"></div>'+'</figcaption>'+
+            '</div>'+
+            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+  
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+  
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+       }
+    });
+  
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  
+  
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+  
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+  
+    $(document).ready(function() {
+      var $target = $('.animeStart'),
+          $target2 = $('.animeStop'),
+          targetBox = $('.box'),
+          animationClass = 'anime-init',
+          windowHeight = $(window).height(),
+          offset = windowHeight - (windowHeight / 4);
+  
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function() {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          } 
+        });
+      }
+      animeScroll();
+  
+      $(document).scroll(function() {
+        animeScroll();
+      });
+    });
+  
+  
+  </script>
+  
+  <script>
+    var scriptElem=document.createElement("script");
+    scriptElem.src="https://plugin.handtalk.me/web/latest/handtalk.min.js",
+    scriptElem.charset="UTF-8",
+    scriptElem.onload=function(){
+          window.ht = new HT({
+              token:"bf5b7efb148a829a126a0e0c9fd533bf",
+              align:"top",
+              videoEnabled: true,
+              ytEmbedReplace: true,           
+              mobileConfig:{align:"right",
+                            actionsAlign:"top",
+                            customButtonStyle:{
+                                  borderRadius:"6px",
+                                  size:"38px",
+                                  horizontalMargin:"13px",
+                                  bottomMargin:"140px",
+                                  rightMargin:"40px"}
+                            }
+            });        
+        $('.ht-skip').attr("aria-hidden","true")
+      },
+    document.body.appendChild(scriptElem);
+  </script>
+  </body>
+</html>
