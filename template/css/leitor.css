@@ -327,6 +327,8 @@ p.legenda-imagem{
   margin: 10px auto !important;
   display: block !important;
   text-align: center !important;
+  margin-top: 10px !important;
+  font-size: 13px;
   
 }
 

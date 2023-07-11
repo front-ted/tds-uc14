@@ -172,114 +172,242 @@
                 </div>
               </div>
             </div>
-            <div class="no-print">
-              <div class="modal fade" id="m1" tabindex="-1" role="dialog" aria-labelledby="labelm1">
-                <div class="modal-dialog" role="document">
+            <div class="no-print" aria-hidden="true">
+              <div class="modal modal-100 fade" id="m1">
+                <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h4 class="modal-title" id="labelm1">De janela ou WRAC</h4>
-                    </div>
                     <div class="modal-body">
-                      <ul class="marcador">
-                        <li>Em <strong>Project</strong>, selecione o <strong>Maven</strong>. </li>
-                        <li>Em <strong>Language</strong>, escolha o <strong>Java</strong>. </li>
-                        <li>Em <strong>Spring Boot</strong>, escolha a versão mais atualizada, a<strong> 3.0.6</strong>.
-                        </li>
-                        <li>Em <strong>Project Metadata</strong>, defina alguns metadados para a criação do projeto.
-                        </li>
-                        <ul class="marcador">
-                          <li>Group: informar <strong>com.api</strong> </li>
-                          <li>Artifact e Name: informar <strong>senac</strong> </li>
-                          <li>Description: <strong>informar API Rest de Projeto de Funcionários</strong> </li>
-                          <li>Package name: com.api.senac<strong></strong> </li>
-                          <li>Packaging: selecionar <strong>Jar</strong> </li>
-                          <li>Java: indicar a versão <strong>17</strong> </li>
-                        </ul>
-                      </ul>
-                      <img src="imgs/fig-01.png"
-                        class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-                      </p>
-                      <a href="imgs/fig-01.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-                        aria-hidden="true"><img src="imgs/fig-01.png"
-                          class="center-block img-responsive espacoimg imgBorder"></a>
-                      <p class="legenda-imagem">
-                        Figura 1 – <i>Site</i> do Spring Initializr <br>
-                        Fonte: Spring Initializr (s.d.)
-                      </p>
-                      <p class="acessivel no-print">
-                        Tela da seção de configurações da página do Spring Initializr, com as informações preenchidas
-                        como citado
-                        no texto.
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                      <div class="modal-header no-print">
+                        <button type="button" class="close" data-dismiss="modal">
+                          <img src="imgs/bt_fechar_modal.png" alt="">
+                        </button>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-2 col-md-2"></div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                          <ul class="marcador">
+                            <li>Em <strong>Project</strong>, selecione o <strong>Maven</strong>. </li>
+                            <li>Em <strong>Language</strong>, escolha o <strong>Java</strong>. </li>
+                            <li>Em <strong>Spring Boot</strong>, escolha a versão mais atualizada, a<strong>
+                                3.0.6</strong>.
+                            </li>
+                            <li>Em <strong>Project Metadata</strong>, defina alguns metadados para a criação do projeto.
+                            </li>
+                            <ul class="marcador">
+                              <li>Group: informar <strong>com.api</strong> </li>
+                              <li>Artifact e Name: informar <strong>senac</strong> </li>
+                              <li>Description: <strong>informar API Rest de Projeto de Funcionários</strong> </li>
+                              <li>Package name: com.api.senac<strong></strong> </li>
+                              <li>Packaging: selecionar <strong>Jar</strong> </li>
+                              <li>Java: indicar a versão <strong>17</strong> </li>
+                            </ul>
+                          </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11">
+                          <img src="imgs/fig-01.png"
+                            class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                          </p>
+                          <a href="imgs/fig-01.png" target="_blank" class="no-print visible-sm visible-xs"
+                            aria-hidden="true"><img src="imgs/fig-01.png"
+                              class="center-block img-responsive espacoimg imgBorder"></a>
+                          <div class="legenda-imagem">
+                            Figura 1 – <i>Site</i> do Spring Initializr <br><br>
+                            Fonte: Spring Initializr (s.d.)
+                          </div>
+                          <div class="acessivel no-print">
+                            Tela da seção de configurações da página do Spring Initializr, com as informações
+                            preenchidas
+                            como citado no texto.
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-1"></div>
+                      </div>
+                      <div class="modal-footer no-print">
+                        <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="no-print">
-              <div class="modal fade" id="m2" tabindex="-1" role="dialog" aria-labelledby="labelm1">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h4 class="modal-title" id="labelm1">De janela ou WRAC</h4>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                        Por fim, devem ser definidas as dependências do projeto:
-                      </p>
-                      <ul class="marcador">
-                        <li>Spring Web (spring-boot-starter-web): utilizada para criação de API em Spring Boot,
-                          incluindo REST
-                          em
-                          aplicações utilizando o Spring MVC e Tomcat como um servidor-padrão. </li>
-                        <li>Spring Data JPA (spring-boot-starter-data-jpa): permite persistir dados em bancos de dados
-                          SQL
-                          usando
-                          Spring Data e Hibernate, que é uma implementação do JPA. </li>
-                        <li>MySQL Driver (mysql-connector-java) é um driver para conexão com banco de dados MySQL para
-                          Spring
-                          Boot.
-                        </li>
-                        <li>Validation (spring-boot-starter-validation) é uma dependência usada para validar os campos
-                          de um
-                          objeto
-                          antes de persistir no banco de dados. </li>
-                        <li>Lombok é uma biblioteca auxiliar para adicionar automaticamente diversos métodos, como get
-                          e set,
-                          toString e construtores, ou seja, toda vez que é adicionada a anotação @Data em uma classe,
-                          você não
-                          vai
-                          mais precisar escrever métodos getter, setter, equals, hashCode, construtores de classe etc.
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+              <div class="no-print" aria-hidden="true">
+                <div class="modal modal-100 fade" id="m2">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="modal-header no-print">
+                            <button type="button" class="close" data-dismiss="modal">
+                              <img src="imgs/bt_fechar_modal.png" alt="">
+                            </button>
+                          </div>
+                          <p>
+                            Por fim, devem ser definidas as dependências do projeto:
+                          </p>
+                          <ul class="marcador">
+                            <li>Spring Web (spring-boot-starter-web): utilizada para criação de API em Spring Boot,
+                              incluindo REST
+                              em
+                              aplicações utilizando o Spring MVC e Tomcat como um servidor-padrão. </li>
+                            <li>Spring Data JPA (spring-boot-starter-data-jpa): permite persistir dados em bancos de
+                              dados
+                              SQL
+                              usando
+                              Spring Data e Hibernate, que é uma implementação do JPA. </li>
+                            <li>MySQL Driver (mysql-connector-java) é um driver para conexão com banco de dados MySQL
+                              para
+                              Spring
+                              Boot.
+                            </li>
+                            <li>Validation (spring-boot-starter-validation) é uma dependência usada para validar os
+                              campos
+                              de um
+                              objeto
+                              antes de persistir no banco de dados. </li>
+                            <li>Lombok é uma biblioteca auxiliar para adicionar automaticamente diversos métodos, como
+                              get
+                              e set,
+                              toString e construtores, ou seja, toda vez que é adicionada a anotação @Data em uma
+                              classe,
+                              você não
+                              vai
+                              mais precisar escrever métodos getter, setter, equals, hashCode, construtores de classe
+                              etc.
+                            </li>
+                          </ul>
+                          <div class="modal-footer no-print">
+                            <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="modal fade" id="m3" tabindex="-1" role="dialog" aria-labelledby="labelm1">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelm1">De janela ou WRAC</h4>
+                <div class="no-print" aria-hidden="true">
+                  <div class="modal modal-100 fade" id="m3">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <div class="container">
+                            <div class="modal-header no-print">
+                              <button type="button" class="close" data-dismiss="modal">
+                                <img src="imgs/bt_fechar_modal.png" alt="">
+                              </button>
+                            </div>
+                            <p>
+                              Após selecionar o Spring Web, a dependência aparecerá abaixo na lista de dependências.
+                            </p>
+                            <img src="imgs/fig-02.png"
+                              class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                            </p>
+                            <a href="imgs/fig-02.png" target="_blank" class="no-print visible-sm visible-xs"
+                              aria-hidden="true"><img src="imgs/fig-02.png"
+                                class="center-block img-responsive espacoimg imgBorder"></a>
+                            <div class="legenda-imagem legenda text-center">
+                              Figura 2 – Site do Spring Initializr <br>
+                              Fonte: Spring Initializr (s.d.)
+                            </div>
+                            <p class="acessivel no-print">
+                              Tela com detalhe para a seção “Dependencies” do site do Spring Initializr mostrando a
+                              lista de
+                              dependências incluídas como citado no texto.
+                            </p>
+                            <p>Após concluir todas as configurações, clique em Generate e será feito o download de uma
+                              pasta
+                              compactada
+                              (.zip) contendo o projeto completo. Finalizado o download, você pode extrair o conteúdo no
+                              computador e
+                              abrir a pasta do projeto com a IDE do NetBeans. </p>
+                            <img src="imgs/fig-03.png"
+                              class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                            </p>
+                            <a href="imgs/fig-03.png" target="_blank" class="no-print visible-sm visible-xs"
+                              aria-hidden="true"><img src="imgs/fig-03.png"
+                                class="center-block img-responsive espacoimg imgBorder"></a>
+                            <div class="legenda-imagem legenda text-center">
+                              Figura 3 – Estrutura do projeto no NetBeans <br>
+                              Fonte: NetBeans (2023)
+                            </div>
+                            <p class="acessivel no-print">
+                              Tela da aba “Projects” do NetBeans, com projeto “senac” criado, mostrando pacote
+                              “com.api.senac”, com
+                              classe SenacApplication.java e item “Other Sources” expandido, com “src/main/resources”
+                              contendo “
+                              &lt;default package>”, “static” e “templates”. De “ &lt;default package>”, há o arquivo
+                              “application.properties”. Mais abaixo, o item “Project Files” aparece expandido com o
+                              arquivo
+                              “pom.xml”.
+                            </p>
+                            <div class="modal-footer no-print">
+                              <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="modal-body">
+                  <div class="acessivel print">
+                    <ul class="marcador">
+                      <li>Em <strong>Project</strong>, selecione o <strong>Maven</strong>. </li>
+                      <li>Em <strong>Language</strong>, escolha o <strong>Java</strong>. </li>
+                      <li>Em <strong>Spring Boot</strong>, escolha a versão mais atualizada, a<strong> 3.0.6</strong>.
+                      </li>
+                      <li>Em <strong>Project Metadata</strong>, defina alguns metadados para a criação do projeto.
+                      </li>
+                      <ul class="marcador">
+                        <li>Group: informar <strong>com.api</strong> </li>
+                        <li>Artifact e Name: informar <strong>senac</strong> </li>
+                        <li>Description: <strong>informar API Rest de Projeto de Funcionários</strong> </li>
+                        <li>Package name: com.api.senac<strong></strong> </li>
+                        <li>Packaging: selecionar <strong>Jar</strong> </li>
+                        <li>Java: indicar a versão <strong>17</strong> </li>
+                      </ul>
+                    </ul>
+                    <img src="imgs/fig-01.png"
+                      class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig-01.png" target="_blank" class="no-print visible-sm visible-xs"
+                      aria-hidden="true"><img src="imgs/fig-01.png"
+                        class="center-block img-responsive espacoimg imgBorder"></a>
+                    <div class="legenda-imagem">
+                      Figura 1 – <i>Site</i> do Spring Initializr <br><br>
+                      Fonte: Spring Initializr (s.d.)
+                    </div>
+                    <div class="acessivel no-print">
+                      Tela da seção de configurações da página do Spring Initializr, com as informações preenchidas
+                      como citado no texto.
+                    </div>
+                    <p>
+                      Por fim, devem ser definidas as dependências do projeto:
+                    </p>
+                    <ul class="marcador">
+                      <li>Spring Web (spring-boot-starter-web): utilizada para criação de API em Spring Boot,
+                        incluindo REST
+                        em
+                        aplicações utilizando o Spring MVC e Tomcat como um servidor-padrão. </li>
+                      <li>Spring Data JPA (spring-boot-starter-data-jpa): permite persistir dados em bancos de dados
+                        SQL
+                        usando
+                        Spring Data e Hibernate, que é uma implementação do JPA. </li>
+                      <li>MySQL Driver (mysql-connector-java) é um driver para conexão com banco de dados MySQL para
+                        Spring
+                        Boot.
+                      </li>
+                      <li>Validation (spring-boot-starter-validation) é uma dependência usada para validar os campos
+                        de um
+                        objeto
+                        antes de persistir no banco de dados. </li>
+                      <li>Lombok é uma biblioteca auxiliar para adicionar automaticamente diversos métodos, como get
+                        e set,
+                        toString e construtores, ou seja, toda vez que é adicionada a anotação @Data em uma classe,
+                        você não
+                        vai
+                        mais precisar escrever métodos getter, setter, equals, hashCode, construtores de classe etc.
+                      </li>
+                    </ul>
                     <p>
                       Após selecionar o Spring Web, a dependência aparecerá abaixo na lista de dependências.
                     </p>
@@ -287,7 +415,7 @@
                       class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
                     <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
                     </p>
-                    <a href="imgs/fig-02.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+                    <a href="imgs/fig-02.png" target="_blank" class="no-print visible-sm visible-xs"
                       aria-hidden="true"><img src="imgs/fig-02.png"
                         class="center-block img-responsive espacoimg imgBorder"></a>
                     <div class="legenda-imagem legenda text-center">
@@ -307,7 +435,7 @@
                       class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
                     <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
                     </p>
-                    <a href="imgs/fig-03.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+                    <a href="imgs/fig-03.png" target="_blank" class="no-print visible-sm visible-xs"
                       aria-hidden="true"><img src="imgs/fig-03.png"
                         class="center-block img-responsive espacoimg imgBorder"></a>
                     <div class="legenda-imagem legenda text-center">
@@ -324,21 +452,17 @@
                       “pom.xml”.
                     </p>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h4>Arquivo “pom.xml”</h4>
-          <p>
-            O arquivo “pom.xml”, disponível na pasta <strong>ProjectFiles</strong>, abriga as dependências e os plug-ins
-            do Maven no
-            projeto. A seção de dependência simplesmente contém as dependências adicionadas ao projeto. A seguir, veja
-            um exemplo do arquivo pow.xml:
-          </p>
-          <pre>
+                  <h4>Arquivo “pom.xml”</h4>
+                  <p>
+                    O arquivo “pom.xml”, disponível na pasta <strong>ProjectFiles</strong>, abriga as dependências e os
+                    plug-ins
+                    do Maven no
+                    projeto. A seção de dependência simplesmente contém as dependências adicionadas ao projeto. A
+                    seguir,
+                    veja
+                    um exemplo do arquivo pow.xml:
+                  </p>
+                  <pre>
             <code>
 &lt;?xml version="1.0" encoding="UTF-8"?> 
 
@@ -473,14 +597,15 @@
 &lt;/project> 
             </code>
           </pre>
-          <h4> Configurando o MySQL, JPA e Hibernate</h4>
-          <p>
-            Na pasta de recursos dentro de <strong>Other Sources > src/main/resources > default package >
-              application.properties </strong>, abra o arquivo e escreva as propriedades a seguir para configurações
-            específicas de
-            algumas das dependências adicionadas:
-          </p>
-          <pre>
+                  <h4> Configurando o MySQL, JPA e Hibernate</h4>
+                  <p>
+                    Na pasta de recursos dentro de <strong>Other Sources > src/main/resources > default package >
+                      application.properties </strong>, abra o arquivo e escreva as propriedades a seguir para
+                    configurações
+                    específicas de
+                    algumas das dependências adicionadas:
+                  </p>
+                  <pre>
             <code>
               spring.datasource.url=jdbc:mysql://localhost:3306/senac_db 
 
@@ -503,130 +628,179 @@ spring.jpa.hibernate.ddl-auto=update
 server.error.include-message = Always 
             </code>
           </pre>
-          <ul class="marcador">
-            <li>spring.datasource.url: o Spring Boot usa a URL juntamente com as credenciais para estabelecer uma
-              conexão de banco de dados com o banco de dados MySQL. Aqui, o MySQL está configurado com a porta 3306 e o
-              ​​nome do banco de dados como senac_db. </li>
-            <li>spring.datasource.username e spring.datasource.password: as propriedades são o nome de usuário e a senha
-              do banco de dados MySQL (use o nome de usuário e senha corretos do servidor MySQL instalado em seu
-              computador). </li>
-            <li>server.port: a porta-padrão de inicialização do Spring é 8080. </li>
-            <li>spring.jpa.properties.hibernate.dialect: usar o valor “MySQLDialect” faz com que o Hibernate gere um SQL
-              melhor para o banco de dados escolhido. </li>
-            <li>spring.jpa.hibernate.ddl-auto: é usado para a inicialização do banco de dados. Foi definido o valor como
-              <strong>update</strong> para que uma tabela seja criada no banco de dados automaticamente correspondente
-              ao modelo de dados
-              definido. Qualquer alteração no modelo (criação de um novo campo, alteração ou exclusão de campos da
-              tabela) também ocasionará uma atualização no banco de dados.
-            </li>
-            <li>server.error.include-message: essa configuração, quando adotada pelo valor de <strong>Always</strong>, é
-              usada para
-              sempre permitir a inclusão das mensagens de erros produzidas pelas exceções</li>
-          </ul>
-          <h4>Executando o projeto</h4>
-          <p>
-            Agora que você finalizou as configurações, execute o arquivo principal do projeto para verificar se está
-            tudo funcionando. Para isso, na pasta <strong>Source Packages > com.api.senac</strong>, clique com o botão
-            direito do <i>mouse</i>
-            sobre <strong>SenacApplication</strong> na opção <strong>Run File</strong> ou Shift+F6.
-          </p>
-          <img src="imgs/fig-04.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-04.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 4 – Executando no NetBeans <br>
-            Fonte: NetBeans (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com detalhe da aba Projects do NetBeans mostrando projeto “senac”, arquivo SenacApplication.java e um
-            menu de contexto com o item “Run File...” selecionado.
-          </p>
-          <p>
-            Ao executar o projeto, o Spring Boot iniciará um servidor web embutido (por padrão, o Tomcat) e implantará o
-            seu aplicativo nesse servidor, na porta que foi configurada em <strong>application.properties</strong>.
-            Estando tudo
-            funcionando, aparecerá a seguinte mensagem: <strong>Started SenacApplication</strong>, conforme figura a
-            seguir:
-          </p>
-          <img src="imgs/fig-05.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-05.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-05.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 5 – Terminal do NetBeans executando o projeto <br>
-            Fonte: NetBeans (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com área “Output” do NetBeans mostrando várias mensagens de status, com destaque para a última linha,
-            dizendo “Started Senac Application in”.
-          </p>
-          <div class="caixa-destaque">
-            <img src="imgs/nota.png" class="img-responsive no-print imgNota">
-            <p>
-              Caso seu projeto esteja com um sinal de exclamação no nome ou caso tenha aparecido uma tela informando
-              problemas com dependências, clique com o botão direito do <i>mouse</i> sobre o projeto e escolha “Resolve
-              Problems...”. Na tela que surgir, clique no botão “Resolve...”. O Maven ajustará as dependências, o
-              problema será solucionado e você poderá executar o projeto.
-            </p>
-          </div>
-          <h3 id="t3">Estrutura de camadas em um projeto <i>spring boot</i> com banco de dados </h3>
-          <p>
-            Agora que a configuração está pronta, é possível estruturar as camadas do projeto. Para isso, na pasta
-            <strong>Source Packages</strong>, crie três pacotes:
-          </p>
-          <div class="caixa-destaque2">
-            <ul class="marcador">
-              <li><strong>com.api.senac.controller</strong>: terá a camada de <strong>Controller</strong>, que abrigará
-                os controladores ou <i>endpoints</i>. </li>
-              <li><strong>com.api.senac.data</strong>: abrigará toda a camada de acesso aos dados, intitulada
-                <strong>Data</strong>, que terá <i>entity</i> e <i>repository</i>, que serão detalhados mais à frente.
-              </li>
-              <li> <strong>com.api.senac.service</strong>: será a camada <strong>Service</strong>, que terá toda a regra
-                de negócio. </li>
-            </ul>
-          </div>
-          <p>
-            Essa estrutura garantirá que o cliente não tenha acesso direto ao banco de dados, e a solicitação seja
-            redirecionada via controladores. O controlador chama o serviço (com a lógica de negócio) usando o
-            repositório, que, por sua vez, faz uma chamada para o banco de dados, implementando toda persistência
-            necessária no projeto. A seguir, veja a estrutura do projeto:
-          </p>
-          <img src="imgs/fig-06.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-06.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 6 – Estrutura do projeto no NetBeans <br>
-            Fonte: NetBeans (2023)
-          </p>
-          <p class="acessivel no-print">
-            Detalhe do projeto no Netbeans mostrando pacotes com.api.senac, com classe SenacApplication.java;
-            com.api.senac.controller, com classe FuncionarioController.java, com.api.senac.data, com classes
-            FuncionarioEntity.java e FuncionarioRepository.java, com.api.senac.service, com classe
-            FuncionarioService.java.
-          </p>
-          <h4>Camada “Data” </h4>
-          <p>
-            Essa camada permite o acesso aos dados da API, que incluirá desde a <i>entity</i>, que contém a definição da
-            classe
-            com os respectivos atributos – <strong>FuncionarioEntity</strong>, e a <i>repository</i>, que é uma
-            interface em que são herdados os
-            métodos de manipulação com o banco de dados – <strong>FuncionarioRepository</strong>.
-          </p>
-          <p>
-            Está sendo usado no projeto o <strong>Spring Data</strong>, que tem por objetivo facilitar o trabalho com a
-            persistência de
-            dados. Dentro dele, há o <strong>Spring Data JPA</strong>, que permite implementar projetos em JPA de forma
-            simples, por meio
-            de anotações já estudadas anteriormente em ORM, como @Entity, @Table, @Id, @GeneratedValue e @Column.
-          </p>
-          <p>Crie a classe <strong>FuncionarioEntity</strong> em <strong>com.api.senac.data</strong> com o seguinte
-            código: </p>
-          <pre>
+                  <ul class="marcador">
+                    <li>spring.datasource.url: o Spring Boot usa a URL juntamente com as credenciais para estabelecer
+                      uma
+                      conexão de banco de dados com o banco de dados MySQL. Aqui, o MySQL está configurado com a porta
+                      3306
+                      e
+                      o
+                      ​​nome do banco de dados como senac_db. </li>
+                    <li>spring.datasource.username e spring.datasource.password: as propriedades são o nome de usuário e
+                      a
+                      senha
+                      do banco de dados MySQL (use o nome de usuário e senha corretos do servidor MySQL instalado em seu
+                      computador). </li>
+                    <li>server.port: a porta-padrão de inicialização do Spring é 8080. </li>
+                    <li>spring.jpa.properties.hibernate.dialect: usar o valor “MySQLDialect” faz com que o Hibernate
+                      gere um
+                      SQL
+                      melhor para o banco de dados escolhido. </li>
+                    <li>spring.jpa.hibernate.ddl-auto: é usado para a inicialização do banco de dados. Foi definido o
+                      valor
+                      como
+                      <strong>update</strong> para que uma tabela seja criada no banco de dados automaticamente
+                      correspondente
+                      ao modelo de dados
+                      definido. Qualquer alteração no modelo (criação de um novo campo, alteração ou exclusão de campos
+                      da
+                      tabela) também ocasionará uma atualização no banco de dados.
+                    </li>
+                    <li>server.error.include-message: essa configuração, quando adotada pelo valor de
+                      <strong>Always</strong>,
+                      é
+                      usada para
+                      sempre permitir a inclusão das mensagens de erros produzidas pelas exceções
+                    </li>
+                  </ul>
+                  <h4>Executando o projeto</h4>
+                  <p>
+                    Agora que você finalizou as configurações, execute o arquivo principal do projeto para verificar se
+                    está
+                    tudo funcionando. Para isso, na pasta <strong>Source Packages > com.api.senac</strong>, clique com o
+                    botão
+                    direito do <i>mouse</i>
+                    sobre <strong>SenacApplication</strong> na opção <strong>Run File</strong> ou Shift+F6.
+                  </p>
+                  <img src="imgs/fig-04.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-04.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 4 – Executando no NetBeans <br>
+                    Fonte: NetBeans (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe da aba Projects do NetBeans mostrando projeto “senac”, arquivo
+                    SenacApplication.java e
+                    um
+                    menu de contexto com o item “Run File...” selecionado.
+                  </p>
+                  <p>
+                    Ao executar o projeto, o Spring Boot iniciará um servidor web embutido (por padrão, o Tomcat) e
+                    implantará
+                    o
+                    seu aplicativo nesse servidor, na porta que foi configurada em
+                    <strong>application.properties</strong>.
+                    Estando tudo
+                    funcionando, aparecerá a seguinte mensagem: <strong>Started SenacApplication</strong>, conforme
+                    figura a
+                    seguir:
+                  </p>
+                  <img src="imgs/fig-05.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-05.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-05.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 5 – Terminal do NetBeans executando o projeto <br>
+                    Fonte: NetBeans (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com área “Output” do NetBeans mostrando várias mensagens de status, com destaque para a última
+                    linha,
+                    dizendo “Started Senac Application in”.
+                  </p>
+                  <div class="caixa-destaque">
+                    <img src="imgs/nota.png" class="img-responsive no-print imgNota">
+                    <p>
+                      Caso seu projeto esteja com um sinal de exclamação no nome ou caso tenha aparecido uma tela
+                      informando
+                      problemas com dependências, clique com o botão direito do <i>mouse</i> sobre o projeto e escolha
+                      “Resolve
+                      Problems...”. Na tela que surgir, clique no botão “Resolve...”. O Maven ajustará as dependências,
+                      o
+                      problema será solucionado e você poderá executar o projeto.
+                    </p>
+                  </div>
+                  <h3 id="t3">Estrutura de camadas em um projeto <i>spring boot</i> com banco de dados </h3>
+                  <p>
+                    Agora que a configuração está pronta, é possível estruturar as camadas do projeto. Para isso, na
+                    pasta
+                    <strong>Source Packages</strong>, crie três pacotes:
+                  </p>
+                  <div class="caixa-destaque2">
+                    <ul class="marcador">
+                      <li><strong>com.api.senac.controller</strong>: terá a camada de <strong>Controller</strong>, que
+                        abrigará
+                        os controladores ou <i>endpoints</i>. </li>
+                      <li><strong>com.api.senac.data</strong>: abrigará toda a camada de acesso aos dados, intitulada
+                        <strong>Data</strong>, que terá <i>entity</i> e <i>repository</i>, que serão detalhados mais à
+                        frente.
+                      </li>
+                      <li> <strong>com.api.senac.service</strong>: será a camada <strong>Service</strong>, que terá toda
+                        a
+                        regra
+                        de negócio. </li>
+                    </ul>
+                  </div>
+                  <p>
+                    Essa estrutura garantirá que o cliente não tenha acesso direto ao banco de dados, e a solicitação
+                    seja
+                    redirecionada via controladores. O controlador chama o serviço (com a lógica de negócio) usando o
+                    repositório, que, por sua vez, faz uma chamada para o banco de dados, implementando toda
+                    persistência
+                    necessária no projeto. A seguir, veja a estrutura do projeto:
+                  </p>
+                  <img src="imgs/fig-06.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-06.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 6 – Estrutura do projeto no NetBeans <br>
+                    Fonte: NetBeans (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Detalhe do projeto no Netbeans mostrando pacotes com.api.senac, com classe SenacApplication.java;
+                    com.api.senac.controller, com classe FuncionarioController.java, com.api.senac.data, com classes
+                    FuncionarioEntity.java e FuncionarioRepository.java, com.api.senac.service, com classe
+                    FuncionarioService.java.
+                  </p>
+                  <h4>Camada “Data” </h4>
+                  <p>
+                    Essa camada permite o acesso aos dados da API, que incluirá desde a <i>entity</i>, que contém a
+                    definição
+                    da
+                    classe
+                    com os respectivos atributos – <strong>FuncionarioEntity</strong>, e a <i>repository</i>, que é uma
+                    interface em que são herdados os
+                    métodos de manipulação com o banco de dados – <strong>FuncionarioRepository</strong>.
+                  </p>
+                  <p>
+                    Está sendo usado no projeto o <strong>Spring Data</strong>, que tem por objetivo facilitar o
+                    trabalho
+                    com
+                    a
+                    persistência de
+                    dados. Dentro dele, há o <strong>Spring Data JPA</strong>, que permite implementar projetos em JPA
+                    de
+                    forma
+                    simples, por meio
+                    de anotações já estudadas anteriormente em ORM, como @Entity, @Table, @Id, @GeneratedValue e
+                    @Column.
+                  </p>
+                  <p>Crie a classe <strong>FuncionarioEntity</strong> em <strong>com.api.senac.data</strong> com o
+                    seguinte
+                    código: </p>
+                  <pre>
             <code>
 package com.api.senac.data; 
 
@@ -669,68 +843,88 @@ public class FuncionarioEntity {
 } 
             </code>
           </pre>
-          <ul class="marcador">
-            <li>A anotação <strong>@Data</strong> na classe possibilita que você não precise escrever os métodos
-              <i>getter</i>, <i>setter</i>, <i>equals</i>,
-              <i>hashCode</i> e construtores de classe, pois serão criados implicitamente devido a essa anotação. Essa
-              facilidade é alcançada graças à biblioteca Lombok, incluída na criação do projeto.
-            </li>
-            <li>A anotação <strong>@Entity</strong> diz ao Spring que a classe <strong>FuncionarioEntity</strong>
-              representa uma tabela do banco de dados. </li>
-            <li>A anotação <strong>@Table</strong> indica o nome da tabela que será criada automaticamente pelo Spring
-              Boot através do JPA e Hibernate. </li>
-            <li>A anotação <strong>@Id</strong> torna o campo ID uma chave primária da tabela de funcionários quando
-              persistida no banco de dados. </li>
-            <li>A anotação <strong>@GeneratedValue</strong> especifica a estratégia de geração de chave primária. O
-              valor <strong>GenerationType.AUTO</strong> instrui o banco de dados MySQL para definir o autoincremento
-              automaticamente. </li>
-            <li>Quando a anotação <strong>@Column</strong> não é adicionada, indica que serão assumidas as
-              propriedades-padrão de cada coluna, ou seja, os nomes do atributo e da coluna no banco de dados devem ser
-              iguais, caso contrário, a aplicação não funcionará. </li>
-          </ul>
-          <h4>Repository</h4>
-          <p>
-            Repositórios do Spring são interfaces que podem ser definidas para acessar dados. Eles disponibilizam
-            métodos comuns para persistência e podem criar <i>queries</i> a partir do nome de métodos personalizados em
-            tempo
-            de execução. O Spring Data permite criar um repositório para uma entidade estendendo outra interface a
-            <strong>JpaRepository</strong>.
-          </p>
-          <p>
-            O JpaRepository tem várias operações e, ao ser estendido, são obtidos os métodos mais relevantes do CRUD e
-            buscas por parâmetros com suas classes. Alguns desses métodos são:
-          </p>
-          <div class="caixa-destaque3">
-            <ul class="marcadorCircular">
-              <li>findAll() – retorna uma lista com todos os elementos da classe. </li>
-              <li>findById() – busca um elemento por meio do seu ID e o retorna. </li>
-              <li>save() – salva um elemento na tabela ou cria um novo, caso o ID não seja enviado. </li>
-              <li>deleteById() – exclui um elemento por meio do seu ID. </li>
-            </ul>
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <img src="imgs/infografico1_imagem.png" class="img-responsive no-print imgInfografico">
-              </div>
-            </div>
-          </div>
-          <p class="espacamento">
-            É importante ressaltar que esses métodos deverão ser chamados na camada <i>service</i>, em que estão as
-            regras de
-            negócios.
-          </p>
-          <p>
-            Agora será criada a interface <strong>FuncionarioRepository</strong>, em
-            <strong>com.api.senac.data</strong>, que deve ser anotada com
-            @Repository e estender a JpaRepository&lt;FuncionarioEntity,Integer>, no qual deve ser passada a entidade e
-            o
-            tipo do ID, no caso, “FuncionarioEntity” e “Integer”. Note que o primeiro parâmetro é a classe que precisa
-            se comunicar com o banco de dados e o segundo é o ID dessa classe, que o banco fará a referência.
-          </p>
-          <p>
-            Veja, a seguir, o código da classe <strong>FuncionarioRepository</strong>.
-          </p>
-          <pre>
+                  <ul class="marcador">
+                    <li>A anotação <strong>@Data</strong> na classe possibilita que você não precise escrever os métodos
+                      <i>getter</i>, <i>setter</i>, <i>equals</i>,
+                      <i>hashCode</i> e construtores de classe, pois serão criados implicitamente devido a essa
+                      anotação.
+                      Essa
+                      facilidade é alcançada graças à biblioteca Lombok, incluída na criação do projeto.
+                    </li>
+                    <li>A anotação <strong>@Entity</strong> diz ao Spring que a classe
+                      <strong>FuncionarioEntity</strong>
+                      representa uma tabela do banco de dados.
+                    </li>
+                    <li>A anotação <strong>@Table</strong> indica o nome da tabela que será criada automaticamente pelo
+                      Spring
+                      Boot através do JPA e Hibernate. </li>
+                    <li>A anotação <strong>@Id</strong> torna o campo ID uma chave primária da tabela de funcionários
+                      quando
+                      persistida no banco de dados. </li>
+                    <li>A anotação <strong>@GeneratedValue</strong> especifica a estratégia de geração de chave
+                      primária. O
+                      valor <strong>GenerationType.AUTO</strong> instrui o banco de dados MySQL para definir o
+                      autoincremento
+                      automaticamente. </li>
+                    <li>Quando a anotação <strong>@Column</strong> não é adicionada, indica que serão assumidas as
+                      propriedades-padrão de cada coluna, ou seja, os nomes do atributo e da coluna no banco de dados
+                      devem
+                      ser
+                      iguais, caso contrário, a aplicação não funcionará. </li>
+                  </ul>
+                  <h4>Repository</h4>
+                  <p>
+                    Repositórios do Spring são interfaces que podem ser definidas para acessar dados. Eles
+                    disponibilizam
+                    métodos comuns para persistência e podem criar <i>queries</i> a partir do nome de métodos
+                    personalizados
+                    em
+                    tempo
+                    de execução. O Spring Data permite criar um repositório para uma entidade estendendo outra interface
+                    a
+                    <strong>JpaRepository</strong>.
+                  </p>
+                  <p>
+                    O JpaRepository tem várias operações e, ao ser estendido, são obtidos os métodos mais relevantes do
+                    CRUD
+                    e
+                    buscas por parâmetros com suas classes. Alguns desses métodos são:
+                  </p>
+                  <div class="caixa-destaque3">
+                    <ul class="marcadorCircular">
+                      <li>findAll() – retorna uma lista com todos os elementos da classe. </li>
+                      <li>findById() – busca um elemento por meio do seu ID e o retorna. </li>
+                      <li>save() – salva um elemento na tabela ou cria um novo, caso o ID não seja enviado. </li>
+                      <li>deleteById() – exclui um elemento por meio do seu ID. </li>
+                    </ul>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <img src="imgs/infografico1_imagem.png" class="img-responsive no-print imgInfografico">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="espacamento">
+                    É importante ressaltar que esses métodos deverão ser chamados na camada <i>service</i>, em que estão
+                    as
+                    regras de
+                    negócios.
+                  </p>
+                  <p>
+                    Agora será criada a interface <strong>FuncionarioRepository</strong>, em
+                    <strong>com.api.senac.data</strong>, que deve ser anotada com
+                    @Repository e estender a JpaRepository&lt;FuncionarioEntity,Integer>, no qual deve ser passada a
+                    entidade
+                    e
+                    o
+                    tipo do ID, no caso, “FuncionarioEntity” e “Integer”. Note que o primeiro parâmetro é a classe que
+                    precisa
+                    se comunicar com o banco de dados e o segundo é o ID dessa classe, que o banco fará a referência.
+                  </p>
+                  <p>
+                    Veja, a seguir, o código da classe <strong>FuncionarioRepository</strong>.
+                  </p>
+                  <pre>
             <code>
 package com.api.senac.data; 
 
@@ -743,29 +937,40 @@ public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntit
 } 
             </code>
           </pre>
-          <h4>Camada “Service”</h4>
-          <p>
-            Essa camada abrigará a lógica de negócios. Nessa fase inicial da API de Funcionários, haverá apenas as
-            regras para validar se um funcionário existe <strong>getFuncionarioId</strong>, ou seja, antes de atualizar,
-            deletar e pesquisar um funcionário, esse método será chamado e retornado <i>null</i>, caso não exista.
-          </p>
-          <p>
-            Contudo, embora tendo apenas esse método, é importante seguir uma boa padronização, ou seja, os
-            <i>endpoints</i> da
-            API que pertencem à camada da <i>controller</i> não terão acesso direto a <i>repository</i>, isso não é uma
-            boa prática,
-            por isso é criada a camada de serviço que faz uma ponte entre os <i>endpoints</i> e a <i>repository</i>.
-          </p>
-          <p>
-            Na camada de serviço, deve ser criada, para cada classe <i>entity</i> do projeto, sua classe de serviço. Até
-            o
-            momento, há a classe <strong>FuncionarioEntity</strong>, então devem ter na classe de serviço os métodos
-            “criarFuncionario()”, “atualizarFuncionario()”, “deletarFuncionario()”, “listarTodosFuncionarios()” e
-            “getFuncionarioId()”.
-          </p>
-          <p>Crie a classe <strong>FuncionarioService</strong> em <strong>com.api.senac.service </strong> com o seguinte
-            código: </p>
-          <pre>
+                  <h4>Camada “Service”</h4>
+                  <p>
+                    Essa camada abrigará a lógica de negócios. Nessa fase inicial da API de Funcionários, haverá apenas
+                    as
+                    regras para validar se um funcionário existe <strong>getFuncionarioId</strong>, ou seja, antes de
+                    atualizar,
+                    deletar e pesquisar um funcionário, esse método será chamado e retornado <i>null</i>, caso não
+                    exista.
+                  </p>
+                  <p>
+                    Contudo, embora tendo apenas esse método, é importante seguir uma boa padronização, ou seja, os
+                    <i>endpoints</i> da
+                    API que pertencem à camada da <i>controller</i> não terão acesso direto a <i>repository</i>, isso
+                    não é
+                    uma
+                    boa prática,
+                    por isso é criada a camada de serviço que faz uma ponte entre os <i>endpoints</i> e a
+                    <i>repository</i>.
+                  </p>
+                  <p>
+                    Na camada de serviço, deve ser criada, para cada classe <i>entity</i> do projeto, sua classe de
+                    serviço.
+                    Até
+                    o
+                    momento, há a classe <strong>FuncionarioEntity</strong>, então devem ter na classe de serviço os
+                    métodos
+                    “criarFuncionario()”, “atualizarFuncionario()”, “deletarFuncionario()”, “listarTodosFuncionarios()”
+                    e
+                    “getFuncionarioId()”.
+                  </p>
+                  <p>Crie a classe <strong>FuncionarioService</strong> em <strong>com.api.senac.service </strong> com o
+                    seguinte
+                    código: </p>
+                  <pre>
             <code>
 package com.api.senac.service; 
 
@@ -840,18 +1045,22 @@ public class FuncionarioService {
 } 
             </code>
           </pre>
-          <ul class="marcador">
-            <li>A anotação <strong>@Service</strong> especifica que essa classe será uma classe de serviço, que tratará
-              das regras de negócio e comunicação com banco de dados. </li>
-            <li>A anotação <strong>@autowire</strong> faz com que o repositório <strong>FuncionarioRepository</strong>
-              seja instanciado automaticamente pelo Spring. </li>
-          </ul>
-          <p>
-            <i> Serviço “listarTodosFuncionarios”</i>: para criar esse serviço, é necessário usar apenas o método
-            <strong>findAll</strong>. Veja
-            que não é preciso criar nenhuma linha em SQL.
-          </p>
-          <pre>
+                  <ul class="marcador">
+                    <li>A anotação <strong>@Service</strong> especifica que essa classe será uma classe de serviço, que
+                      tratará
+                      das regras de negócio e comunicação com banco de dados. </li>
+                    <li>A anotação <strong>@autowire</strong> faz com que o repositório
+                      <strong>FuncionarioRepository</strong>
+                      seja instanciado automaticamente pelo Spring.
+                    </li>
+                  </ul>
+                  <p>
+                    <i> Serviço “listarTodosFuncionarios”</i>: para criar esse serviço, é necessário usar apenas o
+                    método
+                    <strong>findAll</strong>. Veja
+                    que não é preciso criar nenhuma linha em SQL.
+                  </p>
+                  <pre>
             <code>
 public List&lt;FuncionarioEntity> listarTodosFuncionarios() { 
 
@@ -860,13 +1069,16 @@ public List&lt;FuncionarioEntity> listarTodosFuncionarios() {
 } 
             </code>
           </pre>
-          <p>
-            <i> Serviço “criarFuncionario”</i>: para criar esse serviço, é necessário receber o objeto a ser gravado,
-            atribuir
-            para o atributo ID como <i>null</i> e chamar o método <strong>save</strong>. Note que não é preciso usar o
-            comando <i>insert</i> do SQL.
-          </p>
-          <pre>
+                  <p>
+                    <i> Serviço “criarFuncionario”</i>: para criar esse serviço, é necessário receber o objeto a ser
+                    gravado,
+                    atribuir
+                    para o atributo ID como <i>null</i> e chamar o método <strong>save</strong>. Note que não é preciso
+                    usar
+                    o
+                    comando <i>insert</i> do SQL.
+                  </p>
+                  <pre>
             <code>
     public FuncionarioEntity criarFuncionario(FuncionarioEntity func) { 
 
@@ -879,14 +1091,16 @@ public List&lt;FuncionarioEntity> listarTodosFuncionarios() {
     } 
             </code>
           </pre>
-          <p>
-            <i>Serviço “getFuncionarioId”</i>: o método <strong>findById</strong> retorna um funcionário pelo ID
-            informado. Entretanto, caso não
-            exista, por meio do método <strong>orElse</strong>, você pode usar uma expressão em Lambda e instanciar sua
-            classe indicando
-            com o erro <i>null</i>.
-          </p>
-          <pre>
+                  <p>
+                    <i>Serviço “getFuncionarioId”</i>: o método <strong>findById</strong> retorna um funcionário pelo ID
+                    informado. Entretanto, caso não
+                    exista, por meio do método <strong>orElse</strong>, você pode usar uma expressão em Lambda e
+                    instanciar
+                    sua
+                    classe indicando
+                    com o erro <i>null</i>.
+                  </p>
+                  <pre>
             <code>
 public FuncionarioEntity getFuncionarioId(Integer funcId) { 
 
@@ -895,14 +1109,19 @@ public FuncionarioEntity getFuncionarioId(Integer funcId) {
     } 
             </code>
           </pre>
-          <p>
-            Mais adiante, neste conteúdo, será retornado esse serviço com uma exceção personalizada, porém usando agora
-            o método <strong>orElseThrow()</strong>.
-          </p>
-          <p><i>Serviço “deletarFuncionario”</i>: recebe como parâmetro o ID do funcionário, que verifica se ele existe
-            ou não
-            pelo método <strong>getFuncionarioId</strong>. Caso exista, ele deleta, caso contrário, retorna o erro. </p>
-          <pre>
+                  <p>
+                    Mais adiante, neste conteúdo, será retornado esse serviço com uma exceção personalizada, porém
+                    usando
+                    agora
+                    o método <strong>orElseThrow()</strong>.
+                  </p>
+                  <p><i>Serviço “deletarFuncionario”</i>: recebe como parâmetro o ID do funcionário, que verifica se ele
+                    existe
+                    ou não
+                    pelo método <strong>getFuncionarioId</strong>. Caso exista, ele deleta, caso contrário, retorna o
+                    erro.
+                  </p>
+                  <pre>
               <code>
 public void deletarFuncionario(Integer funcId) { 
 
@@ -913,15 +1132,19 @@ public void deletarFuncionario(Integer funcId) {
     } 
               </code>
             </pre>
-          <p>
-            <i>Serviço “atualizarFuncionario”</i>: inicialmente, é preciso validar se o funcionário existe no banco de
-            dados,
-            por isso, se chama o método <strong>getFuncionarioId</strong>. Caso não exista, uma exceção é disparada,
-            caso contrário, o
-            objeto localizado deve receber em cada um dos seus atributos os dados que foram enviados para atualização.
-            Por fim, se chama o método <strong>save</strong>.
-          </p>
-          <pre>
+                  <p>
+                    <i>Serviço “atualizarFuncionario”</i>: inicialmente, é preciso validar se o funcionário existe no
+                    banco
+                    de
+                    dados,
+                    por isso, se chama o método <strong>getFuncionarioId</strong>. Caso não exista, uma exceção é
+                    disparada,
+                    caso contrário, o
+                    objeto localizado deve receber em cada um dos seus atributos os dados que foram enviados para
+                    atualização.
+                    Por fim, se chama o método <strong>save</strong>.
+                  </p>
+                  <pre>
             <code>
     public FuncionarioEntity atualizarFuncionario(Integer funcId, FuncionarioEntity funcionarioRequest) { 
 
@@ -944,50 +1167,52 @@ public void deletarFuncionario(Integer funcId) {
     } 
             </code>
           </pre>
-          <h4>Camada “Controller”</h4>
-          <p>
-            É a classe que disponibilizará as rotas ou <i>endpoints</i> da API de Funcionários. Os serviços
-            disponibilizados serão acessados conforme a tabela a seguir.
-          </p>
-          <table class="senac table-responsive">
-            <tbody>
-              <tr>
-                <th>URL</th>
-                <th>HTTP</th>
-                <th>Função</th>
-              </tr>
-              <tr>
-                <td>localhost:8080/funcionario/listar </td>
-                <td>GET</td>
-                <td>Retorna uma lista com todos os funcionários cadastrados </td>
-              </tr>
-              <tr>
-                <td>localhost:8080/funcionario/pesquisar/1 </td>
-                <td>GET</td>
-                <td>Retorna um único funcionário por meio do ID informado </td>
-              </tr>
-              <tr>
-                <td>localhost:8080/funcionario/adicionar </td>
-                <td>POST</td>
-                <td>Cadastra um novo funcionário </td>
-              </tr>
-              <tr>
-                <td>localhost:8080/funcionario/atualizar/1 </td>
-                <td>PUT</td>
-                <td>Atualiza um funcionário por meio do ID informado </td>
-              </tr>
-              <tr>
-                <td>localhost:8080/funcionario/deletar/2 </td>
-                <td>DELETE </td>
-                <td>Exclui um funcionário por meio do ID informado </td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            Crie uma classe <strong>FuncionarioController</strong> em <strong>com.api.senac.controller</strong> com o
-            seguinte código:
-          </p>
-          <pre>
+                  <h4>Camada “Controller”</h4>
+                  <p>
+                    É a classe que disponibilizará as rotas ou <i>endpoints</i> da API de Funcionários. Os serviços
+                    disponibilizados serão acessados conforme a tabela a seguir.
+                  </p>
+                  <table class="senac table-responsive">
+                    <tbody>
+                      <tr>
+                        <th class="tabela01">URL</th>
+                        <th class="tabela02">HTTP</th>
+                        <th class="tabela02">Função</th>
+                      </tr>
+                      <tr>
+                        <td class="tabela01">localhost:8080/funcionario/listar </td>
+                        <td class="tabela02">GET</td>
+                        <td class="tabela02">Retorna uma lista com todos os funcionários cadastrados </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela01">localhost:8080/funcionario/pesquisar/1 </td>
+                        <td class="tabela02">GET</td>
+                        <td class="tabela02">Retorna um único funcionário por meio do ID informado </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela01">localhost:8080/funcionario/adicionar </td>
+                        <td class="tabela02">POST</td>
+                        <td class="tabela02">Cadastra um novo funcionário </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela01">localhost:8080/funcionario/atualizar/1 </td>
+                        <td class="tabela02">PUT</td>
+                        <td class="tabela02">Atualiza um funcionário por meio do ID informado </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela01">localhost:8080/funcionario/deletar/2 </td>
+                        <td class="tabela02">DELETE </td>
+                        <td class="tabela02">Exclui um funcionário por meio do ID informado </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    Crie uma classe <strong>FuncionarioController</strong> em <strong>com.api.senac.controller</strong>
+                    com
+                    o
+                    seguinte código:
+                  </p>
+                  <pre>
             <code>
 package com.api.senac.controller; 
 
@@ -1082,44 +1307,61 @@ public class FuncionarioController {
 } 
             </code>
           </pre>
-          <ul class="marcador">
-            <li><strong>@RestController</strong>: a anotação marca o “<strong>FuncionarioController</strong>” como um
-              manipulador de solicitação HTTP e permite que o Spring o reconheça como um serviço REST. </li>
-            <li><strong>@RequestMapping("/funcionario")</strong>: a anotação define o caminho-base para os terminais de
-              recurso no controlador como endereço:porta/funcionário, no caso,
-              <strong>localhost:8080/funcionario</strong>.
-            </li>
-            <li>Em seguida, é conectada automaticamente a classe “<strong>FuncionarioService</strong>” no controlador
-              para usar os
-              métodos declarados, implementados nele. Isso é injeção de dependência. </li>
-            <li><strong>@GetMapping</strong>: é um atalho para @RequestMapping(method = RequestMethod.GET) e é usado
-              para mapear solicitações <strong>HTTP GET</strong> para os métodos mapeados do controlador. É usado para
-              devolver todos os funcionários e um único funcionário. </li>
-            <li><strong>@PathVariable</strong>: a anotação mostra que um parâmetro do método deve ser vinculado a uma
-              variável de modelo de URI. </li>
-            <li><strong>@PostMapping</strong>: é uma abreviação de @RequestMapping, em que o método é igual a POST. Ele
-              é usado para mapear a solicitação HTTP POST para os métodos do controlador mapeado. </li>
-            <li><strong>@PutMapping</strong>: é uma abreviação de @RequestMapping onde o método é igual a PUT. Ele é
-              usado para mapear a solicitação HTTP PUT para os métodos do controlador mapeado. </li>
-            <li><strong>@RequestBody</strong>: a anotação indica que o valor do objeto virá no corpo da requisição.
-              Portanto, quando você faz uma solicitação POST ou PUT, o HttpMessageConverters converte o corpo da
-              solicitação JSON em um objeto e passa para o método solicitado. </li>
-            <li><strong>@DeleteMapping</strong>: usar essa anotação faz com que o método solicitado esteja pronto para
-              uma operação de exclusão. É um atalho para @RequestMapping(method = RequestMethod.DELETE). </li>
-          </ul>
-          <h3 id="t4">Testando API de Funcionários com o Postman</h3>
-          <p>
-            Agora, teste sua API com o Postman. Para isso, certifique-se de que o serviço da API de Funcionários esteja
-            em execução.
-          </p>
-          <p><strong>Adicionando um registro de funcionário</strong> </p>
-          <p>
-            Adicione um funcionário fazendo uma solicitação <strong>POST</strong> para
-            localhost:8080/funcionario/adicionar. Em <i>body</i> ,
-            selecione a opção <strong>raw</strong>, selecione <strong>JSON</strong> e inclua o seguinte código
-            <strong>JSON</strong> no editor do Postman:
-          </p>
-          <pre>
+                  <ul class="marcador">
+                    <li><strong>@RestController</strong>: a anotação marca o “<strong>FuncionarioController</strong>”
+                      como
+                      um
+                      manipulador de solicitação HTTP e permite que o Spring o reconheça como um serviço REST. </li>
+                    <li><strong>@RequestMapping("/funcionario")</strong>: a anotação define o caminho-base para os
+                      terminais
+                      de
+                      recurso no controlador como endereço:porta/funcionário, no caso,
+                      <strong>localhost:8080/funcionario</strong>.
+                    </li>
+                    <li>Em seguida, é conectada automaticamente a classe “<strong>FuncionarioService</strong>” no
+                      controlador
+                      para usar os
+                      métodos declarados, implementados nele. Isso é injeção de dependência. </li>
+                    <li><strong>@GetMapping</strong>: é um atalho para @RequestMapping(method = RequestMethod.GET) e é
+                      usado
+                      para mapear solicitações <strong>HTTP GET</strong> para os métodos mapeados do controlador. É
+                      usado
+                      para
+                      devolver todos os funcionários e um único funcionário. </li>
+                    <li><strong>@PathVariable</strong>: a anotação mostra que um parâmetro do método deve ser vinculado
+                      a
+                      uma
+                      variável de modelo de URI. </li>
+                    <li><strong>@PostMapping</strong>: é uma abreviação de @RequestMapping, em que o método é igual a
+                      POST.
+                      Ele
+                      é usado para mapear a solicitação HTTP POST para os métodos do controlador mapeado. </li>
+                    <li><strong>@PutMapping</strong>: é uma abreviação de @RequestMapping onde o método é igual a PUT.
+                      Ele é
+                      usado para mapear a solicitação HTTP PUT para os métodos do controlador mapeado. </li>
+                    <li><strong>@RequestBody</strong>: a anotação indica que o valor do objeto virá no corpo da
+                      requisição.
+                      Portanto, quando você faz uma solicitação POST ou PUT, o HttpMessageConverters converte o corpo da
+                      solicitação JSON em um objeto e passa para o método solicitado. </li>
+                    <li><strong>@DeleteMapping</strong>: usar essa anotação faz com que o método solicitado esteja
+                      pronto
+                      para
+                      uma operação de exclusão. É um atalho para @RequestMapping(method = RequestMethod.DELETE). </li>
+                  </ul>
+                  <h3 id="t4">Testando API de Funcionários com o Postman</h3>
+                  <p>
+                    Agora, teste sua API com o Postman. Para isso, certifique-se de que o serviço da API de Funcionários
+                    esteja
+                    em execução.
+                  </p>
+                  <p><strong>Adicionando um registro de funcionário</strong> </p>
+                  <p>
+                    Adicione um funcionário fazendo uma solicitação <strong>POST</strong> para
+                    localhost:8080/funcionario/adicionar. Em <i>body</i> ,
+                    selecione a opção <strong>raw</strong>, selecione <strong>JSON</strong> e inclua o seguinte código
+                    <strong>JSON</strong> no editor do Postman:
+                  </p>
+                  <pre>
             <code>
 { 
 
@@ -1136,79 +1378,97 @@ public class FuncionarioController {
 } 
             </code>
           </pre>
-          <img src="imgs/fig-07.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-07.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-07.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 7 – Requisição POST no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela do Postman mostrando a configuração de uma requisição Post para endereço
-            localhost:8080/funcionário/adicionar. Abaixo, na seção body, mostra o JSON exposto no texto.
-          </p>
-          <p>Agora execute clicando em <strong>SEND</strong>. </p>
-          <img src="imgs/fig-08.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-08.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-08.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 8 – Resultado da requisição <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com a área de resultado do Postman mostrando no topo “Status: 201 Created” e na região “body” o JSON:
-            {,"id": 53, "cpf": "01234567890", "nome": "aaaaa", "telefone": "51 987654", "email": "claudio@gmail.com",
-            "salario": 1254.6,}.
-          </p>
-          <p><strong>Obtendo todos os registros de funcionários</strong> </p>
-          <p>Faça uma solicitação <strong>GET</strong> para <strong>localhost:8080/funcionario/listar</strong> para
-            obter todos os funcionários. </p>
-          <img src="imgs/fig-09.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-09.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-09.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 9 – Requisição GET no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com a área de requisição no Postman do tipo GET para URL localhost:8080/funcionario/listar mostrando
-            como retorno o Status 200 OK e Body o JSON: {"id": 53, "cpf": "01234567890", "nome": "aaaaa", "telefone":
-            "51 987654", "email": "claudio@gmail.com", "salario": 1254.6}.
-          </p>
-          <p><strong>Obtendo o registro de um funcionários através do seu ID </strong></p>
-          <p>
-            Faça uma solicitação <strong>GET</strong> para <strong>localhost:8080/funcionario/pesquisar/53</strong>,
-            especificando o ID do funcionário.
-          </p>
-          <img src="imgs/fig-10.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-10.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-10.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 10 – Requisição GET no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com a área de requisição no Postman do tipo GET para URL localhost:8080/funcionario/pesquisar/53
-            mostrando como retorno: Status 200 OK e Body o JSON: {"id": 53, "cpf": "01234567890", "nome": "aaaaa",
-            "telefone": "51 987654", "email": "claudio@gmail.com", "salario": 1254.6}.
-          </p>
-          <h4>Atualizar um registro de funcionário</h4>
-          <p>
-            Faça uma solicitação <strong>PUT</strong> para <strong>localhost:8080/funcionario/atualizar/53</strong>
-            especificar o ID do funcionário no
-            final da URL. Nesse caso, o ID é 53.
-            Em body, selecione a opção <strong>raw</strong>, selecione <strong>JSON</strong> e inclua o seguinte código
-            JSON no editor do Postman:
-          </p>
-          <pre>
+                  <img src="imgs/fig-07.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-07.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-07.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 7 – Requisição POST no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela do Postman mostrando a configuração de uma requisição Post para endereço
+                    localhost:8080/funcionário/adicionar. Abaixo, na seção body, mostra o JSON exposto no texto.
+                  </p>
+                  <p>Agora execute clicando em <strong>SEND</strong>. </p>
+                  <img src="imgs/fig-08.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-08.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-08.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 8 – Resultado da requisição <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a área de resultado do Postman mostrando no topo “Status: 201 Created” e na região “body” o
+                    JSON:
+                    {,"id": 53, "cpf": "01234567890", "nome": "aaaaa", "telefone": "51 987654", "email":
+                    "claudio@gmail.com",
+                    "salario": 1254.6,}.
+                  </p>
+                  <p><strong>Obtendo todos os registros de funcionários</strong> </p>
+                  <p>Faça uma solicitação <strong>GET</strong> para <strong>localhost:8080/funcionario/listar</strong>
+                    para
+                    obter todos os funcionários. </p>
+                  <img src="imgs/fig-09.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-09.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-09.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 9 – Requisição GET no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a área de requisição no Postman do tipo GET para URL localhost:8080/funcionario/listar
+                    mostrando
+                    como retorno o Status 200 OK e Body o JSON: {"id": 53, "cpf": "01234567890", "nome": "aaaaa",
+                    "telefone":
+                    "51 987654", "email": "claudio@gmail.com", "salario": 1254.6}.
+                  </p>
+                  <p><strong>Obtendo o registro de um funcionários através do seu ID </strong></p>
+                  <p>
+                    Faça uma solicitação <strong>GET</strong> para
+                    <strong>localhost:8080/funcionario/pesquisar/53</strong>,
+                    especificando o ID do funcionário.
+                  </p>
+                  <img src="imgs/fig-10.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-10.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-10.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 10 – Requisição GET no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a área de requisição no Postman do tipo GET para URL
+                    localhost:8080/funcionario/pesquisar/53
+                    mostrando como retorno: Status 200 OK e Body o JSON: {"id": 53, "cpf": "01234567890", "nome":
+                    "aaaaa",
+                    "telefone": "51 987654", "email": "claudio@gmail.com", "salario": 1254.6}.
+                  </p>
+                  <h4>Atualizar um registro de funcionário</h4>
+                  <p>
+                    Faça uma solicitação <strong>PUT</strong> para
+                    <strong>localhost:8080/funcionario/atualizar/53</strong>
+                    especificar o ID do funcionário no
+                    final da URL. Nesse caso, o ID é 53.
+                    Em body, selecione a opção <strong>raw</strong>, selecione <strong>JSON</strong> e inclua o seguinte
+                    código
+                    JSON no editor do Postman:
+                  </p>
+                  <pre>
             <code>
 { 
 
@@ -1225,81 +1485,108 @@ public class FuncionarioController {
 } 
             </code>
           </pre>
-          <img src="imgs/fig-11.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-11.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-11.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 11 – Requisição PUT no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com a área de requisição no Postman do tipo PUT para URL localhost:8080/funcionario/atualizar/53. A aba
-            body de dados da requisição marca o item raw e mostra o JSON: {"nome": "Senac 102 102 102 102 102", "email":
-            "senac102@gmail.com", "cpf": "01234567890", "salario": "620.45", "telefone": "51 987654",}, mostrando como
-            retorno: Status 200 OK e body o JSON: {"id": 53, "cpf": "01234567890", "nome": " Senac 102 102 102 102 102",
-            "telefone": "51 987654", "email": "senac102@gmail.com", "salario": 620.45}.
-          </p>
-          <h4>Excluindo um registro de funcionário</h4>
-          <p>
-            Faça uma solicitação <strong>DELETE</strong> para <strong>localhost:8080/funcionario/deletar/53</strong>
-            adicionar ao final da URL o ID do
-            funcionário a ser excluído. Nesse caso, o ID é 53. Foi obtido “200 OK”, uma operação de exclusão
-            bem-sucedida.
-          </p>
-          <img src="imgs/fig-12.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-12.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-12.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 12 – Requisição DELETE no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com a área de requisição no Postman do tipo PUT para URL localhost:8080/funcionario/deletar/53
-            mostrando na área de resposta: Status 200 OK e body com valor “1”.
-          </p>
-          <div class="caixa-destaque">
-            <img src="imgs/desafio.png" class="img-responsive no-print desafio">
-            <p>
-              Revisite o desafio presente no conteúdo “Linguagem de programação” e crie ou incremente um projeto Spring
-              RESTful para livros, permitindo cadastro, consulta de livro por ID ou todos os livros e exclusão. Dessa
-              vez,
-              no entanto, use banco de dados para persistência.
-            </p>
-          </div>
-        </div>
-        <div class="container bloco2">
-          <h3 id="t5">Criando validações e personalizando mensagens com <i>exceptions</i></h3>
-          <p>
-            Um recurso muito importante adotado nas APIs são as validações nas requisições. O Spring Boot, por meio da
-            dependência <strong>Validation</strong>, permite indicar quais atributos você quer validar em uma inclusão
-            e/ou alteração.
-            Por exemplo, você pode criar validações na classe <strong>FuncionarioEntity</strong> para os atributos CPF,
-            <i>e-mail</i>, nome com
-            quantidade mínima de caracteres, campos obrigatórios, entre outras. Para isso, basta apenas colocar a
-            anotação de validação correspondente sobre o nome do atributo. A seguir, veja um resumo das principais
-            validações.
-          </p>
-          <ul class="marcador">
-            <li><strong>@NotBlanke @NotNull</strong>: essas duas anotações realizam verificações e validam os campos
-              onde são mapeadas
-              para garantir que os valores não estejam em branco e nulos. </li>
-            <li><strong>@CPF e @CNPJ</strong>: valida se o campo anotado possui CPF ou CNPJ válido. </li>
-            <li><strong>@Email</strong>: valida se o campo anotado é um endereço de e-mail válido. </li>
-            <li><strong>@Size</strong>: especifica a quantidade mínima (min.) e máxima (máx.) de caracteres. </li>
-            <li><strong>@Min</strong>: valida que a propriedade anotada tem um valor não menor que o valor do atributo.
-            </li>
-            <li><strong>@Max</strong>: valida que a propriedade anotada tem um valor não maior que o valor do atributo.
-            </li>
-          </ul>
-          <p>
-            Veja como fica a classe <strong>FuncionarioEntity</strong> com as anotações de validação nos atributos: CPF,
-            nome, telefone, e-mail e salário.
-          </p>
-          <pre>
+                  <img src="imgs/fig-11.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-11.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-11.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 11 – Requisição PUT no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a área de requisição no Postman do tipo PUT para URL
+                    localhost:8080/funcionario/atualizar/53. A
+                    aba
+                    body de dados da requisição marca o item raw e mostra o JSON: {"nome": "Senac 102 102 102 102 102",
+                    "email":
+                    "senac102@gmail.com", "cpf": "01234567890", "salario": "620.45", "telefone": "51 987654",},
+                    mostrando
+                    como
+                    retorno: Status 200 OK e body o JSON: {"id": 53, "cpf": "01234567890", "nome": " Senac 102 102 102
+                    102
+                    102",
+                    "telefone": "51 987654", "email": "senac102@gmail.com", "salario": 620.45}.
+                  </p>
+                  <h4>Excluindo um registro de funcionário</h4>
+                  <p>
+                    Faça uma solicitação <strong>DELETE</strong> para
+                    <strong>localhost:8080/funcionario/deletar/53</strong>
+                    adicionar ao final da URL o ID do
+                    funcionário a ser excluído. Nesse caso, o ID é 53. Foi obtido “200 OK”, uma operação de exclusão
+                    bem-sucedida.
+                  </p>
+                  <img src="imgs/fig-12.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-12.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-12.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 12 – Requisição DELETE no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a área de requisição no Postman do tipo PUT para URL localhost:8080/funcionario/deletar/53
+                    mostrando na área de resposta: Status 200 OK e body com valor “1”.
+                  </p>
+                  <div class="caixa-destaque">
+                    <img src="imgs/desafio.png" class="img-responsive no-print desafio">
+                    <p>
+                      Revisite o desafio presente no conteúdo “Linguagem de programação” e crie ou incremente um projeto
+                      Spring
+                      RESTful para livros, permitindo cadastro, consulta de livro por ID ou todos os livros e exclusão.
+                      Dessa
+                      vez,
+                      no entanto, use banco de dados para persistência.
+                    </p>
+                  </div>
+                </div>
+                <div class="container bloco2">
+                  <h3 id="t5">Criando validações e personalizando mensagens com <i>exceptions</i></h3>
+                  <p>
+                    Um recurso muito importante adotado nas APIs são as validações nas requisições. O Spring Boot, por
+                    meio
+                    da
+                    dependência <strong>Validation</strong>, permite indicar quais atributos você quer validar em uma
+                    inclusão
+                    e/ou alteração.
+                    Por exemplo, você pode criar validações na classe <strong>FuncionarioEntity</strong> para os
+                    atributos
+                    CPF,
+                    <i>e-mail</i>, nome com
+                    quantidade mínima de caracteres, campos obrigatórios, entre outras. Para isso, basta apenas colocar
+                    a
+                    anotação de validação correspondente sobre o nome do atributo. A seguir, veja um resumo das
+                    principais
+                    validações.
+                  </p>
+                  <ul class="marcador">
+                    <li><strong>@NotBlanke @NotNull</strong>: essas duas anotações realizam verificações e validam os
+                      campos
+                      onde são mapeadas
+                      para garantir que os valores não estejam em branco e nulos. </li>
+                    <li><strong>@CPF e @CNPJ</strong>: valida se o campo anotado possui CPF ou CNPJ válido. </li>
+                    <li><strong>@Email</strong>: valida se o campo anotado é um endereço de e-mail válido. </li>
+                    <li><strong>@Size</strong>: especifica a quantidade mínima (min.) e máxima (máx.) de caracteres.
+                    </li>
+                    <li><strong>@Min</strong>: valida que a propriedade anotada tem um valor não menor que o valor do
+                      atributo.
+                    </li>
+                    <li><strong>@Max</strong>: valida que a propriedade anotada tem um valor não maior que o valor do
+                      atributo.
+                    </li>
+                  </ul>
+                  <p>
+                    Veja como fica a classe <strong>FuncionarioEntity</strong> com as anotações de validação nos
+                    atributos:
+                    CPF,
+                    nome, telefone, e-mail e salário.
+                  </p>
+                  <pre>
             <code>
 package com.api.senac.data; 
 
@@ -1369,18 +1656,23 @@ public class FuncionarioEntity {
 } 
             </code>
           </pre>
-          <h4>Anotação @Valid</h4>
-          <p>
-            Após especificar quais atributos deverão ser validados na <strong>FuncionarioEntity</strong>, é preciso
-            agora definir na
-            <strong>FuncionarioController</strong> quais <i>endpoints</i> serão utilizados nas validações por meio da
-            anotação <strong>@Valid</strong>. Por
-            exemplo, você gostaria de aplicar essas validações somente quando ocorrer uma requisição de cadastrar
-            funcionário. Para isso, é necessário apenas aplicar a anotação <strong>@Valid</strong> antes da anotação
-            <strong>@RequestBody</strong> e
-            adicionar a importação do pacote <strong>import jakarta.validation.Valid</strong>:
-          </p>
-          <pre>
+                  <h4>Anotação @Valid</h4>
+                  <p>
+                    Após especificar quais atributos deverão ser validados na <strong>FuncionarioEntity</strong>, é
+                    preciso
+                    agora definir na
+                    <strong>FuncionarioController</strong> quais <i>endpoints</i> serão utilizados nas validações por
+                    meio
+                    da
+                    anotação <strong>@Valid</strong>. Por
+                    exemplo, você gostaria de aplicar essas validações somente quando ocorrer uma requisição de
+                    cadastrar
+                    funcionário. Para isso, é necessário apenas aplicar a anotação <strong>@Valid</strong> antes da
+                    anotação
+                    <strong>@RequestBody</strong> e
+                    adicionar a importação do pacote <strong>import jakarta.validation.Valid</strong>:
+                  </p>
+                  <pre>
             <code>
     @PostMapping("/adicionar") 
 
@@ -1393,14 +1685,16 @@ public class FuncionarioEntity {
     } 
             </code>
           </pre>
-          <p><strong>Adicionando um registro de funcionário com dados incompletos</strong> </p>
-          <p>
-            Execute novamente a API no Postman e adicione um funcionário fazendo uma solicitação POST para
-            <strong>localhost:8080/funcionario/adicionar</strong>. Observe que o nome está com apenas com um caractere e
-            que os campos
-            e-mail e CPF estão incorretos.
-          </p>
-          <pre>
+                  <p><strong>Adicionando um registro de funcionário com dados incompletos</strong> </p>
+                  <p>
+                    Execute novamente a API no Postman e adicione um funcionário fazendo uma solicitação POST para
+                    <strong>localhost:8080/funcionario/adicionar</strong>. Observe que o nome está com apenas com um
+                    caractere
+                    e
+                    que os campos
+                    e-mail e CPF estão incorretos.
+                  </p>
+                  <pre>
             <code>
 { 
 
@@ -1417,58 +1711,82 @@ public class FuncionarioEntity {
 } 
             </code>
           </pre>
-          <img src="imgs/fig-13.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-13.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-13.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 13 – Requisição POST no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com a área de requisição no Postman do tipo POST para URL localhost:8080/funcionario/adicionar. A aba
-            body de dados da requisição marca o item raw e mostra o JSON: {"nome": "a", "email": "claudio", "cpf":
-            "123", "salario": "1254.60", "telefone": "51 987654",}, mostrando como retorno: Status "400 Bad Request" e
-            body o JSON: {"timestamp": "2023-05-02T03:01:51.893+00:00", "status": 400, "error": "Validation failed for
-            object='funcionarioEntity'. Error count: 3", "path": "/funcionario/adicionar"}.
-          </p>
-          <p>
-            Quando a entrada for inválida, será lançada uma exceção com uma mensagem para o cliente, nesse caso, é uma
-            mensagem genérica que mostra três erros na validação de um objeto na classe
-            <strong>FuncionarioEntity</strong>. Além disso, é
-            retornado o <i>status</i> com código de requisição malformada 400. Veja na continuação deste conteúdo que é
-            possível também personalizar as respostas.
-          </p>
-          <h4>Camada <i>exception</i> </h4>
-          <p>
-            Para que seu projeto tenha uma melhor organização, inicialmente será criada uma quarta camada denominada
-            <strong> exception</strong>, na qual estarão as classes para tratamento de mensagens das exceções. Será
-            preciso criar o
-            <i> package</i> <strong>com.api.senac.exception</strong> na pasta <strong>Source Packages</strong>, com as
-            classes <strong>ValidationHandler</strong> e
-            <strong>ResourceNotFoundException</strong>. A estrutura do projeto ficará da seguinte forma:
-          </p>
-          <img src="imgs/fig-14.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-14.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-14.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 14 – Estrutura do projeto no NetBeans <br>
-            Fonte: NetBeans (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com detalhe do projeto “senac” no NetBeans mostrando o novo pacote “com.api.senac.;exception” dentro de
-            “Source Packages” e contendo as classes ResourceNotFoundException.java e ValidationHandler.java.
-          </p>
-          <h4> Personalizando mensagens de erro em validações </h4>
-          <p>
-            É uma prática comum criar um tratamento personalizado para retornar mensagens de erros customizadas quando
-            uma requisição é realizada e não são enviados os dados conforme as regras estabelecidas para a API. Por
-            isso, será criada a classe ValidationHandler com o seguinte código:
-          </p>
-          <pre>
+                  <img src="imgs/fig-13.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-13.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-13.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 13 – Requisição POST no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a área de requisição no Postman do tipo POST para URL localhost:8080/funcionario/adicionar.
+                    A
+                    aba
+                    body de dados da requisição marca o item raw e mostra o JSON: {"nome": "a", "email": "claudio",
+                    "cpf":
+                    "123", "salario": "1254.60", "telefone": "51 987654",}, mostrando como retorno: Status "400 Bad
+                    Request"
+                    e
+                    body o JSON: {"timestamp": "2023-05-02T03:01:51.893+00:00", "status": 400, "error": "Validation
+                    failed
+                    for
+                    object='funcionarioEntity'. Error count: 3", "path": "/funcionario/adicionar"}.
+                  </p>
+                  <p>
+                    Quando a entrada for inválida, será lançada uma exceção com uma mensagem para o cliente, nesse caso,
+                    é
+                    uma
+                    mensagem genérica que mostra três erros na validação de um objeto na classe
+                    <strong>FuncionarioEntity</strong>. Além disso, é
+                    retornado o <i>status</i> com código de requisição malformada 400. Veja na continuação deste
+                    conteúdo
+                    que
+                    é
+                    possível também personalizar as respostas.
+                  </p>
+                  <h4>Camada <i>exception</i> </h4>
+                  <p>
+                    Para que seu projeto tenha uma melhor organização, inicialmente será criada uma quarta camada
+                    denominada
+                    <strong> exception</strong>, na qual estarão as classes para tratamento de mensagens das exceções.
+                    Será
+                    preciso criar o
+                    <i> package</i> <strong>com.api.senac.exception</strong> na pasta <strong>Source Packages</strong>,
+                    com
+                    as
+                    classes <strong>ValidationHandler</strong> e
+                    <strong>ResourceNotFoundException</strong>. A estrutura do projeto ficará da seguinte forma:
+                  </p>
+                  <img src="imgs/fig-14.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-14.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-14.png"
+                      class="center-block img-responsive imgBorder espacoimg"></a>
+                  <p class="legenda-imagem">
+                    Figura 14 – Estrutura do projeto no NetBeans <br>
+                    Fonte: NetBeans (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe do projeto “senac” no NetBeans mostrando o novo pacote “com.api.senac.;exception”
+                    dentro
+                    de
+                    “Source Packages” e contendo as classes ResourceNotFoundException.java e ValidationHandler.java.
+                  </p>
+                  <h4> Personalizando mensagens de erro em validações </h4>
+                  <p>
+                    É uma prática comum criar um tratamento personalizado para retornar mensagens de erros customizadas
+                    quando
+                    uma requisição é realizada e não são enviados os dados conforme as regras estabelecidas para a API.
+                    Por
+                    isso, será criada a classe ValidationHandler com o seguinte código:
+                  </p>
+                  <pre>
             <code>
 package com.api.senac.exception; 
 
@@ -1523,25 +1841,29 @@ public class ValidationHandler extends ResponseEntityExceptionHandler {
 } 
             </code>
           </pre>
-          <ul class="marcador">
-            <li>A anotação <strong>@ControllerAdvice</strong> é responsável pelo gerenciamento global das exceções.
-            </li>
-            <li>A classe <strong>ValidationHandler</strong> estende a classe
-              <strong>ResponseEntityExceptionHandler</strong>, que é uma classe-base
-              conveniente quando se deseja implementar esse tipo de tratamento de exceção centralizado, pois fornece
-              métodos para lidar com exceções internas do Spring MVC.
-            </li>
-            <li><strong>@Override</strong> sobrescreve uma tratativa da exceção
-              <strong>MethodArgumentNotValidException</strong> (que é disparado quando
-              uma requisição desrespeita alguma validação aplicada no objeto) para pegar as informações lançadas na
-              exceção e retorná-las dentro do objeto de erros.
-            </li>
-          </ul>
-          <p>
-            Agora será retornado o exemplo anterior. Execute novamente a API no Postman para adicionar um funcionário
-            fazendo uma solicitação POST no endereço <strong>localhost:8080/funcionario/adicionar</strong>.
-          </p>
-          <pre>
+                  <ul class="marcador">
+                    <li>A anotação <strong>@ControllerAdvice</strong> é responsável pelo gerenciamento global das
+                      exceções.
+                    </li>
+                    <li>A classe <strong>ValidationHandler</strong> estende a classe
+                      <strong>ResponseEntityExceptionHandler</strong>, que é uma classe-base
+                      conveniente quando se deseja implementar esse tipo de tratamento de exceção centralizado, pois
+                      fornece
+                      métodos para lidar com exceções internas do Spring MVC.
+                    </li>
+                    <li><strong>@Override</strong> sobrescreve uma tratativa da exceção
+                      <strong>MethodArgumentNotValidException</strong> (que é disparado quando
+                      uma requisição desrespeita alguma validação aplicada no objeto) para pegar as informações lançadas
+                      na
+                      exceção e retorná-las dentro do objeto de erros.
+                    </li>
+                  </ul>
+                  <p>
+                    Agora será retornado o exemplo anterior. Execute novamente a API no Postman para adicionar um
+                    funcionário
+                    fazendo uma solicitação POST no endereço <strong>localhost:8080/funcionario/adicionar</strong>.
+                  </p>
+                  <pre>
             <code>
 { 
 
@@ -1558,37 +1880,49 @@ public class ValidationHandler extends ResponseEntityExceptionHandler {
 } 
             </code>
           </pre>
-          <img src="imgs/fig-15.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-15.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-15.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 15 – Requisição POST no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com detalhe de teste no Postman com requisição POST para URL localhost:8080/funcionário/adicionar.
-            Região de dados da requisição com aba body ativa e opção raw marcada, mostrando o JSON: {"nome": "a",
-            "email": "claudio", "cpf": "123", "salario": "1254.60", "telefone": "51 987654",}. Área de resposta, abaixo,
-            mostrando: Status “400 Bad Request” e na aba body o JSON: {"cpf": "CPF inválido", "nome": "Informe ao menos
-            2 caracteres para o campo nome", "email": "E-mail inválido"}.
-          </p>
-          <p>
-            Observe agora a API retornando as mensagens personalizadas nas anotações da classe
-            <strong>FuncionarioEntity</strong>.
-          </p>
-          <h4>Gerando mensagens de erro com <i>exception</i></h4>
-          <p>
-            Na camada de serviço, há a classe <strong>FuncionarioService</strong>, que tem o método
-            <strong>getFuncionarioId</strong>, que tem por
-            objetivo buscar um funcionário pelo ID informado. Entretanto, pode ocorrer de ele não ser encontrado ou ser
-            informado um ID inexistente. Como visto anteriormente, a mensagem de erro está sendo produzida de forma
-            geral. Entretanto, você pode criar uma exceção personalizada informando, por exemplo, que o funcionário não
-            foi localizado com o ID informado. Nesse cenário, crie outra exceção
-            <strong>ResourceNotFoundException</strong>:
-          </p>
-          <pre>
+                  <img src="imgs/fig-15.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-15.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-15.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 15 – Requisição POST no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe de teste no Postman com requisição POST para URL
+                    localhost:8080/funcionário/adicionar.
+                    Região de dados da requisição com aba body ativa e opção raw marcada, mostrando o JSON: {"nome":
+                    "a",
+                    "email": "claudio", "cpf": "123", "salario": "1254.60", "telefone": "51 987654",}. Área de resposta,
+                    abaixo,
+                    mostrando: Status “400 Bad Request” e na aba body o JSON: {"cpf": "CPF inválido", "nome": "Informe
+                    ao
+                    menos
+                    2 caracteres para o campo nome", "email": "E-mail inválido"}.
+                  </p>
+                  <p>
+                    Observe agora a API retornando as mensagens personalizadas nas anotações da classe
+                    <strong>FuncionarioEntity</strong>.
+                  </p>
+                  <h4>Gerando mensagens de erro com <i>exception</i></h4>
+                  <p>
+                    Na camada de serviço, há a classe <strong>FuncionarioService</strong>, que tem o método
+                    <strong>getFuncionarioId</strong>, que tem por
+                    objetivo buscar um funcionário pelo ID informado. Entretanto, pode ocorrer de ele não ser encontrado
+                    ou
+                    ser
+                    informado um ID inexistente. Como visto anteriormente, a mensagem de erro está sendo produzida de
+                    forma
+                    geral. Entretanto, você pode criar uma exceção personalizada informando, por exemplo, que o
+                    funcionário
+                    não
+                    foi localizado com o ID informado. Nesse cenário, crie outra exceção
+                    <strong>ResourceNotFoundException</strong>:
+                  </p>
+                  <pre>
             <code>
 package com.api.senac.exception; 
 
@@ -1609,71 +1943,1512 @@ public class ResourceNotFoundException extends RuntimeException {
 } 
             </code>
           </pre>
-          <ul class="marcador">
-            <li>A anotação <strong>@ResponseStatus</strong> é responsável por indicar que a classe retornará com
-              <i>status</i> em “http”, de acordo com o informado, nesse caso, <i>not found</i>.
-            </li>
-            <li>A classe de exceção <strong>ResourceNotFoundException</strong> estende o comportamento da superclasse
-              <strong>RuntimeException</strong>
-              que gerencia as exceções em tempo de execução
-            </li>
-            <li>Há apenas o construtor que recebe uma mensagem e informa ao construtor da superclasse para notificar
-              quando a exceção ocorrer. </li>
-          </ul>
-          <p>
-            Agora com a configuração da <i>exception</i> definida, é preciso alterar o método
-            <strong>getFuncionarioId</strong> para que use o
-            método <strong>orElseThrow</strong> em vez de <strong>orElse</strong>, que será responsável por enviar um
-            objeto da classe
-            <strong>ResourceNotFoundException</strong>, passando a mensagem “Funcionário não localizado”.
-          </p>
-          <pre>
+                  <ul class="marcador">
+                    <li>A anotação <strong>@ResponseStatus</strong> é responsável por indicar que a classe retornará com
+                      <i>status</i> em “http”, de acordo com o informado, nesse caso, <i>not found</i>.
+                    </li>
+                    <li>A classe de exceção <strong>ResourceNotFoundException</strong> estende o comportamento da
+                      superclasse
+                      <strong>RuntimeException</strong>
+                      que gerencia as exceções em tempo de execução
+                    </li>
+                    <li>Há apenas o construtor que recebe uma mensagem e informa ao construtor da superclasse para
+                      notificar
+                      quando a exceção ocorrer. </li>
+                  </ul>
+                  <p>
+                    Agora com a configuração da <i>exception</i> definida, é preciso alterar o método
+                    <strong>getFuncionarioId</strong> para que use o
+                    método <strong>orElseThrow</strong> em vez de <strong>orElse</strong>, que será responsável por
+                    enviar
+                    um
+                    objeto da classe
+                    <strong>ResourceNotFoundException</strong>, passando a mensagem “Funcionário não localizado”.
+                  </p>
+                  <pre>
             <code>
     public FuncionarioEntity getFuncionarioId(Integer funcId) { 
-
-        return funcionarioRepository.findById(funcId).orElseThrow(() -> new ResourceNotFoundException("Funcionário não encontrado " + funcId)); 
-                
+        return funcionarioRepository.findById(funcId).orElseThrow(() -> new ResourceNotFoundException("Funcionário não encontrado " + funcId));                
     } 
             </code>
           </pre>
-          <p>
-            Agora você testará os ajustes realizados. Por isso, faça uma solicitação GET para o endereço
-            <strong>localhost:8080/funcionario/pesquisa/99999</strong>, passando o ID do funcionário
-            <strong>99999</strong> no final da URL.
-          </p>
-          <img src="imgs/fig-16.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
-          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
-          </p>
-          <a href="imgs/fig-16.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-16.png" class="center-block img-responsive espacoimg imgBorder"></a>
-          <p class="legenda-imagem">
-            Figura 16 – Requisição GET no Postman <br>
-            Fonte: Postman (2023)
-          </p>
-          <p class="acessivel no-print">
-            Tela com detalhe da requisição no Postman do tipo GET para localhost:8080/funcionário/pesquisar/99999. Na
-            parte inferior, a resposta mostra status “404 Not Found” e em body JSON: {"timestamp":
-            "2023-05-02T04:09:28.019+00:00", "status": 404, "error": "Not Found", "message": "Funcionário não encontrado
-            99999", "path": "/funcionario/pesquisar/99999"}.
-          </p>
-          <p>
-            Observe agora a API retornando a mensagem personalizada Funcionário não encontrado 99999, que foi definida
-            no método getFuncionarioId.
-          </p>
-          <div class="caixa-destaque4">
-            <img src="imgs/desafio.png" class="img-responsive desafio2 no-print">
-            <p>
-              Incremente o projeto de livros do desafio anterior, criando validações para o nome e o autor como campos
-              requeridos.
-            </p>
-          </div>
-          <h3 id="t6"> Criando consultas avançadas </h3>
-          <p>
-            O Spring Data JPA disponibiliza métodos para criar queries a partir do nome de métodos personalizados. Esse
-            é um recurso extremamente flexível e poderoso. No entanto, para gerar essas consultas, existem algumas
-            regras que devem ser seguidas por meio de palavras-chaves e atributos que indicam quais consultas serão
-            utilizadas.
-          </p>
+                  <p>
+                    Agora você testará os ajustes realizados. Por isso, faça uma solicitação GET para o endereço
+                    <strong>localhost:8080/funcionario/pesquisa/99999</strong>, passando o ID do funcionário
+                    <strong>99999</strong> no final da URL.
+                  </p>
+                  <img src="imgs/fig-16.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-16.png" target="_blank" class="no-print visible-sm visible-xs "
+                    aria-hidden="true"><img src="imgs/fig-16.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 16 – Requisição GET no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe da requisição no Postman do tipo GET para
+                    localhost:8080/funcionário/pesquisar/99999.
+                    Na
+                    parte inferior, a resposta mostra status “404 Not Found” e em body JSON: {"timestamp":
+                    "2023-05-02T04:09:28.019+00:00", "status": 404, "error": "Not Found", "message": "Funcionário não
+                    encontrado
+                    99999", "path": "/funcionario/pesquisar/99999"}.
+                  </p>
+                  <p>
+                    Observe agora a API retornando a mensagem personalizada Funcionário não encontrado 99999, que foi
+                    definida
+                    no método getFuncionarioId.
+                  </p>
+                  <div class="caixa-destaque4">
+                    <img src="imgs/desafio.png" class="img-responsive desafio2 no-print">
+                    <p>
+                      Incremente o projeto de livros do desafio anterior, criando validações para o nome e o autor como
+                      campos
+                      requeridos.
+                    </p>
+                  </div>
+                  <h3 id="t6"> Criando consultas avançadas </h3>
+                  <p>
+                    O <strong>Spring Data JPA</strong> disponibiliza métodos para criar <i>queries</i> a partir do nome
+                    de
+                    métodos personalizados. Esse
+                    é um recurso extremamente flexível e poderoso. No entanto, para gerar essas consultas, existem
+                    algumas
+                    regras que devem ser seguidas por meio de palavras-chaves e atributos que indicam quais consultas
+                    serão
+                    utilizadas.
+                  </p>
+                  <table class="senac table-responsive">
+                    <tbody>
+                      <tr>
+                        <th class="tabela02">Retorno </th>
+                        <th class="tabela02">Palavra de busca </th>
+                        <th class="tabela02">Atributo </th>
+                        <th class="tabela02">Operador </th>
+                      </tr>
+                      <tr>
+                        <td class="tabela02">FuncionarioEntity </td>
+                        <td class="tabela02">findBy </td>
+                        <td class="tabela02">Nome </td>
+                        <td class="tabela02">And, Or </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela02">List>FuncionarioEntity> </td>
+                        <td class="tabela02"></td>
+                        <td class="tabela02"><i>E-mail </i></td>
+                        <td class="tabela02">StartingWith, EndingWith, Containing </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela02"></td>
+                        <td class="tabela02"></td>
+                        <td class="tabela02">Salário </td>
+                        <td class="tabela02">OrderBy </td>
+                      </tr>
+                      <tr>
+                        <td class="tabela02"></td>
+                        <td class="tabela02"></td>
+                        <td class="tabela02"></td>
+                        <td class="tabela02">Asc, Desc </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    Para melhor entender como criar métodos personalizados de consultas, veja alguns exemplos com maior
+                    detalhamento.
+                  </p>
+                  <div class="no-print" aria-hidden="true">
+                    <p>Clique ou toque para visualizar o conteúdo.</p>
+                    <div class="panel-group gaitinha" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                              aria-expanded="true" aria-controls="collapseOne">
+                              Exemplo 1: Localizar um funcionário pelo seu nome.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                          aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            Para isso, defina o retorno do método, em seguida, a palavra para sinalizar a busca, por
+                            fim, o
+                            nome
+                            do atributo que será utilizado. Essa pesquisa somente retornará caso o nome informado seja
+                            igual
+                            ao
+                            nome armazenado no banco de dados.
+                            <pre>
+                      <code>
+                            FuncionarioEntity findByNome(String nome); 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                              href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Exemplo 2: Localizar funcionários pelo seu nome ou e-mail em uma mesma pesquisa.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                          aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            Defina agora o tipo de retorno do método, como uma lista, em seguida, a palavra-chave
+                            “findBy”,
+                            após
+                            especificar o nome do atributo do primeiro atributo “nome” a ser pesquisado, seguido do
+                            operador
+                            “Or” e, por fim, o último atributo “email”.
+                            <pre>
+                      <code>
+                            List&lt;FuncionarioEntity> findByNomeOrEmail(String nome, String email); 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                              href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Exemplo 3: Encontrar nomes de funcionários que começam com um valor.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                          aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            Use o operador “StartingWith”, que em SQL seria algo como “WHERE nome LIKE ‘%value”.
+                            <pre>
+                      <code>
+                            List&lt;FuncionarioEntity> findByNomeStartingWith(String nome) 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading4">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                              Exemplo 4: Pesquisar nomes de funcionários que terminem com um valor.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                          <div class="panel-body">
+                            Use o operador “EndingWith”, que em SQL seria algo como “WHERE nome LIKE ‘value%”.
+                            <pre>
+                      <code>
+                        List&lt;FuncionarioEntity> findByNomeEndingWith(String nome); 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading5">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                              Exemplo 5: Descobrindo quais nomes de funcionários contêm um valor.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                          <div class="panel-body">
+                            Use o operador “Containing”, que em SQL seria algo como “WHERE nome LIKE ‘%value%”.
+                            <pre>
+                      <code>
+                            List&lt;FuncionarioEntity> findByNomeContaining(String nome); 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading6">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                              Exemplo 6: Gerar uma listagem de funcionários ordenados pelo seu nome de forma ascendente.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                          <div class="panel-body">
+                            Não use um filtro, e sim um retorno de uma listagem ordenada. Para isso, continue usando
+                            palavra-chave “findBy”, seguida do operador “OrderBy”, acrescido dos atributos que estão
+                            sendo
+                            ordenados, nesse caso, “nome”, e o tipo de ordenação “Asc”.
+                            <pre>
+                      <code>
+                            List&lt;FuncionarioEntity> findByOrderByNomeAsc(); 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading7">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                              Exemplo 7: Gerar a mesma listagem de funcionários, porém de forma decrescente do nome.
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                          <div class="panel-body">
+                            Basta usar o operador “Desc”.
+                            <pre>
+                      <code>
+                            List&lt;FuncionarioEntity> findByOrderByNomeDesc();  
+                      </code>
+                    </pre>
+                            Por fim, veja como ficou a interface “FuncionarioRepository“.
+                            <pre>
+                      <code>
+package com.api.senac.data; 
+
+import java.util.List; 
+
+import org.springframework.data.jpa.repository.JpaRepository; 
+
+import org.springframework.stereotype.Repository; 
+
+@Repository 
+
+public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntity, Integer> { 
+
+    FuncionarioEntity findByNome(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeOrEmail(String nome, String email); 
+
+    List&lt;FuncionarioEntity> findByNomeStartingWith(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeEndingWith(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeContaining(String nome); 
+
+    List&lt;FuncionarioEntity> findByOrderByNomeAsc(); 
+
+    List&lt;FuncionarioEntity> findByOrderByNomeDesc(); 
+
+     
+
+} 
+                      </code>
+                    </pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="acessivel print">
+                    <p>Exemplo 1: Localizar um funcionário pelo seu nome. </p>
+                    <p> Para isso, defina o retorno do método, em seguida, a palavra para sinalizar a busca, por fim, o
+                      nome
+                      do atributo que será utilizado. Essa pesquisa somente retornará caso o nome informado seja igual
+                      ao
+                      nome armazenado no banco de dados.
+                    </p>
+                    <pre>
+            <code>
+                  FuncionarioEntity findByNome(String nome); 
+            </code>
+            </pre>
+                    <p>Exemplo 2: Localizar funcionários pelo seu nome ou e-mail em uma mesma pesquisa. </p>
+                    <p>Defina agora o tipo de retorno do método, como uma lista, em seguida, a palavra-chave “findBy”,
+                      após
+                      especificar o nome do atributo do primeiro atributo “nome” a ser pesquisado, seguido do operador
+                      “Or” e, por fim, o último atributo “email”.
+                    </p>
+                    <pre>
+            <code>
+                  List&lt;FuncionarioEntity> findByNomeOrEmail(String nome, String email); 
+            </code>
+            </pre>
+                    <p>Exemplo 3: Encontrar nomes de funcionários que começam com um valor. </p>
+                    <p>Use o operador “StartingWith”, que em SQL seria algo como “WHERE nome LIKE ‘%value”.</p>
+                    <pre>
+            <code>
+                  List&lt;FuncionarioEntity> findByNomeStartingWith(String nome) 
+            </code>
+            </pre>
+                    <p>Exemplo 4: Pesquisar nomes de funcionários que terminem com um valor. </p>
+                    <p>Use o operador “EndingWith”, que em SQL seria algo como “WHERE nome LIKE ‘value%”.</p>
+                    <pre>
+            <code>
+              List&lt;FuncionarioEntity> findByNomeEndingWith(String nome); 
+            </code>
+            </pre>
+                    <p>Exemplo 5: Descobrindo quais nomes de funcionários contêm um valor. </p>
+                    <p> Use o operador “Containing”, que em SQL seria algo como “WHERE nome LIKE ‘%value%”. </p>
+                    <pre>
+            <code>
+                  List&lt;FuncionarioEntity> findByNomeContaining(String nome); 
+            </code>
+            </pre>
+                    <p>Exemplo 6: Gerar uma listagem de funcionários ordenados pelo seu nome de forma ascendente.</p>
+                    <p>
+                      Não use um filtro, e sim um retorno de uma listagem ordenada. Para isso, continue usando
+                      palavra-chave “findBy”, seguida do operador “OrderBy”, acrescido dos atributos que estão sendo
+                      ordenados, nesse caso, “nome”, e o tipo de ordenação “Asc”.
+                    </p>
+                    <pre>
+            <code>
+                  List&lt;FuncionarioEntity> findByOrderByNomeAsc(); 
+            </code>
+            </pre>
+                    <p>Exemplo 7: Gerar a mesma listagem de funcionários, porém de forma decrescente do nome. </p>
+                    <p> Basta usar o operador “Desc”.</p>
+                    <pre>
+            <code>
+                  List&lt;FuncionarioEntity> findByOrderByNomeDesc();  
+            </code>
+            </pre>
+                    <p>Por fim, veja como ficou a interface “FuncionarioRepository“.</p>
+                    <pre>
+            <code>
+package com.api.senac.data; 
+
+import java.util.List; 
+
+import org.springframework.data.jpa.repository.JpaRepository; 
+
+import org.springframework.stereotype.Repository; 
+
+@Repository 
+
+public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntity, Integer> { 
+
+    FuncionarioEntity findByNome(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeOrEmail(String nome, String email); 
+
+    List&lt;FuncionarioEntity> findByNomeStartingWith(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeEndingWith(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeContaining(String nome); 
+
+    List&lt;FuncionarioEntity> findByOrderByNomeAsc(); 
+
+    List&lt;FuncionarioEntity> findByOrderByNomeDesc(); 
+
+     
+
+} 
+              </code>
+            </pre>
+                  </div>
+                  <h4>Testando os métodos de consulta avançada</h4>
+                  <p>
+                    Antes de iniciar os testes na API de Funcionários, é importante ressaltar que os métodos criados
+                    serão
+                    utilizados de acordo com a necessidade na camada <strong>Service</strong>. Para exemplificar, será
+                    criado
+                    um
+                    método na classe
+                    <strong>FuncionarioService</strong>, chamando <strong>getFuncionarioPorNome</strong>, que deverá
+                    receber
+                    um
+                    nome e retornar uma lista de
+                    funcionários que tenham, em qualquer parte dos nomes dos funcionários, o valor informado. Será usado
+                    o
+                    método de pesquisa <strong>findByNomeContaining</strong>.
+                  </p>
+                  <pre>
+            <code>
+              public List&lt;FuncionarioEntity> getFuncionarioPorNome(String nome) { 
+
+                return funcionarioRepository.findByNomeContaining(nome); 
+          
+          } 
+            </code>
+          </pre>
+                  <p>
+                    O próximo passo agora é criar na camada <strong>Controller</strong> uma rota ou <i>endpoint</i> para
+                    solicitar uma pesquisa, chamada
+                    “pesquisar-nome”, passando o nome em <i>string</i>, que chamará o serviço
+                    <strong>getFuncionarioPorNome</strong>, pelo nome e
+                    retornando uma lista com os nomes de funcionários encontrados.
+                  </p>
+                  <pre>
+            <code>
+    @GetMapping("/pesquisar-nome/{nome}") 
+
+    public ResponseEntity&lt;List<FuncionarioEntity>> getPesquisarPorNomeFuncionarios(@PathVariable String nome) { 
+
+        List&lt;FuncionarioEntity> funcionarios = funcionarioService.getFuncionarioPorNome(nome); 
+
+        return new ResponseEntity<>(funcionarios, HttpStatus.OK); 
+
+    }     
+            </code>
+          </pre>
+                  <p>
+                    No Postman, agora teste a pesquisa criada. Para isso, faça uma solicitação GET para o endereço
+                    <strong>localhost:8080/funcionario/pesquisa-nome/Senac</strong>, passando parte de um nome do
+                    funcionário
+                    <strong>Senac</strong> no final da
+                    URL.
+                  </p>
+                  <img src="imgs/fig-17.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-17.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-17.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 17 – Requisição GET no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe de uma requisição no Postman do tipo GET para
+                    localhost:8080/funcionário/pesquisar-nome/Senac. Abaixo, área de resposta com status “200 ok” e body
+                    com
+                    JSON: [{"id": 2, "cpf": "01234567890", "nome": "Senac 102 102 102 102 102", "telefone": "51 987654",
+                    "email": "senac102@gmail.com", "salario": 620.45}].
+                  </p>
+                  <h4>Utilizando a anotação @Query</h4>
+                  <p>
+                    Uma das formas que o <strong>Spring Data</strong> provê para executar uma <i>query</i> é por meio da
+                    anotação @Query, que só pode
+                    ser utilizada nas interfaces <i>repository</i>. Neste projeto, é
+                    <strong>FuncionarioRepository</strong>.
+                    A
+                    chamada dos métodos
+                    anotados por @Query acionará a execução da instrução encontrada. Com isso, é possível executar SQL
+                    nativo.
+                  </p>
+                  <p>
+                    <strong>@Query com SQL Nativo</strong>: para utilizar instruções nativas em SQL, é necessário
+                    indicar
+                    com
+                    <i>true</i> o atributo <strong>nativeQuery</strong>. Para exemplificar, será criada, em
+                    <strong>FuncionarioRepository</strong>, uma
+                    consulta <strong>findAllMaiorSalario</strong>, que
+                    retornará uma lista dos funcionários com maior salário. Para isso, use a anotação @Query e defina na
+                    propriedade “value” a query em SQL “select MAX(salario) from funcionário”.
+                  </p>
+                  <pre>
+            <code>
+@Query(value="select MAX(salario) from Funcionario", nativeQuery=true) 
+List&lt;FuncionarioEntity> findAllMaiorSalario(); 
+            </code>
+          </pre>
+                  <p>
+                    Veja como ficou a classe <strong>FuncionarioRepository</strong>.
+                  </p>
+                  <pre>
+            <code>
+package com.api.senac.data; 
+
+import java.util.List; 
+
+import org.springframework.data.jpa.repository.JpaRepository; 
+
+import org.springframework.data.jpa.repository.Query; 
+
+import org.springframework.stereotype.Repository; 
+
+@Repository 
+
+public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntity, Integer> { 
+
+    FuncionarioEntity findByNome(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeOrEmail(String nome, String email); 
+
+    List&lt;FuncionarioEntity> findByNomeStartingWith(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeEndingWith(String nome); 
+
+    List&lt;FuncionarioEntity> findByNomeContaining(String nome); 
+
+    List&lt;FuncionarioEntity> findByOrderByNomeAsc(); 
+
+    List&lt;FuncionarioEntity> findByOrderByNomeDesc(); 
+
+    @Query(value="select * from Funcionario", nativeQuery=true) 
+
+    List&lt;FuncionarioEntity> findAllMaiorSalario(); 
+
+} 
+            </code>
+          </pre>
+                  <p>
+                    Na classe de serviço <strong>FuncionarioService</strong>, crie o método
+                    <strong>getMaioresSalarios</strong>,
+                    que retornará uma lista de
+                    funcionários com maiores salários, para isso, use o método de pesquisa com SQL nativo
+                    <strong>findAllMaiorSalario</strong>,
+                    criado na classe <strong>FuncionarioRepository</strong>.
+                  </p>
+                  <pre>
+            <code>
+    public List&lt;FuncionarioEntity> listarTodosFuncionarios() { 
+        return funcionarioRepository.findAll();     
+    } 
+            </code>
+          </pre>
+                  <p>
+                    Por fim, é preciso criar na camada <strong>Controller</strong> uma rota ou endpoint para solicitar
+                    uma
+                    pesquisa, chamada
+                    <strong> maiores-salarios</strong>, que chamará o serviço <strong>getMaioresSalarios</strong>,
+                    retornando
+                    uma lista com os nomes dos
+                    funcionários com maiores salários.
+                  </p>
+                  <pre>
+            <code>
+    @GetMapping("/maiores-salarios") 
+
+    public ResponseEntity&lt;List&lt;FuncionarioEntity>> getMaioresSalarios() { 
+
+        List&lt;FuncionarioEntity> funcionarios = funcionarioService.getMaioresSalarios(); 
+
+        return new ResponseEntity<>(funcionarios, HttpStatus.OK); 
+
+    }   
+            </code>
+          </pre>
+                  <p>
+                    No Postman, teste a pesquisa criada. Para isso, faça uma solicitação GET para o endereço
+                    <strong>localhost:8080/funcionario/maiores-salarios</strong>.
+                  </p>
+                  <img src="imgs/fig-18.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-18.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-18.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 18 – Requisição GET no Postman <br>
+                    Fonte: Postman (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe de uma requisição no Postman do tipo GET para
+                    localhost:8080/funcionário/maiores-salarios.
+                    Abaixo, área de resposta com status “200 ok” e aba body com JSON: [{"id": 2, "cpf": "01234567890",
+                    "nome":
+                    "Senac 102 102 102 102 102", "telefone": "51 987654", "email": "senac102@gmail.com", "salario":
+                    620.45}].
+                  </p>
+                  <h3 id="t7">Criando uma aplicação <i>web</i> com Spring MVC </h3>
+                  <p>
+                    Agora que você tem a API criada, pode utilizar todos os serviços criados em uma aplicação <i>web</i>
+                    utilizando o
+                    Spring MVC. Essa aplicação será um CRUD de funcionários, em que você irá listar, cadastrar, alterar
+                    e
+                    excluir. Para iniciar, é necessário compreender que a construção de um projeto Spring MVC pode ser
+                    realizada
+                    a partir do Spring Boot, mas, para isso, serão necessários três passos:
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 destaque01">
+                      <p class="conteudo01">
+                        Adicionar a dependência da biblioteca do <strong>Thymeleaf</strong> no arquivo “pow.xml”.
+                      </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 destaque02">
+                      <p class="conteudo02">
+                        Criar uma classe <i>controller</i> específica com rotas para o Spring MVC, usando a anotação
+                        @Controller.
+                      </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 destaque03">
+                      <p class="conteudo03">
+                        Criar uma classe <i>controller</i> específica com rotas para o Spring MVC, usando a anotação
+                        @Controller.
+                      </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                  </div>
+                  <p>
+                    A seguir, serão aprofundados cada um desses passos.
+                  </p>
+                  <h4> Inserir dependência da biblioteca Thymeleaf no arquivo “pow.xml”</h4>
+                  <p>
+                    Para incluir uma dependência na biblioteca Thymeleaf de um projeto já criado, use o gerenciador de
+                    dependências do Maven.
+                  </p>
+                  <ul class="marcador">
+                    <li>Abra o arquivo pom.xml no NetBeans – ele fica dentro de Project Files na estrutura de arquivos.
+                      Esse
+                      arquivo é responsável por gerenciar as dependências do seu projeto.</li>
+                    <img src="imgs/fig-19.png"
+                      class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                    <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                    </p>
+                    <a href="imgs/fig-19.png" target="_blank" class="no-print visible-sm visible-xs"
+                      aria-hidden="true"><img src="imgs/fig-19.png"
+                        class="center-block img-responsive espacoimg imgBorder"></a>
+                    <p class="legenda-imagem">
+                      Figura 19 – Arquivo pom.xml <br>
+                      Fonte: NetBeans (2023)
+                    </p>
+                    <p class="acessivel no-print">
+                      Tela com detalhe do projeto “Senac” no NetBeans mostrando o item “Project Files” expandido com
+                      “pom.xml”.
+                    </p>
+                    <li>Localize a seção &lt;dependencies> do arquivo “pom.xml” – ela estará aproximadamente na linha
+                      19. É
+                      aqui
+                      que você precisa adicionar as novas dependências. Nesse caso, use o Thymeleaf na versão 3.0.6, com
+                      o
+                      seguinte código em XML: </li>
+                    <pre>
+                <code>
+&lt;dependency> 
+
+    &lt;groupId>org.springframework.boot&lt;/groupId> 
+  
+    &lt;artifactId>spring-boot-starter-thymeleaf&lt;/artifactId> 
+  
+    &lt;version>3.0.6&lt;/version> 
+  
+&lt;/dependency> 
+                </code>
+              </pre>
+                    <li>
+                      Cole o código XML da dependência dentro da seção &lt;dependencies> do arquivo “pom.xml”.
+                      Certifique-se
+                      de
+                      que
+                      a dependência esteja dentro das tags &lt;dependency> e &lt;/dependency>. Tenha cuidado para não
+                      apagar
+                      as
+                      dependências que já estão lá. Suas dependências devem ficar assim:
+                    </li>
+                    <p class=" hidden-lg hidden-sm visible-xs">Arraste para ver o restante do código </p>
+                    <pre class="codigo-destaque codDestaque">
+<span class="hljs-string">&lt;?xml> version="<span class="hljs-number">1.0</span>" encoding="UTF-8"?> </span>
+
+<span class="hljs-string">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+https://maven.apache.org/xsd/maven-4.0.0.xsd"> </span>
+
+   <span class="hljs-name"> &lt;modelVersion><span class="hljs-number"> 4.0.0 </span> &lt;/modelVersion> </span>
+
+    <span class="hljs-name"> &lt;parent> </span>
+
+        <span class="hljs-name">&lt;groupId> </span> org.springframework.boot <span class="hljs-name">&lt;/groupId> </span>
+
+         <span class="hljs-name">&lt;artifactId></span> spring-boot-starter-parent <span class="hljs-name">&lt;/artifactId> </span>
+
+         <span class="hljs-name">&lt;version></span> 3.0.6 <span class="hljs-name">&lt;/version> </span>
+
+         <span class="hljs-name">&lt;relativePath/> </span> &lt!-- lookup parent from repository --> 
+
+     <span class="hljs-name">&lt;/parent> </span>
+
+     <span class="hljs-name">&lt;groupId></span> com.api <span class="hljs-name">&lt;/groupId> </span>
+
+     <span class="hljs-name">&lt;artifactId></span> senac <span class="hljs-name">&lt;/artifactId> </span>
+
+    <span class="hljs-name">&lt;version></span> 0.0.1-SNAPSHOT <span class="hljs-name">&lt;/version> </span>
+
+     <span class="hljs-name">&lt;name></span> senac <span class="hljs-name">&lt;/name></span> 
+
+     <span class="hljs-name">&lt;description></span> API Rest de Projeto de Funcionários <span class="hljs-name">&lt;/description> </span>
+
+     <span class="hljs-name">&lt;properties> </span>
+
+         <span class="hljs-name">&lt;java.version></span> 17 <span class="hljs-name">&lt;/java.version> </span>
+
+     <span class="hljs-name">&lt;/properties> </span>
+
+     <span class="hljs-name">&lt;dependencies> </span>
+
+         <span class="hljs-name">&lt;dependency> </span>
+
+           <span class="hljs-name"> &lt;groupId></span>org.springframework.boot <span class="hljs-name">&lt;/groupId> </span>
+
+            <span class="hljs-name">&lt;artifactId></span>spring-boot-starter-data-jpa <span class="hljs-name">&lt;/artifactId> </span>
+
+        <span class="hljs-name">&lt;/dependency> </span>
+
+        <span class="hljs-name">&lt;dependency> </span>
+
+           <span class="hljs-name"> &lt;groupId></span>org.springframework.boot <span class="hljs-name">&lt;/groupId> </span>
+
+            <span class="hljs-name">&lt;artifactId></span> spring-boot-starter-validation <span class="hljs-name">&lt;/artifactId></span>
+
+        <span class="hljs-name">&lt;/dependency> </span>
+
+        <span class="hljs-name">&lt;dependency> </span>
+
+            <span class="hljs-name">&lt;groupId></span> org.springframework.boot <span class="hljs-name">&lt;/groupId> </span>
+
+            <span class="hljs-name"> &lt;artifactId></span>spring-boot-starter-web <span class="hljs-name">&lt;/artifactId> </span>
+
+        <span class="hljs-name">&lt;/dependency> </span>
+
+        <span class="hljs-name">&lt;dependency> </span>
+
+              <span class="code-destaque">
+              <span class="hljs-keyword">&lt;groupId>org.springframework.boot&lt;/groupId></span>
+
+              <span class="hljs-keyword">&lt;artifactId>spring-boot-starter-thymeleaf&lt;/artifactId> </span>
+
+              <span class="hljs-keyword">&lt;version>3.0.6&lt;/version> </span></span> 
+          <span class="hljs-name">&lt;/dependency> </span>
+
+         <span class="hljs-name"> &lt;dependency> </span> 
+
+              <span class="hljs-name">&lt;groupId></span> com.mysql <span class="hljs-name">&lt;/groupId> </span>
+
+              <span class="hljs-name">&lt;artifactId></span> mysql-connector-j <span class="hljs-name">&lt;/artifactId> </span>
+
+              <span class="hljs-name">&lt;scope></span> runtime <span class="hljs-name">&lt;/scope> </span>
+
+         <span class="hljs-name"> &lt;/dependency> </span>
+
+          <span class="hljs-name">&lt;dependency> </span>
+
+              <span class="hljs-name">&lt;groupId></span> org.projectlombok <span class="hljs-name">&lt;/groupId> </span>
+
+              <span class="hljs-name">&lt;artifactId></span> lombok <span class="hljs-name">&lt;/artifactId> </span>
+
+              <span class="hljs-name">&lt;optional></span> true <span class="hljs-name">&lt; /optional> </span>
+
+          <span class="hljs-name">&lt;/dependency> </span>
+
+          <span class="hljs-name">&lt;dependency> </span>
+
+              <span class="hljs-name">&lt;groupId></span> org.springframework.boot <span class="hljs-name">&lt;/groupId> </span>
+
+              <span class="hljs-name">&lt;artifactId></span> spring-boot-starter-test <span class="hljs-name">&lt;/artifactId> </span>
+
+              <span class="hljs-name">&lt;scope></span> test <span class="hljs-name">&lt;/scope> </span>
+
+         <span class="hljs-name">&lt;/dependency> </span>
+
+      <span class="hljs-name">&lt;/dependencies> </span>
+
+      <span class="hljs-name">&lt;build> </span>
+
+          <span class="hljs-name">&lt;plugins> </span>
+
+             <span class="hljs-name">&lt;plugin> </span>
+
+                  <span class="hljs-name">&lt;groupId></span> org.springframework.boot <span class="hljs-name">&lt;/groupId> </span>
+
+                  <span class="hljs-name">&lt;artifactId></span> spring-boot-maven-plugin <span class="hljs-name">&lt;/artifactId> </span>
+
+                  <span class="hljs-name">&lt;configuration> </span>
+
+                     <span class="hljs-name">&lt;excludes> </span> 
+
+                          <span class="hljs-name">&lt;exclude> </span>
+
+                              <span class="hljs-name">&lt;groupId></span> org.projectlombok <span class="hljs-name">&lt;/groupId> </span>
+
+                             <span class="hljs-name">&lt;artifactId></span> lombok <span class="hljs-name">&lt;/artifactId> </span>
+
+                          <span class="hljs-name">&lt;/exclude> </span>
+
+                      <span class="hljs-name">&lt;/excludes> </span>
+
+                 <span class="hljs-name"> &lt;/configuration> </span>
+
+             <span class="hljs-name">&lt;/plugin> </span>
+
+          <span class="hljs-name">&lt;/plugins> </span>
+
+      <span class="hljs-name">&lt;/build> </span>
+
+  <span class="hljs-name">&lt;/project> </span>
+            </pre>
+                    <li>Salve o arquivo pom.xml. O Maven agora baixará automaticamente a nova dependência para o seu
+                      projeto.
+                    </li>
+                    <li>Para atualizar o projeto no NetBeans com as novas dependências, clique com o botão direito do
+                      <i>mouse</i> no
+                      nome do projeto e selecione a opção “Clean and Build” (Limpar e Construir).
+                    </li>
+                    <li>Pronto, agora você pode usar a nova dependência em seu projeto Spring. </li>
+                  </ul>
+                  <h4> Criando um controller específico para o Spring MVC</h4>
+                  <p>
+                    Crie uma classe <strong>FuncController</strong> em <strong>com.api.senac.controller</strong> com o
+                    código
+                    a
+                    seguir. Observe que foi usada uma
+                    anotação especial <strong>@Controller</strong>, proveniente do pacote
+                    “org.springframework.stereotype”
+                    do
+                    Spring. Essa
+                    anotação é necessária para que o sistema busque nessa classe qual método deve ser executado a partir
+                    da
+                    URL.
+                    Em seguida, conecte automaticamente a classe <strong>FuncionarioService</strong> em no controlador
+                    para
+                    usar
+                    os métodos
+                    declarados implementados nele. Isso é injeção de dependência pela anotação
+                    <strong>@Autowired</strong>.
+                    Além
+                    disso, há cinco
+                    métodos que serão detalhados na sequência do conteúdo durante a criação do CRUD de funcionários.
+                  </p>
+                  <pre>
+            <code>
+package com.api.senac.controller; 
+
+import com.api.senac.data.FuncionarioEntity; 
+
+import com.api.senac.service.FuncionarioService; 
+
+import jakarta.validation.Valid; 
+
+import org.springframework.beans.factory.annotation.Autowired; 
+
+import org.springframework.stereotype.Controller; 
+
+import org.springframework.ui.Model; 
+
+import org.springframework.validation.BindingResult; 
+
+import org.springframework.web.bind.annotation.GetMapping; 
+
+import org.springframework.web.bind.annotation.ModelAttribute; 
+
+import org.springframework.web.bind.annotation.PathVariable; 
+
+import org.springframework.web.bind.annotation.PostMapping; 
+
+@Controller 
+
+public class FuncController { 
+
+    @Autowired 
+
+    FuncionarioService funcionarioService; 
+
+    @GetMapping("/") 
+
+    public String viewHomePage(Model model) { 
+
+        model.addAttribute("listarFuncionarios", funcionarioService.listarTodosFuncionarios()); 
+
+        return "index"; 
+
+    } 
+
+    @GetMapping("/deletarFuncionario/{id}") 
+
+    public String deletarFuncionario(@PathVariable(value = "id") Integer id) { 
+
+        funcionarioService.deletarFuncionario(id); 
+
+        return "redirect:/"; 
+
+    } 
+
+    @GetMapping("/criarFuncionarioForm") 
+
+    public String criarFuncionarioForm(Model model) { 
+
+        FuncionarioEntity func = new FuncionarioEntity(); 
+
+        model.addAttribute("funcionario", func); 
+
+        return "inserir"; 
+
+    } 
+
+    @PostMapping("/salvarFuncionario") 
+
+    public String salvarFuncionario(@Valid @ModelAttribute("funcionario") FuncionarioEntity func, BindingResult result) { 
+
+ 
+
+        if (result.hasErrors()) { 
+
+            return "inserir"; 
+
+        } 
+
+        if (func.getId()==null) { 
+
+            funcionarioService.criarFuncionario(func); 
+
+        } else { 
+
+            funcionarioService.atualizarFuncionario(func.getId(), func); 
+
+        } 
+
+        return "redirect:/"; 
+
+    } 
+
+    @GetMapping("/atualizarFuncionarioForm/{id}") 
+
+    public String atualizarFuncionarioForm(@PathVariable(value = "id") Integer id, Model model) { 
+
+        FuncionarioEntity func = funcionarioService.getFuncionarioId(id); 
+
+        model.addAttribute("funcionario", func); 
+
+        return "atualizar"; 
+    } 
+} 
+            </code>
+          </pre>
+                  <h4>Criando um CRUD de funcionários</h4>
+                  <p>
+                    No NetBeans, na pasta “Other Sources/src/main/resources/templates”, clique com o botão direito do
+                    <i>mouse</i> e
+                    selecione New > HTML File e crie três arquivos com nomes “index.html”, “atualizar.html” e
+                    “inserir.html”.
+                    Veja como ficará a estrutura do projeto a seguir:
+                  </p>
+                  <img src="imgs/fig-20.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-20.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-20.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 20 – Estrutura da camada View <br>
+                    Fonte: NetBeans (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com detalhe do projeto “senac” no NetBeans destacando a pasta “templates”, com os arquivos
+                    “atualizar.html”, “index.html” e “inserir.html”.
+                  </p>
+                  <p>
+                    <strong>Inserir funcionário</strong>: será chamada uma página com formulário de cadastro de
+                    funcionário
+                    e
+                    estudado como
+                    realizar a postagem dos valores digitados pelo usuário para o <i>back-end</i>. Primeiramente,
+                    analise na
+                    classe
+                    “FuncController” o método criado anteriormente <strong>criarFuncionarioForm()</strong>, que
+                    responderá
+                    pela
+                    URL
+                    “/criarFuncionarioForm”.
+                  </p>
+                  <pre>
+            <code>
+@GetMapping("/criarFuncionarioForm") 
+
+public String criarFuncionarioForm(Model model) { 
+
+        FuncionarioEntity func = new FuncionarioEntity(); 
+
+        model.addAttribute("funcionario", func); 
+
+        return "inserir"; 
+
+    } 
+            </code>
+          </pre>
+                  <p>
+                    O método recebe um parâmetro do tipo “Model”, que será usado para transportar dados para a camada de
+                    visão.
+                    Nesse caso, inclua em “model” o atributo “funcionário” com o objeto “func” que foi criado. Por fim,
+                    retorne
+                    para a visão “inserir”. Agora é preciso um formulário em “html” para que o usuário possa realizar o
+                    cadastro
+                    de um funcionário. Para isso, insira no arquivo “inserir.html” o seguinte bloco de código:
+                  </p>
+                  <pre>
+            <code class="language-html">
+&lt;!DOCTYPE html> 
+&lt;html lang="en"> 
+    &lt;head> 
+        &lt;meta charset="utf-8"> 
+        &lt;title>Gerenciamento de Funcionários&lt;/title> 
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;div class="container"> 
+            &lt;h1>Gerenciamento de Funcionários&lt;/h1> 
+            &lt;hr> 
+            &lt;h2>Adicionar&lt;/h2> 
+            &lt;form action="#" th:action="@{/salvarFuncionario}" th:object="${funcionario}" method="POST"> 
+                &lt;input type="text" th:field="*{nome}" placeholder="Insira o nome" class="form-control mt-4 col-4"> 
+                &lt;span class="text-danger" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}">&lt;/span> 
+                &lt;input type="text" th:field="*{cpf}" placeholder="Insira o CPF" class="form-control mt-4 col-4"> 
+                &lt;span class="text-danger" th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}">&lt;/span> 
+                &lt;input type="text" th:field="*{email}" placeholder="Insira o Email" class="form-control mt-4 col-4"> 
+                &lt;span class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">&lt;/span> 
+                &lt;input type="text" th:field="*{telefone}" placeholder="Insira o Telefone" class="form-control mt-4 col-4"> 
+                &lt;span class="text-danger" th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}">&lt;/span> 
+                &lt;input type="number" th:field="*{salario}" placeholder="Insira o Salário" class="form-control mt-4 col-4"> 
+                &lt;span class="text-danger" th:if="${#fields.hasErrors('salario')}" th:errors="*{salario}">&lt;/span> 
+                &lt;button type="submit" class="btn btn-info mt-4"> Salvar&lt;/button> 
+            &lt;/form> 
+            &lt;hr> 
+            &lt;a th:href="@{/}"> Retornar&lt;/a> 
+        &lt;/div> 
+    &lt;/body>         
+&lt;/html>  
+            </code>
+          </pre>
+                  <p>
+                    A página conta com um formulário com campos simples. Veja alguns dos atributos Thymeleaf presentes:
+                  </p>
+                  <ul class="marcador">
+                    <li><strong>th:action="@{/salvarFuncionario}"</strong>: indica que a ação do formulário irá para a
+                      URL
+                      terminada em “/salvarfuncionario”. </li>
+                    <li><strong>th:object="${funcionario}" data-binding</strong>: com o objeto do tipo Funcionário
+                      fornecido
+                      por
+                      “Model”. </li>
+                    <li><strong>th:field="*{nome}"</strong>: associa um elemento de <i>input</i> com uma propriedade do
+                      objeto
+                      Funcionário associado ao formulário. </li>
+                  </ul>
+                  <p>
+                    No método “salvarFuncionario”, da classe “FuncController”, existem características importantes.
+                  </p>
+                  <pre>
+            <code>
+    @PostMapping("/salvarFuncionario") 
+
+    public String salvarFuncionario(@Valid @ModelAttribute("funcionario") FuncionarioEntity func, BindingResult result) { 
+
+        if (result.hasErrors()) { 
+            return "inserir"; 
+
+        } 
+
+        if (func.getId()==null) { 
+            funcionarioService.criarFuncionario(func); 
+        } else { 
+            funcionarioService.atualizarFuncionario(func.getId(), func); 
+        } 
+
+        return "redirect:/"; 
+
+    } 
+            </code>
+          </pre>
+                  <p>
+                    A anotação @PostMapping indica que o método é acessível apenas por requisições do tipo POST e
+                    responderá
+                    à
+                    URL terminada em “/salvarFuncionario” (a mesma do atributo “action” no formulário). Já
+                    @ModelAttribute
+                    indica que o objeto “func” presente no parâmetro do método conterá as informações que o usuário
+                    digitou
+                    no
+                    formulário ao realizar a postagem. Outra característica são as validações por meio da anotação
+                    @Valid,
+                    que
+                    normalmente é usada antes do objeto a ser validado. Lembre-se de que dentro da classe
+                    “FuncionarioEntity”
+                    existem anotações que validam os dados enviados. Suponha que, na requisição, o campo “nome” tenha
+                    sido
+                    informado em branco ou com menos de dois caracteres.
+                  </p>
+                  <pre>
+            <code>
+    @Size(min=2, message="Informe ao menos 2 caracteres para o campo nome") 
+    private String nome; 
+            </code>
+          </pre>
+                  <p>
+                    Quando alguma restrição é violada, os erros de violação serão adicionados ao objeto “BindingResult”,
+                    presente nos parâmetros do método. Em seguida, é possível verificar se há erros no objeto
+                    “BindingResult”.
+                    O
+                    método “hasErrors()” é usado para verificar se há algum erro no objeto “BindingResult” após o
+                    processo
+                    de
+                    validação ter sido acionado. Caso ocorra, redirecione para a visão “inserir.html” para que as
+                    mensagens
+                    de
+                    validação de erros sejam exibidas ao lado de cada campo, como no caso do nome, por meio da marcação
+                    do
+                    Thymeleaf.
+                  </p>
+                  <pre class="codigo-destaque">
+<span class="hljs-keyword"> &lt;input type=</span> <span class="hljs-title function_"> "text" </span> <span class="hljs-keyword">th:field=</span> <span class="hljs-title function_"> "*{nome}" </span> <span class="hljs-keyword">placeholder=</span> <span class="hljs-title function_"> "Insira o nome" </span> <span class="hljs-keyword">class=</span> <span class="hljs-title function_"> "form-control mt-4 col-4"> </span>
+<span class="hljs-keyword">&lt;span class=</span> <span class="hljs-title function_"> "text-danger" <span class="code-destaque">th:if=</span>"${#fields.hasErrors('nome')}" <span class="code-destaque">th:errors=</span>"*{nome}">&lt;/span> </span>                
+          </pre>
+                  <ul class="marcador">
+                    <li><strong>th:if = ”${#fields.hasErros(‘nome’)}”</strong>: habilita o componente em HTML, por ter
+                      ocorrido
+                      erro com atributo “nome”. </li>
+                    <li><strong>th:errors=”*{nome}”</strong>: exibe o erro gerado na violação. </li>
+                  </ul>
+                  <p>Veja o erro sendo exibido na visão “inserir.html”: </p>
+                  <img src="imgs/fig-21.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-21.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-21.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 21 – Formulário de adicionar funcionário <br>
+                    Fonte: Senac EAD (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela de página com título “Gerenciamento de Funcionários” e subtítulo “Adicionar”, com campos de
+                    texto
+                    definidos pelo código HTML do formulário, um abaixo do outro. No primeiro campo de texto, há o valor
+                    “s”,
+                    abaixo, um parágrafo vermelho escrito “Informe ao menos 2 caracteres para o campo nome”.
+                  </p>
+                  <p>
+                    Esse método pode ser usado tanto para criar um novo funcionário como para atualizar um existente.
+                    Por
+                    isso,
+                    é necessário criar uma condição, no exemplo, está sendo validado se o ID do funcionário está sendo
+                    enviado.
+                    Se for enviado nulo, será chamado o serviço de “criarFuncionario”, caso contrário, o
+                    “atualizarFuncionario”,
+                    que são serviços já definidos anteriormente durante a criação da API. Por fim, é feito um
+                    redirecionamento
+                    para a raiz do projeto “viewHomePage”, que é o método para exibir uma lista de funcionários na visão
+                    “index.html”.
+                  </p>
+                  <p>
+                    <strong>Atualizar funcionário</strong>: analise na classe “FuncController” o método criado
+                    anteriormente
+                    <strong>atualizarFuncionarioForm</strong>, que responderá pela URL “/atualizarFuncionarioForm/{id}”.
+                    Essa
+                    rota deverá receber
+                    dois parâmetros: o ID de um funcionário pelo PathVariable e o objeto Model. Depois, deve ser
+                    incluída,
+                    em
+                    um
+                    mapa de informações, uma entrada pelo método “addAttibute()” da classe Model, em que serão
+                    informados
+                    uma
+                    chave (“funcionario”) e o valor (o objeto func que foi localizado pelo ID informado no método
+                    getFuncionarioId). Por fim, retorne para a visão “atualizar”.
+                  </p>
+                  <pre>
+            <code>
+@GetMapping("/atualizarFuncionarioForm/{id}") 
+    public String atualizarFuncionarioForm(@PathVariable(value = "id") Integer id, Model model) { 
+        FuncionarioEntity func = funcionarioService.getFuncionarioId(id); 
+        model.addAttribute("funcionario", func); 
+        return "atualizar"; 
+} 
+            </code>
+          </pre>
+                  <p>
+                    Agora é preciso um formulário para que o usuário possa realizar a atualização de um funcionário.
+                    Para
+                    isso,
+                    insira no arquivo “atualizar.html” o seguinte bloco de código:
+                  </p>
+                  <pre>
+            <code class="language-html">
+&lt;!DOCTYPE html> 
+&lt;html lang="en"> 
+    &lt;head> 
+        &lt;meta charset="utf-8"> 
+        &lt;title>Gerenciamento de Funcionários</title> 
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;div class="container"> 
+            &lt;h1>Gerenciamento de Funcionários</h1> 
+            &lt;hr> 
+            &lt;h2>Atualizar</h2> 
+            &lt;form action="#" th:action="@{/salvarFuncionario}" th:object="${funcionario}" method="POST"> 
+                &lt;input type="text" th:field="*{nome}" placeholder="Insira o nome" class="form-control mb-4 col-4"> 
+                &lt;input type="text" th:field="*{cpf}" placeholder="Insira o CPF" class="form-control mb-4 col-4"> 
+                &lt;input type="text" th:field="*{email}" placeholder="Insira o Email" class="form-control mb-4 col-4"> 
+                &lt;input type="text" th:field="*{telefone}" placeholder="Insira o Telefone" class="form-control mb-4 col-4"> 
+                &lt;input type="text" th:field="*{salario}" placeholder="Insira o Salário" class="form-control mb-4 col-4"> 
+                &lt;input type="hidden" th:field="*{id}" /> 
+                &lt;button type="submit" class="btn btn-info col-2"> Atualizar&lt;/button> 
+            &lt;/form>         
+            &lt;hr> 
+            &lt;a th:href="@{/}"> Retornar&lt;/a> 
+        &lt;/div> 
+    &lt;/body> 
+&lt;/html> 
+            </code>
+          </pre>
+                  <p>
+                    Observe que a visão de atualização de funcionário tem as mesmas características da visão de inserir.
+                    Entretanto é necessário informar o ID do funcionário pela marcação do Thymeleaf th:field="*{id}" e
+                    defini-la
+                    como oculta pela propriedade “hidden”, da seguinte forma:
+                  </p>
+                  <pre>
+            <code>
+              &lt;input type="hidden" th:field="*{id}" /> 
+            </code>
+          </pre>
+                  <p>
+                    No restante, requisição e validações serão iguais.
+                  </p>
+                  <img src="imgs/fig-22.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-22.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-22.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 22 – Formulário de atualizar funcionário <br>
+                    Fonte: Senac EAD (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela de página de cadastro com título “Gerenciamento de Funcionários”, subtítulo “Atualizar” e
+                    valores
+                    nos
+                    campos de texto: “Senac 102 102, 102 102”, “01234567890”, “senac102@gmail.com”, “51 987654”,
+                    “620.45”.
+                    Abaixo, há o botão “Atualizar” e o link “Retornar”.
+                  </p>
+                  <p>
+                    <strong>Listagem de funcionários</strong>: em “FuncController”, há o método criado anteriormente
+                    <strong>viewHomePage</strong>. A presença da
+                    anotação “@GetMapping” é que fará, quando o usuário digitar http://localhost:8080/, que uma lista de
+                    funcionários seja exibida na visão “index”. Observe que o método tem como parâmetro um objeto do
+                    tipo
+                    Model,
+                    que incluirá em um mapa de informações uma entrada pelo método “addAtribute()”, em que é informada
+                    uma
+                    chave
+                    “listarFuncionarios” e como valor a lista de funcionários obtida pelo método
+                    listarTodosFuncionarios()
+                    da
+                    camada de serviço funcionarioService. Por fim, o redirecionamento para a visão “index.html”.
+                  </p>
+                  <pre>
+            <code>
+    @GetMapping("/") 
+
+    public String viewHomePage(Model model) { 
+
+        model.addAttribute("listarFuncionarios", funcionarioService.listarTodosFuncionarios()); 
+
+        return "index"; 
+
+    } 
+            </code>
+          </pre>
+                  <p>
+                    Agora é necessária uma listagem de funcionários com as operações de alterar e excluir, além do botão
+                    de
+                    adicionar um novo funcionário. Para isso, insira no arquivo “index.html” o seguinte bloco de código:
+                  </p>
+                  <pre>
+            <code class="language-html">
+&lt;!DOCTYPE html> 
+&lt;html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+    &lt;head> 
+        &lt;meta charset="utf-8"> 
+        &lt;title>Gerenciamento de Funcionários</title> 
+        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;div class="container my-2"> 
+            &lt;h1>Lista de Funcionários</h1> 
+            &lt;a th:href="@{/criarFuncionarioForm}" class="btn btn-primary btn-sm mb-3"> Adicionar &lt;/a> 
+            &lt;table border="1" class="table table-striped table-responsive-md"> 
+                &lt;thead> 
+                    &lt;tr> 
+                        &lt;th>ID</th> 
+                        &lt;th>Nome</th> 
+                        &lt;th>CPF</th> 
+                        &lt;th>Email</th> 
+                        &lt;th>Telefone</th> 
+                        &lt;th>Salário</th> 
+                        &lt;th>Operações</th> 
+                    &lt;/tr> 
+                &lt;/thead> 
+                &lt;tbody> 
+                    &lt;tr th:each="func : ${listarFuncionarios}"> 
+                        &lt;td th:text="${func.id}"></td> 
+                        &lt;td th:text="${func.nome}"></td> 
+                        &lt;td th:text="${func.cpf}"></td>  
+                        &lt;td th:text="${func.email}"></td> 
+                        &lt;td th:text="${func.telefone}"></td> 
+                        &lt;td th:text="${func.salario}"></td> 
+                        &lt;td> &lt;a th:href="@{/atualizarFuncionarioForm/{id}(id=${func.id})}" class="btn btn-primary">Atualisar&lt;/a> 
+                            &lt;a th:href="@{/deletarFuncionario/{id}(id=${func.id})}" class="btn btn-danger">Excluir&lt;/a> 
+                        &lt;/td> 
+                    &lt;/tr> 
+                &lt;/tbody> 
+            &lt;/table>  
+        &lt;/div> 
+    &lt;/body>     
+&lt;/html> 
+            </code>
+          </pre>
+                  <p>
+                    A primeira alteração acontece no tag html, que recebe um atributo para reconhecer os atributos
+                    especiais
+                    de
+                    Thymeleaf. A segunda alteração é que, para chamar uma rota para cadastrar, será usada a marcação
+                    <strong>th:href</strong>.
+                    Para cadastrar, será usado: th:href=”@{/criarFuncionarioForm}”.
+                  </p>
+                  <pre>
+            <code>
+              &lt;a th:href="@{/criarFuncionarioForm}" class="btn btn-primary btn-sm mb-3"> Adicionar &lt;/a> 
+            </code>
+          </pre>
+                  <p>
+                    E como os dados da listagem de funcionários serão exibidos? A marcação <strong>th:each</strong> é
+                    usada
+                    para
+                    iterar a lista
+                    de funcionários. O <strong>func : ${listarFuncionarios}</strong> significa o valor para cada
+                    atributo,
+                    ou
+                    seja, “para cada
+                    elemento no resultado da lista <strong>${listarFuncionarios}</strong>, repita esse fragmento da
+                    configuração
+                    do modelo desse
+                    elemento em uma variável chamada <strong>func</strong>”. O próximo passo agora é exibir cada
+                    atributo do
+                    objeto por meio do
+                    marcador <strong>th:text=”${func.id}</strong>”
+                  </p>
+                  <p>
+                    Por fim, agora é possível fazer a chamada de rotas usando o marcador <strong>th:ref</strong> e
+                    passando
+                    parâmetros usando <strong>{func.id}</strong>.
+                  </p>
+                  <p>
+                    Sintaxe: th:href=”@{/rota/parâmetro(parâmetro=${obj.atributo})}”
+                  </p>
+                  <p>
+                    <strong>Exemplo para chamar uma requisição de atualização de funcionário</strong>: aqui há a rota
+                    “atualizarFuncionarioForm”
+                    da classe “FuncController”, que recebe como parâmetro o ID do funcionário, busca as informações e
+                    retorna
+                    para a visão “atualizar”. Esse método foi detalhado na seção “Atualizar Funcionário”.
+                  </p>
+                  <pre>
+            <code>
+              &lt;a th:href="@{/atualizarFuncionarioForm/{id}(id=${func.id})}" class="btn btn-primary">Atualisar&lt;/a> 
+            </code>
+          </pre>
+                  <p>
+                    <strong>Exemplo para excluir um funcionário</strong>: no código a seguir, há o bloco responsável por
+                    excluir
+                    um funcionário,
+                    por meio do ID do funcionário.
+                  </p>
+                  <pre>
+            <code>
+              &lt;a th:href="@{/deletarFuncionario/{id}(id=${func.id})}" class="btn btn-danger">Excluir&lt;/a> 
+            </code>
+          </pre>
+                  <p>
+                    No momento em que a rota é requisitada, o método “deletarFuncionario” presente na classe
+                    “FuncController”
+                    recebe como parâmetro o ID do funcionário. Logo a seguir, é chamada a classe de serviço com o método
+                    de
+                    “deletarFuncionario”, no qual o objetivo é excluí-lo do banco de dados. Por fim, é feito um
+                    redirecionamento
+                    para a raiz do projeto “viewHomePage”, que é o método para carregar e exibir uma lista de
+                    funcionários
+                    na
+                    visão “index.html”.
+                  </p>
+                  <pre>
+            <code>
+@GetMapping(“/deletarFuncionario/{id}”) 
+
+public String deletarFuncionario(@PathVariable(value = “id”) Integer id) { 
+
+    funcionarioService.deletarFuncionario(id); 
+
+    return “redirect:/”; 
+
+} 
+            </code>
+          </pre>
+                  <p>
+                    <strong> Testando a aplicação</strong>: para testar, clique com o botão direito do <i>mouse</i>
+                    sobre a
+                    classe
+                    “SenacApplication.java” e escolha “Run File”. A aba <i>output</i> do NetBeans deve mostrar um
+                    <i>log</i>
+                    na
+                    aba <i>output</i>,
+                    indicando que o servidor interno Tomcat do Spring está rodando. Note ainda que o processo não
+                    encerra,
+                    segue
+                    rodando, mas você pode interromper clicando no botão “stop” na lateral esquerda dessa aba. Agora com
+                    servidor rodando, você pode, enfim, testar por completo as funcionalidades, primeiro acessando
+                    “http://localhost:8080/” via navegador de internet.
+                  </p>
+                  <img src="imgs/fig-23.png"
+                    class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+                  </p>
+                  <a href="imgs/fig-23.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig-23.png"
+                      class="center-block img-responsive espacoimg imgBorder"></a>
+                  <p class="legenda-imagem">
+                    Figura 23 – Lista de Funcionários <br>
+                    Fonte: Senac EAD (2023)
+                  </p>
+                  <p class="acessivel no-print">
+                    Tela com a página de uma “Lista de Funcionários” mostrando uma tabela com os funcionários
+                    cadastrados, à
+                    direita da linha, há os botões em destaque “Atualizar” e “Excluir”.
+                  </p>
+                  <div>
+                    <p class="caixa-destaque4">
+                      <img src="imgs/desafio.png" class="img-responsive desafio3 no-print">
+                      Crie uma aplicação web Spring MVC que consuma os serviços REST de livros desenvolvidos nos
+                      desafios
+                      anteriores.
+                    </p>
+                  </div>
+                  <h3 id="t8"> Encerramento</h3>
+                  <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                      <p class="conteudoEncerramento">
+                        Neste conteúdo, você aprendeu como criar uma API com Spring Boot, integrando ao banco de dados
+                        com
+                        Spring Data JPA, e criar consultas avançadas, além do desenvolvimento de uma aplicação <i>
+                          web</i>
+                        utilizando o
+                        Spring MVC.
+                      </p>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                      <img src="imgs/img_encerramento.png" class="imgEncerramento img-responsive no-print hidden-xs">
+                    </div>
+                  </div>
+                </div>
 
 
 
@@ -1688,39 +3463,19 @@ public class ResourceNotFoundException extends RuntimeException {
 
 
 
+              </div>
 
+            </div>
 
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
 
+      <ul class="pagination">
 
+      </ul>
 
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-  </div>
-
-  </section>
-  <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
-  <footer class="text-center no-print">
-
-    <ul class="pagination">
-
-    </ul>
-
-  </footer>
+    </footer>
 
   </div>
 

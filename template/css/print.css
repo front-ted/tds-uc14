@@ -248,6 +248,7 @@ h5 {
   p.legenda-imagem{
     text-align: center;
     text-align-last: unset;
+    margin-top: 10px;
   }
   *,
   *:before,
