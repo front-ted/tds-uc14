@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Ambiente de desenvolvimento (Spring MVC) </title>
+
+    <!-- Bootstrap -->
+    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+    <link href="../template/css/cores.css" rel="stylesheet">
+    <link href="../template/css/modal-100.css" rel="stylesheet">
+    <link href="../template/css/devibeans.min.css" rel="stylesheet">
+      <!--Extras - novas classes para facilitar-->
+      <link rel="stylesheet" href="../template/css/extras.css">
+    <link href="../template/css/sncload.css" rel="stylesheet">
+    <link href="../template/css/magnific-popup.css" rel="stylesheet">
+    <!-- referencia ao arquivo css com estilos especificos da pagina -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <!-- css necessario para o print -->
+    <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+    <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+    <!-- MARCA D´ÁGUA -->
+    <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+    <!-- /MARCA D´ÁGUA -->
+
+    <div id='sncloader' class='over-loader'><div class="over-cell"><div id="sncload"></div></div></div>
+    <header id="topo" class="senac no-print">
+        <div  class="header-tecnicos container">
+        	  <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+            <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+        </div>
+        <div id="sombra"></div>
+    </header>
+
+    <div id="booklet">
+        <header class="no-print container">
+          <!-- BTO IMPRIMIR -->
+          <div class="grupo-imprimir no-print">
+            <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+                <span class="fa fa-print"></span> <span>Imprimir</span>
+            </button>
+          </div>
+          <!-- /BTO IMPRIMIR -->
+        </header>
+<!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+        <section class="paginas">
+
+          <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+          <div class="pagina">
+            <!-- Menu -->
+            <div class="bg-fundo"></div>
+            <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+            <div class="menu no-print" aria-hidden="true">
+              <div id="style-2" class="scroll-bar">
+                <div class="force-overflow">
+                  
+                  <ul class="eng-item-menu">
+                    <li class="item1">
+                      <a href="#t1" class="fundo-item">Introdução</a>
+                      <hr>
+                    </li>
+                    <li class="item2">
+                      <a href="#t2" class="fundo-item"> Spring e Spring Boot  </a>
+                      <hr>
+                    </li>
+                    <li class="item3">
+                      <a href="#t3" class="fundo-item"> Instalação e configuração </a>
+                      <hr>
+                    </li>
+                    <li class="item4">
+                      <a href="#t4" class="fundo-item"> Spring MVC </a>
+                      <hr>
+                    </li>
+                    <li class="item5">
+                      <a href="#t5" class="fundo-item"> THYMELEAF </a>
+                      <hr>
+                    </li>
+                    <li class="item6">
+                      <a href="#t6" class="fundo-item"> Manipulação de dados dinâmicos </a>
+                      <hr>
+                    </li>
+                    <li class="item7">
+                      <a href="#t7" class="fundo-item"> Loops </a>
+                      <hr>
+                    </li>
+                    <li class="item8">
+                      <a href="#t8" class="fundo-item">Condicionais</a>
+                    </li>
+                    <li class="item9">
+                      <a href="#t8" class="fundo-item">Formulários</a>
+                    </li>
+                    <li class="item10">
+                      <a href="#t8" class="fundo-item">Navegação entre páginas </a>
+                    </li>
+                    <li class="item11">
+                      <a href="#t8" class="fundo-item">Recursos estáticos</a>
+                    </li>
+                    <li class="item11">
+                      <a href="#t8" class="fundo-item">Encerramento</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="container">
+              
+              <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+              
+              <h2 class="acessivel print">Ambiente de desenvolvimento (Spring MVC) </h2>
+              <h3>Introdução</h3>              
+              <p>A seguir, será abordado como instalar e configurar um ambiente de desenvolvimento para programar projetos Spring MVC. Nesse momento, não será dada atenção à persistência dos dados em um banco de dados. Assim que o ambiente estiver pronto, será iniciada a criação dos projetos, com muitas dicas úteis para ajudá-lo a ter sucesso nesse processo. </p>
+              <h3>Spring e Spring Boot</h3>
+              <p>
+                Como você pôde conferir no conteúdo “Arquitetura Web” desta unidade, o Spring Framework permite o desenvolvimento muito mais eficiente de aplicações web do que as ferramentas nativas de Java (Servlets, JSP etc.). Essa ferramenta é amplamente adotada pelo mercado por trazer facilidade à configuração com o uso de injeção de dependência, o que permite uma boa modularização no sistema e favorece o desenvolvimento de serviços web. Além disso, conta com suporte para tarefas comuns em desenvolvimento web, como vinculação de dados (data-binding), conversão automática de tipos, validações de eventos, internacionalização e vários outros recursos.  
+              </p>
+              <p>
+                O Spring Boot é uma ferramenta auxiliar ao Spring que visa tornar mais fácil e rápido o processo de criação e configuração de projetos. Seu uso é opcional, mas a principal vantagem é que torna possível criar rapidamente aplicações prontas para produção, com um mínimo de configuração e sem a necessidade de definir manualmente muitos detalhes técnicos. O Spring Boot oferece várias facilidades, como um servidor embutido e um amplo conjunto de ferramentas para ajudar a simplificar o processo de desenvolvimento. Assim, podem ser criadas aplicações que rodam por si próprias, sem necessidade de implantação em servidor web externo, como Tomcat. 
+              </p>
+              <h3> Instalação e configuração</h3>
+              <p>
+                Para implementação de projeto Spring, as etapas são um pouco diferentes das instalações e configurações-padrão de aplicativos. Como o Spring é um framework para projetos Java, é necessário um projeto Java para “instalar” o Spring nesse projeto. Geralmente, isso é feito criando um projeto do zero e, depois, fazendo a instalação do framework por meio de algum gerenciador de dependências. Isso pode ser um pouco demorado e muitos erros podem acontecer se cada etapa não for seguida à risca. Sendo assim, será usada outra abordagem. 
+              </p>
+              <p>
+                A forma mais eficaz que se tem para criar um projeto com o Spring é utilizando o Spring Initializr, um serviço web que permite aos desenvolvedores criar rapidamente aplicativos Java com o Spring Framework. Ele fornece modelos de projeto pré-configurados, com uma variedade de opções para selecionar e construir o projeto do jeito que precisar. Como o serviço gera automaticamente o código de configuração necessário para iniciar o projeto, você economiza tempo e esforço. O primeiro passo é acessar a página do Spring Initializr (start.spring.io). 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Página Spring Initializr, paniel à esquerda com opções: Project (opções Gradle – Groovy. Gradle – Kotlin, Maven), Language (Java, Kotlin ou Groovy), Spring Boot (opções 3.1.0 (SNAPSHOT), 3.1.0(M2), 3.0.8 (SNAPSHOT), 3.0.5, 2.7.11 (SNAPSHOT) 2.7.10), Project metadata com campos de texto para “Group”, “Artifact”, “Name”, “Description”, “Package name”. Abaixo, Packaging (opções Jar e War), e abaixo Java (com opções 20, 17, 11, 8). À direita, painel com título “Dependencies” e botão “Add Dependencies”. No rodabé botões “Generate”, “Explore” e “Share...”. "></a>
+                            <p class="legenda-imagem">
+                              Figura 1 – Site do Spring Initializr 
+                              Fonte: Spring Initializr (s.d.) 
+                            </p>
+              <p>
+                Nessa tela, serão definidas todas as configurações iniciais do projeto. Em Project, você deve escolher qual gerenciador de dependências utilizará. Um gerenciador de dependências facilita a construção de um projeto, baixando bibliotecas automaticamente a partir de algumas referências configuradas. Durante o curso, você já conheceu o Maven, e é com ele que seguirá nos próximos projetos. Por isso, nos exemplos, normalmente será selecionada a opção Maven. 
+              </p>
+              <p>
+                Em Language, é possível escolher qual linguagem de programação será utilizada no desenvolvimento do projeto. Nos projetos do curso, será escolhida sempre a opção Java. 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Project”:  Gradle Goovy, Gradle Kotlin e Maven (selecionada). "></a>
+              <p class="legenda-imagem">
+                Figura 2 – Site do Spring Initializr 
+                Fonte: Spring Initializr (s.d.) 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Language”:  Java (selecionada), Kotlin, Groovy ">
+              </a>
+              <p class="legenda-imagem">
+                Figura 3 – Site do Spring Initializr 
+                Fonte: Spring Initializr (s.d.) 
+              </p>
+              <p>
+                Em Spring Boot, é escolhida a versão da biblioteca que se deseja utilizar. Por padrão, a opção 3.0.6 já vem selecionada por se tratar da última versão do Spring Boot nesta data. É possível selecionar versões mais antigas ou a versão atualmente em desenvolvimento, que se trata de uma versão mais atualizada, mas que pode apresentar alguns bugs em funcionalidades que não tenham sido testadas – não é recomendado selecioná-la. Para garantir que não ocorra nenhuma instabilidade ou imprevisto no desenvolvimento deste projeto, foi selecionada a última versão estável na data de produção deste material, que é a 3.0.6. 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Spring Boot”:  3.1.0 (SNAPSHOT), 3.1.0(RC1), 3.1.0 (M2), 3.0.7(SNAPSHOT), 3.0.6 (selecionada), 2.7.12 (SNAPSHOT) 2.7.11 ">
+              </a>
+              <p class="legenda-imagem">Figura 4 – Site do Spring Initializr 
+                Fonte Spring Initializr (s.d.) 
+              </p>
+              <p class="caixa-destaque icone-atencao"><strong>Atenção</strong> - As versões do Spring Boot podem variar dependendo de quando você estiver lendo este conteúdo. É recomendado que você utilize a última versão estável da biblioteca sempre que possível. </p>
+              <p>
+                Em Project Metadata, é necessário definir alguns metadados para a criação deste projeto. Veja no infográfico a seguir. 
+              </p>
+              <h1>img infográfico</h1>
+
+              <br>
+              <p>
+                Veja a seguir um exemplo de preenchimento desses dados. 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Seção “Project Metadata” da página Spring Initializr, mostrando campo “Group” com valor “com.api”, campo “Artifact” com valor “tarefas”, campo “Name” com valor “tarefas”, campo “Description” com valor “API Rest de Projeto de Tarefas”, campo “Package name” com valor “com.api.tarefas”, item “Packaging” com opção “Jar” selecionada, e item “Java” com opção “17” selecionada. ">
+              </a>
+              <p class="legenda-imagem">Figura 5 – Site do Spring Initializr  
+                Fonte Spring Initializr (s.d.) 
+              </p>
+              <p>
+                A seção Dependencies no Spring Initializr permite que você escolha as bibliotecas e os frameworks que deseja utilizar em seu projeto. Para adicionar uma dependência, clique no botão Add Dependencies. 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Detalhe na página Spring Initializr do painel com título “Dependencies” e botão “Add Dependencies”. ">
+              </a>
+              <p class="legenda-imagem">Figura 6 – Site do Spring Initializr 
+                Fonte: Spring Initializr (s.d.) 
+              </p>
+              <p>
+                As dependências disponíveis no Spring Initializr incluem várias bibliotecas populares do ecossistema Spring, como Spring Web, Spring Data JPA, Spring Security e Spring Cloud, bem como outras bibliotecas populares, como o Apache Kafka, o Hibernate e o Thymeleaf. Você pode selecionar várias dependências clicando nas caixas de seleção correspondentes. Nos projetos web apresentados neste conteúdo, sempre será usado o Spring Web. 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Lista de dependências do Spring Initializr, mostrando uma lista com ”Spring Web”, selecionada, “Spring Reactive Web”, “Spring Web Servides” e outras. ">
+              </a>
+              <p class="legenda-imagem">Figura 7 – Site do Spring Initializr  
+                Fonte: Spring Initializr (s.d.) 
+              </p>
+              <p>
+                Projetos Spring MVC ou com banco de dados podem exigir a inclusão de mais bibliotecas de dependência. Ao selecionar uma dependência, o Spring Initializr automaticamente adicionará a versão mais recente daquela dependência ao seu projeto. 
+              </p>
+              <p>
+                É importante notar que adicionar muitas dependências ao seu projeto pode torná-lo mais pesado e aumentar o tempo de construção. Por isso, é importante escolher apenas as dependências necessárias para o seu projeto e mantê-las atualizadas para garantir a segurança e o desempenho do seu aplicativo. 
+              </p>
+              <p>
+                Após selecionar o Spring Web, por exemplo, a dependência aparecerá abaixo na lista de dependências. 
+              </p>
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Detalhe na página Spring Initializr do painel com título “Dependencies” e botão “Add Dependencies”. Abaixo lista a dependência “Spring web” com descrição “Build web, including RESTful, applications using SpringMVC. Uses Apache Tomcat as the default embedded container” ">
+              </a>
+              <p class="legenda-imagem">Figura 8 – Site do Spring Initializr 
+                Fonte: Spring Initializr (s.d.) 
+              </p>
+              <p>
+                Após concluir todas as configurações, clique em Generate, no rodapé da página, que será feito o download de uma pasta compactada (.zip) contendo o projeto completo. 
+              </p>
+              <p>
+                Finalizado o download, é possível extrair o conteúdo em seu computador e abrir a pasta do projeto com sua IDE – nesse caso, o Apache NetBeans IDE. 
+              </p>
+              <h3>Spring MVC</h3>
+              <p>
+                O framework Spring conta com uma variedade grande de ferramentas para desenvolvimento web e, entre essas ferramentas, uma das mais populares é o Spring MVC, uma implementação do padrão MVC para a construção de aplicações web, que usa anotações, convenções, pacotes e pastas para separar as camadas do padrão.  
+              </p>
+              <p>
+                A construção de um projeto Spring MVC pode ser realizada a partir do Spring Boot, que inclui algumas configurações automaticamente. Assim, evita-se a escrita de arquivos XML para configurar. De maneira simplificada, o fluxo de uma requisição no Spring MVC é o seguinte: 
+              </p>
+              <p>
+                Clique ou toque para visualizar o conteúdo. 
+              </p>
+              
+        <h4>Carousel</h4>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item">
+              <p>Request é recebido pelo sistema e tratado internamente por um objeto da classe DispatcherServlet. </p>
+              <img src="imgs/fig-09.png" alt="À esquerda, um computador tem uma seta com o texto http://localhost:8080/abc conectando a uma área com título “Spring MVC” à direita; dentro da área, há um retângulo escrito “DispatcherServlet”, onde a seta prossegue. " class="img-responsive center-block">
+              <div class="carousel-caption">
+                Figura 9 – Request enviado ao sistema 
+                Fonte: Senac EAD (2023) 
+              </div>
+            </div>
+            <div class="item">
+              <img src="imgs/fig-10.png" alt="Área com o título “Spring MVC”, dentro dela, à direita, há um retângulo com o texto “DispatcherServlet”, de onde saem duas setas, uma para uma classe “AlgumController” e outra para classe “OutroController”. " class="img-responsive  center-block">
+              <div class="carousel-caption">
+                Figura 10 – Escolha da classe Controller 
+
+Fonte: Senac EAD (2023) 
+              </div>
+            </div>
+            <div class="item active">
+              <img src="imgs/fig-11.png" alt="Área com o título “Spring MVC”, dentro dela, à direita, há um retângulo com o texto “DispatcherServlet”, de onde sai uma seta para classe “AlgumController”, onde há um método com o código @GetMapping(“/abc”) - Public String preparaAbc(){ return “abc”; }. Também se vê esmaecida a classe “OutroController”. " class="img-responsive  center-block">
+              <div class="carousel-caption">
+                Figura 11 – Controller escolhido e ação localizada 
+
+Fonte: Senac EAD (2023)  
+              </div>
+            </div>
+            <div class="item active">
+              <img src="imgs/fig-12.png" alt="Situação descrita na figura anterior, agora mostrando uma seta da classe “AlgoController” para o “DispatcherServlet” com texto “abc”. " class="img-responsive  center-block">
+              <div class="carousel-caption">
+                Figura 12 – Retorno do Controller 
+
+Fonte: Senac EAD (2023) 
+              </div>
+            </div>
+            <div class="item active">
+              <img src="imgs/fig-13.png" alt="Área com o título “Spring MVC”, dentro dela, à direita, há um retângulo com o texto “DispatcherServlet”, de onde sai uma seta com texto “abc” para uma pasta à direita, que ramifica para três ícones de arquivos: “abc.html”, “def.html” e “ghi.html”." class="img-responsive  center-block">
+              <div class="carousel-caption">
+                Figura 13 – Buscando View 
+
+Fonte: Senac EAD (2023) 
+              </div>
+            </div>
+            <div class="item active">
+              <img src="imgs/fig-14.png" alt="Área com o título “Spring MVC”, dentro dela, à direita, há um retângulo com o texto “DispatcherServlet”, de onde sai uma seta para um documento “abc.html”, à direita, mostrando um código simples HTML. Desse documento, sai uma seta pontilhada retornando a “DispatcherServlet”. " class="img-responsive  center-block">
+              <div class="carousel-caption">
+                Figura 14 – Formatando HTML da View 
+
+Fonte: Senac EAD (2023) 
+              </div>
+            </div>
+            <div class="item active">
+              <img src="imgs/fig-15.png" alt="Área “SpringMVC” à esquerda, de onde sai uma seta pontilhada com texto de código HTML direcionada a um computador à esquerda, que mostra na sua tela uma página renderizada, com título texto e imagem. " class="img-responsive  center-block">
+              <div class="carousel-caption">
+                Figura 15 – Renderização do retorno 
+
+Fonte: Senac EAD (2023) 
+              </div>
+            </div>
+          
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+          <p>
+            Na prática, na maioria das vezes, não é necessário lidar diretamente com o DispatcherServlet, mas é importante entender que há algo que orquestra as requisições e as respostas. Esta implementação se concentrará nas classes de controle, nas classes de modelo de negócio e nas páginas. 
+          </p>
+          <p>
+            A seguir, para compreender esse mecanismo, você criará um novo projeto. 
+          </p>
+          <ul>
+            <li>Usando o Spring Initializr, crie um projeto com as seguintes configurações: </li>
+            <ul>
+              <li>Project: Maven </li>
+              <li>Language: Java </li>
+              <li>Spring Boot: maior versão estável disponível </li>
+              <li>Group: com.senac </li>
+              <li>Artifact e Name: projetomvc </li>
+              <li>Packaging: Jar </li>
+              <li>Java: 17 (ou versão instalada em sua máquina)  </li>
+              <li>Dependencies: inclua Spring Web (categoria Web) e Thymeleaf (categoria Template Engines) </li>
+            </ul>
+            <li>Baixe o arquivo compactado gerado, extraia e abra a pasta no NetBeans. </li>
+          </ul>
+          <a href="imgs/fig-16.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+            <img src="imgs/fig-16.png" class="center-block img-responsive" alt="Página do Sprinc Initializr com as configurações citadas no texto. ">
+          </a>
+          <p class="legenda-imagem">Figura 16 – Configurações no Spring Initializr 
+
+            Fonte: Spring Initializr (s.d.) 
+            
+          </p>
+          <ul>
+            <li>
+              A estrutura do projeto, quando aberto no NetBeans, fica conforme a seguir.
+            </li>
+          </ul>
+
+
+              <a href="imgs/fig-17.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/fig-17.png" class="center-block img-responsive" alt="Detalhe da aba projetos do Netbeans, destacando as estruturas: Source Packages > com.senac.projetomvc > ProjetoMvcApplication.java; abaixo Other Sources > src/main/resources > “default package”, “static” e “templates”; Project Files > pom.xml.  ">
+              </a>
+              <p class="legenda-imagem">Figura 17 – Projeto Spring MVC 
+
+                Fonte: NetBeans (2023) 
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true">
+                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="">
+              </a>
+              <p class="legenda-imagem">
+                
+              </p>
+
+
+
+
+
+
+                <!-- painel clicavel -->
+
+
+
+           
+              
+            </div>
+            
+          </div>
+
+        </section>
+<!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+        <footer class="text-center no-print">
+          
+          <ul class="pagination">
+
+          </ul>
+         
+        </footer>
+
+    </div>
+
+    <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+<!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+<div class="ico-div-loader">
+	<img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../template/js/jquery.min.js"></script>
+    <script src="../template/js/bootstrap.min.js"></script>
+    <script src="../template/js/jquery.magnific-popup.min.js"></script>
+    <script src="../template/js/print.js"></script>
+    <script src="../template/js/template.config.js"></script>
+    <script src="../template/js/images.loader.js"></script>
+    <script src="../template/js/highlight.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/custom.js"></script>
+    <noscript>
+      <style media="screen">
+        .over-loader { display: none;}    
+      </style>
+    </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+     type: 'image',
+       mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+  
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+  
+      // The "opener" function should return the element from which popup will be zoomed in
+      // and to which popup will be scaled down
+      // By defailt it looks for an image tag:
+      opener: function(openerElement) {
+        // openerElement is the element on which popup was initialized, in this case its <a> tag
+        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+      },
+       image: {
+        markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+ // Floated left
+            '<div class="mfp-bottom-bar">'+'<figcaption>'+'<div class="mfp-title" style="text-align:center"></div>'+
+              '<div class="mfp-counter"></div>'+'</figcaption>'+
+            '</div>'+
+            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+  
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+  
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+       }
+    });
+  
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  
+  
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+  
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+  
+    $(document).ready(function() {
+      var $target = $('.animeStart'),
+          $target2 = $('.animeStop'),
+          targetBox = $('.box'),
+          animationClass = 'anime-init',
+          windowHeight = $(window).height(),
+          offset = windowHeight - (windowHeight / 4);
+  
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function() {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          } 
+        });
+      }
+      animeScroll();
+  
+      $(document).scroll(function() {
+        animeScroll();
+      });
+    });
+  
+  
+  </script>
+  
+  <script>
+    var scriptElem=document.createElement("script");
+    scriptElem.src="https://plugin.handtalk.me/web/latest/handtalk.min.js",
+    scriptElem.charset="UTF-8",
+    scriptElem.onload=function(){
+          window.ht = new HT({
+              token:"bf5b7efb148a829a126a0e0c9fd533bf",
+              align:"top",
+              videoEnabled: true,
+              ytEmbedReplace: true,           
+              mobileConfig:{align:"right",
+                            actionsAlign:"top",
+                            customButtonStyle:{
+                                  borderRadius:"6px",
+                                  size:"38px",
+                                  horizontalMargin:"13px",
+                                  bottomMargin:"140px",
+                                  rightMargin:"40px"}
+                            }
+            });        
+        $('.ht-skip').attr("aria-hidden","true")
+      },
+    document.body.appendChild(scriptElem);
+  </script>
+  </body>
+</html>
