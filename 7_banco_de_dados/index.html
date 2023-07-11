@@ -823,7 +823,7 @@ public class FuncionarioService {
 
     } 
 
-    public List<FuncionarioEntity> listarTodosFuncionarios() { 
+    public List&lt;FuncionarioEntity> listarTodosFuncionarios() { 
 
         return funcionarioRepository.findAll(); 
 
@@ -949,7 +949,7 @@ public void deletarFuncionario(Integer funcId) {
             É a classe que disponibilizará as rotas ou <i>endpoints</i> da API de Funcionários. Os serviços
             disponibilizados serão acessados conforme a tabela a seguir.
           </p>
-          <table class="senac">
+          <table class="senac table-responsive">
             <tbody>
               <tr>
                 <th>URL</th>
@@ -984,7 +984,695 @@ public void deletarFuncionario(Integer funcId) {
             </tbody>
           </table>
           <p>
-            Crie uma classe <strong>FuncionarioController</strong> em <strong>com.api.senac.controller</strong> com o seguinte código: 
+            Crie uma classe <strong>FuncionarioController</strong> em <strong>com.api.senac.controller</strong> com o
+            seguinte código:
+          </p>
+          <pre>
+            <code>
+package com.api.senac.controller; 
+
+import com.api.senac.data.FuncionarioEntity; 
+
+import com.api.senac.service.FuncionarioService; 
+
+import java.util.List; 
+
+import org.springframework.beans.factory.annotation.Autowired; 
+
+import org.springframework.http.HttpStatus; 
+
+import org.springframework.http.ResponseEntity; 
+
+import org.springframework.web.bind.annotation.DeleteMapping; 
+
+import org.springframework.web.bind.annotation.GetMapping; 
+
+import org.springframework.web.bind.annotation.PathVariable; 
+
+import org.springframework.web.bind.annotation.PostMapping; 
+
+import org.springframework.web.bind.annotation.PutMapping; 
+
+import org.springframework.web.bind.annotation.RequestBody; 
+
+import org.springframework.web.bind.annotation.RequestMapping; 
+
+import org.springframework.web.bind.annotation.RestController; 
+
+@RestController 
+
+@RequestMapping("/funcionario") 
+
+public class FuncionarioController { 
+
+    @Autowired 
+
+    FuncionarioService funcionarioService; 
+
+    @GetMapping("/listar") 
+
+    public ResponseEntity&lt;List<FuncionarioEntity>> getAllFuncionarios() { 
+
+        List&lt;FuncionarioEntity> funcionarios = funcionarioService.listarTodosFuncionarios(); 
+
+        return new ResponseEntity&lt;>(funcionarios, HttpStatus.OK); 
+
+    } 
+
+    @GetMapping("/pesquisar/{id}") 
+
+    public ResponseEntity&lt;FuncionarioEntity> getFuncionarioById(@PathVariable Integer id) { 
+
+        FuncionarioEntity funcionario = funcionarioService.getFuncionarioId(id); 
+
+        return new ResponseEntity<>(funcionario, HttpStatus.OK); 
+
+    } 
+
+    @PostMapping("/adicionar") 
+
+    public ResponseEntity&lt;FuncionarioEntity> addFuncionario(@RequestBody FuncionarioEntity func) { 
+
+        var novoFuncionario = funcionarioService.criarFuncionario(func); 
+
+        return new ResponseEntity<>(novoFuncionario, HttpStatus.CREATED); 
+
+    } 
+
+    @PutMapping("/atualizar/{id}") 
+
+    public ResponseEntity&lt;FuncionarioEntity> atualizarFuncionario(@PathVariable Integer id, @RequestBody FuncionarioEntity funcionario) { 
+
+        var funcionarioAtualizado = funcionarioService.atualizarFuncionario(id, funcionario); 
+
+        return new ResponseEntity<>(funcionarioAtualizado, HttpStatus.OK); 
+
+    } 
+
+    @DeleteMapping("/deletar/{id}") 
+
+    public ResponseEntity<?> deletarFuncionario(@PathVariable Integer id) { 
+
+        funcionarioService.deletarFuncionario(id); 
+
+        return new ResponseEntity<>(HttpStatus.OK); 
+
+    } 
+
+} 
+            </code>
+          </pre>
+          <ul class="marcador">
+            <li><strong>@RestController</strong>: a anotação marca o “<strong>FuncionarioController</strong>” como um
+              manipulador de solicitação HTTP e permite que o Spring o reconheça como um serviço REST. </li>
+            <li><strong>@RequestMapping("/funcionario")</strong>: a anotação define o caminho-base para os terminais de
+              recurso no controlador como endereço:porta/funcionário, no caso,
+              <strong>localhost:8080/funcionario</strong>.
+            </li>
+            <li>Em seguida, é conectada automaticamente a classe “<strong>FuncionarioService</strong>” no controlador
+              para usar os
+              métodos declarados, implementados nele. Isso é injeção de dependência. </li>
+            <li><strong>@GetMapping</strong>: é um atalho para @RequestMapping(method = RequestMethod.GET) e é usado
+              para mapear solicitações <strong>HTTP GET</strong> para os métodos mapeados do controlador. É usado para
+              devolver todos os funcionários e um único funcionário. </li>
+            <li><strong>@PathVariable</strong>: a anotação mostra que um parâmetro do método deve ser vinculado a uma
+              variável de modelo de URI. </li>
+            <li><strong>@PostMapping</strong>: é uma abreviação de @RequestMapping, em que o método é igual a POST. Ele
+              é usado para mapear a solicitação HTTP POST para os métodos do controlador mapeado. </li>
+            <li><strong>@PutMapping</strong>: é uma abreviação de @RequestMapping onde o método é igual a PUT. Ele é
+              usado para mapear a solicitação HTTP PUT para os métodos do controlador mapeado. </li>
+            <li><strong>@RequestBody</strong>: a anotação indica que o valor do objeto virá no corpo da requisição.
+              Portanto, quando você faz uma solicitação POST ou PUT, o HttpMessageConverters converte o corpo da
+              solicitação JSON em um objeto e passa para o método solicitado. </li>
+            <li><strong>@DeleteMapping</strong>: usar essa anotação faz com que o método solicitado esteja pronto para
+              uma operação de exclusão. É um atalho para @RequestMapping(method = RequestMethod.DELETE). </li>
+          </ul>
+          <h3 id="t4">Testando API de Funcionários com o Postman</h3>
+          <p>
+            Agora, teste sua API com o Postman. Para isso, certifique-se de que o serviço da API de Funcionários esteja
+            em execução.
+          </p>
+          <p><strong>Adicionando um registro de funcionário</strong> </p>
+          <p>
+            Adicione um funcionário fazendo uma solicitação <strong>POST</strong> para
+            localhost:8080/funcionario/adicionar. Em <i>body</i> ,
+            selecione a opção <strong>raw</strong>, selecione <strong>JSON</strong> e inclua o seguinte código
+            <strong>JSON</strong> no editor do Postman:
+          </p>
+          <pre>
+            <code>
+{ 
+
+    "nome": "aaaaaa", 
+
+    "email": "claudio@gmail.com", 
+
+    "cpf": "01234567890", 
+
+    "salario": "1254.60", 
+
+    "telefone": "51 987654" 
+
+} 
+            </code>
+          </pre>
+          <img src="imgs/fig-07.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-07.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-07.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 7 – Requisição POST no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela do Postman mostrando a configuração de uma requisição Post para endereço
+            localhost:8080/funcionário/adicionar. Abaixo, na seção body, mostra o JSON exposto no texto.
+          </p>
+          <p>Agora execute clicando em <strong>SEND</strong>. </p>
+          <img src="imgs/fig-08.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-08.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-08.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 8 – Resultado da requisição <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com a área de resultado do Postman mostrando no topo “Status: 201 Created” e na região “body” o JSON:
+            {,"id": 53, "cpf": "01234567890", "nome": "aaaaa", "telefone": "51 987654", "email": "claudio@gmail.com",
+            "salario": 1254.6,}.
+          </p>
+          <p><strong>Obtendo todos os registros de funcionários</strong> </p>
+          <p>Faça uma solicitação <strong>GET</strong> para <strong>localhost:8080/funcionario/listar</strong> para
+            obter todos os funcionários. </p>
+          <img src="imgs/fig-09.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-09.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-09.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 9 – Requisição GET no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com a área de requisição no Postman do tipo GET para URL localhost:8080/funcionario/listar mostrando
+            como retorno o Status 200 OK e Body o JSON: {"id": 53, "cpf": "01234567890", "nome": "aaaaa", "telefone":
+            "51 987654", "email": "claudio@gmail.com", "salario": 1254.6}.
+          </p>
+          <p><strong>Obtendo o registro de um funcionários através do seu ID </strong></p>
+          <p>
+            Faça uma solicitação <strong>GET</strong> para <strong>localhost:8080/funcionario/pesquisar/53</strong>,
+            especificando o ID do funcionário.
+          </p>
+          <img src="imgs/fig-10.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-10.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-10.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 10 – Requisição GET no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com a área de requisição no Postman do tipo GET para URL localhost:8080/funcionario/pesquisar/53
+            mostrando como retorno: Status 200 OK e Body o JSON: {"id": 53, "cpf": "01234567890", "nome": "aaaaa",
+            "telefone": "51 987654", "email": "claudio@gmail.com", "salario": 1254.6}.
+          </p>
+          <h4>Atualizar um registro de funcionário</h4>
+          <p>
+            Faça uma solicitação <strong>PUT</strong> para <strong>localhost:8080/funcionario/atualizar/53</strong>
+            especificar o ID do funcionário no
+            final da URL. Nesse caso, o ID é 53.
+            Em body, selecione a opção <strong>raw</strong>, selecione <strong>JSON</strong> e inclua o seguinte código
+            JSON no editor do Postman:
+          </p>
+          <pre>
+            <code>
+{ 
+
+    "nome": "Senac 102 102 102 102", 
+
+    "email": "senac102@gmail.com", 
+
+    "cpf": "01234567890", 
+
+    "salario": "620.45", 
+
+    "telefone": "51 987654" 
+
+} 
+            </code>
+          </pre>
+          <img src="imgs/fig-11.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-11.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-11.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 11 – Requisição PUT no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com a área de requisição no Postman do tipo PUT para URL localhost:8080/funcionario/atualizar/53. A aba
+            body de dados da requisição marca o item raw e mostra o JSON: {"nome": "Senac 102 102 102 102 102", "email":
+            "senac102@gmail.com", "cpf": "01234567890", "salario": "620.45", "telefone": "51 987654",}, mostrando como
+            retorno: Status 200 OK e body o JSON: {"id": 53, "cpf": "01234567890", "nome": " Senac 102 102 102 102 102",
+            "telefone": "51 987654", "email": "senac102@gmail.com", "salario": 620.45}.
+          </p>
+          <h4>Excluindo um registro de funcionário</h4>
+          <p>
+            Faça uma solicitação <strong>DELETE</strong> para <strong>localhost:8080/funcionario/deletar/53</strong>
+            adicionar ao final da URL o ID do
+            funcionário a ser excluído. Nesse caso, o ID é 53. Foi obtido “200 OK”, uma operação de exclusão
+            bem-sucedida.
+          </p>
+          <img src="imgs/fig-12.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-12.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-12.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 12 – Requisição DELETE no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com a área de requisição no Postman do tipo PUT para URL localhost:8080/funcionario/deletar/53
+            mostrando na área de resposta: Status 200 OK e body com valor “1”.
+          </p>
+          <div class="caixa-destaque">
+            <img src="imgs/desafio.png" class="img-responsive no-print desafio">
+            <p>
+              Revisite o desafio presente no conteúdo “Linguagem de programação” e crie ou incremente um projeto Spring
+              RESTful para livros, permitindo cadastro, consulta de livro por ID ou todos os livros e exclusão. Dessa
+              vez,
+              no entanto, use banco de dados para persistência.
+            </p>
+          </div>
+        </div>
+        <div class="container bloco2">
+          <h3 id="t5">Criando validações e personalizando mensagens com <i>exceptions</i></h3>
+          <p>
+            Um recurso muito importante adotado nas APIs são as validações nas requisições. O Spring Boot, por meio da
+            dependência <strong>Validation</strong>, permite indicar quais atributos você quer validar em uma inclusão
+            e/ou alteração.
+            Por exemplo, você pode criar validações na classe <strong>FuncionarioEntity</strong> para os atributos CPF,
+            <i>e-mail</i>, nome com
+            quantidade mínima de caracteres, campos obrigatórios, entre outras. Para isso, basta apenas colocar a
+            anotação de validação correspondente sobre o nome do atributo. A seguir, veja um resumo das principais
+            validações.
+          </p>
+          <ul class="marcador">
+            <li><strong>@NotBlanke @NotNull</strong>: essas duas anotações realizam verificações e validam os campos
+              onde são mapeadas
+              para garantir que os valores não estejam em branco e nulos. </li>
+            <li><strong>@CPF e @CNPJ</strong>: valida se o campo anotado possui CPF ou CNPJ válido. </li>
+            <li><strong>@Email</strong>: valida se o campo anotado é um endereço de e-mail válido. </li>
+            <li><strong>@Size</strong>: especifica a quantidade mínima (min.) e máxima (máx.) de caracteres. </li>
+            <li><strong>@Min</strong>: valida que a propriedade anotada tem um valor não menor que o valor do atributo.
+            </li>
+            <li><strong>@Max</strong>: valida que a propriedade anotada tem um valor não maior que o valor do atributo.
+            </li>
+          </ul>
+          <p>
+            Veja como fica a classe <strong>FuncionarioEntity</strong> com as anotações de validação nos atributos: CPF,
+            nome, telefone, e-mail e salário.
+          </p>
+          <pre>
+            <code>
+package com.api.senac.data; 
+
+import jakarta.persistence.Entity; 
+
+import jakarta.persistence.GeneratedValue; 
+
+import jakarta.persistence.GenerationType; 
+
+import jakarta.persistence.Id; 
+
+import jakarta.persistence.Table; 
+
+import jakarta.validation.constraints.Email; 
+
+import jakarta.validation.constraints.NotBlank; 
+
+import jakarta.validation.constraints.NotNull; 
+
+import jakarta.validation.constraints.Size; 
+
+import lombok.Data; 
+
+import org.hibernate.validator.constraints.br.CPF; 
+
+@Data 
+
+@Entity 
+
+@Table(name="Funcionario") 
+
+public class FuncionarioEntity { 
+
+    @Id 
+
+    @GeneratedValue(strategy = GenerationType.AUTO) 
+
+    private Integer id; 
+
+     
+
+    @CPF(message="CPF inválido") 
+
+    private String cpf; 
+
+
+    @Size(min=2, message="Informe ao menos 2 caracteres para o campo nome") 
+
+    private String nome; 
+
+    @NotBlank(message="Telefone obrigatório") 
+
+    private String telefone; 
+
+
+    @NotBlank(message="E-mail obrigatório") 
+
+    @Email(message="E-mail inválido") 
+
+    private String email; 
+
+
+    @NotNull(message="Salário obrigatório") 
+
+    private double salario; 
+
+} 
+            </code>
+          </pre>
+          <h4>Anotação @Valid</h4>
+          <p>
+            Após especificar quais atributos deverão ser validados na <strong>FuncionarioEntity</strong>, é preciso
+            agora definir na
+            <strong>FuncionarioController</strong> quais <i>endpoints</i> serão utilizados nas validações por meio da
+            anotação <strong>@Valid</strong>. Por
+            exemplo, você gostaria de aplicar essas validações somente quando ocorrer uma requisição de cadastrar
+            funcionário. Para isso, é necessário apenas aplicar a anotação <strong>@Valid</strong> antes da anotação
+            <strong>@RequestBody</strong> e
+            adicionar a importação do pacote <strong>import jakarta.validation.Valid</strong>:
+          </p>
+          <pre>
+            <code>
+    @PostMapping("/adicionar") 
+
+    public ResponseEntity&lt;FuncionarioEntity> addFuncionario(@Valid @RequestBody FuncionarioEntity func) { 
+
+        var novoFuncionario = funcionarioService.criarFuncionario(func); 
+
+        return new ResponseEntity<>(novoFuncionario, HttpStatus.CREATED); 
+
+    } 
+            </code>
+          </pre>
+          <p><strong>Adicionando um registro de funcionário com dados incompletos</strong> </p>
+          <p>
+            Execute novamente a API no Postman e adicione um funcionário fazendo uma solicitação POST para
+            <strong>localhost:8080/funcionario/adicionar</strong>. Observe que o nome está com apenas com um caractere e
+            que os campos
+            e-mail e CPF estão incorretos.
+          </p>
+          <pre>
+            <code>
+{ 
+
+    "nome": "a", 
+
+    "email": "claudio", 
+
+    "cpf": "123", 
+
+    "salario": "1254.60", 
+
+    "telefone": "51 987654" 
+
+} 
+            </code>
+          </pre>
+          <img src="imgs/fig-13.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-13.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-13.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 13 – Requisição POST no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com a área de requisição no Postman do tipo POST para URL localhost:8080/funcionario/adicionar. A aba
+            body de dados da requisição marca o item raw e mostra o JSON: {"nome": "a", "email": "claudio", "cpf":
+            "123", "salario": "1254.60", "telefone": "51 987654",}, mostrando como retorno: Status "400 Bad Request" e
+            body o JSON: {"timestamp": "2023-05-02T03:01:51.893+00:00", "status": 400, "error": "Validation failed for
+            object='funcionarioEntity'. Error count: 3", "path": "/funcionario/adicionar"}.
+          </p>
+          <p>
+            Quando a entrada for inválida, será lançada uma exceção com uma mensagem para o cliente, nesse caso, é uma
+            mensagem genérica que mostra três erros na validação de um objeto na classe
+            <strong>FuncionarioEntity</strong>. Além disso, é
+            retornado o <i>status</i> com código de requisição malformada 400. Veja na continuação deste conteúdo que é
+            possível também personalizar as respostas.
+          </p>
+          <h4>Camada <i>exception</i> </h4>
+          <p>
+            Para que seu projeto tenha uma melhor organização, inicialmente será criada uma quarta camada denominada
+            <strong> exception</strong>, na qual estarão as classes para tratamento de mensagens das exceções. Será
+            preciso criar o
+            <i> package</i> <strong>com.api.senac.exception</strong> na pasta <strong>Source Packages</strong>, com as
+            classes <strong>ValidationHandler</strong> e
+            <strong>ResourceNotFoundException</strong>. A estrutura do projeto ficará da seguinte forma:
+          </p>
+          <img src="imgs/fig-14.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-14.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-14.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 14 – Estrutura do projeto no NetBeans <br>
+            Fonte: NetBeans (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com detalhe do projeto “senac” no NetBeans mostrando o novo pacote “com.api.senac.;exception” dentro de
+            “Source Packages” e contendo as classes ResourceNotFoundException.java e ValidationHandler.java.
+          </p>
+          <h4> Personalizando mensagens de erro em validações </h4>
+          <p>
+            É uma prática comum criar um tratamento personalizado para retornar mensagens de erros customizadas quando
+            uma requisição é realizada e não são enviados os dados conforme as regras estabelecidas para a API. Por
+            isso, será criada a classe ValidationHandler com o seguinte código:
+          </p>
+          <pre>
+            <code>
+package com.api.senac.exception; 
+
+import java.util.HashMap; 
+
+import java.util.Map; 
+
+import org.springframework.http.HttpHeaders; 
+
+import org.springframework.http.HttpStatus; 
+
+import org.springframework.http.HttpStatusCode; 
+
+import org.springframework.http.ResponseEntity; 
+
+import org.springframework.validation.FieldError; 
+
+import org.springframework.web.bind.MethodArgumentNotValidException; 
+
+import org.springframework.web.context.request.WebRequest; 
+
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler; 
+
+import org.springframework.web.bind.annotation.ControllerAdvice; 
+
+@ControllerAdvice 
+
+public class ValidationHandler extends ResponseEntityExceptionHandler { 
+
+    @Override 
+
+    protected ResponseEntity&lt;Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, 
+
+            HttpHeaders headers, HttpStatusCode status, WebRequest request) { 
+
+        Map&lt;String, String> errors = new HashMap<>(); 
+
+        ex.getBindingResult().getAllErrors().forEach((error) -> { 
+
+            String fieldName = ((FieldError) error).getField(); 
+
+            String message = error.getDefaultMessage(); 
+
+            errors.put(fieldName, message); 
+
+        }); 
+
+        return new ResponseEntity&lt;Object>(errors, HttpStatus.BAD_REQUEST); 
+
+    } 
+
+} 
+            </code>
+          </pre>
+          <ul class="marcador">
+            <li>A anotação <strong>@ControllerAdvice</strong> é responsável pelo gerenciamento global das exceções.
+            </li>
+            <li>A classe <strong>ValidationHandler</strong> estende a classe
+              <strong>ResponseEntityExceptionHandler</strong>, que é uma classe-base
+              conveniente quando se deseja implementar esse tipo de tratamento de exceção centralizado, pois fornece
+              métodos para lidar com exceções internas do Spring MVC.
+            </li>
+            <li><strong>@Override</strong> sobrescreve uma tratativa da exceção
+              <strong>MethodArgumentNotValidException</strong> (que é disparado quando
+              uma requisição desrespeita alguma validação aplicada no objeto) para pegar as informações lançadas na
+              exceção e retorná-las dentro do objeto de erros.
+            </li>
+          </ul>
+          <p>
+            Agora será retornado o exemplo anterior. Execute novamente a API no Postman para adicionar um funcionário
+            fazendo uma solicitação POST no endereço <strong>localhost:8080/funcionario/adicionar</strong>.
+          </p>
+          <pre>
+            <code>
+{ 
+
+    "nome": "a", 
+
+    "email": "claudio", 
+
+    "cpf": "123", 
+
+    "salario": "1254.60", 
+
+    "telefone": "51 987654" 
+
+} 
+            </code>
+          </pre>
+          <img src="imgs/fig-15.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-15.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-15.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 15 – Requisição POST no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com detalhe de teste no Postman com requisição POST para URL localhost:8080/funcionário/adicionar.
+            Região de dados da requisição com aba body ativa e opção raw marcada, mostrando o JSON: {"nome": "a",
+            "email": "claudio", "cpf": "123", "salario": "1254.60", "telefone": "51 987654",}. Área de resposta, abaixo,
+            mostrando: Status “400 Bad Request” e na aba body o JSON: {"cpf": "CPF inválido", "nome": "Informe ao menos
+            2 caracteres para o campo nome", "email": "E-mail inválido"}.
+          </p>
+          <p>
+            Observe agora a API retornando as mensagens personalizadas nas anotações da classe
+            <strong>FuncionarioEntity</strong>.
+          </p>
+          <h4>Gerando mensagens de erro com <i>exception</i></h4>
+          <p>
+            Na camada de serviço, há a classe <strong>FuncionarioService</strong>, que tem o método
+            <strong>getFuncionarioId</strong>, que tem por
+            objetivo buscar um funcionário pelo ID informado. Entretanto, pode ocorrer de ele não ser encontrado ou ser
+            informado um ID inexistente. Como visto anteriormente, a mensagem de erro está sendo produzida de forma
+            geral. Entretanto, você pode criar uma exceção personalizada informando, por exemplo, que o funcionário não
+            foi localizado com o ID informado. Nesse cenário, crie outra exceção
+            <strong>ResourceNotFoundException</strong>:
+          </p>
+          <pre>
+            <code>
+package com.api.senac.exception; 
+
+import org.springframework.http.HttpStatus; 
+
+import org.springframework.web.bind.annotation.ResponseStatus; 
+
+@ResponseStatus(HttpStatus.NOT_FOUND) 
+
+public class ResourceNotFoundException extends RuntimeException { 
+
+    public ResourceNotFoundException(String mensagem) { 
+
+        super(mensagem); 
+
+    } 
+
+} 
+            </code>
+          </pre>
+          <ul class="marcador">
+            <li>A anotação <strong>@ResponseStatus</strong> é responsável por indicar que a classe retornará com
+              <i>status</i> em “http”, de acordo com o informado, nesse caso, <i>not found</i>.
+            </li>
+            <li>A classe de exceção <strong>ResourceNotFoundException</strong> estende o comportamento da superclasse
+              <strong>RuntimeException</strong>
+              que gerencia as exceções em tempo de execução
+            </li>
+            <li>Há apenas o construtor que recebe uma mensagem e informa ao construtor da superclasse para notificar
+              quando a exceção ocorrer. </li>
+          </ul>
+          <p>
+            Agora com a configuração da <i>exception</i> definida, é preciso alterar o método
+            <strong>getFuncionarioId</strong> para que use o
+            método <strong>orElseThrow</strong> em vez de <strong>orElse</strong>, que será responsável por enviar um
+            objeto da classe
+            <strong>ResourceNotFoundException</strong>, passando a mensagem “Funcionário não localizado”.
+          </p>
+          <pre>
+            <code>
+    public FuncionarioEntity getFuncionarioId(Integer funcId) { 
+
+        return funcionarioRepository.findById(funcId).orElseThrow(() -> new ResourceNotFoundException("Funcionário não encontrado " + funcId)); 
+                
+    } 
+            </code>
+          </pre>
+          <p>
+            Agora você testará os ajustes realizados. Por isso, faça uma solicitação GET para o endereço
+            <strong>localhost:8080/funcionario/pesquisa/99999</strong>, passando o ID do funcionário
+            <strong>99999</strong> no final da URL.
+          </p>
+          <img src="imgs/fig-16.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-16.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
+            aria-hidden="true"><img src="imgs/fig-16.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 16 – Requisição GET no Postman <br>
+            Fonte: Postman (2023)
+          </p>
+          <p class="acessivel no-print">
+            Tela com detalhe da requisição no Postman do tipo GET para localhost:8080/funcionário/pesquisar/99999. Na
+            parte inferior, a resposta mostra status “404 Not Found” e em body JSON: {"timestamp":
+            "2023-05-02T04:09:28.019+00:00", "status": 404, "error": "Not Found", "message": "Funcionário não encontrado
+            99999", "path": "/funcionario/pesquisar/99999"}.
+          </p>
+          <p>
+            Observe agora a API retornando a mensagem personalizada Funcionário não encontrado 99999, que foi definida
+            no método getFuncionarioId.
+          </p>
+          <div class="caixa-destaque4">
+            <img src="imgs/desafio.png" class="img-responsive desafio2 no-print">
+            <p>
+              Incremente o projeto de livros do desafio anterior, criando validações para o nome e o autor como campos
+              requeridos.
+            </p>
+          </div>
+          <h3 id="t6"> Criando consultas avançadas </h3>
+          <p>
+            O Spring Data JPA disponibiliza métodos para criar queries a partir do nome de métodos personalizados. Esse
+            é um recurso extremamente flexível e poderoso. No entanto, para gerar essas consultas, existem algumas
+            regras que devem ser seguidas por meio de palavras-chaves e atributos que indicam quais consultas serão
+            utilizadas.
           </p>
 
 
@@ -1005,26 +1693,34 @@ public void deletarFuncionario(Integer funcId) {
 
 
 
-
-            <!-- painel clicavel -->
-
-
-
-
-
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </div>
 
-    </section>
-    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
-    <footer class="text-center no-print">
+  </div>
 
-      <ul class="pagination">
+  </section>
+  <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+  <footer class="text-center no-print">
 
-      </ul>
+    <ul class="pagination">
 
-    </footer>
+    </ul>
+
+  </footer>
 
   </div>
 

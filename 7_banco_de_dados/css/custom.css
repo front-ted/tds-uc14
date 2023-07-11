@@ -103,6 +103,18 @@ ul.marcador li{
   padding-right: 35px;
 }
 
+.caixa-destaque4{
+  background-color: #ffff;
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 1em;
+  position: relative;
+  padding-left: 100px;
+}
+
 ul.marcadorCircular li{
   background: url('../imgs/infografico1.png') no-repeat left center;
   background-size: 20px;
@@ -133,10 +145,24 @@ table.senac {
   border-color: #004b8a;
 }
 
+.desafio{
+  position: absolute;
+  margin-left: -175px;
+  margin-top: -3px;
+  }
 
+.bloco2{
+  background-color: #e8e8e8;
+}
 
-
-
+.destaque01{
+  background: url("../imgs/infografico2_1.svg") no-repeat;
+}
+.desafio2{
+  position: absolute;
+  margin-left: -175px;
+  margin-top: -25px;
+  }
 
 
 
