@@ -6,14 +6,11 @@ background-color:#ffff;
   padding: 4px;
   z-index: 2;
 }
-
-
 .paginas{
   background: url('../imgs/grafico_esq.png') left bottom no-repeat,  url('../imgs/grafico_dir.png') right bottom no-repeat;
   z-index: 4;
   background-attachment: fixed;
 }
-
 .grupo-imprimir{
   margin-bottom: 5px;
 }
@@ -42,7 +39,6 @@ header{margin-top: 100px;}
 .mt-20{margin-top: 20px;}
 .mt-40{margin-top: 40px;}
 .mt-60{margin-top: 60px;}
-
 .caixa-destaque{
   background-color: #d4e2f1!important;
   padding: 1px;
@@ -85,7 +81,6 @@ header{margin-top: 100px;}
   border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); 
 }
-
 .icone01{
   position: absolute;
   margin-left: -25px;
@@ -106,7 +101,6 @@ header{margin-top: 100px;}
   margin-left: -25px;
   margin-top: 36px;
 }
-
 .dica{
   position: absolute;
   margin-left: -175px;
@@ -137,8 +131,6 @@ header{margin-top: 100px;}
   .caixa-destaque3{padding-left: 15px;}
   .nota{display: none;}
 }  
-
-
 @media screen and (max-width: 780px){
   .caixa-destaque2 .conteudo{padding-right: 25px;
   padding-left: 60px;
