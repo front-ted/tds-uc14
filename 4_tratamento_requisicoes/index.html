@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Web services e API</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="container">
+          <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu
+            leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam
+            lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de
+            pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa
+            forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+          <h2>Tratamento de requisições</h2>
+          <p>
+            Sempre que um sistema web é utilizado, seja clicando em um <i>link</i>, preenchendo um formulário ou
+            clicando em um
+            botão, ou seja, realizando uma ação dentro dele, é realizada uma requisição por meio do protocolo
+            responsável pela comunicação entre o cliente o servidor, o conhecido HTTP (<i>Hypertext Transfer
+              Protocol</i> ou
+            protocolo de transferência de hipertexto). Por isso, é de extrema importância a todo programador web
+            reconhecer quando uma requisição acontece, qual o tipo de requisição foi feito e qual a melhor forma de
+            tratá-la. Com o domínio dessa etapa, a comunicação ficará mais estável e segura, garantindo assim a melhor
+            qualidade na utilização do sistema.
+          </p>
+          <h3>Estrutura de requisição e resposta no HTTP</h3>
+          <p>
+            Nas trocas de mensagens entre cliente e servidor, há dois tipos distintos de mensagens HTTP, uma que é
+            realizada pelo cliente pedindo que algo seja feito, chamada de requisição ou <i>request</i>, e a reposta do
+            servidor, chamada de resposta ou <i>response</i>. É importante citar que sempre quem inicia uma troca de
+            dados é o
+            cliente, já seu cancelamento pode acontecer por qualquer uma das partes. É importante saber que existe uma
+            estrutura padrão para requisições e respostas no HTTP. Veja a divisão dessa estrutura no infográfico a
+            seguir.
+          </p>
+          <div class="caixa-destaque no-print" aria-hidden="true">
+            <img src="imgs/a.png" class="img-responsive no-print icone01">
+            <p class="conteudo">
+              Uma linha inicial, chamada de start-line, que mostra o tipo de requisição pedido, além de poder mostrar
+              também seus status de sucesso ou falha.
+            </p>
+          </div>
+          <div class="caixa-destaque no-print" aria-hidden="true">
+            <img src="imgs/b.png" class="img-responsive no-print icone01">
+            <p class="conteudo">
+              Um conjunto não obrigatório de cabeçalhos (headers) HTTP, demostrando as peculiaridades da mensagem ou
+              demonstrando os itens contidos no seu corpo.
+            </p>
+          </div>
+          <div class="caixa-destaque no-print" aria-hidden="true">
+            <img src="imgs/c.png" class="img-responsive no-print icone01 iconeC">
+            <p class="conteudo">
+              Uma linha em branco, chamada empty line, onde é destacado o fim do cabeçalho e o início do corpo da
+              mensagem.
+            </p>
+          </div>
+          <div class="caixa-destaque no-print" aria-hidden="true">
+            <img src="imgs/d.png" class="img-responsive no-print icone02">
+            <p class="conteudo">
+              Na última parte, tem o corpo (body) da mensagem, este que, no caso, não aparece em todas as mensagens.
+            </p>
+          </div>
+          <div class="acessivel print">
+            <p>
+              a) Uma linha inicial, chamada de start-line, que mostra o tipo de requisição pedido, além de poder mostrar
+              também seus status de sucesso ou falha.
+            </p>
+            <p>
+              b) Um conjunto não obrigatório de cabeçalhos (headers) HTTP, demostrando as peculiaridades da mensagem ou
+              demonstrando os itens contidos no seu corpo.
+            </p>
+            <p>
+              c) Uma linha em branco, chamada empty line, onde é destacado o fim do cabeçalho e o início do corpo da
+              mensagem.
+            </p>
+            <p>
+              d) Na última parte, tem o corpo (body) da mensagem, este que, no caso, não aparece em todas as mensagens.
+            </p>
+          </div>
+          <p>
+            Veja esses elementos na imagem a seguir.
+          </p>
+          <img src="imgs/fig-01.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig-01.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 1 – Exemplos de requisição e resposta no HTTP <br>
+            Fonte: Mozilla (c1998-2023)
+          </p>
+          <div class="acessivel no-print">
+            À esquerda, há uma requisição no HTTP e, à direita, uma resposta no HTTP. Ambas contêm start-line, cabeçalho
+            (headers), empty line e o corpo (body) da mensagem.
+          </div>
+          <h3>Códigos de <i>status</i> HTTP</h3>
+          <p>
+            A comunicação entre cliente e servidor ocorre por meio do protocolo HTTP, e sempre que o navegador (cliente)
+            faz uma solicitação ao servidor, ele recebe um código composto por três números, informando se a solicitação
+            foi bem-sucedida, se houve algum erro ou se é necessária uma autenticação prévia para envio da resposta.
+          </p>
+          <p>
+            Entre os códigos de <i>status</i> existem cinco categorias, e é necessário saber que o primeiro dígito desse
+            código
+            define a categoria a qual ele pertence. Por exemplo, o código de <i>status</i> 403, que começa pelo número
+            4,
+            indica que é um erro do lado do cliente (usuário), já um erro de número 503, que começa pelo número 5, é um
+            erro do lado do servidor. Desse modo, é importante conhecer o que cada número de 1 a 5 significa dentro do
+            <i>status</i>.
+          </p>
+          <p>
+            No infográfico a seguir, note que, na linha inicial, há o código “403”: esse é o <i>status</i> retornado
+            para
+            aquela requisição. Com essas informações, é possível conhecer as principais categorias de <i>status</i>.
+          </p>
+          <div class="caixa-destaque2 no-print" aria-hidden="true">
+            <img src="imgs/a.png" class="img-responsive no-print icone01 icone-a">
+            <p class="conteudo">
+              Categoria 1XX: inicia com o valor 1 e tem valores como, por exemplo, 101, 102, 103 etc. Essa categoria é
+              utilizada pelo servidor para informar ao cliente que uma solicitação/requisição está em andamento.
+            </p>
+          </div>
+          <div class="caixa-destaque2 no-print" aria-hidden="true">
+            <img src="imgs/b.png" class="img-responsive no-print icone03 icone-b">
+            <p class="conteudo">
+              Categoria 2XX: inicia com o valor 2 e tem valores como, por exemplo, 201, 202, 203 etc. Essa categoria é
+              utilizada pelo servidor para informar ao cliente que uma solicitação/requisição está aceita pelo servidor.
+              É esse o tipo de requisição esperada ao fazer um pedido ao servidor, pois indica que está tudo certo e o
+              processo continuará seu andamento.
+            </p>
+          </div>
+          <div class="caixa-destaque2 no-print" aria-hidden="true">
+            <img src="imgs/c.png" class="img-responsive no-print icone01 icone-c">
+            <p class="conteudo">
+              Categoria 3XX: inicia com o valor 3 e tem valores como, por exemplo, 301, 302, 303 etc. Essa categoria
+              indica que é preciso um redirecionamento, ou seja, novos passos são necessários para que a requisição seja
+              aceita.
+            </p>
+          </div>
+          <p>Os códigos das linhas 4XX e 5XX são os códigos de erro. </p>
+          <div class="caixa-destaque2 no-print" aria-hidden="true">
+            <img src="imgs/d.png" class="img-responsive no-print icone04 icone-d">
+            <p class="conteudo">
+              Categoria 4XX (erro/cliente): inicia com o valor 4 e tem valores como, por exemplo, 401, 402, 403 etc.
+              Essa categoria é utilizada pelo servidor para informar erros do lado do cliente, ou seja, a requisição foi
+              recebida, mas não pôde ser continuada por uma falha que aconteceu do lado do cliente.
+            </p>
+          </div>
+          <div class="caixa-destaque2 no-print" aria-hidden="true">
+            <img src="imgs/e.png" class="img-responsive no-print icone01 icone-e">
+            <p class="conteudo">
+              Categoria 5XX (erro/servidor): inicia com o valor 5 e tem valores como, por exemplo, 501, 502, 503 etc.
+              Essa categoria é utilizada pelo servidor para informar ao cliente um erro que ocorreu do lado do servidor.
+            </p>
+          </div>
+          <div class="acessivel print">
+            <p>
+              a) Categoria 1XX: inicia com o valor 1 e tem valores como, por exemplo, 101, 102, 103 etc. Essa categoria
+              é
+              utilizada pelo servidor para informar ao cliente que uma solicitação/requisição está em andamento.
+            </p>
+            <p>
+              b) Categoria 2XX: inicia com o valor 2 e tem valores como, por exemplo, 201, 202, 203 etc. Essa categoria
+              é
+              utilizada pelo servidor para informar ao cliente que uma solicitação/requisição está aceita pelo servidor.
+              É esse o tipo de requisição esperada ao fazer um pedido ao servidor, pois indica que está tudo certo e o
+              processo continuará seu andamento.
+            </p>
+            <p>
+              c) Categoria 3XX: inicia com o valor 3 e tem valores como, por exemplo, 301, 302, 303 etc. Essa categoria
+              indica que é preciso um redirecionamento, ou seja, novos passos são necessários para que a requisição seja
+              aceita.
+            </p>
+            <p>Os códigos das linhas 4XX e 5XX são os códigos de erro. </p>
+            <p>
+              d) Categoria 4XX (erro/cliente): inicia com o valor 4 e tem valores como, por exemplo, 401, 402, 403 etc.
+              Essa categoria é utilizada pelo servidor para informar erros do lado do cliente, ou seja, a requisição foi
+              recebida, mas não pôde ser continuada por uma falha que aconteceu do lado do cliente.
+            </p>
+            <p>
+              e) Categoria 5XX (erro/servidor): inicia com o valor 5 e tem valores como, por exemplo, 501, 502, 503 etc.
+              Essa categoria é utilizada pelo servidor para informar ao cliente um erro que ocorreu do lado do servidor.
+            </p>
+          </div>
+          <h4>Códigos de erro HTTP</h4>
+          <p>
+            Além das categorias dos principais <i>status</i> do HTTP, existem alguns erros mais constantes que precisam
+            ser
+            conhecidos. Veja os principais a seguir.
+          </p>
+          <p>
+            <strong>Código 200</strong>: esse código de erro não significa um erro em si, mas é necessário conhecê-lo,
+            pois é o código
+            esperado como solução para qualquer erro anterior, ou seja, o código 200 indica que a solicitação foi
+            bem-sucedida/aceita.
+          </p>
+          <p>
+            <strong>Código 500</strong>: esse é um erro interno do servidor e é um dos erros mais temido pelos usuários,
+            pois indica que
+            o servidor está passando por alguma instabilidade e não está conseguindo dar andamento à requisição do
+            cliente.
+          </p>
+          <p>
+            <strong> Código 403 (<i>Forbidden</i>)</strong>: esse é o conhecido acesso proibido, é simplesmente uma
+            negação do servidor à
+            requisição do cliente, ou seja, demonstra que o cliente não tem permissão de acesso ao conteúdo requisitado.
+            Esse erro é comum de ser visto durante navegações pela web, pois ele é uma forma de proteger os dados de
+            acessos indevidos, geralmente solucionado por meio de autenticação.
+          </p>
+          <div class="caixa-destaque3">
+            <img src="imgs/dica.png" class="img-responsive no-print dica">
+            <p>
+              Deve-se deixar claro que a URL foi encontrada, diferentemente do erro 404, em que não é encontrada a URL
+              requisitada.
+            </p>
+          </div>
+          <p>
+            <strong>Código 503</strong>: esse é um dos códigos mais conhecidos do HTTP, ele indica uma falha de
+            solicitação do lado do
+            servidor, normalmente um processo de manutenção, sobrecarga de dados ou erro de configuração interna do
+            servidor.
+          </p>
+          <p>
+            <strong>Código 404</strong>: clássico erro indicando que a página requisitada não foi encontrada,
+            normalmente por erro de
+            digitação da URL ou porque a página está fora do ar.
+          </p>
+          <h3>Métodos de tratamento de requisições</h3>
+          <p>
+            As requisições sempre contam com um método ou verbo que indicam como os dados enviados ao servidor devem ser
+            tratados. Por padrão, uma requisição utiliza o método GET. A seguir, veja o conceito de cada método
+            separadamente.
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group gaitinha" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      POST
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Esse método é geralmente utilizado para enviar informações ao servidor, muitas vezes, dentro de
+                    formulários, com as informações anexadas no corpo da mensagem.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      GET
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    Esse método é geralmente utilizado para buscar informações do servidor, como o acesso a uma página
+                    específica, por exemplo.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      PUT
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Esse método é geralmente utilizado para atualizar todos os dados de um determinado produto, tendo
+                    como base normalmente o ID desse produto ou qualquer outra chave primária.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                      aria-expanded="false" aria-controls="collapse4">
+                      PATCH
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    Esse método é geralmente utilizado para atualizar parte dos dados de um determinado produto, tendo
+                    como base normalmente o ID desse produto ou qualquer outra chave primária.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5"
+                      aria-expanded="false" aria-controls="collapse5">
+                      DELETE
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    Esse método é geralmente utilizado para deletar informações do servidor.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <ul>
+              <li>
+                POST:
+                Esse método é geralmente utilizado para enviar informações ao servidor, muitas vezes, dentro de
+                formulários, com as informações anexadas no corpo da mensagem.
+              </li>
+              <li>
+                GET:
+                Esse método é geralmente utilizado para buscar informações do servidor, como o acesso a uma página
+                específica, por exemplo.
+              </li>
+              <li>
+                PUT:
+                Esse método é geralmente utilizado para atualizar todos os dados de um determinado produto, tendo como
+                base normalmente o ID desse produto ou qualquer outra chave primária.
+              </li>
+              <li>
+                PATCH:
+                Esse método é geralmente utilizado para atualizar parte dos dados de um determinado produto, tendo como
+                base normalmente o ID desse produto ou qualquer outra chave primária.
+              </li>
+              <li>
+                DELETE:
+                Esse método é geralmente utilizado para deletar informações do servidor.
+              </li>
+            </ul>
+          </div>
+          <p>
+            Os métodos POST e GET são padrão para aplicações web, enquanto PUT, PATCH e DELETE são mais especificamente
+            utilizados em <i>web services</i>. Enquanto do lado do cliente o <i>request</i> envia o verbo necessário, do
+            lado do
+            servidor, o <i>back-end</i> processa de acordo com esse verbo. Por exemplo, se o servidor receber requisição
+            POST,
+            a ideia é que também trate os dados recebidos e o processe potencialmente gravando em banco de dados, por
+            exemplo. Já se receber GET, o processamento será no sentido de retornar uma página do sistema ou alguma
+            informação processada pelo servidor.
+          </p>
+          <h3> Dados retornados em uma resposta</h3>
+          <p>
+            Dentro do próprio navegador Google Chrome, há uma ferramenta para visualizar as respostas do servidor
+            perante qualquer requisição do cliente. Quando estiver navegando na internet, use o atalho F12, que dá
+            acesso a Dev Tools ou ferramenta do desenvolvedor, que será utilizado como exemplo a partir de agora.
+          </p>
+          <p>
+            a) Exemplo de retorno de requisição 200 de uma busca do Google.
+          </p>
+          <img src="imgs/fig-02.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-02.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig-02.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 2 – Ferramenta de desenvolvedor: <i>status</i> 200 <br>
+            Fonte: Google Chrome (2023)
+          </p>
+          <div class="acessivel no-print">
+            Captura de tela de uma pesquisa no Google demonstrando o uso do método de requisição GET retornando o status
+            200, que indica que a requisição foi feita com sucesso.
+          </div>
+          <p>
+            Note que, em um exemplo real de uma pesquisa, quando a requisição é aceita pelo servidor, ele retorna o
+            status 200, já estudado, que indica que a requisição foi aceita.
+          </p>
+          <div class="caixa-destaque3">
+            <img src="imgs/dica.png" class="img-responsive no-print dica">
+            <p>
+              A ferramenta do desenvolvedor pode estar em inglês, então é utilizado o item Network para acessar as
+              requisições.
+            </p>
+          </div>
+          <p>
+            A seguir, serão analisados alguns itens importantes.
+          </p>
+          <p>
+            b) Exemplo de retorno de requisição 404 de uma busca do Google.
+          </p>
+          <img src="imgs/fig-03.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-03.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig-03.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 3 – Ferramenta de desenvolvedor – <i>status</i> 404 <br>
+            Fonte: Google Chrome (2023)
+          </p>
+          <div class="acessivel no-print">
+            Captura de tela de uma pesquisa no Google demonstrando o uso do método de requisição GET retornando o status
+            404, que indica que o servidor não encontrou a página que está sendo buscada.
+          </div>
+          <p>
+            Ao tentar acessar o endereço http://www.google.com.br/cadastro, que é um endereço inválido, é possível
+            entender com exatidão o uso do retorno 404 para páginas inexistentes.
+          </p>
+          <img src="imgs/fig-04.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+          </p>
+          <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig-04.png" class="center-block img-responsive imgBorder"></a>
+          <p class="legenda-imagem">
+            Figura 4 – Ferramenta de desenvolvedor – <i>status</i> 404 <br>
+            Fonte: Google Chrome (2023)
+          </p>
+          <div class="acessivel no-print">
+            Captura de tela de uma tentativa de acesso a uma página interna “senacead”, que retorna o erro 403.
+          </div>
+          <p>
+            Ao tentar acessar indevidamente o endereço http://www.senacead.com.br, que é um endereço que necessita de
+            autorização, é possível entender o uso do retorno 403 para páginas que necessitam de <i>login</i> prévio.
+          </p>
+          <h3> POST e GET: exemplo de uso dos métodos na prática</h3>
+          <p>
+            Para simular o uso de uma API, será utilizado o JSON Server, que é uma biblioteca que permite criar
+            simulações de API, desenvolvendo um ambiente para testar os métodos de tratamento de requisições do HTTP na
+            prática.
+          </p>
+          <div class="caixa-destaque3">
+            <img src="imgs/nota.png" class="img-responsive no-print nota">
+            <p>
+              Na Unidade Curricular “Desenvolver e organizar interface de usuário e elementos visuais para aplicações
+              web (front-end)”, você pôde conferir o passo a passo de utilização do JSON Server.
+            </p>
+          </div>
+          <p>
+            Primeiramente é necessário criar um arquivo “.json” para iniciar uma base de dados que será utilizada nos
+            testes futuros. O arquivo será chamado senacdb.json e serão colocados quatro alunos e suas menções em uma
+            unidade curricular, conforme pode ser visto no exemplo do código a seguir.
+          </p>
+          <pre>
+            <code>
+{ 
+   "senacead": [ 
+      { 
+        "id": 1 
+        "nome": "Pedro Antunes", 
+        "atividade1": "A", 
+        "atividade2": "A", 
+        "atividade3": "PA", 
+      }, 
+
+      { 
+        "id": 2 
+  "nome": "Ricardo Almeida", 
+        "atividade1": "SM", 
+        "atividade2": "SM", 
+        "atividade3": "SM", 
+      }, 
+  
+      { 
+        "id": 3 
+        "nome": "CarlaSilva", 
+        "atividade1": "A", 
+        "atividade2": "A", 
+        "atividade3": "A" 
+      }, 
+  
+      { 
+        "id": 4, 
+  "nome": "Juliano Nunes Ribeiro", 
+        "atividade1": "A", 
+        "atividade2": "A", 
+        "atividade3": "A" 
+      } 
+    ] 
+  } 
+            </code>
+          </pre>
+          <p>
+            Note que foram inseridos quatro alunos dentro da base de dados “senacead”. Agora é possível utilizar os
+            métodos para manipular esses dados, começando pelo método GET. Por padrão, o endereço de visualização do
+            JSON Server é http://localhost:3000, que pode ser complementado para visualizar um determinado elemento,
+            como, por exemplo:
+          </p>
+          <ul>
+            <li>
+              http://localhost:3000/senacead: acessa a base de dados “senacead” com todos os alunos.
+            </li>
+            <li>
+              http://localhost:3000/senacead/1: acessa a base de dados “senacead” fazendo referência somente ao aluno
+              com “id=1”.
+            </li>
+          </ul>
+          <p>
+            A partir daqui, o mais importante é entender o que está acontecendo com os dados sempre que um método é
+            usado, pois os comandos em si não são os mais importantes na medida em que existem diversas formas de
+            fazê-los. <!--talvez haja mudança no final dessa frase-->
+          </p>
+          <h4>Uso do GET</h4>
+          <p>
+            Será mostrado um dado de envio e qual resposta será dada pelo servidor para melhor entendimento, e o GET,
+            como demonstrado por padrão, retornará os dados requisitados.
+          </p>
+          <p>Envio: </p>
+          <pre>
+            <code>
+              GET http://localhost:3000/senacead/ 
+              Content-Type: application/json 
+            </code>
+          </pre>
+          <p>Retorno: </p>
+          <!--aguardando análise didática se há mais conteúdo aqui-->
+          <p>
+            Como foi especificado na URL, apenas “senacead” e nenhum ID de aluno, nesse caso, serão retornados todos os
+            quatro alunos, com seus nomes e suas três menções de atividades. Pode-se continuar usando o GET, mas agora
+            marcando um aluno, para ver suas menções.
+          </p>
+          <p>Envio</p>
+          <pre>
+            <code>
+              GET http://localhost:3000/senacead/2 
+              Content-Type: application/json 
+            </code>
+          </pre>
+          <p>Retorno: </p>
+          <pre>
+            <code>
+              { 
+                "id": 1 
+                "nome": “Pedro Antunes”, 
+                "atividade1": "A", 
+                "atividade2": "A 
+                "atividade3": “PA”  } 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, serão analisadas as respostas do servidor por meio do DevTools do Chrome. Há três abas
+            principais na ferramenta: geral, cabeçalho de resposta e cabeçalho de solicitação. Serão analisadas as
+            principais informações delas.
+          </p>
+          <ul>
+            <li> Aba Geral
+              <img src="imgs/fig-05.png"
+                class="center-block img-responsive hidden-sm hidden-xs espacoImg imgBorder print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+              </p>
+              <a href="imgs/fig-05.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                  src="imgs/fig-05.png" class="center-block img-responsive espacoImg imgBorder"></a>
+              <p class="legenda-imagem">
+                Figura 5 – Ferramenta de desenvolvedor – aba Geral <br>
+                Fonte: Google Chrome (2023)
+              </p>
+              <div class="acessivel no-print">
+                A imagem mostra a aba geral da ferramenta do desenvolvedor do Google CHROME, mostrando informações como
+                utl solicitada, método de solicitação GET, código do status 304, mostra o endereço remoto do pedido e a
+                política utilizada.
+              </div>
+              <p>As informações mais importantes para ler essa aba são: </p>
+              <p>
+                a) Solicitar URL: aqui é mostrada a URL utilizada, o que é importante para ver se a ferramenta do
+                desenvolvedor está fazendo realmente a análise da URL desejada.
+              </p>
+              <p>
+                b) Método de Solicitação: aqui é possível ver o verbo utilizado na mensagem, que, nesse caso, é o GET.
+              </p>
+              <p>
+                c) Código de <i>Status</i>: 304 indica que a solicitação não necessita retransmitir uma requisição de
+                recursos, ou seja, é apenas uma visualização via GET.
+              </p>
+              <p>
+                d) Endereço remoto: aparece o endereço do servidor.
+              </p>
+            </li>
+            <li> Aba Cabeçalho de resposta
+              <img src="imgs/fig-06.png"
+                class="center-block img-responsive hidden-sm hidden-xs espacoImg imgBorder print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+              </p>
+              <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                  src="imgs/fig-06.png" class="center-block img-responsive espacoImg imgBorder"></a>
+              <p class="legenda-imagem">
+                Figura 6 – Ferramenta de desenvolvedor – Aba Cabeçalho de resposta <br>
+                Fonte: Google Chrome (2023)
+              </p>
+              <div class="acessivel no-print">
+                A imagem mostra a aba Cabeçalhos de resposta da ferramenta do desenvolvedor do Google CHROME.
+              </div>
+              <p>
+                a) Acess-Control-Allow-Credentials: indica se a resposta a esta requisição pode ser ou não mostrada.
+                Nesse
+                caso de true, ela tem permissão para ser mostrada.
+              </p>
+              <p>
+                b) Cache-control: é usado para especificar diretivas para mecanismos de cache tanto em requisições
+                quanto em respostas.
+              </p>
+              <p>
+                c) Connection: esse item é de controle de conexão. No caso keep-alive, indica que ela pode continuar
+                aberta após o término da mensagem.
+              </p>
+              <p>
+                d) Date: contém hora e data que a mensagem foi enviada
+              </p>
+              <p>
+                e) Keep-alive: aqui é possível definir um tempo limite mínimo que a conexão deve ficar aberta. Nesse
+                item, foram indicados 5 segundos com o termo timeout=5, e um máximo de requisições que não foi
+                especificado nesse caso.
+              </p>
+            </li>
+            <li> Aba Cabeçalho de solicitação
+              <img src="imgs/fig-07.png"
+                class="center-block img-responsive hidden-sm hidden-xs imgBorder espacoImg print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
+              </p>
+              <a href="imgs/fig-07.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                  src="imgs/fig-07.png" class="center-block img-responsive espacoImg imgBorder"></a>
+              <p class="legenda-imagem">
+                Figura 7 – Ferramenta de desenvolvedor – Aba Cabeçalho de solicitação <br>
+                Fonte: Google Chrome (2023)
+              </p>
+              <div class="acessivel no-print">
+                A imagem mostra a aba cabeçalho de solicitação da ferramenta do desenvolvedor do Google CHROME.
+              </div>
+              <p>As informações mais importantes para ler esta aba são: </p>
+              <p>
+                a) Accept: indica quais tipos de documentos/formatos de conteúdo o cliente pode receber.
+              </p>
+              <p>
+                b) Accept-Encoding: aqui é indicado o tipo de compressão/codificação o cliente é capaz de entender.
+              </p>
+              <p>
+                c) Accept-Language: aqui é indicado o tipo de linguagem que o cliente pode receber.
+              </p>
+              <p>
+                d) Cache-control: esse item aparece tanto em respostas como em requisições e tem o mesmo conceito
+                apresentado na aba de resposta.
+              </p>
+              <p>
+                e) Connection: esse item também aparece tanto em respostas como em requisições e tem o mesmo conceito
+                apresentado na aba de resposta.
+              </p>
+              <p>
+                f) Host: aqui é indicado o endereço do servidor utilizado na requisição.
+              </p>
+            </li>
+          </ul>
+          <h4>Uso do POST</h4>
+          <p>
+            No caso do POST, ele enviará novos valores à base da dados. Será testada a inclusão de um novo aluno.
+          </p>
+          <p>Envio: </p>
+          <pre>
+            <code>
+              POST http://localhost:3000/senacead/ 
+              Content-Type: application/json 
+              {    "id": 5 
+                  "nome": “Ana Carolina Magalhães dos Santos”, 
+                  "atividade1": "A", 
+                  "atividade2": "A 
+                  "atividade3": "A"   
+              } 
+            </code>
+          </pre>
+          <p>Retorno: </p>
+          <pre>
+            <code>
+              {    "id": 5 
+                    "nome": “Ana Carolina Magalhães dos Santos”, 
+                    "atividade1": "A", 
+                    "atividade2": "PA 
+                    "atividade3": "PA"   
+              } 
+            </code>
+          </pre>
+          <p>
+            Com o uso do método POST, um novo aluno é inserido na base de dados, juntamente com todos os seus dados.
+          </p>
+          <h4>Uso do PUT</h4>
+          <p>
+            No caso do PUT, foi alterado um produto por completo.
+          </p>
+          <p>Envio: </p>
+          <pre>
+            <code>
+              PUT http://localhost:3000/senacead/5 
+              Content-Type: application/json 
+              {    "id": 5 
+                  "nome": “Ana Carolina Magalhães dos Santos”, 
+                  "atividade1": "A", 
+                  "atividade2": "A"
+                  "atividade3": "A"   
+              } 
+            </code>
+          </pre>
+          <p>Retorno: </p>
+          <pre>
+            <code>
+              {    "id": 5 
+                    "nome": “Ana Carolina Magalhães dos Santos”, 
+                    "atividade1": "A", 
+                    "atividade2": "A" 
+                    "atividade3": "A"   
+              } 
+            </code>
+          </pre>
+          <p>
+            Pode-se notar que todos os dados foram percorridos com o uso do PUT e alteradas/atualizadas as notas das
+            atividades 2 e 3 para “A”.
+          </p>
+          <h4>Uso do PATCH</h4>
+          <p>
+            No caso do PATCH, foi alterada apenas parte do produto. Será utilizado o PUT para alterar um sobrenome que
+            está errado no aluno 5.
+          </p>
+          <p>Envio: </p>
+          <pre>
+            <code>
+              PATCH http://localhost:3000/senacead/5 
+              Content-Type: application/json 
+              { 
+                  "nome": “Ana Carolina Magalhães Santos”, 
+              } 
+            </code>
+          </pre>
+          <p>Retorno: </p>
+          <pre>
+            <code>
+              {    "id": 5 
+                  "nome": “Ana Carolina Magalhães Santos”, 
+                  "atividade1": "A", 
+                  "atividade2": "A" 
+                  "atividade3": "A"   
+              } 
+            </code>
+          </pre>
+          <p>
+            Nome alterado com sucesso, dessa forma, fica simples ver o padrão de utilização dos métodos, faltando agora
+            apenas o DELETE.
+          </p>
+          <h4>Uso do DELETE</h4>
+          <p>
+            No caso do DELETE, é usado para excluir um produto por completo.
+          </p>
+          <p>Envio: </p>
+          <pre>
+            <code>
+              DELETE http://localhost:3000/senacead/1 
+              Content-Type: application/json 
+            </code>
+          </pre>
+          <p>Retorno: </p>
+          <pre>
+            <code>
+              Status: 200 OK 
+            </code>
+          </pre>
+          <p>
+            O status 200 indica que o aluno com o “id=1” foi removido com sucesso.
+          </p>
+          <p>
+            Com base nos exemplos, é possível entender o padrão de utilização de cada um dos métodos de requisição HTTP,
+            erros esses que podem ser notados, muitas vezes, ao navegar na internet.
+            <!--talvez aqui esse texto mude em algo-->
+          </p>
+          <h3> Encerramento</h3>
+          <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 encerramento">
+              <p>
+                Com o conhecimento dos métodos de requisição e as possíveis respostas que o servidor tem para um pedido,
+                o programador tem um controle muito maior da interação cliente/servidor, o que melhora, de muitas
+                formas, o sistema <i>web</i> em criação, como, por exemplo, podendo mostrar uma mensagem que deixe mais claro
+                para o cliente o que está acontecendo, no lugar de simplesmente um número na tela, ou redirecionando o
+                cliente para alguma solução sempre que um erro indesejado acontecer.
+              </p>
+              <p>
+                Portanto é indispensável estar sempre atualizado sobre conceitos e atualizações do protocolo HTTP, para
+                garantir sistemas mais seguros e estáveis, que permitam uma utilização mais agradável por parte do
+                usuário, pois o tratamento de erros é também um dos pilares da usabilidade.
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-5">
+              <img src="imgs/encerramento.png" class="img-responsive no-print imgEncerramento hidden-sm hidden-xs">
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+  </div>
+
+  </div>
+
+  </section>
+  <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+  <footer class="text-center no-print">
+
+    <ul class="pagination">
+
+    </ul>
+
+  </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

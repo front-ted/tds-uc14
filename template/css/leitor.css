@@ -321,7 +321,9 @@ header.senac{
 .container {
   max-width: 800px;
 }
-
+.encerramento{
+  width: 100%;
+}
 p.legenda-imagem{
   width: 100% !important;
   margin: 10px auto !important;

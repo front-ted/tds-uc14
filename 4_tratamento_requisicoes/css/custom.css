@@ -1,0 +1,163 @@
+.paginas .container {
+background-color:#ffff;
+}
+#booklet{
+  background: linear-gradient(to right, #2875c0, #d4e2f1);
+  padding: 4px;
+  z-index: 2;
+}
+
+
+.paginas{
+  background: url('../imgs/grafico_esq.png') left bottom no-repeat,  url('../imgs/grafico_dir.png') right bottom no-repeat;
+  z-index: 4;
+  background-attachment: fixed;
+}
+
+.grupo-imprimir{
+  margin-bottom: 5px;
+}
+h1 i,
+h2 i,
+h3 i,
+h4 i {
+  font-weight: bold;
+}
+h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+h4 {
+  margin: 0px;
+  margin-top: 40px;
+}
+h2, h3, h4, h5{color: #4170b4;}
+pre {
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+header{margin-top: 100px;}
+.mt-20{margin-top: 20px;}
+.mt-40{margin-top: 40px;}
+.mt-60{margin-top: 60px;}
+
+.caixa-destaque{
+  background-color: #d4e2f1!important;
+  padding: 1px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 100px;
+  position: relative;
+}
+.caixa-destaque2{
+  background-color: #d4e2f1!important;
+  padding: 1px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1px;
+  margin-bottom: 15px;
+  border-radius: 100px;
+  position: relative;
+}
+.caixa-destaque3{
+  background-color: #d4e2f1!important;
+  padding: 2em;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 1em;
+  position: relative;
+  padding-left: 100px;
+  position: relative;
+}
+.caixa-destaque2 p{ margin: unset;}
+.conteudo{
+  padding-left: 50px;
+  padding-right: 20px;
+}
+.imgBorder{ 
+  border: #004b8a 3px solid;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.icone01{
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 22px;
+}
+.icone02{
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 24px;
+}
+.icone03{
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 44px;
+}
+.icone04{
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 36px;
+}
+
+.dica{
+  position: absolute;
+  margin-left: -175px;
+  margin-top: -25px;
+}
+.nota{
+  position: absolute;
+  margin-left: -175px;
+  margin-top: -13px;
+}
+.espacoImg{
+  margin-top: 30px;
+}
+.imgEncerramento{margin-top: 35px;}
+
+@media screen and (max-width: 430px){
+  .caixa-destaque{width: 80%;
+    border-radius: 70px;}
+  .caixa-destaque2{width: 90%;
+  border-radius: 50px;
+  }
+  .icone-a{margin-top: 64px !important;}
+  .icone-b{margin-top: 138px !important;}
+  .icone-c{margin-top: 84px !important;}
+  .icone-d{margin-top: 116px !important;}
+  .icone-e{margin-top: 67px !important;}
+  .dica{display: none;}
+  .caixa-destaque3{padding-left: 15px;}
+  .nota{display: none;}
+}  
+
+
+@media screen and (max-width: 780px){
+  .caixa-destaque2 .conteudo{padding-right: 25px;
+  padding-left: 60px;
+margin-top: 5px;
+margin-bottom: 5px;}
+  .icone01{margin-top: 53px;}
+  .icone02{margin-top: 35px;}
+  .iconeC{margin-top: 42px;}
+  .icone-a{margin-top:37px;}
+  .icone-b{margin-top: 88px;}
+  .icone-c{margin-top:54px;}
+  .desafio{margin-left: 15px;}
+  .icone04{margin-top: 54px;}
+  .icone-e{margin-top: 36px;}
+  .icone-d{margin-top: 66px;}
+  .dica{margin-top: -15px;}
+  .nota{margin-top: 2px;}
+}
+
+
+
+  
