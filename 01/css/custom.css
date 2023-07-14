@@ -1,11 +1,16 @@
 body{
-  background: url('../imgs/background.png') no-repeat;
+  background: url('../imgs/bg_geral-1.png') no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #fff;
   overflow-x: hidden;
 }
-
+.container{
+  background-color: #fff;
+}
+.lista li{
+  list-style: none;
+}
 h1 i,
 h2 i,
 h3 i,

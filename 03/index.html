@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Comunicação visual e imagens vetoriais e bitmap</title>
+
+    <!-- Bootstrap -->
+    <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+    <link href="../template/css/cores.css" rel="stylesheet">
+    <link href="../template/css/modal-100.css" rel="stylesheet">
+    <link href="../template/css/devibeans.min.css" rel="stylesheet">
+      <!--Extras - novas classes para facilitar-->
+      <link rel="stylesheet" href="../template/css/extras.css">
+    <link href="../template/css/sncload.css" rel="stylesheet">
+    <link href="../template/css/magnific-popup.css" rel="stylesheet">
+    <!-- referencia ao arquivo css com estilos especificos da pagina -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <!-- css necessario para o print -->
+    <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+    <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+    <!-- MARCA D´ÁGUA -->
+    <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+    <!-- /MARCA D´ÁGUA -->
+
+    <div id='sncloader' class='over-loader'><div class="over-cell"><div id="sncload"></div></div></div>
+    <header id="topo" class="senac no-print">
+        <div  class="header-tecnicos container">
+        	  <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+            <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+        </div>
+        <div id="sombra"></div>
+    </header>
+
+    <div id="booklet">
+        <header class="no-print container">
+          <!-- BTO IMPRIMIR -->
+          <div class="grupo-imprimir no-print">
+            <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+                <span class="fa fa-print"></span> <span>Imprimir</span>
+            </button>
+          </div>
+          <!-- /BTO IMPRIMIR -->
+        </header>
+<!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+        <section class="paginas">
+
+          <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+          <div class="pagina">
+            <!-- Menu -->
+            <div class="bg-fundo"></div>
+            <!-- <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+            <div class="menu no-print" aria-hidden="true">
+              <div id="style-2" class="scroll-bar">
+                <div class="force-overflow">
+                  
+                  <ul class="eng-item-menu">
+                    <li class="item1">
+                      <a href="#t1" class="fundo-item">Introdução</a>
+                      <hr>
+                    </li>
+                    <li class="item2">
+                      <a href="#t2" class="fundo-item">Conceito de classes e objetos</a>
+                      <hr>
+                    </li>
+                    <li class="item3">
+                      <a href="#t3" class="fundo-item">Os quatro pilares da orientação a objetos</a>
+                      <hr>
+                    </li>
+                    <li class="item4">
+                      <a href="#t4" class="fundo-item">As vantagens da orientação a objetos</a>
+                      <hr>
+                    </li>
+                    <li class="item5">
+                      <a href="#t5" class="fundo-item">UML</a>
+                      <hr>
+                    </li>
+                    <li class="item6">
+                      <a href="#t6" class="fundo-item">Diagramas</a>
+                      <hr>
+                    </li>
+                    <li class="item7">
+                      <a href="#t7" class="fundo-item">Uso do aplicativo Diagrams</a>
+                      <hr>
+                    </li>
+                    <li class="item8">
+                      <a href="#t8" class="fundo-item">Encerramento</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+             -->
+            <div class="container">
+              
+              <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
+              
+              <h2 class="acessivel print">Linguagem de programação para back-end (APIs REST)</h2>
+              
+              <p>Neste conteúdo, você terá uma visão mais abrangente sobre o desenvolvimento do back-end especificamente para APIs REST, usando o Spring Framework. Durante a leitura, você verá muitos processos familiares, mas com detalhes minuciosos que diferem um “website” de um “web service”.  </p>
+              <p>Além de construir um projeto de API completo, com explicações durante todo o processo, será introduzida uma nova ferramenta muito útil para testar serviços web: o Postman. Não se preocupe em instalar agora, pois isso será feito assim que chegar a hora. E após finalizar os testes, será feita a integração de seu serviço web a um website totalmente isolado do projeto para você entender como funciona na prática a integração de sistemas. </p>
+              <p>Prepare seu NetBeans e seu Spring Initializr que você começará suas programações. </p>
+              
+              <h3>Criação do projeto </h3>
+              <p>O primeiro passo é acessar a página do Spring Initializr. </p>
+
+              <a href="imgs/assets/fig-01.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-01.png" class="center-block img-responsive" alt="Na imagem, há a página inicial do site Spring Initilizr. ">
+              </a>
+              <p class="legenda-imagem">Figura 1 – Spring Initializr  
+              Fonte: Spring Initializr (s.d.) 
+              </p>
+              <p>Defina nessa página as seguintes configurações: </p>
+              <ul>
+                <li>Project: Maven </li>
+                <li>Language: Java </li>
+                <li>Spring Boot: 3.0.6 (ou maior versão estável) </li>
+                <li>Group: com.api </li>
+                <li>Artifact: tarefas </li>
+                <li>Description: API Rest de Projeto de Tarefas </li>
+                <li>Packaging: Jar </li>
+                <li>Java: 17 (ou versão instalada em seu computador) </li>
+              </ul>
+              <p>
+                Por fim, você precisa definir as dependências de seu projeto. Para projetos de APIs REST, deve ser usado apenas o Spring Web. 
+              </p>
+              <a href="imgs/assets/fig-02.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-02.png" class="center-block img-responsive" alt=" Na imagem, há a área de dependências do Spring Initializr listando apenas o Spring Web. ">
+              </a>
+              <p class="legenda-imagem">Figura 2 – Spring Initializr  
+                Fonte: Spring Initializr (s.d.) 
+              </p>
+              <p>
+                Após concluir todas as configurações, clique em Generate e será feito o download de uma pasta compactada (.zip) contendo o projeto completo. 
+              </p>
+              <p>
+                Finalizado o download, você pode extrair o conteúdo em seu computador e abrir a pasta do projeto com o Apache NetBeans IDE. 
+              </p>
+              <p>
+                Se é a sua primeira vez abrindo um projeto Maven com o Spring Boot no NetBeans, é possível que você se depare com a mensagem “unloadable”. 
+              </p>
+              <a href="imgs/assets/fig-03.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-03.png" class="center-block img-responsive" alt="Na imagem, há a estrutura do projeto “tarefas” no NetBeans. Ao lado do nome do projeto, aparece a mensagem “unloadable”. ">
+              </a>
+              <p class="legenda-imagem">Figura 3 – Estrutura do projeto no NetBeans  
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <p>
+                Para corrigir isso, clique com o botão direito do mouse sobre o projeto e selecione a opção “Resolve Project Problems”. Uma nova janela será aberta. 
+              </p>
+              <a href="imgs/assets/fig-04.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-04.png" class="center-block img-responsive" alt="Na imagem, há a janela “Resolve Project Problems – tarefas [unloadable] Project”. Em “Project Problems”, há o item “Unable to properly load Project” com um ícone de alerta ao lado. Em “Description”, há a seguinte mensagem: “Some problems were encountered while processing the POMs: [ERROR] “dependencies.dependency.version” for org.springframework.boot:spring-boot-starter-web:jar is missing. @ line 20, column 15. [ERROR] “dependencies.dependency.version” for org.springframework.boot:spring-boot-starter-test:jar is missing. @ line 25, column 15.” ">
+              </a>
+              <p class="legenda-imagem">Figura 4 – Janela de “Resolve Project Problems” do NetBeans  
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <p>
+                Nessa nova tela, há mais detalhes sobre o erro que se refere às dependências org.springframework.boot:spring-boot-starter-web:jar e org.springframework.boot:spring-boot-starter-test:jar. Para corrigir esse problema, é muito simples! Clique no botão Resolve... e o NetBeans se encarregará de fazer todas as correções.  
+              </p>
+              <p>
+                Assim que as correções forem concluídas, a mensagem “This problem was resolved” aparecerá. Clique no botão “Close” para fechar a janela.  
+              </p>
+              <a href="imgs/assets/fig-05.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-05.png" class="center-block img-responsive" alt="Na imagem, há a janela “Resolve Project Problems – tarefas [unloadable] Project”. Em “Project Problems”, há o item “Unable to properly load Project” com um ícone de check ao lado, sinalizando que o problema foi resolvido. Em “Description”, há a seguinte mensagem: “This problem was resolved.” ">
+              </a>
+              <p class="legenda-imagem">Figura 5 – Janela de “Resolve Project Problems” do NetBeans  
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <p class="caixa-destaque icone-fundamental"><strong>Dica</strong>Esse processo só precisa ser feito na primeira vez que você abrir um projeto Maven com o Spring. Após isso, o NetBeans salvará as correções para que esse erro não ocorra novamente durante a abertura de novos projetos. 
+              </p>
+              <p>
+                Agora que as configurações foram finalizadas, execute o arquivo principal do projeto para verificar se está tudo funcionando. 
+              </p>
+              <a href="imgs/assets/fig-06.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-06.png" class="center-block img-responsive" alt="Na imagem, há a estrutura do projeto tarefas no NetBeans. Nessa estrutura, o arquivo “Source Packages > com.api.tarefas > TarefasApplication.java” está selecionado e o menu de opções (botão direito do mouse) está sendo exibido. Nesse menu, há a opção “Run File” destacada com um contorno vermelho. ">
+              </a>
+              <p class="legenda-imagem">Figura 6 – Estrutura de arquivos do projeto no NetBeans 
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <p>
+                Quando você executa um projeto Spring Web, o Spring Boot iniciará um servidor web embutido (por padrão, o Tomcat) e implantará o seu aplicativo nesse servidor.  
+              </p>
+              <a href="imgs/assets/fig-07.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-07.png" class="center-block img-responsive" alt="Na imagem, há o Output do NetBeans mostrando o projeto sendo executado. ">
+              </a>
+              <p class="legenda-imagem">Figura 7 – Terminal do NetBeans executando o projeto 
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <p>
+                Ao executar o aplicativo Spring Web, você pode acessá-lo por meio de um navegador da web ou por meio de outras ferramentas de teste de API, como o Postman, que será visto mais para a frente ainda neste conteúdo. Por padrão, a URL desse acesso é http://localhost:8080. 
+              </p>
+              <p class="caixa-destaque icone-atencao"><strong>Atenção</strong>
+                A seguir, serão feitas modificações no projeto que incluem a criação de novas classes, pacotes etc. Essas mudanças não são reconhecidas pelo servidor web já em execução. Então lembre-se de finalizar o processo de execução do projeto no NetBeans e iniciá-lo novamente para que as alterações sejam reconhecidas.  
+                          
+              </p>
+              <h3>Estrutura do projeto</h3>
+              <p>
+                Nesse projeto, será usada a arquitetura MVC para organizar o conteúdo. Para começar, crie um pacote chamado model e outro pacote chamado controller dentro do pacote com.api.tarefas.  
+              </p>
+              <a href="imgs/assets/fig-08.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-08.png" class="center-block img-responsive" alt="Na imagem, há a estrutura do projeto tarefas no NetBeans. Nessa estrutura, há o “Source Packages” expandido, relevando os seguintes pacotes, respectivamente: “com.api.tarefas”, “com.api.tarefas.controller” e “com.api.tarefas.model”. O primeiro pacote “com.api.tarefas” está expandido revelando o arquivo TarefasApplication.java. ">
+              </a>
+              <p class="legenda-imagem">Figura 8 – Estrutura do projeto no NetBeans  
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <ul>
+                <li></li>
+                <li>Model: esse pacote será responsável por representar os dados do sistema e as regras de negócios que se aplicam aos dados. </li>
+                <li>Controller: esse pacote conterá todas as classes que processarão as requisições HTTP feitas pelos endpoints da API. </li>
+              </ul>
+              <h4>Classe Principal </h4>
+              <p>
+                Esse é o arquivo executado para rodar seu projeto. E como já visto, a classe principal da aplicação Spring é responsável por definir as configurações básicas do Spring, inicializar o servidor web e iniciar a execução da aplicação. 
+              </p>
+              <p>
+                Mantenha esse arquivo onde ele está e não faça nenhuma alteração nele. Os pacotes criados são destinados apenas para as novas classes que serão criadas a seguir. 
+              </p>
+              <h4>Criação do Model</h4>
+              <p>
+                Para começar, será criada uma classe Java chamada “Tarefa”, que representará uma tarefa dentro do pacote com.api.tarefas.model. Antes de escrever os atributos e os métodos dessa classe, adicione a anotação @Component para indicar que essa classe é um componente Spring. Essa anotação é feita em cima da declaração da classe.  
+              </p>
+              <code>
+                package com.api.tarefas.model; <br>
+                import org.springframework.stereotype.Component; <br>
+                @Component <br>
+                public class Tarefa { <br>
+                } <br>
+              </code>
+              <p>
+                Atenção: não se esqueça de adicionar a declaração de importação de org.springframework.stereotype.Component. Essa é uma importação necessária para utilizar a anotação @Component em uma classe Java e torná-la gerenciada pelo Spring. Toda anotação do Spring Framework precisa de sua devida declaração de importação. Você pode adicioná-la facilmente clicando sobre o ícone de lâmpada que aparecer ao lado e selecionando a opção “Add import for &lt;caminho&gt;”. 
+              </p>
+              <a href="imgs/assets/fig-02.png" target="_blank" class="" aria-hidden="true">
+                <img src="imgs/assets/fig-02.png" class="center-block img-responsive" alt="Na imagem, há o editor de texto do NetBeans com um erro no trecho de código “@Component” localizado na linha 3. Nessa linha, está sendo exibido um menu com as opções “Add import for org.springframework.stereotype.Component” e “Search Dependecy at Maven Repositories for Component”. ">
+              </a>
+              <p class="legenda-imagem">Figura 9 – Editor de texto do NetBeans 
+                Fonte: Apache NetBeans IDE (2023) 
+              </p>
+              <p>
+                Agora é possível seguir com a codificação da classe “Tarefa”. Essa classe terá os seguintes atributos: 
+              </p>
+              <ul>
+                <li>id: um identificador numérico para identificar cada tarefa </li>
+                <li>
+                  descricao: texto descrevendo a tarefa que será realizada </li>
+                <li>
+                  completa: um booleano para informar se a tarefa foi concluída (valor true) ou não (valor false) 
+                </li>
+              </ul>
+              <p>
+                Também será implementado o método construtor da classe e os métodos getters e setters de cada atributo. O código ficará da seguinte maneira: 
+              </p>
+              <code>
+                <br>                 package com.api.tarefas.model; 
+                <br> import org.springframework.stereotype.Component; 
+                <br> @Component 
+                <br> public class Tarefa { 
+                <br> 
+                <br>     // Atributos 
+                <br> 
+                <br>     private int id; 
+                <br> 
+                <br>     private String descricao; 
+                <br> 
+                <br>     private boolean completa; 
+                <br> 
+                <br>  
+                <br> 
+                <br>     // Construtores 
+                <br> 
+                <br>     public Tarefa() {} 
+                <br> 
+                <br>      
+                <br> 
+                <br>     public Tarefa(int id, String descricao, boolean completa) { 
+                <br> 
+                <br>         this.id = id; 
+                <br> 
+                <br>         this.descricao = descricao; 
+                <br> 
+                <br>         this.completa = completa; 
+                <br> 
+                <br>     }     
+                <br> 
+                <br>      
+                <br> 
+                <br>     // Métodos Getters e Setters 
+                <br> 
+                <br>     public int getId() { return id; } 
+                <br> 
+                <br>     public void setId(int id) { this.id = id; } 
+                <br> 
+                <br>     public String getDescricao() { return descricao; } 
+                <br> 
+                <br>     public void setDescricao(String descricao) { this.descricao = descricao; } 
+                <br> 
+                <br>     public boolean isCompleta() { return completa; } 
+                <br> 
+                <br>     public void setCompleta(boolean completa) { this.completa = completa; } 
+                <br> 
+                <br> } 
+              </code>
+              <p>
+                Com isso, está concluída a criação da classe Model. 
+              </p>
+              <h4>Criação do Controller</h4>
+              <p>
+                Crie uma classe chamada TarefaController em com.api.tarefas.controller que será responsável por lidar com as requisições HTTP feitas na API.  
+              </p>
+              <code>
+                package com.api.tarefas.controller; 
+              <br>  import org.springframework.web.bind.annotation.*; 
+              <br>  @RestController 
+              <br>  @RequestMapping("/tarefas") 
+              <br>  public class TarefaController { 
+              <br>  
+              <br>  } 
+              </code>
+              <p>
+                Essa classe deve ter a anotação @RestController para indicar que ela uma controladora REST e deve ser registrada com o Spring. É uma anotação com propósito semelhante ao @Controller de Spring MVC, mas específico para serviços RESTful. Também é incluída a anotação @RequestMapping com valor “/tarefas”, indicando que os serviços disponibilizados por essa classe de controle serão acessados pela URL http://localhost:8080/tarefas.  
+              </p>
+              <h4>Variáveis auxiliares </h4>
+              <p>
+                Como seu projeto não utiliza banco de dados, serão armazenadas as tarefas criadas em uma lista dentro da classe TarefaController. Isso permitirá que as tarefas sejam mantidas na memória durante a execução do programa. Além disso, também será criada uma variável auxiliar para garantir que o id das tarefas não se repita quando for feito o cadastro – caso estivesse sendo utilizado um banco de dados, isso seria feito automaticamente pela propriedade AUTO_INCREMENT. 
+              </p>
+              <code>
+                package com.api.tarefas.controller; 
+              <br>  import java.util.ArrayList; 
+              <br>  import java.util.List; 
+              <br>  import org.springframework.web.bind.annotation.*; 
+              <br>  import com.api.tarefas.model.Tarefa; 
+              <br>  @RestController 
+              <br>  @RequestMapping("/tarefas") 
+              <br>  public class TarefaController { 
+              <br>      // Variáveis auxiliares 
+              <br>      private List<Tarefa> tarefas = new ArrayList<>(); 
+              <br>      private int proximoId = 1; 
+              <br>  } 
+              </code>
+              <p>
+                Agora serão vistos os métodos. 
+              </p>
+              <p>
+                Métodos GET, POST, PUT e DELETE 
+              </p>
+              <p>
+                Para lidar com as diferentes operações da API, serão criados os seguintes métodos dentro da classe: 
+              </p>
+              <ul> 
+                <li>buscarTodasTarefas: para buscar todas as tarefas cadastradas na lista</li>
+                <li>buscarTarefaPorId: para buscar uma tarefa específica pelo id </li>
+                <li>criarTarefa: para adicionar uma nova tarefa à lista </li>
+                <li>atualizarTarefa: para atualizar os dados de uma tarefa cadastrada </li>
+                <li>deletarTarefa: para remover uma tarefa cadastrada </li>
+              </ul>
+              <p>
+                Cada método estará associado a um verbo HTTP específico, que pode ser GET, POST, PUT ou DELETE. Logo, é necessário utilizar as anotações do Spring para indicar qual método HTTP deve ser usado por cada método, sendo elas: 
+              </p>
+              <ul>
+                <li>@GetMapping: para associar ao método GET, usar nos métodos buscarTodasTarefas e buscarTarefaPorId. Assim, esses métodos serão acionados apenas ao receber requisições com método GET para a URL do projeto. 
+                   </li>
+                <li>@PostMapping: para associar ao método POST, usar no método criarTarefa. O método será executado apenas quando chegar requisição do tipo POST ao sistema. 
+                  </li>
+                <li>@PutMapping: para associar ao método PUT, usar no método atualizarTarefa. O método responderá apenas às requisições com método PUT que chegarem ao sistema. 
+                  </li>
+                <li>@DeleteMapping: para associar ao método DELETE, usar no método deletarTarefa. O método responderá às requisições de método DELETE.</li>
+              </ul>
+              <p>
+                Isso significa que, diferentemente do projeto Spring MVC, não se depende necessariamente de mapeamentos na URL, como localhost:8080/tarefas/gravar ou localhost:8080/tarefas/excluir. Apenas será usado http://localhost:8080/tarefas especificando o método de requisição e, a partir disso, a classe Controller selecionará o método correto a ser executado. 
+              </p>
+              
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                  aria-controls="collapseOne">
+                  GET
+                </a>
+              </h3>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <code>
+                  <br> @GetMapping 
+                  <br> public List<Tarefa> buscarTodasTarefas() { 
+                  <br>     return tarefas; 
+                  <br> } 
+                </code>
+                <p>
+                  Esse método é um endpoint do tipo GET que retorna todas as tarefas cadastradas na API. Ele simplesmente retorna a lista de tarefas que está armazenada na variável tarefas. 
+                </p>
+                <code>
+                  @GetMapping("/{id}") 
+                <br>  public Tarefa buscarTarefaPorId(@PathVariable int id) { 
+                <br>      for (Tarefa tarefa : tarefas) { 
+                <br>          if (tarefa.getId() == id) { 
+                <br>              return tarefa; 
+                <br>          } 
+                <br>      } 
+                <br>      return null; 
+                <br>  }   
+                </code>
+                <p>
+                  Esse método também é um endpoint do tipo GET, porém ele recebe um parâmetro na URL que indica o ID da tarefa que se deseja buscar. O parâmetro “id” é capturado pela anotação @PathVariable – essa anotação é responsável por extrair valores de variáveis de caminho em uma URL. O método faz uma iteração sobre a lista de tarefas até encontrar a tarefa com o ID informado, e então retorna essa tarefa. Caso nenhuma tarefa seja encontrada com o ID informado, ele retorna “null”. 
+                </p>
+                <p>
+                  Em suma, quando uma requisição não trouxer um parâmetro extra, buscarTodasTarefas() será executado. Caso haja um parâmetro, o método buscarTarefaPorId() é que executará.  
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  POST
+                </a>
+              </h3>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <code>
+                <br>  @PostMapping 
+                <br>  public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
+                <br>      int id = tarefas.size() + 1; 
+                <br>      tarefa.setId(id); 
+                <br>      tarefas.add(tarefa); 
+                <br>      return tarefa; 
+                <br>  } 
+                </code>
+                <p>
+                  Esse método é um endpoint do tipo POST que recebe um JSON no corpo da requisição contendo as informações de uma nova tarefa. Ele gera um novo ID para a tarefa (o ID é igual ao número de tarefas cadastradas mais um), adiciona a tarefa na lista de tarefas e então retorna a tarefa que acabou de ser criada.  
+                </p>
+                <p>
+                  Aqui, é usada a anotação @RequestBody, que é uma anotação usada para indicar que o parâmetro de um método deve ser extraído do corpo da requisição HTTP – nesse caso, refere-se ao parâmetro “tarefa”. 
+                </p>
+                <p>
+                  Ao usar essa anotação, o Spring mapeia o corpo da requisição HTTP para o objeto Java correspondente ao tipo do parâmetro anotado com @RequestBody. Em outras palavras, o Spring converte o conteúdo do corpo da requisição em um objeto Java. 
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
+                  PUT
+                </a>
+              </h3>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <div class="icone-atencao texto-com-icone">
+                  <code>
+                    @PutMapping("/{id}") 
+                  <br>  public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefaAtualizada) { 
+                  <br>      for (int i = 0; i < tarefas.size(); i++) { 
+                  <br>          Tarefa tarefa = tarefas.get(i); 
+                  <br>          if (tarefa.getId() == id) { 
+                  <br>              tarefa.setDescricao(tarefaAtualizada.getDescricao()); 
+                  <br>              tarefa.setCompleta(tarefaAtualizada.isCompleta()); 
+                  <br>              return tarefa; 
+                  <br>          } 
+                  <br>      } 
+                  <br>      return null; 
+                  <br>  }   
+                  </code>
+                  <p>
+                    Perceba que aqui há o uso em conjunto de duas anotações vistas na criação dos métodos anteriores: @PathVariable e @RequestBody. Isso porque esse método receberá dois parâmetros: primeiro é um inteiro que representa o ID da tarefa e é obtido a partir da anotação @PathVariable. O segundo parâmetro é um objeto da classe Tarefa que representa a nova versão da tarefa e é obtido a partir da anotação @RequestBody. 
+                  </p>
+                  <p>
+                    Esse método é um endpoint do tipo PUT que recebe um parâmetro na URL indicando o ID da tarefa que se deseja atualizar, e um JSON no corpo da requisição contendo as informações atualizadas da tarefa. Ele faz uma iteração sobre a lista de tarefas até encontrar a tarefa com o ID informado, atualiza as informações da tarefa com as informações que foram passadas no JSON e então retorna a tarefa atualizada. Caso nenhuma tarefa seja encontrada com o ID informado, ele retorna “null”.  
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+            
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFor">
+              <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFor"
+                  aria-expanded="false" aria-controls="collapseFor">
+                  PUT
+                </a>
+              </h3>
+            </div>
+            <div id="collapseFor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFor">
+              <div class="panel-body">
+                <div class="icone-atencao texto-com-icone">
+                  <code>@DeleteMapping("/{id}") 
+                  <br>  public boolean deletarTarefa(@PathVariable int id) { 
+                  <br>      for (int i = 0; i < tarefas.size(); i++) { 
+                  <br>          Tarefa tarefa = tarefas.get(i); 
+                  <br>          if (tarefa.getId() == id) { 
+                  <br>              tarefas.remove(i); 
+                  <br>              return true; 
+                  <br>          } 
+                  <br>      } 
+                  <br>      return false; 
+                  <br>  }  
+                    
+                  </code>
+                  <p>
+                    Esse método é um endpoint do tipo DELETE que recebe um parâmetro na URL indicando o ID da tarefa que se deseja deletar. Ele faz uma iteração sobre a lista de tarefas até encontrar a tarefa com o ID informado, remove a tarefa da lista e retorna true. Caso nenhuma tarefa seja encontrada com o ID informado, ele retorna false. Note que como o método retorna um booleano, é possível utilizá-lo para saber se a tarefa foi deletada com sucesso ou não. 
+                  </p>
+                  <p>
+                    Para finalizar, é necessário adicionar mais duas anotações à classe Controller.  
+                  </p>
+                  <p>
+                    A primeira é a anotação @RequestMapping para mapear uma URL específica para que a classe “controller” seja acessada. Para esse exemplo, será usada a URL /tarefas. Assim, se um cliente fizer uma requisição GET para a URL “/tarefas”, o Spring vai automaticamente chamar o método listarTarefas da classe TarefaController. Da mesma forma, se o cliente fizer uma requisição POST para a URL “/tarefas”, o Spring vai chamar o método adicionarTarefa. 
+                  </p>
+                  <p>
+                    A segunda anotação é a @CrossOrigin, que permitirá o acesso à API a partir de um domínio diferente. Quando rodar o arquivo TarefasApplication.java, a API será iniciada em um servidor web Tomcat com o endereço http://localhost:8080 – esse endereço eletrônico é o domínio da API. Se você criar um arquivo index.html, por exemplo, na área de trabalho do Windows, e abrir esse arquivo, o domínio dessa página web será o caminho do arquivo, algo como C:/Users/MeuUsuario/Desktop/index.html. Perceba que os domínios são bem diferentes um do outro. 
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <p>
+          Por padrão, as solicitações HTTP entre diferentes domínios são bloqueadas pelos navegadores como medida de segurança, isso é conhecido como política de segurança de mesma origem (Same-origin policy). Essa política impede que scripts de um site mal-intencionado tenham acesso aos dados de outro site.  
+        </p>
+        <p>
+          No entanto, às vezes, é necessário permitir que um site externo faça solicitações para uma API, e a anotação @CrossOrigin pode ajudar a permitir essas solicitações. Nesse exemplo, será inserida essa anotação com o valor origins = "*", que significa que estão sendo permitidas solicitações de qualquer domínio. Você também pode especificar um conjunto de domínios que são permitidos a fazer solicitações para sua API caso queira. 
+        </p>
+        <p>
+          O código completo da classe Controller ficará assim: 
+        </p>
+        <code>package com.api.tarefas.controller; 
+        <br>  import java.util.ArrayList; 
+        <br>  import java.util.List; 
+        <br>  import org.springframework.web.bind.annotation.*; 
+        <br>  import com.api.tarefas.model.Tarefa; 
+        <br>  @RestController 
+        <br>  @CrossOrigin(origins = "*") 
+        <br>  @RequestMapping("/tarefas") 
+        <br>  public class TarefaController { 
+        <br>      private List<Tarefa> tarefas = new ArrayList<>(); 
+        <br>      private int proximoId = 1; 
+        <br>      @PostMapping("") 
+        <br>      public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
+        <br>          tarefa.setId(proximoId++); 
+        <br>          tarefas.add(tarefa); 
+        <br>          return tarefa; 
+        <br>      } 
+        <br>      @GetMapping("") 
+        <br>      public List<Tarefa> buscarTarefas() { 
+        <br>          return tarefas; 
+        <br>      } 
+        <br>      @GetMapping("/{id}") 
+        <br>      public Tarefa buscarTarefa(@PathVariable int id) { 
+        <br>          for (Tarefa tarefa : tarefas) { 
+        <br>              if (tarefa.getId() == id) { 
+        <br>                  return tarefa; 
+        <br>              } 
+        <br>          } 
+        <br>          return null; 
+        <br>      } 
+        <br>      @PutMapping("/{id}") 
+        <br>      public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefa) { 
+        <br>          for (int i = 0; i < tarefas.size(); i++) { 
+        <br>              Tarefa t = tarefas.get(i); 
+        <br>              if (t.getId() == id) { 
+        <br>                  t.setDescricao(tarefa.getDescricao()); 
+        <br>                  t.setCompleta(tarefa.isCompleta()); 
+        <br>                  return t; 
+        <br>              } 
+        <br>          } 
+        <br>          return null; 
+        <br>      } 
+        <br>      @DeleteMapping("/{id}") 
+        <br>      public boolean deletarTarefa(@PathVariable int id) { 
+        <br>          for (int i = 0; i < tarefas.size(); i++) { 
+        <br>              Tarefa tarefa = tarefas.get(i); 
+        <br>              if (tarefa.getId() == id) { 
+        <br>                  tarefas.remove(i); 
+        <br>                  return true; 
+        <br>              } 
+        <br>          } 
+        <br>          return false; 
+        <br>      } 
+        <br>  } 
+
+        </code>
+        <p>
+          Com isso, está concluída a criação da classe Controller e da API. 
+        </p>
+        <h3>POSTMAN</h3>
+        <p>
+          O Postman é uma plataforma utilizada no desenvolvimento de APIs que permite aos desenvolvedores testar, documentar e compartilhar APIs de maneira rápida e fácil. O Postman oferece uma interface de usuário amigável que permite que os desenvolvedores enviem solicitações HTTP para APIs e examinem as respostas. 
+        </p>
+        <p>
+          Ele tem diversas funcionalidades, como a capacidade de criar e salvar solicitações HTTP personalizadas, criar testes automatizados para garantir que a API esteja funcionando corretamente, gerenciar variáveis e ambientes, colaborar com outros desenvolvedores, documentar APIs, entre outras. 
+        </p>
+        <h4>Instalação e configuração </h4>
+        <p>
+          O Postman está disponível para uso na web e também como um aplicativo desktop para os sistemas operacionais Windows, Linux e Mac. 
+        </p>
+        <p>
+          O aplicativo web do Postman está em desenvolvimento ativo e, por isso, existem recursos que você só conseguirá acessar no aplicativo de desktop. Por esse motivo, será usada a versão desktop em vez da versão web e recomenda-se que você use também. 
+        </p>
+        <p>
+          Para obter a versão mais recente do aplicativo desktop, visite a página de download oficial e baixe a versão para a sua plataforma. 
+        </p>
+        <a href="imgs/assets/fig-09.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-09.png" class="center-block img-responsive" alt="Na imagem, há a página oficial de download do Postman. ">
+        </a>
+        <p class="legenda-imagem">Figura 10 – Página oficial de download do Postman  
+          Fonte: Postman (c2023) 
+        </p>
+        <p>
+          Após concluir o download, execute o instalador e o Postman será instalado automaticamente no seu sistema. Após terminar a instalação, será aberta uma tela de apresentação da ferramenta em que você poderá escolher entre criar uma nova conta (opção Create Free Account) ou usar uma já existente (opção Sign in). Você pode realizar esse processo de login ou escolher a opção Skip and go to the app para pular essa etapa e ir direto ao aplicativo. 
+        </p>
+        <a href="imgs/assets/fig-10.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-10.png" class="center-block img-responsive" alt="Na imagem, há a tela inicial do Postman, que é composta pelo título “Create na account or sign in” e os botões “Create Free Account” e “Sign In” logo abaixo. Ainda nessa tela, há o link “Skip and go to the app” localizado ao lado do texto “Create your account or sign in later?”. No lado esquerdo, há o texto “A free Postman account lets you: Organize all your API development in workspaces; Create public workspaces to collaborate with over 10 million developers; Back up your work on Postman’s cloud; Experience the best API development platform for free!”. ">
+        </a>
+        <p class="legenda-imagem">Figura 11 – Tela inicial do Postman  
+          Fonte: Postman (2023) 
+        </p>
+        <h4>Teste da API</h4>
+        <p>
+          Para testar a API desenvolvida, basta iniciar a aplicação (execute o arquivo principal no NetBeans – nesse exemplo, trata-se do arquivo TarefasApplication.java) e fazer requisições HTTP para o endereço http://localhost:8080/tarefas. A seguir, você verá como fazer as requisições POST, GET, PUT e DELETE através do Postman. 
+        </p>
+        <p>POST</p>
+        <p>Para criar uma nova tarefa, é enviada uma requisição POST com um JSON no corpo da requisição. </p>
+        <ol>
+          <li>Selecione o método POST no menu à esquerda da barra de endereço. </li>
+          <li>Insira a URL da API na barra de endereço: http://localhost:8080/tarefas. </li>
+          <li>Clique na guia “Body” abaixo da barra de endereço.  </li>
+          <li>Selecione “raw” na parte inferior da guia e escolha o formato JSON.  </li>
+          <li>Em seguida, digite o corpo da solicitação. Nesse exemplo, será cadastrada a descrição da tarefa como “Fazer compras” e o seu status de completa como false para sinalizar que a tarefa não está completa ainda. 
+            <br>
+            <code>{ 
+            <br>      "descricao": "Fazer compras", 
+            <br>      "completa": false 
+            <br>  } 
+            </code>
+          </li>
+          <li>Clique no botão “Send” para enviar a solicitação. </li>
+          <li>O resultado da solicitação será exibido na seção de resposta abaixo da área de envio. </li>
+        </ol>
+        <a href="imgs/assets/fig-12.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-12.png" class="center-block img-responsive" alt="Na imagem, há a tela de requisição do aplicativo Postman. Nela, há a requisição “POST” selecionada e a URL http://localhost:8080/tarefas. Abaixo, a guia “Body” está selecionada, junto da opção “raw” e “JSON” com o corpo { “descricao”: “Fazer compras”, “completa”: false }. Abaixo desse conteúdo, há a área de resposta da requisição, com o Status “200 OK” e o corpo { “id”: 1, “descricao”: “Fazer compras”, “completa”: false}. ">
+        </a>
+        <p class="legenda-imagem">Figura 12 – Requisição POST no Postman  
+          Fonte: Postman (2023) 
+        </p>
+        <p>GET </p>
+        <p>
+          Para buscar todas as tarefas, é usada a requisição GET na URL. 
+        </p>
+        <p>
+          O processo aqui é mais simples!  
+        </p>
+        <ol>
+          <li>Selecione o método GET no menu à esquerda da barra de endereço. </li>
+          <li>Insira a URL da API na barra de endereço: http://localhost:8080/tarefas. </li>
+          <li>Clique no botão “Send” para enviar a solicitação. </li>
+        </ol>
+        <a href="imgs/assets/fig-13.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-13.png" class="center-block img-responsive" alt="Na imagem, há a tela de requisição do aplicativo Postman. Nela, há a requisição “GET” selecionada e a URL http://localhost:8080/tarefas. Abaixo, a guia “Params” está selecionada, mas sem nenhuma configuração feita. Abaixo desse conteúdo, há a área de resposta da requisição, com o Status “200 OK” e o corpo {{“id”: 1, “descricao”: “Fazer compras”, “completa”: false}}. ">
+        </a>
+        <p class="legenda-imagem">Figura 13 – Requisição GET no Postman  
+          Fonte: Postman (2023) 
+        </p>
+        <p>
+          Para buscar uma tarefa específica, envie uma requisição GET com o ID da tarefa na URL. No exemplo a seguir, foi buscada a tarefa com ID 1 (pois foi cadastrada apenas uma tarefa) usando a URL http://localhost:8080/tarefas/1. 
+        </p>
+        <a href="imgs/assets/fig-14.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-14.png" class="center-block img-responsive" alt="Na imagem, há a tela de requisição do aplicativo Postman. Nela, há a requisição “GET” selecionada e a URL http://localhost:8080/tarefas/1. Abaixo, a guia “Params” está selecionada, mas sem nenhuma configuração feita. Abaixo desse conteúdo, há a área de resposta da requisição, com o Status “200 OK” e o corpo {{“id”: 1, “descricao”: “Fazer compras”, “completa”: false}}. ">
+        </a>
+        <p class="legenda-imagem">Figura 14 – Requisição GET no Postman  
+          Fonte: Postman (2023) 
+        </p>
+        <p>PUT</p>
+        <p>
+          Para atualizar uma tarefa, envie uma requisição PUT com o ID da tarefa na URL e um JSON no corpo da requisição. 
+        </p>
+        <ol>
+          <li>Selecione o método PUT no menu à esquerda da barra de endereço. </li>
+          <li>Insira a URL da API na barra de endereço: http://localhost:8080/tarefas/1. </li>
+          <li>Clique na guia “Body” abaixo da barra de endereço.  </li>
+          <li>Selecione “raw” na parte inferior da guia e escolha o formato JSON.  </li>
+          <li>Em seguida, digite o corpo da solicitação. Nesse exemplo, será alterada a descrição da tarefa e também o seu status de completa para true. 
+            <br>
+            <code>{ 
+            <br>      "descricao": "Fazer compras no mercado", 
+            <br>      "completa": true 
+            <br>  } 
+            </code>
+          </li>
+          <li>Clique no botão “Send” para enviar a solicitação. </li>
+          <li>O resultado da solicitação será exibido na seção de resposta abaixo da área de envio. </li>
+        </ol>
+        <a href="imgs/assets/fig-15.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-15.png" class="center-block img-responsive" alt="Na imagem, há a tela de requisição do aplicativo Postman. Nela, há a requisição “PUT” selecionada e a URL http://localhost:8080/tarefas/1. Abaixo, a guia “Params” está selecionada, mas sem nenhuma configuração feita. Abaixo, a guia “Body” está selecionada, junto da opção “raw” e “JSON” com o corpo { “descricao”: “Fazer compras no mercado”, “completa”: true }. Abaixo desse conteúdo, há a área de resposta da requisição, com o Status “200 OK” e o corpo { “id”: 1, “descricao”: “Fazer compras no  mercado”, “completa”: true}. ">
+        </a>
+        <p class="legenda-imagem">Figura 15 – Requisição PUT no Postman  
+          Fonte: Postman (2023) 
+        </p>
+        <h3>DELETE </h3>
+        <p>
+          Para deletar uma tarefa, é enviada uma requisição DELETE com o ID da tarefa na URL. 
+        </p>
+        <ul>
+          <li>Selecione o método DELETE no menu à esquerda da barra de endereço. </li>
+          <li>Insira a URL da API na barra de endereço com o ID da tarefa: http://localhost:8080/tarefas/1. </li>
+          <li>Clique no botão “Send” para enviar a solicitação. </li>
+        </ul>
+        <a href="imgs/assets/fig-16.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-16.png" class="center-block img-responsive" alt="Na imagem, há a tela de requisição do aplicativo Postman. Nela, há a requisição “DELETE” selecionada e a URL http://localhost:8080/tarefas/1. Abaixo, a guia “Params” está selecionada, mas sem nenhuma configuração feita. Abaixo desse conteúdo, há a área de resposta da requisição, com o Status “200 OK” e o corpo “true”. ">
+        </a>
+        <p class="legenda-imagem">Figura 16 – Requisição DELETE no Postman  
+          Fonte: Postman (2023) 
+        </p>
+        <p>
+          É importante lembrar que esse código não utiliza um banco de dados, portanto, todas as tarefas serão armazenadas na memória durante a execução do programa. Isso significa que, ao reiniciar a aplicação, todas as tarefas serão perdidas. 
+        </p>
+        <p class="caixa-destaque icone-desafio"><strong>Desafio</strong>
+                    
+        </p>
+        <h3>Integração com sistema web</h3>
+        <p>
+          Agora que você já construiu sua API, já realizou todos os testes com o Postman e tem tudo funcionando, chegou a hora de construir um projeto web separado para consumir essa API.  
+        </p>
+        <p>
+          Esse projeto será bem simples, contendo apenas uma página HTML para o usuário interagir e os scripts em Javascript para fazer as requisições à API – para facilitar, será usada a biblioteca jQuery. 
+        </p>
+        <p>
+          Para continuar, crie uma pasta vazia com o nome de sua escolha e, dentro dela, crie um arquivo index.html. O código desse arquivo HTML ficará da seguinte maneira: 
+        </p>
+        <code>&lt;!DOCTYPE html> 
+          &lt;html> 
+          &lt;head> 
+              &lt;meta charset="UTF-8"> 
+              &lt;title>Minha Lista de Tarefas&lt;/title> 
+          &lt;/head> 
+          &lt;body> 
+          <br>     &lt;h1>Minha Lista de Tarefas&lt;/h1> 
+          <br>     &lt;h2>Cadastro de tarefas&lt;/h2> 
+          <br>     &lt;form id="formCriarTarefa"> 
+          <br>         &lt;label for="descricao">Descrição:&lt;/label> 
+          <br>         &lt;input type="text" id="descricao" name="descricao"> 
+          <br>         &lt;button type="submit">Adicionar&lt;/button> 
+          <br>     &lt;/form> 
+          <br>     &lt;h2>Tarefas cadastradas&lt;/h2> 
+          <br>     &lt;table id="tabelaTarefas"> 
+          <br>     &lt;thead> 
+          <br>         &lt;tr> 
+          <br>         &lt;th>ID&lt;/th> 
+          <br>         &lt;th>Descrição&lt;/th> 
+          <br>         &lt;th>Concluída&lt;/th> 
+          <br>         &lt;th>Excluir&lt;/th> 
+          <br>         &lt;/tr> 
+          <br>     &lt;/thead> 
+          <br>     &lt;tbody>&lt;/tbody> 
+          <br>     &lt;/table> 
+          <br>      
+          <br>     &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script> 
+          <br>     &lt;script src="script.js">&lt;/script> 
+          <br> &lt;/body> 
+          <br> &lt;/html> 
+
+        </code>
+        <p>
+          Esse é um código HTML básico para criar uma página web simples. Ele tem um título "Minha Lista de Tarefas", um formulário para criar novas tarefas e uma área para a lista de tarefas que será preenchida com as tarefas da API. O código HTML também inclui dois scripts JavaScript - um para usar a biblioteca jQuery e outro para o script personalizado que será criado a seguir. 
+        </p>
+        <p>
+          Agora, crie um arquivo chamado script.js e insira o seguinte código: 
+        </p>
+        <code>$(document).ready(function () { 
+        <br>      // Função para carregar as tarefas da API e exibi-las na tela 
+        <br>      function carregarTarefas() { 
+        <br>          $.ajax({ 
+        <br>              url: 'http://localhost:8080/tarefas', 
+        <br>              method: 'GET', 
+        <br>              success: function (data) { 
+        <br>                  // Limpa a tabela de tarefas 
+        <br>                  $('#tabelaTarefas tbody').empty(); 
+        <br>                  // Adiciona cada tarefa à tabela 
+        <br>                  for (let i = 0; i < data.length; i++) { 
+        <br>                      let tarefa = data[i]; 
+        <br>                      let checkbox = $('&lt;input>') 
+        <br>                          .attr('type', 'checkbox') 
+        <br>                          .prop('checked', tarefa.completa) 
+        <br>                          .change(function () { 
+        <br>                              atualizarTarefa($(this).parent().parent().attr('data-id'), { 
+        <br>                                  descricao: tarefa.descricao, 
+        <br>                                  completa: $(this).prop('checked') 
+        <br>                              }); 
+        <br>                          }); 
+        <br>                      let id = $('&lt;td>') 
+        <br>                          .text(tarefa.id); 
+        <br>                      let descricao = $('&lt;input>') 
+        <br>                          .attr('type', 'text') 
+        <br>                          .val(tarefa.descricao) 
+        <br>                          .blur(function () { 
+        <br>                              atualizarTarefa($(this).parent().attr('data-id'), { 
+        <br>                                  descricao: $(this).val(), 
+        <br>                                  completa: tarefa.completa 
+        <br>                              }); 
+        <br>                          }); 
+        <br>                      let concluida = $('&lt;td>') 
+        <br>                          .append(checkbox); 
+        <br>                      let botaoDeletar = $('&lt;button>') 
+        <br>                          .text('Excluir') 
+        <br>                          .click(function () { 
+        <br>                              deletarTarefa($(this).parent().parent().attr('data-id')); 
+        <br>                          }); 
+        <br>                      let excluir = $('&lt;td>') 
+        <br>                          .append(botaoDeletar); 
+        <br>                      let tr = $('&lt;tr>') 
+        <br>                          .attr('data-id', tarefa.id) 
+        <br>                          .append(id) 
+        <br>                          .append(descricao) 
+        <br>                          .append(concluida) 
+        <br>                          .append(excluir); 
+        <br>                      $('#tabelaTarefas tbody').append(tr); 
+        <br>                  } 
+        <br>              }, 
+        <br>              error: function () { 
+        <br>                  alert('Não foi possível carregar as tarefas da API.'); 
+        <br>              } 
+        <br>          }); 
+        <br>      } 
+        <br>
+      <br>  // Função para criar uma nova tarefa na API 
+      <br>      function criarTarefa(tarefa) { 
+      <br>          $.ajax({ 
+      <br>              url: 'http://localhost:8080/tarefas', 
+      <br>              method: 'POST', 
+      <br>              contentType: 'application/json', 
+      <br>              data: JSON.stringify(tarefa), 
+      <br>              success: function (data) { 
+      <br>                  // Limpa o formulário e recarrega a lista de tarefas 
+      <br>                  $('#descricao').val(''); 
+      <br>                  carregarTarefas(); 
+      <br>              }, 
+      <br>              error: function () { 
+      <br>                  alert('Não foi possível criar a tarefa na API.'); 
+      <br>              } 
+      <br>          }); 
+      <br>      } 
+      <br>      // Adiciona uma tarefa ao enviar o formulário 
+      <br>      $('#formCriarTarefa').submit(function (event) { 
+      <br>          event.preventDefault(); 
+      <br>          let descricao = $('#descricao').val(); 
+      <br>          if (!descricao) { 
+      <br>              alert('Por favor, preencha a descrição da tarefa.'); 
+      <br>              return; 
+      <br>          } 
+      <br>          let tarefa = { 
+      <br>              descricao: descricao, 
+      <br>              completa: false 
+      <br>          }; 
+      <br>          criarTarefa(tarefa); 
+      <br>      }); 
+      <br>      // Atualiza uma tarefa na API 
+      <br>      function atualizarTarefa(id, tarefa) { 
+      <br>          $.ajax({ 
+      <br>              url: 'http://localhost:8080/tarefas/' + id, 
+      <br>              method: 'PUT', 
+      <br>              contentType: 'application/json', 
+      <br>              data: JSON.stringify({ 
+      <br>                  descricao: tarefa.descricao, 
+      <br>                  completa: tarefa.completa 
+      <br>              }), 
+      <br>              success: function (data) { 
+      <br>                  // Recarrega a lista de tarefas 
+      <br>                  alert('Tarefa atualizada na API com sucesso!'); 
+      <br>                  carregarTarefas(); 
+      <br>              }, 
+      <br>              error: function () { 
+      <br>                  alert('Não foi possível atualizar a tarefa na API.'); 
+      <br>              } 
+      <br>          }); 
+      <br>      } 
+      <br>      // Deleta uma tarefa na API 
+      <br>      function deletarTarefa(id) { 
+      <br>          $.ajax({ 
+      <br>              url: 'http://localhost:8080/tarefas/' + id, 
+      <br>              method: 'DELETE', 
+      <br>              success: function (data) { 
+      <br>                  alert('Tarefa removida na API com sucesso!'); 
+      <br>                  // Recarrega a lista de tarefas 
+      <br>                  carregarTarefas(); 
+      <br>              }, 
+      <br>              error: function () { 
+      <br>                  alert('Não foi possível deletar a tarefa na API.'); 
+      <br>              } 
+      <br>          }); 
+      <br>      } 
+      <br>      // Carrega as tarefas ao abrir a página 
+      <br>      carregarTarefas(); 
+      <br>  }); 
+
+        </code>
+        <p>
+          Esse código já está comentado explicando tudo que foi implementado, mas será feito um resumo geral. O arquivo JavaScript contém várias funções que são executadas quando a página é carregada ou quando o usuário interage com a página. 
+        </p>
+        <ul>
+          <li>carregarTarefas(): é responsável por fazer uma requisição GET para a API e exibir as tarefas na lista. Essa função é chamada tanto ao carregar a página quanto após a criação ou exclusão de uma tarefa. </li>
+          <li>criarTarefa(): é responsável por criar uma nova tarefa na API e limpar o formulário após a submissão. Essa função é chamada quando o usuário clica no botão de adicionar tarefa. </li>
+          <li>deletarTarefa(): é responsável por excluir uma tarefa existente na API e atualizar a lista de tarefas após a exclusão. Essa função é chamada quando o usuário clica no botão de excluir uma tarefa. </li>
+          <li>atualizarTarefa(): é responsável por atualizar uma tarefa existente na API e atualizar a lista de tarefas após a atualização. Essa função é chamada quando o usuário marca ou desmarca a caixa de seleção de uma tarefa. </li>
+        </ul>
+        <p>
+          Ao final do arquivo JavaScript, há um trecho de código que associa a função "criarTarefa" ao evento "submit" do formulário e chama a função "carregarTarefas" para exibir as tarefas na lista ao carregar a página. 
+        </p>
+        <p>
+          Agora, com a API rodando no NetBeans, abra o arquivo index.html e tente cadastrar uma tarefa. 
+        </p>
+        <a href="imgs/assets/fig-17.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-17.png" class="center-block img-responsive" alt="No GIF, há a página web “Minha Lista de Tarefas” com as sessões “Cadastro de tarefas” contendo um miniformulário com o campo “Descrição” e o botão “Adicionar”, e “Tarefas cadastradas” sem nenhuma tarefa cadastrada. O campo de descrição é preenchido com “Teste” o botão “Adicionar” é pressionado. Nesse momento, a seção “Tarefas cadastradas” é atualizada e é exibido o item cadastrado em uma tabela com o valor de ID “1”, a descrição “Teste”, a checkbox “Concluída” desmarcada e um botão “Excluir” ao lado.  ">
+        </a>
+        <p class="legenda-imagem">Figura 17 – Figura Minha lista de Tarefas 
+          Fonte: Senac EAD (2023) 
+        </p>
+        <p>
+          Nesse exemplo, foi feito o cadastro da tarefa “Teste”. Ao clicar no botão de adicionar, a requisição POST é feita para a API. Após concluir o cadastro, é realizada a requisição GET para solicitar a lista de tarefas completa e exibi-la na tabela. Perceba que a descrição da tarefa é apresentada dentro de um elemento input do HTML. Isso é proposital para ter uma forma simples de editar o texto caso seja cometido algum erro de digitação. 
+        </p>
+        <p>
+          Foram testadas as requisições POST e GET da API. Agora será testada a requisição PUT alterando a descrição da tarefa “Teste” para “Teste de API”. 
+        </p>
+        <a href="imgs/assets/fig-18.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-18.png" class="center-block img-responsive" alt="No GIF, há a página web “Minha Lista de Tarefas” com as sessões “Cadastro de tarefas” contendo um miniformulário com o campo “Descrição” e o botão “Adicionar”, e “Tarefas cadastradas” com uma tarefa cadastrada. O item cadastrado está em uma tabela com o valor de ID “1”, a descrição “Teste”, a checkbox “Concluída” desmarcada e um botão “Excluir” ao lado. O mouse se posiciona sobre a input onde está a descrição “Teste” e muda o texto para “Teste de API”. Após isso, o mouse clica sobre uma área em branco, desfocando a input e, nesse momento, é exibido um alerta com a mensagem “Tarefa atualizada na API com sucesso”. ">
+        </a>
+        <p class="legenda-imagem">Figura 18 – Figura Minha lista de tarefas 
+          Fonte: Senac EAD (2023) 
+        </p>
+        <p>
+          Como é possível ver, o texto da tarefa será atualizado e a requisição PUT realizada sempre que se desfocar a input da descrição. 
+        </p>
+        <p>
+          Falando em requisição PUT, outra atualização para testar é o status da tarefa que é representado por uma checkbox. Ao marcar essa checkbox, a tarefa fica marcada como concluída. Para isso, basta clicar no elemento checkbox da tarefa. 
+        </p>
+        <a href="imgs/assets/fig-19.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-19.png" class="center-block img-responsive" alt="No GIF, há a página web “Minha Lista de Tarefas” com as sessões “Cadastro de tarefas” contendo um miniformulário com o campo “Descrição” e o botão “Adicionar”, e “Tarefas cadastradas” com uma tarefa cadastrada. O item cadastrado está em uma tabela com o valor de ID “1”, a descrição “Teste de API”, a checkbox “Concluída” desmarcada e um botão “Excluir” ao lado. O mouse se posiciona sobre a checkbox “Concluída” e clica sobre ele, tornando-a uma checkbox marcada. Após isso, é exibido um alerta com a mensagem “Tarefa atualizada na API com sucesso”. O mouse fecha o alerta clicando no botão “Ok” e repete a ação, desmarcando a checkbox e, mais uma vez, relevando o alerta com a mesma mensagem.  ">
+        </a>
+        <p class="legenda-imagem">Figura 19 – Figura Minha Lista de Tarefas 
+
+          Fonte: Senac EAD (2023) 
+          
+        </p>
+        <p>
+          Perceba que tarefas marcadas como concluídas podem ser desmarcadas, basta clicar sobre o elemento checkbox novamente. Por fim, será testada a exclusão de tarefas. Para remover uma tarefa cadastrada, basta clicar no botão “Excluir”. 
+        </p>
+        <a href="imgs/assets/fig-20.png" target="_blank" class="" aria-hidden="true">
+          <img src="imgs/assets/fig-20.png" class="center-block img-responsive" alt="No GIF, há a página web “Minha Lista de Tarefas” com as seções “Cadastro de tarefas” contendo um miniformulário com o campo “Descrição” e o botão “Adicionar”, e “Tarefas cadastradas” com uma tarefa cadastrada. O item cadastrado está em uma tabela com o valor de ID “1”, a descrição “Teste de API”, a checkbox “Concluída” desmarcada e um botão “Excluir” ao lado. O mouse se posiciona sobre o botão “Excluir” e clica nele. Após isso, é exibido um alerta com a mensagem “Tarefa removida na API com sucesso”.  ">
+        </a>
+        <p class="legenda-imagem">Figura 20 – Minha Lista de Tarefas 
+          Fonte: Senac EAD (2023) 
+        </p>
+        <p>
+          Ao excluir uma tarefa, a requisição DELETE é enviada para a API e o item é removido da lista de tarefas. Após concluir a remoção, é realizada a requisição GET novamente para solicitar a lista de tarefas atualizada. 
+        </p>
+<p class="caixa-destaque icone-desafio"><strong>Desafio</strong>
+  Implemente uma página para o projeto RESTful de livros do desafio anterior. Use AJAX para solicitar as operações de inclusão, consulta e exclusão. Aplique outros elementos que considerar necessários, como campos de entrada e tabelas. 
+</p>
+
+<h3>Encerramento</h3>
+<p>
+  Neste conteúdo, você aprendeu como instalar e configurar as ferramentas do ambiente de desenvolvimento para construir e testar APIs em Java e sua integração com um sistema web. Como desenvolvedor, você deve estar comprometido em continuar aprimorando os softwares para atender às necessidades dos usuários. A busca pela melhoria contínua deve ser constante, pois sempre há espaço para otimizar e evoluir os softwares. Portanto, continue seus estudos para alcançar esse objetivo. 
+</p>
+
+
+
+
+        
+
+
+
+
+
+
+           
+              
+            </div>
+            
+          </div>
+
+        </section>
+<!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+        <footer class="text-center no-print">
+          
+          <ul class="pagination">
+
+          </ul>
+         
+        </footer>
+
+    </div>
+
+    <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+<!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+<div class="ico-div-loader">
+	<img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../template/js/jquery.min.js"></script>
+    <script src="../template/js/bootstrap.min.js"></script>
+    <script src="../template/js/jquery.magnific-popup.min.js"></script>
+    <script src="../template/js/print.js"></script>
+    <script src="../template/js/template.config.js"></script>
+    <script src="../template/js/images.loader.js"></script>
+    <script src="../template/js/highlight.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/custom.js"></script>
+    <noscript>
+      <style media="screen">
+        .over-loader { display: none;}    
+      </style>
+    </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+     type: 'image',
+       mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+  
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+  
+      // The "opener" function should return the element from which popup will be zoomed in
+      // and to which popup will be scaled down
+      // By defailt it looks for an image tag:
+      opener: function(openerElement) {
+        // openerElement is the element on which popup was initialized, in this case its <a> tag
+        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+      },
+       image: {
+        markup: '<div class="mfp-figure">'+
+            '<div class="mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+ // Floated left
+            '<div class="mfp-bottom-bar">'+'<figcaption>'+'<div class="mfp-title" style="text-align:center"></div>'+
+              '<div class="mfp-counter"></div>'+'</figcaption>'+
+            '</div>'+
+            '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+  
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+  
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+       }
+    });
+  
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  
+  
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+  
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+  
+    $(document).ready(function() {
+      var $target = $('.animeStart'),
+          $target2 = $('.animeStop'),
+          targetBox = $('.box'),
+          animationClass = 'anime-init',
+          windowHeight = $(window).height(),
+          offset = windowHeight - (windowHeight / 4);
+  
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function() {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          } 
+        });
+      }
+      animeScroll();
+  
+      $(document).scroll(function() {
+        animeScroll();
+      });
+    });
+  
+  
+  </script>
+  
+  <script>
+    var scriptElem=document.createElement("script");
+    scriptElem.src="https://plugin.handtalk.me/web/latest/handtalk.min.js",
+    scriptElem.charset="UTF-8",
+    scriptElem.onload=function(){
+          window.ht = new HT({
+              token:"bf5b7efb148a829a126a0e0c9fd533bf",
+              align:"top",
+              videoEnabled: true,
+              ytEmbedReplace: true,           
+              mobileConfig:{align:"right",
+                            actionsAlign:"top",
+                            customButtonStyle:{
+                                  borderRadius:"6px",
+                                  size:"38px",
+                                  horizontalMargin:"13px",
+                                  bottomMargin:"140px",
+                                  rightMargin:"40px"}
+                            }
+            });        
+        $('.ht-skip').attr("aria-hidden","true")
+      },
+    document.body.appendChild(scriptElem);
+  </script>
+  </body>
+</html>

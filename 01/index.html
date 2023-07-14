@@ -79,7 +79,7 @@
               <h3>Introdução</h3>
               <p>Aplicações <i>web</i> são, por fundamento, baseadas nas interações cliente-servidor, que ocorrem de forma recorrente (cliente solicita, servidor responde). Nesse modelo, é possível desenvolver aplicações <i>web</i> de diferentes formas, destacando as estáticas e as dinâmicas. </p>
               <p>Um sistema <i>web</i> estático, em grande parte, é menos complexo, pois o conteúdo retornado é igual para todos os clientes que fizerem solicitações ao servidor, ou seja, retorna uma página fixa, sem informações personalizadas ou mutáveis ao usuário. A página usará HTML (marcação), CSS (estilização) e JavaScript (eventos, interações e animações). Veja a seguir um exemplo de interação com um sistema estático. </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
+              <a href="imgs/fig-01.png" target="_blank" aria-hidden="true"><img src="imgs/fig-01.png" class="center-block img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
               <p class="legenda-imagem">
                 Figura 1 – Funcionamento de um site estático 
                 Fonte: Nethmal (2020) 
@@ -87,7 +87,7 @@
               <p>
                 Em contrapartida, os chamados sites dinâmicos são aqueles em que parte do seu conteúdo é produzida dinamicamente para cada cliente que interage com o servidor. São sistemas que contam, geralmente, com o auxílio de uma base de dados. Além das linguagens de front-end (HTML, CSS, JS), precisa contar com uma linguagem de back-end capaz de tratar a requisição, processar as informações, eventualmente conectar a um banco de dados, montar e retornar a página como reposta ao usuário. Veja a seguir um exemplo de interação com um sistema dinâmico. 
               </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="Ilustração do funcionamento de um site dinâmico, mostrando a comunicação de um usuário (request) com um servidor que se comunica com uma base de dados e uma engine de templates antes de responder ao usuário."></a>
+              <a href="imgs/fig-02.png" target="_blank" aria-hidden="true"><img src="imgs/fig-02.png" class="center-block img-responsive" alt="Ilustração do funcionamento de um site dinâmico, mostrando a comunicação de um usuário (request) com um servidor que se comunica com uma base de dados e uma engine de templates antes de responder ao usuário."></a>
               <p class="legenda-imagem">
                 Figura 2 – Funcionamento de um site dinâmico 
                 Fonte: Nethmal (2020) 
@@ -104,11 +104,11 @@
               <p>
                 De forma oposta à camada de front-end, a camada back-end restringe interações diretas com o usuário, no entanto é nessa camada que os dados são tratados e as interações com o banco de dados são feitas e retornadas ao usuário quando solicitadas. Em sistemas dinâmicos, essas consultas ocorrem de maneira constante, por exemplo: determinado usuário realiza o login em determinado sistema e os dados são tratados e comparados com os presentes na base de dados em questão. Uma vez verificado, o acesso à área restrita do sistema é liberado ou bloqueado. Como é possível perceber, é nessa camada também que são encontrados os mecanismos mais consistentes para a segurança de um sistema. Entre as linguagens mais utilizadas para a programação back-end estão: 
               </p>
-              <ul>
-                <li>Java</li>
-                <li>Python</li>
-                <li>C#  </li>
-                <li>PHP   </li>
+              <ul class="lista">
+                <li><img src="imgs/Icon awesome-marker.png" alt="">Java</li>
+                <li><img src="imgs/Icon awesome-marker.png" alt="">Python</li>
+                <li><img src="imgs/Icon awesome-marker.png" alt="">C#  </li>
+                <li><img src="imgs/Icon awesome-marker.png" alt="">PHP   </li>
               </ul>
               <h3>Protocolo HTTP e comunicação entre front-end e back-end </h3>
               <p>
@@ -117,12 +117,11 @@
               <p>
                 Essa comunicação ocorre da seguinte maneira: o cliente faz uma requisição para o servidor (<i>request</i>), com os dados dessa requisição, o servidor então apresenta uma resposta ao cliente (response) de acordo com o solicitado. Esse conteúdo será visto a seguir. Também serão abordados os principais verbos utilizados no HTTP (GET e POST). 
               </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="Ilustração do campo de URL presente no navegador, a fim de destacar o protocolo HTTP. "></a>
+              <a href="imgs/fig-03.png" target="_blank" aria-hidden="true"><img src="imgs/fig-03.png" class="center-block img-responsive" alt="Ilustração do campo de URL presente no navegador, a fim de destacar o protocolo HTTP. "></a>
               <p class="legenda-imagem">
                 Figura 3 – Ilustração didática do protocolo HTTP 
                 Fonte: Souza (2019) 
               </p>
-              <p>Clique ou toque para visualizar o conteúdo. </p>
               <div class="no-print" aria-hidden="true">
                 <p>Clique ou toque para visualizar o conteúdo.</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -171,7 +170,7 @@
                           <li>400 – 499 – Erros no lado do cliente </li>
                           <li>500 – 599 – Erros no lado do servidor </li>
                         </ul>
-                        <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="Ilustração de uma interação presente no modelo cliente-servidor demonstrando, por meio de duas figuras (uma representando o cliente e outra o servidor), como ocorre a requisição e a resposta nesse modelo. "></a>
+                        <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/fig-04.png" class="center-block img-responsive" alt="Ilustração de uma interação presente no modelo cliente-servidor demonstrando, por meio de duas figuras (uma representando o cliente e outra o servidor), como ocorre a requisição e a resposta nesse modelo. "></a>
                         <p class="legenda-imagem">
                           Figura 4 – Modelo cliente-servidor, com requisição e resposta 
 Fonte: Hanashiro (2019) 
@@ -190,7 +189,7 @@ Fonte: Hanashiro (2019)
               <p>
                 Quando o usuário requisita algo ao servidor através de URL, o cliente (um navegador como Chrome ou Firefox, por exemplo) monta uma requisição e envia ao servidor, que aciona o <i>web</i> server, que processa a requisição montando uma resposta, muitas vezes, com base em arquivos HTML mapeados pelo software. Essa resposta é enviada ao cliente, que a decodifica e a apresenta ao usuário. 
               </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. "></a>
+              <a href="imgs/fig-05.png" target="_blank" aria-hidden="true"><img src="imgs/fig-05.png" class="center-block img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. "></a>
               <p class="legenda-imagem">
                 Figura 5 – Requisição de uma página estática 
 
@@ -204,7 +203,7 @@ Fonte: Hanashiro (2019)
                 <p><strong>:8080</strong> é a porta que deverá ser usada para acessar o servidor <i>web</i>. Quando ela não é informada, assume-se a porta 80. </p>
                 <p><strong>/meu-site</strong> é o recurso requisitado do servidor, que geralmente resultará em uma página <i>web</i>. </p>
                 <p><strong>?param=abc</strong> são parâmetros opcionais enviados na requisição. Esses parâmetros podem ser processados pelo servidor como dados de entrada do usuário. </p>
-              </div><strong>
+              </div>
                 <p>
                   <i>web</i>servers como o Apache sozinhos são ótimos para fornecer páginas estáticas. No entanto, para um sistema <i>web</i>dinâmico, é necessário integrar o servidor <i>web</i>a linguagens como PHP, Python, Ruby, C# ou Java. No caso do Apache, o mais comum é usá-lo com PHP. Para Java, há opções como o Tomcat e o Glassfish. 
                 </p>
@@ -253,18 +252,32 @@ Fonte: Hanashiro (2019)
                       </div>
                     </div>
                     <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingTwo">
+                      <div class="panel-heading" role="tab" id="headingTre">
                         <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTre" aria-expanded="false" aria-controls="collapseTre">
                             JSP (JavaServer Pages) e JSF (JavaServer Faces):  
                           </a>
                         </h4>
                       </div>
-                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div id="collapseTre" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTre">
                         <div class="panel-body">
                           <p>São tecnologias de Java para a criação de páginas <i>web</i> geradas dinamicamente, permitindo incluir informações processadas dentro de uma estrutura HTML. São linguagens, semelhantes a outras como PHP e ASP, que incluem trechos Java em meio a código HTML e substituem a criação via código dos Servlets e facilitam o desenvolvimento de sistemas <i>web</i>. </p>
 
-                          <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. "></a>
+                          <code>
+                          <br>  &lt;%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII" %> 
+                          <br>  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd"> 
+                          <br>  &lt;html> 
+                          <br>  &lt;head> 
+                          <br>      &lt;meta http-equiv="Content-Type" content="text/html; charset=US-ASCII"> 
+                          <br>      &lt;title>Página JSP&lt;/title> 
+                          <br>  &lt;/head> 
+                          <br>  &lt;%@ page import="java.util.Date" %> 
+                          <br>      &lt;body> 
+                          <br>          &lt;h3>Bem vindo!&lt;/h3><br> 
+                          <br>          &lt;strong>Date e hora atuais: &lt;/strong>: <%=new Date() %> 
+                          <br>      &lt;/body> 
+                          <br>  &lt;/html> 
+                          </code>
                           <p class="legenda-imagem">
                             Tabela 1 – Exemplo de código JSP 
 
@@ -281,7 +294,7 @@ Fonte: Hanashiro (2019)
                 <h3>Spring Framework </h3>
                 <p>O Spring é um extenso framework Java, que visa facilitar o desenvolvimento com base em técnicas de injeção de dependências e inversão de controle. O Spring é hoje o framework Java mais popular do mundo. Esse framework tem como objetivo facilitar muitos aspectos da programação Java, tornando-a mais fácil, rápida e segura, contando com aproximadamente 20 módulos para diferentes propósitos. </p>
                 
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="Círculo de cor verde com uma folha branca dentro. À direita o nome “Spring” em verde. "></a>
+              <a href="imgs/fig-06.png" target="_blank" aria-hidden="true"><img src="imgs/fig-06.png" class="center-block img-responsive" alt="Círculo de cor verde com uma folha branca dentro. À direita o nome “Spring” em verde. "></a>
               <p class="legenda-imagem">
                 Figura 6 – Logo do Spring Framework 
                 Fonte: Spring (c2023)
@@ -289,7 +302,7 @@ Fonte: Hanashiro (2019)
               <p>
                 Entre muitos aspectos, o Spring ainda conta com um módulo de banco de dados de forma integrada, o Spring Data. Vale ressaltar que esse framework ainda conta com um módulo MVC (Model, View e Controller), que facilita o desenvolvimento de aplicação <i>web</i> utilizando esse padrão.  
               </p>
-              <a href="imgs/figura_1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/figura_1.png" class="center-block img-responsive" alt="Quadro verde com título “Spring Framework Runtime”. Dentro dele, há um quadro lilás com título “Data Access/Integration”, com quadros menores com os nomes “JDBC“, “ORM”, “OXM”, “JMS” e “Transactions” internamente. Ao lado, área turquesa com título “Web (MVC/Remoting)”, com quadros menores com os nomes “Web”, “Servlet”, “Portlet” e “Struts”. Abaixo, na área verde, quadros menores com os nomes “AOP”, “Aspects” e “Instrumentation”, lado a lado. Abaixo, área verde limão com título “Core Container” e quadros menores com os nomes “Beans”, “Core”, “Context”, “Expression Language”. Abaixo, uma quadro largo na área verde principal com título “Test”. "></a>
+              <a href="imgs/fig-07.png" target="_blank"  aria-hidden="true"><img src="imgs/fig-07.png" class="center-block img-responsive" alt="Quadro verde com título “Spring Framework Runtime”. Dentro dele, há um quadro lilás com título “Data Access/Integration”, com quadros menores com os nomes “JDBC“, “ORM”, “OXM”, “JMS” e “Transactions” internamente. Ao lado, área turquesa com título “Web (MVC/Remoting)”, com quadros menores com os nomes “Web”, “Servlet”, “Portlet” e “Struts”. Abaixo, na área verde, quadros menores com os nomes “AOP”, “Aspects” e “Instrumentation”, lado a lado. Abaixo, área verde limão com título “Core Container” e quadros menores com os nomes “Beans”, “Core”, “Context”, “Expression Language”. Abaixo, uma quadro largo na área verde principal com título “Test”. "></a>
               <p class="legenda-imagem">
                 Figura 7 – Arquitetura geral do Spring Framework  
 
@@ -309,21 +322,36 @@ Fonte: Spring (c2023)
                 Clique ou toque para visualizar o conteúdo: 
               </p>
               <p>
-                <!-- painel clicavel -->
-              <p> Inversão de Controle (IoC) </p>
-              <p> Inversão de Controle (IoC – Inversion of Control) é um princípio de design no qual um objeto em vez de criar suas próprias dependências (ou seja, outros objetos de que ele precisa para funcionar), ele delega essa tarefa a um "contêiner" especializado em gerenciar essas dependências. Por exemplo, se um objeto A precisa de outro objeto B para funcionar, em vez de A criar uma nova instância de B, o contêiner IoC cria a instância de B e a fornece a A. </p>
+              
+                <div class="caixa-destaque bg-primaria-02 borda-primaria-01">
+                  <ul id="abas" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Inversão de Controle (IoC)</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Injeção de Dependência (DI)</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Beans</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home">
+                      <p> Inversão de Controle (IoC – Inversion of Control) é um princípio de design no qual um objeto em vez de criar suas próprias dependências (ou seja, outros objetos de que ele precisa para funcionar), ele delega essa tarefa a um "contêiner" especializado em gerenciar essas dependências. Por exemplo, se um objeto A precisa de outro objeto B para funcionar, em vez de A criar uma nova instância de B, o contêiner IoC cria a instância de B e a fornece a A. </p>
               <p> Imagine que você precisa construir uma casa e, para isso, precisa de um encanador, um eletricista e um pedreiro. Em vez de você mesmo procurar e contratar cada um desses profissionais, você contrata uma empresa de construção que cuida de todos os aspectos da construção, incluindo a contratação desses profissionais. Isso é semelhante ao IoC, em que você delega a tarefa de gerenciar as dependências do seu programa a um contêiner especializado em gerenciar essas dependências. </p>
-              <p> Injeção de Dependência (DI) </p>
-              <p> Injeção de Dependência (DI – Dependency Injection) é a técnica utilizada pelo Spring Framework para implementar a Inversão de Controle. Ela define como as classes serão criadas e onde serão usadas em um programa. Por exemplo, se uma classe A precisa de uma instância da classe B para executar seu método, a classe A pode indicar que precisa de uma instância de B por meio de um ponto de injeção, como um construtor. Quando a classe A for executada, o contêiner do Spring Framework criará uma instância da classe B e a injetará na classe A, permitindo que o método b.metodoB() seja executado. </p>
+              
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile">
+                      <p> Injeção de Dependência (DI – Dependency Injection) é a técnica utilizada pelo Spring Framework para implementar a Inversão de Controle. Ela define como as classes serão criadas e onde serão usadas em um programa. Por exemplo, se uma classe A precisa de uma instância da classe B para executar seu método, a classe A pode indicar que precisa de uma instância de B por meio de um ponto de injeção, como um construtor. Quando a classe A for executada, o contêiner do Spring Framework criará uma instância da classe B e a injetará na classe A, permitindo que o método b.metodoB() seja executado. </p>
               <p> Podemos pensar na Injeção de Dependência como um serviço de entrega que traz exatamente o que você precisa, quando você precisa. Se você precisa de leite, pão e manteiga para o café da manhã, você pode simplesmente indicar isso para o serviço de entrega, e eles trarão esses itens exatamente no momento em que você precisa deles. Da mesma forma, a Injeção de Dependência traz exatamente as instâncias de classes que um objeto precisa para funcionar, quando ele precisa delas. </p>
-              <p> Beans </p>
-              <p> “Beans” são objetos que são criados, gerenciados e mantidos pelo contêiner do Spring. Eles representam as diferentes instâncias de classes que são definidas pelo programador e que são gerenciadas pelo contêiner do Spring. Por meio da configuração de Beans, os desenvolvedores podem definir as dependências e as características de cada objeto, e o contêiner do Spring se encarrega de gerenciar todo o ciclo de vida desses objetos. </p>
-              <p> Os Beans estão intimamente relacionados com a Inversão de Controle e a Injeção de Dependência, pois eles são criados e gerenciados pelo contêiner do Spring, que é responsável por injetar as dependências necessárias em cada objeto, conforme definido na configuração do programa. Isso permite que os desenvolvedores se concentrem em criar a lógica de negócios de suas classes, sem se preocupar com a criação e o gerenciamento de objetos manualmente. </p>
-              <p> Além disso, o contêiner do Spring também oferece recursos para gerenciar a configuração dos Beans, como a criação e a destruição de objetos, a configuração de propriedades e dependências, a gestão de escopos, entre outros recursos. </p>
-              <p> Em resumo, os Beans do Spring Framework são objetos que são criados e gerenciados pelo contêiner do Spring, permitindo que os desenvolvedores se concentrem na lógica de negócios e deixem a criação e o gerenciamento de objetos por conta do contêiner. Eles são uma parte importante da IoC e da DI, que fazem parte da filosofia do Spring de oferecer um ambiente de desenvolvimento mais modular, escalável e eficiente.</p>
-              </p>
-              <p>Em resumo, o Spring implementa a Inversão de Controle e a Injeção de Dependência para tornar o desenvolvimento de aplicativos mais fácil e modular. Ele fornece um ambiente gerenciado que centraliza a configuração de objetos e suas dependências, permitindo que os desenvolvedores se concentrem mais na lógica de negócios do que na infraestrutura do programa. Essa configuração toda seria feita manualmente com as implementações clássicas de Servlets e JSP de Java. </p>
-              <p>
+              
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="messages">
+                      <p> “Beans” são objetos que são criados, gerenciados e mantidos pelo contêiner do Spring. Eles representam as diferentes instâncias de classes que são definidas pelo programador e que são gerenciadas pelo contêiner do Spring. Por meio da configuração de Beans, os desenvolvedores podem definir as dependências e as características de cada objeto, e o contêiner do Spring se encarrega de gerenciar todo o ciclo de vida desses objetos. </p>
+                      <p> Os Beans estão intimamente relacionados com a Inversão de Controle e a Injeção de Dependência, pois eles são criados e gerenciados pelo contêiner do Spring, que é responsável por injetar as dependências necessárias em cada objeto, conforme definido na configuração do programa. Isso permite que os desenvolvedores se concentrem em criar a lógica de negócios de suas classes, sem se preocupar com a criação e o gerenciamento de objetos manualmente. </p>
+                      <p> Além disso, o contêiner do Spring também oferece recursos para gerenciar a configuração dos Beans, como a criação e a destruição de objetos, a configuração de propriedades e dependências, a gestão de escopos, entre outros recursos. </p>
+                      <p> Em resumo, os Beans do Spring Framework são objetos que são criados e gerenciados pelo contêiner do Spring, permitindo que os desenvolvedores se concentrem na lógica de negócios e deixem a criação e o gerenciamento de objetos por conta do contêiner. Eles são uma parte importante da IoC e da DI, que fazem parte da filosofia do Spring de oferecer um ambiente de desenvolvimento mais modular, escalável e eficiente.</p>
+                      </p>
+                      <p>Em resumo, o Spring implementa a Inversão de Controle e a Injeção de Dependência para tornar o desenvolvimento de aplicativos mais fácil e modular. Ele fornece um ambiente gerenciado que centraliza a configuração de objetos e suas dependências, permitindo que os desenvolvedores se concentrem mais na lógica de negócios do que na infraestrutura do programa. Essa configuração toda seria feita manualmente com as implementações clássicas de Servlets e JSP de Java. </p>
+                      <p>
+                    </div>
+                  </div>
+                </div>
                 Com a IoC e a DI, os desenvolvedores podem definir as dependências de seus objetos de forma clara e simples, sem se preocupar em criá-las manualmente. O resultado é um código mais limpo, modular e escalável, que pode ser facilmente mantido e expandido. 
               </p>
               <h3>Encerramento</h3>
