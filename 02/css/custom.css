@@ -8,12 +8,20 @@ body{
 .container{
   background-color: #fff;
 }
+.code1 .hljs-meta{
+  background-color:darkolivegreen!important;
+}
 
 /*  */
 .destaque_code{
-  background-color: aquamarine;
-  max-width: 500px;
+  background-color: #000;
+  padding: 6px 25px;
+  margin-top: -20px;
+  margin-bottom: -25px;
 }
+.destaque_code span{
+  background-color: aquamarine !important;}
+
 .lista2 li{
   list-style: none;
 }
