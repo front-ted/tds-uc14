@@ -75,26 +75,26 @@
             <div class="container">
               <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
               
-              <h2 class="acessivel print">Arquitetura <i>web</i> em camadas</h2>
+              <h2>Arquitetura <i>web</i> em camadas</h2>
               <h3>Introdução</h3>
               <p>Aplicações <i>web</i> são, por fundamento, baseadas nas interações cliente-servidor, que ocorrem de forma recorrente (cliente solicita, servidor responde). Nesse modelo, é possível desenvolver aplicações <i>web</i> de diferentes formas, destacando as estáticas e as dinâmicas. </p>
               <p>Um sistema <i>web</i> estático, em grande parte, é menos complexo, pois o conteúdo retornado é igual para todos os clientes que fizerem solicitações ao servidor, ou seja, retorna uma página fixa, sem informações personalizadas ou mutáveis ao usuário. A página usará HTML (marcação), CSS (estilização) e JavaScript (eventos, interações e animações). Veja a seguir um exemplo de interação com um sistema estático. </p>
               <a href="imgs/fig-01.png" target="_blank" aria-hidden="true"><img src="imgs/fig-01.png" class="center-block img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
               <p class="legenda-imagem">
-                Figura 1 – Funcionamento de um site estático 
+                Figura 1 – Funcionamento de um site estático  <br>
                 Fonte: Nethmal (2020) 
               </p>
               <p>
-                Em contrapartida, os chamados sites dinâmicos são aqueles em que parte do seu conteúdo é produzida dinamicamente para cada cliente que interage com o servidor. São sistemas que contam, geralmente, com o auxílio de uma base de dados. Além das linguagens de front-end (HTML, CSS, JS), precisa contar com uma linguagem de back-end capaz de tratar a requisição, processar as informações, eventualmente conectar a um banco de dados, montar e retornar a página como reposta ao usuário. Veja a seguir um exemplo de interação com um sistema dinâmico. 
+                Em contrapartida, os chamados sites dinâmicos são aqueles em que parte do seu conteúdo é produzida dinamicamente para cada cliente que interage com o servidor. São sistemas que contam, geralmente, com o auxílio de uma base de dados. Além das linguagens de <i>back-end</i> (HTML, CSS, JS), precisa contar com uma linguagem de <i>back-end</i> capaz de tratar a requisição, processar as informações, eventualmente conectar a um banco de dados, montar e retornar a página como reposta ao usuário. Veja a seguir um exemplo de interação com um sistema dinâmico. 
               </p>
               <a href="imgs/fig-02.png" target="_blank" aria-hidden="true"><img src="imgs/fig-02.png" class="center-block img-responsive" alt="Ilustração do funcionamento de um site dinâmico, mostrando a comunicação de um usuário (request) com um servidor que se comunica com uma base de dados e uma engine de templates antes de responder ao usuário."></a>
               <p class="legenda-imagem">
-                Figura 2 – Funcionamento de um site dinâmico 
+                Figura 2 – Funcionamento de um site dinâmico <br>
                 Fonte: Nethmal (2020) 
               </p>
-              <h3>Conceitos de camadas front-end e back-end </h3>
+              <h3>Conceitos de camadas <i>back-end</i> e <i>back-end</i> </h3>
               <p>
-                A camada front-end é tudo o que está sendo apresentado na tela do usuário, ou seja, o que pode ser visualizado por ele ao acessar determinada página. É toda a parte visível de um site, como formulários, imagens, menus, botões, listas e tabelas. Ainda pertencente à camada do front-end, pode-se ressaltar toda a interatividade presente em uma página, havendo sites desenvolvidos apenas com a utilização dessa camada visual. Os chamados sites estáticos são aqueles em que não há interação com o banco de dados. As principais linguagens para o desenvolvimento front-end são: 
+                A camada <i>back-end</i> é tudo o que está sendo apresentado na tela do usuário, ou seja, o que pode ser visualizado por ele ao acessar determinada página. É toda a parte visível de um site, como formulários, imagens, menus, botões, listas e tabelas. Ainda pertencente à camada do <i>back-end</i>, pode-se ressaltar toda a interatividade presente em uma página, havendo sites desenvolvidos apenas com a utilização dessa camada visual. Os chamados sites estáticos são aqueles em que não há interação com o banco de dados. As principais linguagens para o desenvolvimento <i>back-end</i> são: 
               </p>
               <ul>
                 <li>HTML</li>
@@ -102,7 +102,7 @@
                 <li>JavaScript</li>
               </ul>
               <p>
-                De forma oposta à camada de front-end, a camada back-end restringe interações diretas com o usuário, no entanto é nessa camada que os dados são tratados e as interações com o banco de dados são feitas e retornadas ao usuário quando solicitadas. Em sistemas dinâmicos, essas consultas ocorrem de maneira constante, por exemplo: determinado usuário realiza o login em determinado sistema e os dados são tratados e comparados com os presentes na base de dados em questão. Uma vez verificado, o acesso à área restrita do sistema é liberado ou bloqueado. Como é possível perceber, é nessa camada também que são encontrados os mecanismos mais consistentes para a segurança de um sistema. Entre as linguagens mais utilizadas para a programação back-end estão: 
+                De forma oposta à camada de <i>back-end</i>, a camada <i>back-end</i> restringe interações diretas com o usuário, no entanto é nessa camada que os dados são tratados e as interações com o banco de dados são feitas e retornadas ao usuário quando solicitadas. Em sistemas dinâmicos, essas consultas ocorrem de maneira constante, por exemplo: determinado usuário realiza o login em determinado sistema e os dados são tratados e comparados com os presentes na base de dados em questão. Uma vez verificado, o acesso à área restrita do sistema é liberado ou bloqueado. Como é possível perceber, é nessa camada também que são encontrados os mecanismos mais consistentes para a segurança de um sistema. Entre as linguagens mais utilizadas para a programação <i>back-end</i> estão: 
               </p>
               <ul class="lista">
                 <li><img src="imgs/Icon awesome-marker.png" alt="">Java</li>
@@ -110,16 +110,16 @@
                 <li><img src="imgs/Icon awesome-marker.png" alt="">C#  </li>
                 <li><img src="imgs/Icon awesome-marker.png" alt="">PHP   </li>
               </ul>
-              <h3>Protocolo HTTP e comunicação entre front-end e back-end </h3>
+              <h3>Protocolo HTTP e comunicação entre <i>back-end</i> e <i>back-end</i> </h3>
               <p>
-                O protocolo HTTP é o responsável pela comunicação entre duas máquinas na <i>web</i>, uma máquina cliente e outra servidor (onde está armazenado determinado site). Ou seja, é por meio do protocolo HTTP que se comunica a camada de front-end com a camada de back-end. 
+                O protocolo HTTP é o responsável pela comunicação entre duas máquinas na <i>web</i>, uma máquina cliente e outra servidor (onde está armazenado determinado site). Ou seja, é por meio do protocolo HTTP que se comunica a camada de <i>back-end</i> com a camada de <i>back-end</i>. 
               </p>
               <p>
-                Essa comunicação ocorre da seguinte maneira: o cliente faz uma requisição para o servidor (<i>request</i>), com os dados dessa requisição, o servidor então apresenta uma resposta ao cliente (response) de acordo com o solicitado. Esse conteúdo será visto a seguir. Também serão abordados os principais verbos utilizados no HTTP (GET e POST). 
+                Essa comunicação ocorre da seguinte maneira: o cliente faz uma requisição para o servidor (<i>request</i>), com os dados dessa requisição, o servidor então apresenta uma resposta ao cliente (<i>response</i>) de acordo com o solicitado. Esse conteúdo será visto a seguir. Também serão abordados os principais verbos utilizados no HTTP (GET e POST). 
               </p>
               <a href="imgs/fig-03.png" target="_blank" aria-hidden="true"><img src="imgs/fig-03.png" class="center-block img-responsive" alt="Ilustração do campo de URL presente no navegador, a fim de destacar o protocolo HTTP. "></a>
               <p class="legenda-imagem">
-                Figura 3 – Ilustração didática do protocolo HTTP 
+                Figura 3 – Ilustração didática do protocolo HTTP <br>
                 Fonte: Souza (2019) 
               </p>
               <div class="no-print" aria-hidden="true">
@@ -136,7 +136,7 @@
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                       <div class="panel-body">
                         <p>Em tradução direta, a palavra <i>request</i> significa requisição, ou seja, é um pedido que o cliente realiza ao servidor. Nesse pedido, encontram-se todos os dados necessários para atender à solicitação do cliente, podendo ser desde dados estáticos (já presentes na página) até dados de formulários (digitados pelo próprio cliente). </p>
-                        <p>O <i>request</i> acontece a cada interação com uma página. Por exemplo: ao clicar em uma categoria de filmes de uma plataforma streaming, você está fazendo uma requisição ao servidor, que devolve os dados da página solicitada (response). Isso também acontece ao cadastrar um novo determinado recurso. Nessa situação, é enviada a requisição juntamente com os dados do formulário. Vale destacar que toda informação em HTTP é transportada como texto.  </p>
+                        <p>O <i>request</i> acontece a cada interação com uma página. Por exemplo: ao clicar em uma categoria de filmes de uma plataforma streaming, você está fazendo uma requisição ao servidor, que devolve os dados da página solicitada (<i>response</i>). Isso também acontece ao cadastrar um novo determinado recurso. Nessa situação, é enviada a requisição juntamente com os dados do formulário. Vale destacar que toda informação em HTTP é transportada como texto.  </p>
                         <p>O protocolo ainda define verbos ou métodos, que são modos de interpretar essas requisições. Os mais comuns são GET e POST. </p>
                         <ul>
                           <li>GET – Neste verbo, os parâmetros são enviados por meio do cabeçalho da requisição, ficando visíveis os dados transmitidos pela URL. </li>
@@ -153,13 +153,13 @@
                     <div class="panel-heading" role="tab" id="headingTwo">
                       <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Response
+                          <i>Response</i>
                         </a>
                       </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                       <div class="panel-body">
-                        <p>Como visto anteriormente, o <i>request</i> é uma requisição feita ao servidor com dados que o cliente deseja receber do servidor. A partir do processamento em servidor, é enviada a resposta – ou response – contendo os dados solicitados. Por exemplo, ao solicitar uma página como “www.ead.senac.br”, um <i>request</i> é enviado ao servidor, que fará processamentos, e um response é enviado de volta pelo servidor com os dados da página (o próprio código HTML dela). </p>
+                        <p>Como visto anteriormente, o <i>request</i> é uma requisição feita ao servidor com dados que o cliente deseja receber do servidor. A partir do processamento em servidor, é enviada a resposta – ou <i>response</i> – contendo os dados solicitados. Por exemplo, ao solicitar uma página como “www.ead.senac.br”, um <i>request</i> é enviado ao servidor, que fará processamentos, e um <i>response</i> é enviado de volta pelo servidor com os dados da página (o próprio código HTML dela). </p>
                         <p>
                           Junto com os dados de resposta (o corpo da resposta), um código de status é enviado. Trata-se de um número entre 100 e 599, em que cada centena tem uma categoria para os status, sendo elas: 
                         </p>
@@ -172,7 +172,7 @@
                         </ul>
                         <a href="imgs/fig-04.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/fig-04.png" class="center-block img-responsive" alt="Ilustração de uma interação presente no modelo cliente-servidor demonstrando, por meio de duas figuras (uma representando o cliente e outra o servidor), como ocorre a requisição e a resposta nesse modelo. "></a>
                         <p class="legenda-imagem">
-                          Figura 4 – Modelo cliente-servidor, com requisição e resposta 
+                          Figura 4 – Modelo cliente-servidor, com requisição e resposta <br>
 Fonte: Hanashiro (2019) 
                         </p>
                         <p>Visto essas situações, é possível definir o protocolo HTTP como um protocolo sem estado (stateless), e como não guarda estados, cada par de requisição/resposta é único e independente. Sendo assim, o servidor não armazena informações referentes às diversas requisições que recebe, o que simplifica a estrutura necessária de servidor, uma vez que não há necessidade de armazenamento adicional para lidar com as interações em andamento. </p>
@@ -191,9 +191,9 @@ Fonte: Hanashiro (2019)
               </p>
               <a href="imgs/fig-05.png" target="_blank" aria-hidden="true"><img src="imgs/fig-05.png" class="center-block img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. "></a>
               <p class="legenda-imagem">
-                Figura 5 – Requisição de uma página estática 
+                Figura 5 – Requisição de uma página estática <br>
 
-                Fonte: 
+                Fonte: Senac EAD (2023)  
               </p>
               <p>A URL (sigla para Uniform Resource Locator ou Localizador Uniforme de Recursos) é o endereço por meio do qual se alcança um servidor <i>web</i>. Observe a URL http://localhost:8080/meu-site?param=abc a seguir. </p>
               
@@ -205,11 +205,11 @@ Fonte: Hanashiro (2019)
                 <p><strong>?param=abc</strong> são parâmetros opcionais enviados na requisição. Esses parâmetros podem ser processados pelo servidor como dados de entrada do usuário. </p>
               </div>
                 <p>
-                  <i>web</i>servers como o Apache sozinhos são ótimos para fornecer páginas estáticas. No entanto, para um sistema <i>web</i>dinâmico, é necessário integrar o servidor <i>web</i>a linguagens como PHP, Python, Ruby, C# ou Java. No caso do Apache, o mais comum é usá-lo com PHP. Para Java, há opções como o Tomcat e o Glassfish. 
+                  <i>Web</i>servers como o Apache sozinhos são ótimos para fornecer páginas estáticas. No entanto, para um sistema <i>web</i> dinâmico, é necessário integrar o servidor <i>web</i> a linguagens como PHP, Python, Ruby, C# ou Java. No caso do Apache, o mais comum é usá-lo com PHP. Para Java, há opções como o Tomcat e o Glassfish. 
                 </p>
                 <h3>Java para <i>web</i></h3>
                 <p>
-                  Java conta com uma série de especificações para diferentes finalidades de softwares. Uma das mais notáveis é o Java EE (Java Enterprise Edition), que especifica e fornece bibliotecas para o desenvolvimento de aplicações para web. A partir das bibliotecas de Java EE – ou de frameworks que se utilizem delas, como será visto adiante – é possível programar back-end em uma aplicação <i>web</i>e integrar a camada de front-end, montando páginas com informações processadas. 
+                  Java conta com uma série de especificações para diferentes finalidades de softwares. Uma das mais notáveis é o Java EE (Java Enterprise Edition), que especifica e fornece bibliotecas para o desenvolvimento de aplicações para web. A partir das bibliotecas de Java EE – ou de frameworks que se utilizem delas, como será visto adiante – é possível programar <i>back-end</i> em uma aplicação <i>web</i> e integrar a camada de <i>back-end</i>, montando páginas com informações processadas. 
                 </p>
                 <p>
                   A plataforma Java EE é extensa e cobre funcionalidades de persistência, XML, trocas de mensagens, autenticação e autorização. Em relação ao desenvolvimento <i>web</i>, destacam-se os seguintes conceitos: 
@@ -218,32 +218,34 @@ Fonte: Hanashiro (2019)
                   Clique ou toque para visualizar o conteúdo.  
                 </p>
                 <div class="no-print" aria-hidden="true">
-                  <p>Clique ou toque para visualizar o conteúdo.</p>
-                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingOne">
+                      <div class="panel-heading" role="tab" id="headingOne2">
                         <h4 class="panel-title">
-                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
                             Servlets  
                           </a>
                         </h4>
                       </div>
-                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div id="collapseOne2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne2">
                         <div class="panel-body">
+                          <p>
+                            São objetos capazes de processar requisições de um servidor, tratando-as e respondendo-as de acordo. A classe HttpServlet é base para qualquer Servlet. O desenvolvimento básico em Java para <i>web</i> é realizado por classes Servlet que constroem por código a resposta (HTML) às requisições. 
+                          </p>
 
   
                         </div>
                       </div>
                     </div>
                     <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingTwo">
+                      <div class="panel-heading" role="tab" id="headingTwo2">
                         <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
                             EJB
                           </a>
                         </h4>
                       </div>
-                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
                         <div class="panel-body">
                           <p>
                             Enterprise Java Beans é um componente que reúne especificações de objetos reutilizáveis para soluções rápidas de desenvolvimento, como sessões e mensagens. 
@@ -252,32 +254,33 @@ Fonte: Hanashiro (2019)
                       </div>
                     </div>
                     <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingTre">
+                      <div class="panel-heading" role="tab" id="headingTre2">
                         <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTre" aria-expanded="false" aria-controls="collapseTre">
-                            JSP (JavaServer Pages) e JSF (JavaServer Faces):  
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTre2" aria-expanded="false" aria-controls="collapseTre2">
+                            JSP (JavaServer Pages) e JSF (JavaServer Faces)
                           </a>
                         </h4>
                       </div>
-                      <div id="collapseTre" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTre">
+                      <div id="collapseTre2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTre2">
                         <div class="panel-body">
                           <p>São tecnologias de Java para a criação de páginas <i>web</i> geradas dinamicamente, permitindo incluir informações processadas dentro de uma estrutura HTML. São linguagens, semelhantes a outras como PHP e ASP, que incluem trechos Java em meio a código HTML e substituem a criação via código dos Servlets e facilitam o desenvolvimento de sistemas <i>web</i>. </p>
-
-                          <code>
-                          <br>  &lt;%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII" %> 
-                          <br>  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd"> 
-                          <br>  &lt;html> 
-                          <br>  &lt;head> 
-                          <br>      &lt;meta http-equiv="Content-Type" content="text/html; charset=US-ASCII"> 
-                          <br>      &lt;title>Página JSP&lt;/title> 
-                          <br>  &lt;/head> 
-                          <br>  &lt;%@ page import="java.util.Date" %> 
-                          <br>      &lt;body> 
-                          <br>          &lt;h3>Bem vindo!&lt;/h3><br> 
-                          <br>          &lt;strong>Date e hora atuais: &lt;/strong>: <%=new Date() %> 
-                          <br>      &lt;/body> 
-                          <br>  &lt;/html> 
+                          <pre>
+                          <code class="hljs language-java">
+ <br>  &lt;%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII" %> 
+ <br>  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd"> 
+ <br>  &lt;html> 
+ <br>  &lt;head> 
+ <br>      &lt;meta http-equiv="Content-Type" content="text/html; charset=US-ASCII"> 
+ <br>      &lt;title>Página JSP&lt;/title> 
+ <br>  &lt;/head> 
+ <br>  &lt;%@ page import="java.util.Date" %> 
+ <br>      &lt;body> 
+ <br>          &lt;h3>Bem vindo!&lt;/h3><br> 
+ <br>          &lt;strong>Date e hora atuais: &lt;/strong>: <%=new Date() %> 
+ <br>      &lt;/body> 
+ <br>  &lt;/html> 
                           </code>
+                          </pre>
                           <p class="legenda-imagem">
                             Tabela 1 – Exemplo de código JSP 
 
@@ -325,9 +328,9 @@ Fonte: Spring (c2023)
               
                 <div class="caixa-destaque bg-primaria-02 borda-primaria-01">
                   <ul id="abas" class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Inversão de Controle (IoC)</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Injeção de Dependência (DI)</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Beans</a></li>
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i>Inversão de Controle (IoC)</i></a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i>Injeção de Dependência (DI)</i></a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i>Beans</i></a></li>
                   </ul>
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
@@ -347,16 +350,16 @@ Fonte: Spring (c2023)
                       <p> Além disso, o contêiner do Spring também oferece recursos para gerenciar a configuração dos Beans, como a criação e a destruição de objetos, a configuração de propriedades e dependências, a gestão de escopos, entre outros recursos. </p>
                       <p> Em resumo, os Beans do Spring Framework são objetos que são criados e gerenciados pelo contêiner do Spring, permitindo que os desenvolvedores se concentrem na lógica de negócios e deixem a criação e o gerenciamento de objetos por conta do contêiner. Eles são uma parte importante da IoC e da DI, que fazem parte da filosofia do Spring de oferecer um ambiente de desenvolvimento mais modular, escalável e eficiente.</p>
                       </p>
-                      <p>Em resumo, o Spring implementa a Inversão de Controle e a Injeção de Dependência para tornar o desenvolvimento de aplicativos mais fácil e modular. Ele fornece um ambiente gerenciado que centraliza a configuração de objetos e suas dependências, permitindo que os desenvolvedores se concentrem mais na lógica de negócios do que na infraestrutura do programa. Essa configuração toda seria feita manualmente com as implementações clássicas de Servlets e JSP de Java. </p>
-                      <p>
                     </div>
                   </div>
                 </div>
+                <p>Em resumo, o Spring implementa a Inversão de Controle e a Injeção de Dependência para tornar o desenvolvimento de aplicativos mais fácil e modular. Ele fornece um ambiente gerenciado que centraliza a configuração de objetos e suas dependências, permitindo que os desenvolvedores se concentrem mais na lógica de negócios do que na infraestrutura do programa. Essa configuração toda seria feita manualmente com as implementações clássicas de Servlets e JSP de Java. </p>
+                <p>
                 Com a IoC e a DI, os desenvolvedores podem definir as dependências de seus objetos de forma clara e simples, sem se preocupar em criá-las manualmente. O resultado é um código mais limpo, modular e escalável, que pode ser facilmente mantido e expandido. 
               </p>
               <h3>Encerramento</h3>
               <p>
-                Retomamos aqui conceitos fundamentais de aplicações na <i>web</i>. Ao desenvolver um sistema <i>web</i>, é importante ter em mente, acima de tudo, o mecanismo de <i>Request</i> e Response. Em conteúdos posteriores nesta unidade, será explorado mais o desenvolvimento <i>web</i> com Java e aplicado, para isso, o Spring Framework.  
+                Retomamos aqui conceitos fundamentais de aplicações na <i>web</i>. Ao desenvolver um sistema <i>web</i>, é importante ter em mente, acima de tudo, o mecanismo de <i>Request</i> e <i>Response</i>. Em conteúdos posteriores nesta unidade, será explorado mais o desenvolvimento <i>web</i> com Java e aplicado, para isso, o Spring Framework.  
               </p>
 
 

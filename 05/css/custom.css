@@ -1,9 +1,16 @@
 body{
-  background: url('../imgs/tdsuc1406.jpg') no-repeat;
+  background: url('../../05/imgs/bg1.png') no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #fff;
   overflow-x: hidden;
+}
+
+.imgBorder {
+  border: #004b8a 3px solid;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  padding: 5px;
 }
 .container{
   background-color: #fff;

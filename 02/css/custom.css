@@ -5,9 +5,56 @@ body{
   background-color: #fff;
   overflow-x: hidden;
 }
+
+/*  */
 .destaque_code{
   background-color: aquamarine;
   max-width: 500px;
+}
+.lista2 li{
+  list-style: none;
+}
+.lista2 li::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+
+  /* Height of the list image*/
+  height: 25px;
+
+  /* Width of the list image*/
+  width: 25px;
+  background-image: url("../imgs/fig-37.png");
+  background-size: cover;
+}
+
+/* carrosel */
+
+.item{
+  background: url("../imgs/slide.svg") no-repeat;
+  max-width: 800px;
+  height: 463px;
+  position: relative;
+  background-size: 95%;
+  margin-left: 7%;
+}
+.carousel-control.left{
+background: url("../imgs/seta_esq.png") no-repeat;
+position: absolute;
+top: 40%;
+}
+.carousel-control.right{
+  background: url("../imgs/seta_dir.png") no-repeat;
+  position: absolute;
+  top: 40%;
+}
+.carousel-caption {
+  bottom: 1px;
+  right: 10px;
+  left: 10px;
+  padding-left: 15px;
+  padding-right: 60px;
+  color: black;
 }
 h1 i,
 h2 i,
@@ -261,7 +308,27 @@ label.menu-toggle {
   height: 100%;
   margin-right: 10px;
 }
+label.menu-toggle {
+  position: fixed;
+  z-index: 1100;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  line-height: 0px;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  text-indent: -9999px;
+  background: #004b8a url("../imgs/menu-alt.png") 50% 50%/25px 25px no-repeat;
 
+}
+.imgBorder {
+  border: #004b8a 3px solid;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
 /*---------- FIM MENU ----------*/
 
 @media screen and (max-width: 780px){

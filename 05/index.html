@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title></title>
+    <title>
+     Memória da aplicação web 
+
+    </title>
 
     <!-- Bootstrap -->
     <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -74,24 +77,24 @@
           <div class="pagina">
             <!-- Menu -->
             <div class="bg-fundo"></div>
-            <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
-            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+            <!-- <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+            <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label> -->
             
             <div class="container">
              
             <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
             
-            <h2>Memória da aplicação web </h2>
+            <h2>Memória da aplicação <i>web</i> </h2>
             <p>
-              Sistemas web são, por natureza, sem estado (stateless), ou seja, não guardam uma memória, como uma variável, um vetor ou outras estruturas comuns na programação desktop, que mantenham seus valores entre requisições diferentes. Cada requisição é tratada como uma ação única, e todas as informações necessárias devem ser repassadas do front-end para o back-end.  
+              Sistemas <i>web</i> são, por natureza, sem estado (<i>stateless</i>), ou seja, não guardam uma memória, como uma variável, um vetor ou outras estruturas comuns na programação <i>desktop</i>, que mantenham seus valores entre requisições diferentes. Cada requisição é tratada como uma ação única, e todas as informações necessárias devem ser repassadas do <i>front-end para</i> o <i>back-end</i>.  
             </p>
             <p>
-              Há recursos, no entanto, que permitem guardar dados de um usuário e reutilizá-los nas páginas dos sistemas ou até compartilhá-los com outros sistemas web. No conteúdo a seguir, serão tratados os dois recursos mais importantes para isso: os Cookies e as Sessões. 
+              Há recursos, no entanto, que permitem guardar dados de um usuário e reutilizá-los nas páginas dos sistemas ou até compartilhá-los com outros sistemas <i>web</i>. No conteúdo a seguir, serão tratados os dois recursos mais importantes para isso: os <strong>Cookies</strong> e as <strong>Sessões</strong>. 
             </p>
             <h3>Armazenamento de dados entre requisições</h3>
-            <p>O recurso de armazenamento temporário de informações do usuário de um website ou sistema web são os famosos Cookies. Eles guardam informações no lado do cliente (no navegador) e reenviam essas informações de maneira automática ao servidor.  </p>
+            <p>O recurso de armazenamento temporário de informações do usuário de um <i>website</i> ou sistema <i>web</i> são os famosos <strong>Cookies</strong>. Eles guardam informações no lado do cliente (no navegador) e reenviam essas informações de maneira automática ao servidor.  </p>
             <p>
-              Hoje, cookies são muito usados para identificar ações de um usuário e o comportamento deles em um ou mais sites. Veja alguns exemplos de uso de cookies. 
+              Hoje, <i>cookies</i> são muito usados para identificar ações de um usuário e o comportamento deles em um ou mais <i>sites</i>. Veja alguns exemplos de uso de <i>cookies</i>. 
             </p>
             <ul>
               <li>Configurar a preferência de linguagem do usuário  </li>
@@ -108,91 +111,95 @@
               </li>
             </ul>
             <p>
-              Há grande discussão quanto ao uso de cookies e a privacidade dos usuários de internet, tanto que se tornou padrão incluir um consentimento de uso desse recurso nas páginas (o usuário informa se quer continuar usando cookies, se não deseja usar ou se deseja selecionar para quais usos podem ser aplicados). 
+              Há grande discussão quanto ao uso de <i>cookies</i> e a privacidade dos usuários de internet, tanto que se tornou padrão incluir um consentimento de uso desse recurso nas páginas (o usuário informa se quer continuar usando <i>cookies</i>, se não deseja usar ou se deseja selecionar para quais usos podem ser aplicados). 
             </p>
-            <a href="imgs/assets/fig-01.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-01.png" class="center-block img-responsive" alt="Página inicial do site BBC News Brasil mostrando, na parte de baixo, uma faixa sobreposta ao conteúdo com o texto “Diga-nos se concorda com o uso de cookies” em destaque, um texto descritivo abaixo e, no rodapé, um botão “Concordo” e um link “Não concordo, volte para Configurações”. "></a>
+            <a href="imgs/assets/fig-01.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-01.png" class="imgBorder center-block img-responsive" alt="Página inicial do site BBC News Brasil mostrando, na parte de baixo, uma faixa sobreposta ao conteúdo com o texto “Diga-nos se concorda com o uso de cookies” em destaque, um texto descritivo abaixo e, no rodapé, um botão “Concordo” e um link “Não concordo, volte para Configurações”. "></a>
             <p class="legenda-imagem">
-              Figura 1 – Consentimento de uso de cookies no site da BBC Brasil  
+              Figura 1 – Consentimento de uso de <i>cookies</i> no <i>site</i> da BBC Brasil  
               Fonte: https://www.bbc.com/portuguese  
             </p>
             <p>
-              Tecnicamente, cookies são pequenos arquivos de texto contendo informações únicas que identificam o computador ou o usuário de um site. Esses arquivos são armazenados pelo navegador e são criados quando se acessa pela primeira vez um site que use cookies. Nas vezes posteriores em que se acessa esse mesmo site, os dados de cookie serão transmitidos e o site identificará o usuário de alguma maneira, usará esses dados para alguma personalização no website ou registrará em banco de dados alguma informação relativa. 
+              Tecnicamente, <i>cookies</i> são pequenos arquivos de texto contendo informações únicas que identificam o computador ou o usuário de um <i>site</i>. Esses arquivos são armazenados pelo navegador e são criados quando se acessa pela primeira vez um <i>site</i> que use <i>cookies</i>. Nas vezes posteriores em que se acessa esse mesmo <i>site</i>, os dados de <i>cookie</i> serão transmitidos e o <i>site</i> identificará o usuário de alguma maneira, usará esses dados para alguma personalização no <i>website</i> ou registrará em banco de dados alguma informação relativa. 
             </p>
-            <a href="imgs/assets/fig-02.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-02.png" class="center-block img-responsive" alt="Infográfico com um ícone de computador com seta com o texto “1- Você conecta à internet”, aponta para um globo de onde sai uma seta com texto “2- ... e requisita uma informação de um website” apontando para um ícone de servidor, de onde sai uma seta com texto “3- Quando o servidor website responde, ele te envia um cookie” apontando para um ícone de interrogação, de onde sai uma seta apontando para um ícone de globo, de onde sai uma seta com texto “4- ...que é gravado no seu computador” apontando para um ícone de computador. Em seguida, um ícone de computador apresenta uma seta com texto “5- Quando você fica online e volta a acessar o website”, de onde sai uma seta com texto “6-...seu computador envia o cookie de volta...” apontando para um ícone de globo, que aponta uma seta para um ícone de interrogação, de onde sai uma seta com texto “7-...e então o servidor do website identifica você e suas informações gravados no cookie que podem ser usadas pelo site ou compartilhadas com sites parceiros” apontando para um ícone de servidor. "></a>
-            <p class="legenda-imagem">Figura 2 – Funcionamento de cookies 
+            <a href="imgs/infografico1.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-02.png" class="imgBorder center-block img-responsive" alt="Infográfico com um ícone de computador com seta com o texto “1- Você conecta à internet”, aponta para um globo de onde sai uma seta com texto “2- ... e requisita uma informação de um website” apontando para um ícone de servidor, de onde sai uma seta com texto “3- Quando o servidor website responde, ele te envia um cookie” apontando para um ícone de interrogação, de onde sai uma seta apontando para um ícone de globo, de onde sai uma seta com texto “4- ...que é gravado no seu computador” apontando para um ícone de computador. Em seguida, um ícone de computador apresenta uma seta com texto “5- Quando você fica online e volta a acessar o website”, de onde sai uma seta com texto “6-...seu computador envia o cookie de volta...” apontando para um ícone de globo, que aponta uma seta para um ícone de interrogação, de onde sai uma seta com texto “7-...e então o servidor do website identifica você e suas informações gravados no cookie que podem ser usadas pelo site ou compartilhadas com sites parceiros” apontando para um ícone de servidor. "></a>
+            <p class="legenda-imagem">Figura 2 – Funcionamento de <i>cookies </i><br>
 
               Fonte: Rai (2019)</p>
 
             <p>
-              Os cookies são criados no lado do servidor e precisam ser incluídos na resposta (response) enviada do servidor ao cliente. Quando houver uma requisição para uma página que lê cookies, o navegador enviará nos dados da requisição (request) as informações de cookies presentes. 
+              Os <i>cookies</i> são criados no lado do servidor e precisam ser incluídos na resposta (<i>response</i>) enviada do servidor ao cliente. Quando houver uma requisição para uma página que lê <i>cookies</i>, o navegador enviará nos dados da requisição (<i>request</i>) as informações de <i>cookies</i> presentes. 
             </p>
             <p class="caixa-destaque icone-doc">
-              Você pode verificar os cookies escritos por uma página a partir da propriedade set-cookie do response e os lidos por uma página a partir de cookies do request. Eles podem ser vistos em ferramentas de desenvolvimento, como o Chrome Devtools. 
+              Você pode verificar os <i>cookies</i> escritos por uma página a partir da propriedade <i>set-cookie</i> do response e os lidos por uma página a partir de <i>cookies</i> do <i>request</i>. Eles podem ser vistos em ferramentas de desenvolvimento, como o Chrome Devtools. 
             </p>
-            <p>A estrutura de um cookie consiste de três elementos: </p>
-            <ul>
-              <li><strong> Nome</strong> : a identificação de um cookie. A partir desse nome, em requisições posteriores, são recuperados os dados armazenados. </li>
-              <li><strong> Valor</strong>: os dados gravados no cookie. </li>
-              <li><strong> Atributos</strong>: opcionais, são usados para configurações do cookie, como tempo de expiração, domínio ao qual pertence, se são visíveis apenas a partir de requisições HTTP, entre outras. </li>
+            <p>A estrutura de um <i>cookie</i> consiste de três elementos: </p>
+            
+            <a href="imgs/ativo5.png" target="_blank" class="" aria-hidden="true"><img src="imgs/ativo5.png" class="imgBorder center-block img-responsive" alt=""></a>
+            <ul class="acessivel no-print">
+              <li><strong> Nome</strong> : a identificação de um <i>cookie</i>. A partir desse nome, em requisições posteriores, são recuperados os dados armazenados. </li>
+              <li><strong> Valor</strong>: os dados gravados no <i>cookie</i>. </li>
+              <li><strong> Atributos</strong>: opcionais, são usados para configurações do <i>cookie</i>, como tempo de expiração, domínio ao qual pertence, se são visíveis apenas a partir de requisições HTTP, entre outras. </li>
             </ul>
             <p>
-              Ao criar cookies, pode-se informar alguns atributos que alteram seu funcionamento. Um cookie pode ter limitado o seu tempo de vida, ou seja, pode-se informar quando um cookie expira e é excluído do navegador usando o atributo Expires. É possível restringir se o cookie será entregue apenas em conexões seguras (usando HTTPS) por meio do atributo Secure. Também pode-se definir se ele será invisível ao Javascript (atributo HttpOnly). Veja um exemplo de cookie definindo expiração e segurança. 
+              Ao criar <i>cookies</i>, pode-se informar alguns <strong>atributos</strong> que alteram seu funcionamento. Um cookie pode ter limitado o seu tempo de vida, ou seja, pode-se informar quando um <i>cookie</i> expira e é excluído do navegador usando o atributo <strong>Expires</strong>. É possível restringir se o <i>cookie</i> será entregue apenas em conexões seguras (usando HTTPS) por meio do atributo <strong>Secure</strong>. Também pode-se definir se ele será invisível ao Javascript (atributo <strong>HttpOnly</strong>). Veja um exemplo de <i>cookie</i> definindo expiração e segurança. 
+            </p>
+            <pre>
+              <code>Set-Cookie: id-cookie=meu-id-123; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly</code>
+          </pre>
             </p>
             <p>
-              Set-Cookie: id-cookie=meu-id-123; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly 
+              Outros atributos normalmente usados são <strong>Domain</strong>, para definir que o <i>cookie</i> só será enviado em determinado domínio e subdomínios de internet, e <strong>Path</strong>, que implica que os cookies só existam em um caminho específico no <i>website</i> (por exemplo, apenas em páginas que estão em “/docs”). 
             </p>
             <p>
-              Outros atributos normalmente usados são Domain, para definir que o cookie só será enviado em determinado domínio e subdomínios de internet, e Path, que implica que os cookies só existam em um caminho específico no website (por exemplo, apenas em páginas que estão em “/docs”). 
+              Por serem recursos de navegador (lado cliente), o controle sobre os <i>cookies</i> está nas mãos do usuário, ele poderá decidir se os <i>sites</i> devem gravar ou não essas informações e poderá excluí-las quando quiser. Assim, trata-se de um recurso que não deve ser usado com finalidades vitais ao funcionamento de um sistema <i>web</i>, pois não há garantia de que a informação estará lá quando uma nova requisição ao sistema acontecer (o usuário pode ter apagado).  
             </p>
             <p>
-              Por serem recursos de navegador (lado cliente), o controle sobre os cookies está nas mãos do usuário, ele poderá decidir se os sites devem gravar ou não essas informações e poderá excluí-las quando quiser. Assim, trata-se de um recurso que não deve ser usado com finalidades vitais ao funcionamento de um sistema web, pois não há garantia de que a informação estará lá quando uma nova requisição ao sistema acontecer (o usuário pode ter apagado).  
-            </p>
-            <p>
-              Um uso muito comum, no entanto, é para manter a autenticação de um usuário entre várias páginas. Lembra-se de como seria possível fazer isso em um sistema desktop? Basicamente ao realizar login, se guardava uma variável, o valor da autenticação e os dados do usuário e, ao abrir novas telas, eram consultadas essas variáveis para verificar quem está usando o sistema, suas permissões etc. Em sistemas web, como dito anteriormente, não há variáveis que persistam entre requisições. No entanto, pode-se usar o conceito de sessões para manter esses dados, e as sessões podem usar cookies. 
+              Um uso muito comum, no entanto, é para manter a autenticação de um usuário entre várias páginas. Lembra-se de como seria possível fazer isso em um sistema <i>desktop</i>? Basicamente ao realizar <i>login</i>, se guardava uma variável, o valor da autenticação e os dados do usuário e, ao abrir novas telas, eram consultadas essas variáveis para verificar quem está usando o sistema, suas permissões etc. Em sistemas <i>web</i>, como dito anteriormente, não há variáveis que persistam entre requisições. No entanto, pode-se usar o conceito de sessões para manter esses dados, e as <strong>sessões</strong> podem usar <i>cookies</i>. 
             </p>
             <h3>Cookies</h3>
             <p>
-              A criação e o uso de cookies em Java dependem de algumas classes específicas. A primeira é a classe Cookie (jakarta.servlet.http.Cookie), responsável pela criação de um cookie, permitindo configurações, como tempo de expiração e domínio. Outra classe fundamental é HttpServletResponse (jakarta.servlet.http.HttpServletResponse), que envia o cookie como resposta à requisição do usuário para que ele seja gravado no navegador. Veja um exemplo genérico de criação de cookie. 
+              A criação e o uso de <i>cookies</i> em Java dependem de algumas classes específicas. A primeira é a classe <strong>Cookie</strong> (jakarta.servlet.http.Cookie), responsável pela criação de um <i>cookie</i>, permitindo configurações, como tempo de expiração e domínio. Outra classe fundamental é <strong>HttpServletResponse</strong> (jakarta.servlet.http.HttpServletResponse), que envia o <i>cookie</i> como resposta à requisição do usuário para que ele seja gravado no navegador. Veja um exemplo genérico de criação de <i>cookie</i>. 
             </p>
-            <p>
-              Cookie novoCookie = new Cookie("nome", "valor"); 
-
+            <pre>
+              <code>
+Cookie novoCookie = new Cookie("nome", "valor"); 
 novoCookie.setMaxAge(3600); 
-
 novoCookie.setDomain("localhost"); 
-
 novoCookie.setPath("/"); 
-
 novoCookie.setHttpOnly(true); 
-
 novoCookie.setSecure(true); 
 
- 
-
 //HttpServletResponse response 
-
 response.addCookie(novoCookie); 
-            </p>
+</code>
+</pre>
             <p>
-              Para a leitura de cookies, pode ser usada a classe HttpServletRequest (jakarta.servlet.http.HttpServletRequest) e usar o método getCookies(), que traz todos os cookies enviados pela requisição. É necessário percorrer uma lista se quiser encontrar um cookie específico. Veja a sintaxe a seguir, simulando o método que retorna um cookie específico. 
+              Para a leitura de <i>cookies</i>, pode ser usada a classe HttpServletRequest (jakarta.servlet.http.HttpServletRequest) e usar o método getCookies(), que traz todos os <i>cookies</i> enviados pela requisição. É necessário percorrer uma lista se quiser encontrar um <i>cookie</i> específico. Veja a sintaxe a seguir, simulando o método que retorna um <i>cookie</i> específico. 
             </p>
-            <code><br>
-              Cookie[] cookies = request.getCookies();  <br>
+            
+<pre><code><br>
+Cookie[] cookies = request.getCookies();  <br>
 for (Cookie cookie : cookies ) {  <br>
     if (cookie.getName().equals("nome")) {  <br>
         return cookie;  <br>
     } <br>
 } <br>
             </code>
+          </pre>
             <p>
-              Porém, pelo framework Spring, há uma maneira mais simples quando é necessário obter valor de um cookie específico, que é uma anotação @CookieValue (org.springframework.web.bind.annotation.CookieValue) aplicada a parâmetros de métodos. Veja um exemplo de sintaxe. 
+              Porém, pelo <i>framework</i> Spring, há uma maneira mais simples quando é necessário obter valor de um <i>cookie</i> específico, que é uma anotação <strong>@CookieValue</strong> (org.springframework.web.bind.annotation.CookieValue) aplicada a parâmetros de métodos. Veja um exemplo de sintaxe. 
             </p>
-            <code>
-              @CookieValue(name="nome", defaultValue="", required=true) String valorCookie 
+            
+<pre><code>
+@CookieValue(name="nome", defaultValue="", required=true) String valorCookie 
             </code>
+          </pre>
             <h4>Propriedades do Cookie </h4>
             <p>
               Alguns métodos da classe Cookie podem ser usados para configurar as propriedades do cookie na criação dele. São os seguintes: 
+            </p>
+            <p>
+              Clique ou toque para visualizar o conteúdo.  
             </p>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="panel panel-default">
@@ -206,7 +213,7 @@ for (Cookie cookie : cookies ) {  <br>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body">
-                    <p>Atributo Domain, que recebe por texto a qual domínio de internet o cookie ficará restrito. </p>
+                    <p>Atributo Domain, que recebe por texto a qual domínio de internet o <i>cookie</i> ficará restrito. </p>
                   </div>
                 </div>
               </div>
@@ -222,7 +229,7 @@ for (Cookie cookie : cookies ) {  <br>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body">
                     <p>
-                      Atributo HttpOnly, que define (true ou false) se o cookie deve ser restrito a requisições diretas de HTTP (via navegador). 
+                      Atributo HttpOnly, que define (<i>true</i> ou <i>false</i>) se o <i>cookie</i> deve ser restrito a requisições diretas de HTTP (via navegador). 
                     </p>
                   </div>
                 </div>
@@ -238,9 +245,9 @@ for (Cookie cookie : cookies ) {  <br>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                   <div class="panel-body">
-                    <div class="icone-atencao texto-com-icone">
+                    <div class="">
                       <p>
-                        Define o atributo Max-Age, um tempo de expiração para o cookie expresso em segundos (o cookie será excluído após esse tempo).  
+                        Define o atributo Max-Age, um tempo de expiração para o <i>cookie</i> expresso em segundos (o <i>cookie</i> será excluído após esse tempo).  
                       </p>
 
                     </div>
@@ -258,8 +265,8 @@ for (Cookie cookie : cookies ) {  <br>
                 </div>
                 <div id="collapsefor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfor">
                   <div class="panel-body">
-                    <div class="icone-atencao texto-com-icone">
-                      <p>Atributo Path, que define em qual caminho de URL o cookie deve ser usado. </p>
+                    <div class="">
+                      <p>Atributo Path, que define em qual caminho de URL o <i>cookie</i> deve ser usado. </p>
                     </div>
                   </div>
                 </div>
@@ -275,15 +282,850 @@ for (Cookie cookie : cookies ) {  <br>
                 </div>
                 <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
                   <div class="panel-body">
-                    <div class="icone-atencao texto-com-icone">
-                      <p>Atributo Secure, que restringe o cookie a requisições com HTTPS. </p>
+                    <div class="">
+                      <p>Atributo Secure, que restringe o <i>cookie</i> a requisições com HTTPS. </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <p>
+              Cada propriedade tem seus métodos getter correspondentes (ou “is” em isHttpOnly()). 
+            </p>
+            <p>
+              Agora é hora de praticar com exemplos em projeto Spring MVC e, em seguida, um projeto RESTful. 
+            </p>
+            <h4>Cookies com Spring MVC</h4>
+            <p>
+              Para o primeiro teste, crie a partir do Spring Initializr (https://start.spring.io) um novo projeto Spring MVC: 
+            </p>
+            <ul>
+              <li>Project: Maven. </li>
+              <li>Language: Java. </li>
+              <li>Spring Boot: maior versão que não esteja com “SNAPSHOT”, “M” ou “RC”. Na data da produção deste conteúdo, a versão é 3.0.6. </li>
+              <li>Group: com.senactds. </li>
+              <li>Artifact e Name: cookiemvc. </li>
+              <li>Packaging: Jar. </li>
+              <li>Java: versão instalada em sua máquina (aqui é usada a 17). </li>
+              <li>Dependencies: incluir “Spring Web” (categoria Web) e “Thymeleaf” (categoria Template Engines). </li>
+            </ul>
+            <p>Clicando no botão “Generate”, baixando o arquivo compactado e descompactando-o em uma pasta, é aberto o projeto com o NetBeans. </p>
+            <p>Primeiramente, é criado um pacote “com.senactds.cookiemvc.controller” e, nele, uma classe CookiesController: </p>
+            <pre>
+              <code>
+package com.senactds.cookiemvc.controller; 
+import org.springframework.stereotype.Controller; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+@Controller 
+@RequestMapping("/cookies") 
+public class CookiesController { 
+} 
+              </code>
+            </pre>
+            <p>
+              Dentro dessa classe, criar uma ação responsável por criar um <i>cookie</i>: 
+            </p>
+            <pre>
+              <code>
+@RequestMapping("/grava") 
+public String criaCookie(HttpServletResponse response){ 
+    Cookie novoCookie = new Cookie("user-id", "123abc"); 
+    response.addCookie(novoCookie); 
+    return "criacookie"; 
+} 
+              </code>
+            </pre>
+            <p><i>
+              São necessários “import jakarta.servlet.http.Cookie;” e “import jakarta.servlet.http.HttpServletResponse;”. 
+            </i></p>
+            <p>
+              O método é simples e apenas cria um <i>cookie</i> com chave “user-id” e valor “123abc”, sem outras configurações. Em seguida, o inclui na resposta à requisição. Será criado o arquivo “criacookie.html” na pasta “src/main/resources/templates” para a visão desta ação.  
+            </p>
+            <pre>
+              <code>
+                &lt;!DOCTYPE html> 
+                &lt;html> 
+                    &lt;head> 
+                        &lt;title>Cookies - criação&lt;/title> 
+                        &lt;meta charset="UTF-8"> 
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+                    &lt;/head> 
+                    &lt;body> 
+                        &lt;p>Gravando cookie&lt;/p>  
+                    &lt;/body> 
+                &lt;/html> 
+              </code>
+              </pre>
+            <p>
+              Já é possível testar rodando a aplicação e usando a URL “http://localhost:8080/cookies/grava” no navegador. 
+            </p>
+            <p>
+              A resposta deve ser uma simples frase “Gravando cookie” na tela, mas o mais interessante pode ser visto na ferramenta de desenvolvedor do navegador (Chrome DevTools, por exemplo). Use a aba Rede (Network) e recarregue a página. Veja os detalhes da única requisição que aparece e note, na aba Cabeçalho (Headers), os detalhes da resposta (Response Headers) que mostra uma linha “Set-Cookie: user-id=123abc”. Isso indica que o código funcionou e o <i>cookie</i> foi enviado ao navegador para que seja gravado. Uma prova disso é observada logo abaixo na seção “Request Headers”: ao recarregar a página, o <i>cookie</i> já existe, assim ele é passado pela requisição. Por isso, é possível notar ali uma linha “Cookie” que apresenta o valor “user-id=123abc”. 
+            </p>
+            <a href="imgs/assets/fig-03.png" target="_blank" class="" aria-hidden="true">
+              <img src="imgs/assets/fig-03.png" class="imgBorder center-block img-responsive" alt="Painel de desenvolvedor do navegador Google Chrome ativo mostrando a aba “Network” e a requisição “grava” com detalhes de header. Na seção “Request Headers”  há a linha “Set-Cookie usar-id=123abc” em destaque e na seção “Request Response” a linha “Cookie user-id=123abc”. ">
+            </a>
+            <p class="legenda-imagem">Figura 3 – Testando a criação de <i>cookie</i> <br>
+              Fonte: Google Chrome (2023) 
+            </p>
+            <p>
+              Agora será criada uma ação de leitura do <i>cookie</i> criado, a partir de um novo método na classe CookieController. 
+            </p>
+            <pre>
+              <code>@RequestMapping("/le") 
+                public String leCookie(@CookieValue(name="user-id", defaultValue="nenhum-valor")String userId, Model model){ 
+                    model.addAttribute("userid", userId); 
+                    return "lecookie"; 
+                } 
+              </code>
+            </pre>
+            <p><i>São necessários “import org.springframework.web.bind.annotation.CookieValue;” e “import org.springframework.ui.Model;” </i></p>
+            <p>
+              Atenção à anotação @CookieValue, aplicada ao parâmetro String userId. De acordo com o argumento “name” da anotação, está sendo buscado o <i>cookie</i> “user-id” e, de acordo com o argumento “defaultValue”, caso o <i>cookie</i> não exista, retornará o texto “nenhum-valor”. O valor do <i>cookie</i> é repassado ao parâmetro “userId” do método. 
+            </p>
+            <p>
+              O segundo parâmetro é do tipo Model, apenas para se comunicar com a visão HTML. 
+            </p>
+            <p>Na pasta “templates”, foram incluídos, então, lecookie.html. 
 
-            
+            </p>
+            <pre>
+              <code>
+&lt;!DOCTYPE html> 
+&lt;html> 
+    &lt;head> 
+        &lt;title>Cookies - leitura&lt;/title> 
+        &lt;meta charset="UTF-8"> 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;p>Valor do cookie 'user-id':&lt;span th:text="${userid}" /> &lt;/p> 
+    &lt;/body> 
+&lt;/html> 
+              </code>
+            </pre>
+            <p>
+              É possível recompilar o código e rodar novamente o projeto para testá-lo. No navegador, usar a URL “http://localhost:8080/cookies/le”. Caso o cookie tenha sido gravado anteriormente, aparecerá a mensagem “Valor do cookie 'user-id':123abc”. Caso contrário, aparecerá “Valor do cookie 'user-id':nenhum-valor”. 
+            </p>
+            <p class="caixa-destaque icone-dica">Para limpar <i>cookies</i>, você pode usar as ferramentas de limpeza de histórico do seu navegador ou usar nova janela anônima. 
+
+            </p>
+            <p>
+              Para excluir um <i>cookie</i>, deve-se simplesmente recriá-lo com a propriedade Max-Age em 0, ou seja, ele deve expirar imediatamente. Veja o teste com um novo método em CookiesController: 
+            </p>
+            <pre>
+              <code>
+@RequestMapping("/exclui") 
+public String excluiCookie(HttpServletResponse response){ 
+    Cookie novoCookie = new Cookie("user-id", null); 
+    novoCookie.setMaxAge(0); 
+    response.addCookie(novoCookie); 
+    return "excluicookie"; 
+} 
+              </code>
+            </pre>
+            <p>
+              A diferença com relação ao método criaCookie() é a passagem do valor “null” ao construtor Cookie() e o uso do método setMaxAge() para definir expiração imediata. 
+            </p>
+            <p>
+              A visão excluicookie.html correspondente deve ser criada na pasta “templates”: 
+            </p>
+            <pre>
+              <code>&lt;!DOCTYPE html> 
+                &lt;html> 
+                    &lt;head> 
+                        &lt;title>Cookies - exclusão&lt;/title> 
+                        &lt;meta charset="UTF-8"> 
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+                    &lt;/head> 
+                    &lt;body> 
+                        &lt;p>Excluindo cookie&lt;/p> 
+                    &lt;/body> 
+                &lt;/html> 
+              </code>
+            </pre>
+            <p>
+              Agora você pode testar recompilando e rodando novamente o projeto e, no navegador, acessando primeiro http://localhost:8080/cookies/grava, depois http://localhost:8080/cookies/le, que deve mostrar o valor “123abc” para o <i>cookie</i>; em seguida http://localhost:8080/cookies/exclui e depois http://localhost:8080/cookies/le de novo, que agora deve mostrar “nenhum-valor”. 
+            </p>
+            <p class="caixa-destaque icone-atencao">Caso, na criação, tenha sido especificada a propriedade “domain” ou “path”, é necessário que os mesmos valores dessas propriedades sejam incluídos na criação do <i>cookie</i> para exclusão. Caso contrário, o sistema considerará como dois <i>cookies</i> diferentes. 
+              
+            </p>
+            <p class="caixa-destaque icone-desafio">Crie um projeto Spring MVC com uma página que registre <i>cookie</i> com a data e a hora atuais e outra página que resgate esse <i>cookie</i>, mostrando a data e a hora armazenadas. Experimente também calcular quantos segundos se passaram desde a hora armazenada anteriormente no <i>cookie</i> (estude sobre a classe LocalDate para entender como converter texto para data e operar sobre os valores). 
+
+            </p>
+            <h4>Aplicabilidade: <i>cookies</i> em projeto Spring MVC
+
+            </h4>
+            <p>
+              Agora será aplicado mais funcionalmente o uso de <i>cookies</i>. Você pode criar um novo projeto ou seguir no projeto anterior, conforme a seguir. Será criada uma página que permita a configuração do nome do usuário e um esquema de cores preferido e outra que aplique o estilo escolhido e mostre o nome do usuário. Tudo será gravado com <i>cookies</i>. 
+            </p>
+            <p>
+              Primeiramente, será criada uma classe SiteController no pacote “com.senactds.cookiemvc.controller”. 
+            </p>
+            <pre>
+              <code>
+package com.senactds.cookiemvc.controller; 
+import org.springframework.stereotype.Controller; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+@Controller 
+public class SiteController { 
+    @RequestMapping("/preferencias") 
+    public String preferencias(){ 
+        return "preferencias"; 
+    } 
+} 
+              </code>
+            </pre>
+            <p>
+              Já está sendo criada uma primeira ação que responde à URL “/preferencias”, executando o método preferencias(). Agora será desenvolvida a visão correspondente: em “templates” criar preferencias.html. 
+            </p>
+            <pre>
+              <code>
+&lt;!DOCTYPE html> 
+&lt;html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"> 
+    &lt;head> 
+        &lt;title>Site - Preferências&lt;/title> 
+        &lt;meta charset="UTF-8"/> 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;h1>Informe suas preferências para o site&lt;/h1> 
+        &lt;form th:action="@{/preferencias}" method="POST"> 
+            &lt;p>&lt;label for="txtNome">Seu nome:&lt;/label>&lt;input type="text" name="nome" id="txtNome"/>&lt;/p> 
+            &lt;p>&lt;label for="selEstilo">Seu esquema de cores favorito&lt;/label> 
+            &lt;select name="estilo" id="selEstilo"> 
+                &lt;option value="claro">Tema Claro&lt;/option> 
+                &lt;option value="escuro">Tema Escuro&lt;/option> 
+            &lt;/select>&lt;/p> 
+            &lt;p>&lt;input type="submit" value="OK"/>&lt;/p> 
+        &lt;/form> 
+    &lt;/body> 
+&lt;/html>   
+              </code>
+            </pre>
+            <p>
+              Com o código acima, está sendo criada uma página com um formulário que tenha um campo para nome e um campo de seleção com os valores “claro” e “escuro” para o estilo da página. Não está sendo vinculado um objeto diretamente; em vez disso, foram usados os atributos “name” dos campos para preencher os dados no ato do POST.  
+            </p>
+            <p>
+              Antes de criar a ação que recebe o POST, crie uma classe de modelo chamada “Preferencia” em um novo pacote “com.senactds.cookiemvc.model”. 
+            </p>
+            <pre>
+              <code>
+package com.senactds.cookiemvc.model; 
+public class Preferencia { 
+  private String nome; 
+  private String estilo; 
+  public String getNome() { return nome; } 
+  public void setNome(String nome) { this.nome = nome; } 
+  public String getEstilo() { return estilo; } 
+  public void setEstilo(String estilo) { this.estilo = estilo; } 
+} 
+              </code>
+            </pre>
+            <p>
+              Note que os atributos têm nomes idênticos aos informados nos atributos “name” dos campos do formulário HTML – isso é essencial para que os dados possam ser transmitidos ao <i>back-end</i> na postagem do formulário.  
+            </p>
+            <p>
+              A seguir, há o código para o método gravaPreferencias(), que deve ser programado na classe SiteController. Esse método processará os dados do formulário. 
+            </p>
+            <pre>
+              <code>
+@PostMapping("/preferencias") 
+public ModelAndView gravaPreferencias(@ModelAttribute Preferencia pref, HttpServletResponse response){ 
+    Cookie cookiePrefNome = new Cookie("pref-nome", pref.getNome()); 
+    cookiePrefNome.setDomain("localhost"); //disponível apenas no domínio "localhost" 
+    cookiePrefNome.setHttpOnly(true); //acessível apenas por HTTP, JS não 
+    cookiePrefNome.setMaxAge(86400); //1 dia 
+    response.addCookie(cookiePrefNome); 
+    Cookie cookiePrefEstilo = new Cookie("pref-estilo", pref.getEstilo()); 
+    cookiePrefEstilo.setDomain("localhost"); //disponível apenas no domínio "localhost" 
+    cookiePrefEstilo.setHttpOnly(true); //acessível apenas por HTTP, JS não 
+    cookiePrefEstilo.setMaxAge(86400); //1 dia 
+    response.addCookie(cookiePrefEstilo); 
+    return new ModelAndView("redirect:/"); //"index"; 
+} 
+              </code>
+            </pre>
+            <p>
+              <i>São necessários import org.springframework.web.bind.annotation.PostMapping; import jakarta.servlet.http.HttpServletResponse; import com.senactds.cookiemvc.model.Preferencia; import org.springframework.web.bind.annotation.ModelAttribute; import org.springframework.web.servlet.ModelAndView; e import jakarta.servlet.http.Cookie. </i>
+            </p>
+            <p>
+              Veja aqui alguns detalhes: o primeiro é uso de @PostMapping, indicando que esse método é alcançado apenas com requisições do tipo POST. O segundo detalhe é o retorno do tipo ModelAndView, que permitirá que, ao concluir o processamento do método, seja redirecionado para outra ação (no caso, ainda será programada essa ação logo mais). Isso porque é desejável que, depois de registrar as preferências, o usuário volte à página inicial. O terceiro ponto é o uso de @ModelAttribute para o parâmetro do tipo “Preferencia”. Ele fará com que os dados do formulário sejam preenchidos nos campos do objeto “pref”. 
+            </p>
+            <p>
+              Por fim, a criação de <i>Cookies</i>, que não difere muito dos exemplos já praticados aqui. Nesse caso, no entanto, estão sendo configuradas algumas propriedades: setDomain() para que o <i>cookie</i> só seja visto no domínio “localhost”, setHttpOnly() para que o <i>cookie</i> não seja manipulado com JavaScript e setMaxAge() para que o cookie expire em 24 horas. Os <i>cookies</i> criados têm nome “pref-estilo” e “pref-nome” e usam como valores os campos “estilo” e “nome” do objeto “pref” preenchido no parâmetro.  
+            </p>
+            <p>
+              Siga programando SiteController, agora incluindo o método index(). 
+            </p>
+            <pre>
+              <code>
+@RequestMapping("/") 
+public String index(@CookieValue(name="pref-nome", defaultValue="")String nome, 
+        @CookieValue(name="pref-estilo", defaultValue="claro")String tema, 
+        Model model){ 
+    model.addAttribute("nome", nome); 
+    model.addAttribute("css", tema); 
+    return "index"; 
+
+} 
+              </code>
+            </pre>
+            <p><i>São necessários import org.springframework.web.bind.annotation.CookieValue; e import org.springframework.ui.Model. </i></p>
+            <p>
+              A ação index() deve executar para a página inicial do <i>site</i>. Por isso, é usado @RequestMapping(“/”), ou seja, será executado a partir de “localhost:8080/”. É usada a anotação @CookieValue para incluir o valor dos <i>cookies</i> “pref-nome” e “pref-estilo” nos parâmetros “String nome” e “String tema”, definindo também valores-padrão. No corpo do método, passe como atributo de Model os valores capturados dos <i>cookies</i> e, por fim, requisitar a visão “index”. 
+            </p>
+            <p class="caixa-destaque icone-doc">Veja que há um processamento com relação aos <i>cookies</i> necessários antes de remeter à visão index.html. É por isso que, no método gravaPreferencia(), se faz um redirecionamento a esse método em vez de simplesmente mostrar a visão “index” direto. Ou seja, a partir do “return new ModelAndView("redirect:/");” de gravaPreferencia(), index() é executado. 
+
+            </p>
+            <p>
+              Agora crie a página inicial index.html em “templates”. 
+            </p>
+            <pre>
+              <code>
+&lt;!DOCTYPE html> 
+&lt;html> 
+    &lt;head> 
+        &lt;title>Site - página inicial&lt;/title> 
+        &lt;meta charset="UTF-8"> 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        &lt;link th:href="@{/css/}+${css}+'.css'" rel="stylesheet" type="text/css"/> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;h1>Olá &lt;span th:text="${nome}"/> !&lt;/h1> 
+        &lt;p>Seja muito bem-vindo(a) ao seu site! &lt;/p> 
+        &lt;p>O estilo atual da página é &lt;strong th:text="${css}" />&lt;/p> 
+        &lt;p>Você pode configurar suas preferências de exibição &lt;a href="/preferencias">neste link&lt;/a>&lt;/p> 
+    &lt;/body> 
+&lt;/html> 
+              </code>
+            </pre>
+            <p>
+              A página é muito simples, mas fique atento às intervenções do Thymeleaf: 
+            </p>
+            <ul>
+              <li>th:href="@{/css/}+${css}+'.css'" está apenas indicando que a página deve procurar na pasta css o arquivo definido pelo nome atribuído ao Model pela chave “css” (a linha “model.addAttribute("css", tema);” do método index()). Assim, a escolha do CSS é dinâmica: se o usuário escolheu tema claro, usará “claro.css”; se escolheu escuro, usará “escuro.css”. 
+
+              </li>
+              <li>th:text="${nome}"  e th:text="${css}" estão capturando o valor do atributo “nome” passado ao Model pelo método index(). </li>
+            </ul>
+          <p>
+            Por fim, crie os arquivos CSS. Antes, navegue no projeto por “Other Sources” > “src/main/resources” e clique com o botão direito em “static”, selecionando “New”>”Folder” para criar uma subpasta apenas para os arquivos .css. Dentro dessa nova pasta, crie o arquivo claro.css: 
+          </p>
+          <pre>
+            <code>
+body{ 
+  background-color: white; 
+  font-family: Verdana; 
+  color: #505050 
+} 
+a, a:visited{ 
+  color: #505050; 
+} 
+            </code>
+          </pre>
+          <p>
+            Também crie na pasta o arquivo escuro.css: 
+          </p>
+          <pre>
+            <code>
+body{ 
+  background-color: #505050; 
+  font-family: Verdana; 
+  color: white; 
+} 
+a, a:visited{ 
+  color: white; 
+}            
+            </code>
+          </pre>
+          <p>
+            E, por fim, é possível testar, rodando o projeto e acessando localhost:8080. 
+          </p>
+          <a href="imgs/assets/fig-04.png" target="_blank" class="" aria-hidden="true">
+            <img src="imgs/assets/fig-04.png" class="imgBorder center-block img-responsive" alt="Animação inicia mostrando a página inicial da aplicação com fundo branco e letras escuras, que destaca um título “Olá!” e abaixo uma linha “O estilo atual da página é claro”. Há um clique no link “neste link” que leva à página de preferências, com um campo para nome e outro para escolher o tema. Digita-se “João” no nome e mantém-se estilo “Tema claro”. Aparece a página inicial, mas com o título “Olá João!”. Depois clica-se novamente no link e na tela de preferências digita-se “Maria” e escolhe-se “Tema escuro”. Ao clicar em “OK”, surge a página inicial com fundo cinza escuro, letras brancas, título “Olá Maria!” e frase “O estilo atual da página é escuro”. ">
+          </a>
+          <p class="legenda-imagem">Figura 4 – Retorno página <br>
+            Fonte: Senac EAD (2023)
+          </p>
+          <p class="caixa-destaque icone-desafio">Incremente o projeto incluindo uma terceira preferência em que o usuário escolhe se prefere fonte Times New Roman ou Verdana. 
+
+          </p>
+          <h4>Aplicabilidade: <i>cookies</i> em projetos RESTful 
+
+          </h4>
+          <p>
+            Apesar de <i>webservices</i> RESTful, por seu conceito, prezarem pela ausência de estado, é possível criar <i>Cookies</i> e recuperá-los por meio desses serviços. O procedimento não se diferencia em nada do aplicado para Spring MVC. É hora de exercitar com um exemplo, criando um projeto com o Spring Initializr. 
+          </p>
+          <ul>
+            <li>No <i>site</i> do Spring Initializr, configure “Project: Maven”, “Spring Boot” na maior versão que não seja Snapshot, RC ou M2, “Group: com.senactds”, “Artifact” e “Name” com valor “cookierestful”, “Packaging: Jar” e “Java: 17”, ou versão correspondente à instalada em sua máquina. 
+
+              </li>
+            <li> Em “Dependencies”, inclua “SpringWeb”. 
+              
+             </li>
+            <li> Gere o projeto e o abra com o NetBeans.</li>
+          </ul>
+          <p>
+            No NetBeans, crie um <i>package</i> “com.senactds.cookierestful.controller”. Por enquanto, será necessário apenas esse pacote, no qual será criada a classe “CookiesController”. Nela, use o seguinte código: 
+          </p>
+          <pre>
+            <code>
+import jakarta.servlet.http.Cookie; 
+import jakarta.servlet.http.HttpServletResponse; 
+import org.springframework.web.bind.annotation.CookieValue; 
+import org.springframework.web.bind.annotation.GetMapping; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RestController; 
+@RestController 
+@RequestMapping("/cookies") 
+public class CookiesController { 
+    @GetMapping("/grava") 
+    public String registraCookie(HttpServletResponse response) { 
+        Cookie c = new Cookie("user-id", "123abc"); 
+        response.addCookie(c); 
+        return "Gravando cookie"; 
+    } 
+    @GetMapping("/le") 
+    public String leCookie(@CookieValue(name="user-id", defaultValue="nenhum-valor") String userId) { 
+        return "cookie: " + userId; 
+    } 
+} 
+              
+            </code>
+          </pre>
+          <p>
+            A maior diferença está na natureza dos retornos (os textos são o conteúdo da resposta) e no uso da anotação @RestController. De resto, o processo é idêntico ao adotado com Spring MVC. É possível testar rodando o projeto e usando o navegador ou o Postman para as requisições. 
+          </p>
+          <a href="imgs/assets/fig-06.png" target="_blank" class="" aria-hidden="true">
+            <img src="imgs/assets/fig-06.png" class="imgBorder center-block img-responsive" alt="Animação mostrando o software Postman em que, primeiro, se usa a URL “localhost:8080/cookies/grava” e, em seguida, clica no botão “Send”. Após isso, os resultados aparecem na parte inferior da tela com a aba “Body” mostrando a frase “Gravando Cookie”, a aba “Cookies” com dados do cookie gerado e aba “Headers” com linha “Set-Cookie user-id=123abc”. Depois testa-se requisição com url “localhost:8080/cookies/le” e clique em “Send”. Como resultado, a aba “Body” mostra a frase “cookie: 123abc” e aba “Cookies” mostra dados do cookie. ">
+          </a>
+          <p class="legenda-imagem">Figura 5 – Página Postman <br>
+            Fonte: Postman (2023) 
+          </p>
+          <p>
+            A operação de exclusão de <i>cookies</i> também obedece ao já estudado anteriormente. 
+          </p>
+          <h3>Sessões (<i>sessions</i>) 
+          </h3>
+          <p>
+            Outro meio de se guardar informações entre requisições HTTP em um <i>site</i> é o uso de sessões ou <i>Sessions</i>. Trata-se de um meio de armazenamento, semelhante a <i>cookies</i>, mas que ocorre diretamente no servidor.  
+          </p>
+          <p>
+            Em termos gerais, diz-se que uma sessão indica o tempo que um usuário visita e navega por um <i>website</i>, iniciando quando ele requisita a primeira página e terminando quando ele não requisita mais nenhuma página por um tempo determinado (chamado <strong>timeout</strong>). Informações podem ser armazenadas em formato <strong>chave-valor</strong> (ou seja, se obtém uma informação a partir de um identificador) no servidor para persistirem enquanto durar a sessão.  Durante a sessão, o usuário pode requisitar quantas e quais páginas quiser e as informações estarão presentes para as páginas durante toda essa navegação. 
+          </p>
+          <p>
+            Sessões são normalmente usadas para manter <strong>autenticado</strong> um usuário. A frase “Sua sessão expirará em breve” é comum em <i>websites</i>, indicando que uma sessão foi usada para manter os dados do usuário e que ela tem um tempo de expiração (o <i>timeout</i>). Os dados de sessão podem ser armazenados diretamente no servidor <i>web</i> (Tomcat ou Glassfish, por exemplo), em mecanismos de armazenamento temporários de dados (Redis, por exemplo) ou em banco de dados. É comum que as aplicações <i>web</i> façam uso de <i>cookies</i> para identificar a sessão de um usuário. 
+          </p>
+          <p>
+            Em Java, o meio mais direto e comum de usar sessão é por meio das classes HttpSession e HttpServletRequest, a partir de HttpServletRequest, é recuperado o objeto de sessão da aplicação (HttpSession), que será usado para incluir, atualizar ou excluir informações que persistem entre requisições.  
+          </p>
+          <pre>
+            <code>
+  HttpServletRequest request; 
+  HttpSession ses = request.getSession(); 
+  ses.setAttribute("user", "Meu Nome"); 
+
+            </code>
+          </pre>
+          <p>
+            Os principais métodos da classe HttpSession são: 
+          </p>
+          <ul>
+            <li><i>
+              getAttribute(String)</i>: retorna o valor armazenado para uma chave informada por parâmetro. O retorno é do tipo Object e precisa ser convertido para o tipo adequado. </li>
+            <li><i>setAttribute(String, Object)</i>: inclui na sessão uma informação (parâmetro tipo Object) vinculada a uma chave (parâmetro tipo String). </li>
+            <li><i>removeAttribute(String)</i>: remove da sessão a informação vinculada à chave informada pelo parâmetro. </li>
+            <li><i>getAttributeNames()</i>: recupera uma lista de chaves armazenadas na sessão. </li>
+            <li><i>getMaxInactiveInterval()</i>: retorna o timeout da sessão (em segundos). </li>
+            <li><i>setMaxInactiveInterval(int)</i>: altera o timeout da sessão. </li>
+            <li><i>getId()</i>: recupera o identificador único da sessão.</li>
+            <li><i>invalidate()</i>: invalida uma sessão por completo, excluindo todos os valores armazenados nela. </li>
+          </ul>
+          <p>
+            É hora de exercitar com projetos MVC e Rest. 
+          </p>
+          <h4>Aplicabilidade: sessões com Spring MVC</h4>
+          <p>
+            Crie a partir do Spring Initializr (https://start.spring.io) um novo projeto Spring MVC: 
+          </p>
+          <ul>
+            <li>Project: Maven.</li>
+            <li>Language: Java.</li>
+            <li>Spring Boot: maior versão que não esteja com “SNAPSHOT”, “M” ou “RC”. Na data da produção deste conteúdo, a versão é 3.0.6. </li>
+            <li>Group: com.senactds.</li>
+            <li> Artifact e Name: sessionmvc.</li>
+            <li>Packaging: Jar. </li>
+            <li>Java: versão instalada em sua máquina (aqui é usada a 17).</li>
+            <li>Dependencies: incluir “Spring Web” (categoria Web) e “Thymeleaf” (categoria Template Engines).</li>
+          </ul>
+          <p>
+            Primeiramente, crie um pacote com.senactds.sessionmvc.controller e, nele, crie a classe SessionController, com o seguinte código: 
+          </p>
+          <pre>
+            <code>
+package com.senactds.sessionmvc.controller; 
+import jakarta.servlet.http.HttpServletRequest; 
+import jakarta.servlet.http.HttpSession; 
+import org.springframework.stereotype.Controller; 
+import org.springframework.ui.Model; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+@Controller 
+@RequestMapping("/sessao") 
+public class SessionController { 
+    @RequestMapping("/grava") 
+    public String gravaSessao(HttpServletRequest request,  Model model, String nome){ 
+        HttpSession sessao = request.getSession(); 
+        if(sessao != null){ 
+            sessao.setAttribute("nome-usuario", nome); 
+            model.addAttribute("mensagem", "Gravando Sessao[nome]"); 
+        }else{ 
+            model.addAttribute("mensagem", "Sessão nula"); 
+        } 
+        return "sessao"; 
+    } 
+} 
+
+            </code>
+          </pre>
+          <p>
+            Atenção ao código da ação gravaSessao(): 
+          </p>
+          <ul>
+            <li>É necessário ter por parâmetro um objeto do tipo HttpServletRequest, que será automaticamente preenchido pelo mecanismo do Spring. </li>
+            <li>A partir desse parâmetro, você pode recuperar o objeto HttpSession desta conexão. 
+            </li>
+            <li>É boa prática verificar se a sessão não está nula. Nesse caso, use o método setAttribute() para atribuir o valor recebido pelo parâmetro “nome” à chave “nome-usuario”. </li>
+            <li>Em seguida, inclua no objeto “model” uma mensagem a ser transmitida à camada de visão, informando sucesso na operação. Essa mensagem será de “Sessão nula” caso não haja sessão no <i>request</i>.  </li>
+          </ul>
+           <p>
+            Em seguida, crie o método para leitura, também na classe SessionController: 
+           </p>
+           <pre>
+            <code>
+@RequestMapping("/le") 
+public String leSessao(HttpServletRequest request, Model model){ 
+    HttpSession sessao = request.getSession(); 
+    String nome = ""; 
+    if(sessao != null && sessao.getAttribute("nome-usuario") != null) 
+        nome = (String) sessao.getAttribute("nome-usuario"); 
+    model.addAttribute("mensagem", "Sessao['nome'] = " + nome); 
+    return "sessao"; 
+} 
+            </code>
+           </pre>
+           <p>
+            Para a leitura, você também precisa de um parâmetro HttpServletRequest, do qual é extraída a sessão e depois obtido o valor a partir do método getAttribute(). Esse método retorna um tipo Object, genérico, então é necessário converter para o tipo correto, como visto no código onde se usa “(String)”. 
+           </p>
+           <p>
+            Por fim, crie a visão sessão.html na pasta “templates”: 
+           </p>
+           <pre>
+            <code>
+&lt;!DOCTYPE html> 
+&lt;html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"> 
+    &lt;head> 
+        &lt;title>Sessões&lt;/title> 
+        &lt;meta charset="UTF-8" /> 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;h1>Testando Sessão&lt;/h1> 
+        &lt;p th:text="${mensagem}" /> 
+    &lt;/body> 
+&lt;/html> 
+            </code>
+           </pre>
+<p>
+  Há um atributo de modelo “mensagem” para preencher a resposta das ações de <i>back-end</i>. Você já pode testar rodando o projeto e usando no navegador a URL http://localhost:8080/sessao/grava?nome=Maria – está sendo gravado o valor “Maria” na chave “nome-usuario” da sessão. O resultado é uma tela simples: 
+</p>
+<pre>
+  <code>
+    Testando Sessão 
+    Gravando Sessao[nome] 
+  </code>
+</pre>
+<p>
+  Depois use a URL http://localhost:8080/sessao/le e a frase na página deve ser “Sessao['nome'] = Maria”, indicando que o valor foi salvo em sessão. 
+</p>
+<pre>
+  <code>
+    Testando Sessão 
+    Sessao['nome'] = Maria 
+  </code>
+</pre>
+<p>Agora com o funcionamento básico de sessões, você pode criar algo mais útil, como uma autenticação simples. Primeiramente, crie no pacote “com.senactds.sessionmvc.controller;” a classe AutenticacaoController e use como página inicial uma tela de <i>login</i>. 
+
+</p>
+<pre>
+  <code>
+package com.senactds.sessionmvc.controller; 
+import org.springframework.stereotype.Controller; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+@Controller 
+public class AutenticacaoController { 
+    @RequestMapping("/") 
+    public String index(){ 
+        return "login"; 
+    } 
+} 
+  </code>
+</pre>
+<p>
+  Em seguida, crie a visão login.html na pasta “templates”. 
+</p>
+<pre>
+  <code>
+    &lt;!DOCTYPE html> 
+    &lt;html xmlns="http://www.w3.org/1999/xhtml" 
+          xmlns:th="http://www.thymeleaf.org"> 
+        &lt;head> 
+            &lt;title>Sessões&lt;/title> 
+            &lt;meta charset="UTF-8"/> 
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        &lt;/head> 
+        &lt;body> 
+            &lt;h1>Login&lt;/h1> 
+            &lt;form th:action="@{/autentica}" method="POST"> 
+                &lt;p>&lt;input type="text" name="login" id="txtLogin" placeholder="Login" />&lt;/p> 
+                &lt;p>&lt;input type="password" name="senha" id="pswSenha" placeholder="Senha"/>&lt;/p> 
+                &lt;input type="submit" value="Autenticar" /> 
+            &lt;/form> 
+        &lt;/body> 
+    &lt;/html> 
+  </code>
+</pre>
+<p>
+  Você já pode testar essa ação rodando o projeto e usando a URL http://localhost:8080. No entanto, a funcionalidade principal será implementada agora. Primeiramente, crie um objeto do tipo Usuario, com atributos “login” e “senha” em um novo pacote “com.senactds.sessionmvc.model”. 
+</p>
+<pre>
+  <code>
+package com.senactds.sessionmvc.model; 
+public class Usuario { 
+    private String login; 
+    private String senha; 
+    public String getLogin() { return login; } 
+    public void setLogin(String login) { this.login = login; } 
+    public String getSenha() { return senha; } 
+    public void setSenha(String senha) { this.senha = senha; } 
+} 
+  </code>
+</pre>
+<p>
+  Em seguida, crie um novo método autenticar() na classe AutenticacaoController. 
+</p>
+<pre>
+  <code>
+@PostMapping("/autentica") 
+public String autentica(HttpServletRequest request, Usuario usuario){ 
+    HttpSession sessao = request.getSession(); 
+    if(sessao != null && usuario.getLogin().equals("adm") && usuario.getSenha().equals("123")){ 
+        sessao.setAttribute("usuario", usuario.getLogin()); 
+        return "protegida"; 
+    } 
+    return "login"; 
+}     
+  </code>
+</pre>
+<p><i>São necessários import com.senactds.sessionmvc.model.Usuario; import jakarta.servlet.http.HttpServletRequest; import jakarta.servlet.http.HttpSession; e import org.springframework.web.bind.annotation.PostMapping; </i></p>
+<p>
+  A lógica de autenticação é bem simples e apenas didática: o código aceitará apenas o usuário “adm” com senha “123” para a autenticação. Caso esses sejam os valores recebidos pelo POST, o usuário será direcionado à visão “protegida”, destinada apenas a usuário <i>logado</i>. Caso contrário, ele retorna à página de <i>login</i>. 
+</p>
+<p>
+  Agora crie a visão protegida.html na pasta “templates”. 
+</p>
+<pre>
+  <code>
+&lt;!DOCTYPE html> 
+&lt;html> 
+    &lt;head> 
+        &lt;title>Sessões&lt;/title> 
+        &lt;meta charset="UTF-8"> 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;h1>Você está autenticado!&lt;/h1> 
+        &lt;p>Se você está vendo esta página, então você está autenticado&lt;/p> 
+        &lt;p>&lt;a href="/logoff">Clique aqui para fazer logoff&lt;/a>&lt;/p> 
+    &lt;/body> 
+&lt;/html> 
+  </code>
+</pre>
+       <p>
+        Já foi incluído na página um <i>link</i> para realizar <i>logoff</i>, mas essa funcionalidade será implementada em seguida. 
+       </p>   
+       <p>
+        Por agora, pare e teste rodando o projeto e informando <i>login</i> correto e incorreto. 
+       </p>
+       <a href="imgs/assets/fig-06.png" target="_blank" class="" aria-hidden="true">
+         <img src="imgs/assets/fig-06.png" class="imgBorder center-block img-responsive" alt="Animação inicia com URL localhost:8080 e página de login. Informa-se login “admin” e senha com muitos caracteres e clica-se no botão “Autenticar”. A autenticação falha e volta à tela de login, com campos em branco. Preenche-se agora com “adm” no campo de login e três caracteres no campo de senha e clica-se no botão “Autenticar”. Troca-se para a página com título “Você está autenticado”. ">
+       </a>
+       <p class="legenda-imagem">Figura 6 – Retorno página 
+
+        Fonte: Senac EAD (2023)  
+       
+       </p>
+       <p>
+        Agora crie uma ação que leve direto para a visão “protegida” e verifique a autorização para essa página. Na classe AutenticacaoController, crie o seguinte método: 
+       </p>
+       <pre>
+        <code>
+@RequestMapping("/protegida") 
+public ModelAndView acessaProtegida(HttpServletRequest request){ 
+    HttpSession sessao = request.getSession(); 
+    if(sessao != null && sessao.getAttribute("usuario") != null && sessao.getAttribute("usuario").equals("adm")){ 
+        return new ModelAndView("protegida"); 
+    } 
+    return new ModelAndView("redirect:/"); 
+} 
+        </code>
+       </pre>
+       <p><i>É necessário import org.springframework.web.servlet.ModelAndView; </i></p>
+       <p>
+        A verificação é simples: primeiramente, obtenha a sessão, verifique se a chave “usuário” está preenchida e é “adm”; caso afirmativo, permita que seja apresentada a visão “protegida”; caso negativo, volta ao <i>login</i>. 
+       </p>
+       <p>
+        Em vez de texto, opte aqui por retornar o objeto ModelAndView, que permite um redirecionamento para a página de <i>login</i> (inclusive alterando a URL no navegador) quando o usuário não estiver autenticado. 
+       </p>
+       <p>
+        Mais uma vez, pare e teste antes de continuar a codificação. Tente acessar “localhost:8080/protegida” sem <i>login</i>, depois tente de novo após se autenticar com sucesso. 
+       </p>
+       <p>
+        Por fim, vamos implementar o <i>logoff</i> incluindo o seguinte método na classe AutenticacaoController. 
+       </p>
+       <pre>
+        <code>
+@RequestMapping("/logoff") 
+public ModelAndView fazLogoff(HttpServletRequest request){ 
+    HttpSession sessao = request.getSession(); 
+    if(sessao != null ) 
+        sessao.removeAttribute("usuario"); 
+    return new ModelAndView("redirect:/"); 
+} 
+        </code>
+       </pre>
+       <p>
+        Novamente, o método é simples: apenas use o removeAttribute() de HttpSession e depois retorne o usuário à página de <i>login</i>. Como o <i>link</i> da visão protegida.html aponta para “/logoff”, já é possível testar de novo. 
+       </p>
+       <a href="imgs/assets/fig-07.png" target="_blank" class="" aria-hidden="true">
+         <img src="imgs/assets/fig-07.png" class="imgBorder center-block img-responsive" alt=" Animação inicia com página de login onde se preenchem credenciais corretas e clica-se em “Autenticar”, levando à página “protegida”, onde aparece o título “Você está autenticado”, a frase “Se você está vendo esta página então você está autenticado” e um link para realizar logoff. O mouse posiciona-se no link e clica, retornando à página de login. Em seguida, na barra de endereço do navegador, digita-se localhost:8080/protegida, mas retorna à página de login, já que o usuário não está autenticado.">
+       </a>
+       <p class="legenda-imagem">Figura 7 – Retorno página  <br>
+        Fonte: Senac EAD (2023) 
+       </p>
+       <p class="caixa-destaque icone-doc">Importante ressaltar que, por padrão, Sessões ficam armazenadas em memória volátil do servidor, e não no navegador do usuário como <i>cookies</i>. Assim, ao reiniciar uma aplicação <i>web</i> com sessão, ela será excluída. Existem implementações de sessão que usam banco de dados ou outros recursos que evitam essa situação. 
+
+       </p>
+       <p class="caixa-destaque icone-desafio">
+        Crie um novo projeto Spring MVC com base no exemplo de <i>cookies</i> para preferências do <i>site</i>. Mas, em vez de armazenar os dados em <i>cookies</i>, guarde-os em sessões. 
+       </p>
+       <h4>
+        Aplicabilidade: sessão com projeto RESTful 
+       </h4>
+       <p>
+        Assim como acontece com <i>cookies</i>, sessões não são muito recomendadas para aplicações RESTful por quebrar a premissa<i>stateless</i> desse tipo de abordagem, No entanto, é possível utilizar sem muitos problemas sessões, e o procedimento é exatamente o mesmo aplicado para Spring MVC. 
+       </p>
+       <p>
+        Para o exemplo a seguir, crie um novo projeto: 
+       </p>
+       <ul>
+        <li>No <i>site</i> do Spring Initializr, configure “Project: Maven”, “Spring Boot” na maior versão que não seja Snapshot, RC ou M2, “Group: com.senactds” “Artifact” e “Name” com valores “sessionrestful”, “Packaging: Jar” e “Java: 17”, ou versão correspondente à instalada em sua máquina. </li>
+        <li>Em “Dependencies” inclua “SpringWeb”. </li>
+        <li>Gere o projeto e o abra com o NetBeans. </li>
+       </ul>
+       <p>
+        Crie, em seguida, um pacote “com.senactds.sessionrestful.controller” e, nele, uma classe SessaoController. A seguir, veja o código completo para a classe. 
+       </p>
+       <pre>
+        <code>
+package com.senactds.sessionrestful.controller; 
+import jakarta.servlet.http.HttpServletRequest; 
+import jakarta.servlet.http.HttpSession; 
+import org.springframework.web.bind.annotation.GetMapping; 
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RestController; 
+@RestController 
+@RequestMapping("/sessoes") 
+public class SessaoController { 
+    @GetMapping("/grava") 
+    public String gravaSessao(HttpServletRequest request, String nome){ 
+        HttpSession sessao = request.getSession(); 
+        if(sessao != null){ 
+            sessao.setAttribute("usuario", nome); 
+            return "Sessão atualizada"; 
+        } 
+        return "Sem sessão"; 
+    } 
+    @GetMapping("/le") 
+    public String leSessao(HttpServletRequest request){ 
+        HttpSession sessao = request.getSession(); 
+        if(sessao != null){ 
+            return "Valor da sessão: " + (String)sessao.getAttribute("usuario"); 
+        } 
+        return "Sem sessão"; 
+    } 
+    @GetMapping("/exclui") 
+    public String excluiSessao(HttpServletRequest request){ 
+        HttpSession sessao = request.getSession(); 
+        if(sessao != null){ 
+            sessao.removeAttribute("usuario"); 
+        } 
+        return "Excluído"; 
+    } 
+} 
+
+        </code>
+       </pre>
+       <p>
+        Note que não há diferença com relação ao manejo de sessões relacionadas ao Spring MVC. Você pode rodar a aplicação e testar no navegador ou no Postman realizando esta sequência de requisições: 
+       </p>
+       
+       <a href="imgs/infografico2_mobile.png" target="_blank" class="" aria-hidden="true">
+         <img src="imgs/infografico2_mobile.png" class="imgBorder center-block img-responsive" alt="">
+       </a>
+
+       <h3>Encerramento</h3>
+       <p>
+        Você concluiu seus estudos de <i>cookies</i> e sessões em Java. São recursos que devem ser usados pontualmente e que implicam em algumas questões, como o fato de que <i>cookies</i> podem simplesmente ser excluídos pelo usuário no navegador dele e que sessões podem sumir se o servidor reiniciar. Na maior parte do tempo, <i>cookies</i> serão aplicados para personalização ou troca de informações entre <i>sites</i> e sessões para autenticação e armazenamento temporário de dados que fazem parte de alguma ação do usuário, como um carrinho de compras, por exemplo. 
+       </p>
+       <p>
+        De todo modo, são duas ferramentas importantes para o desenvolvedor web, que, sabendo como usá-las, poderá aplicá-las em soluções para problemas específicos.  
+       </p>
+
+           
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           
+          
+          
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
 
 
 

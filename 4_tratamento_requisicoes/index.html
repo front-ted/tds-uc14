@@ -108,28 +108,28 @@
           <div class="caixa-destaque no-print" aria-hidden="true">
             <img src="imgs/a.png" class="img-responsive no-print icone01">
             <p class="conteudo">
-              Uma linha inicial, chamada de start-line, que mostra o tipo de requisição pedido, além de poder mostrar
+              <strong> Uma linha inicial, chamada de start-line</strong>, que mostra o tipo de requisição pedido, além de poder mostrar
               também seus status de sucesso ou falha.
             </p>
           </div>
           <div class="caixa-destaque no-print" aria-hidden="true">
             <img src="imgs/b.png" class="img-responsive no-print icone01">
             <p class="conteudo">
-              Um conjunto não obrigatório de cabeçalhos (headers) HTTP, demostrando as peculiaridades da mensagem ou
+            <strong>Um conjunto não obrigatório de cabeçalhos (headers) HTTP</strong>, demostrando as peculiaridades da mensagem ou
               demonstrando os itens contidos no seu corpo.
             </p>
           </div>
           <div class="caixa-destaque no-print" aria-hidden="true">
             <img src="imgs/c.png" class="img-responsive no-print icone01 iconeC">
             <p class="conteudo">
-              Uma linha em branco, chamada empty line, onde é destacado o fim do cabeçalho e o início do corpo da
+            <strong>Uma linha em branco, chamada empty line</strong>, onde é destacado o fim do cabeçalho e o início do corpo da
               mensagem.
             </p>
           </div>
           <div class="caixa-destaque no-print" aria-hidden="true">
             <img src="imgs/d.png" class="img-responsive no-print icone02">
             <p class="conteudo">
-              Na última parte, tem o corpo (body) da mensagem, este que, no caso, não aparece em todas as mensagens.
+            <strong>Na última parte, tem o corpo (body) da mensagem</strong>, este que, no caso, não aparece em todas as mensagens.
             </p>
           </div>
           <div class="acessivel print">
@@ -169,7 +169,7 @@
           <p>
             A comunicação entre cliente e servidor ocorre por meio do protocolo HTTP, e sempre que o navegador (cliente)
             faz uma solicitação ao servidor, ele recebe um código composto por três números, informando se a solicitação
-            foi bem-sucedida, se houve algum erro ou se é necessária uma autenticação prévia para envio da resposta.
+            foi bem-sucedida, se houve algum erro ou se é necessária uma autenticação prévia para <i>envio</i> da resposta.
           </p>
           <p>
             Entre os códigos de <i>status</i> existem cinco categorias, e é necessário saber que o primeiro dígito desse
@@ -260,19 +260,19 @@
             ser
             conhecidos. Veja os principais a seguir.
           </p>
-          <p>
+          <p>a) 
             <strong>Código 200</strong>: esse código de erro não significa um erro em si, mas é necessário conhecê-lo,
             pois é o código
             esperado como solução para qualquer erro anterior, ou seja, o código 200 indica que a solicitação foi
             bem-sucedida/aceita.
           </p>
-          <p>
+          <p>b)
             <strong>Código 500</strong>: esse é um erro interno do servidor e é um dos erros mais temido pelos usuários,
             pois indica que
             o servidor está passando por alguma instabilidade e não está conseguindo dar andamento à requisição do
             cliente.
           </p>
-          <p>
+          <p>c)
             <strong> Código 403 (<i>Forbidden</i>)</strong>: esse é o conhecido acesso proibido, é simplesmente uma
             negação do servidor à
             requisição do cliente, ou seja, demonstra que o cliente não tem permissão de acesso ao conteúdo requisitado.
@@ -432,7 +432,7 @@
             acesso a Dev Tools ou ferramenta do desenvolvedor, que será utilizado como exemplo a partir de agora.
           </p>
           <p>
-            a) Exemplo de retorno de requisição 200 de uma busca do Google.
+            a) Exemplo de <i>retorno</i> de requisição 200 de uma busca do Google.
           </p>
           <img src="imgs/fig-02.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
           <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
@@ -462,7 +462,7 @@
             A seguir, serão analisados alguns itens importantes.
           </p>
           <p>
-            b) Exemplo de retorno de requisição 404 de uma busca do Google.
+            b) Exemplo de <i>retorno</i> de requisição 404 de uma busca do Google.
           </p>
           <img src="imgs/fig-03.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
           <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
@@ -479,7 +479,7 @@
           </div>
           <p>
             Ao tentar acessar o endereço http://www.google.com.br/cadastro, que é um endereço inválido, é possível
-            entender com exatidão o uso do retorno 404 para páginas inexistentes.
+            entender com exatidão o uso do <i>retorno</i> 404 para páginas inexistentes.
           </p>
           <img src="imgs/fig-04.png" class="center-block img-responsive hidden-sm hidden-xs imgBorder print">
           <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
@@ -495,7 +495,7 @@
           </div>
           <p>
             Ao tentar acessar indevidamente o endereço http://www.senacead.com.br, que é um endereço que necessita de
-            autorização, é possível entender o uso do retorno 403 para páginas que necessitam de <i>login</i> prévio.
+            autorização, é possível entender o uso do <i>retorno</i> 403 para páginas que necessitam de <i>login</i> prévio.
           </p>
           <h3> POST e GET: exemplo de uso dos métodos na prática</h3>
           <p>
@@ -576,10 +576,10 @@
           </p>
           <h4>Uso do GET</h4>
           <p>
-            Será mostrado um dado de envio e qual resposta será dada pelo servidor para melhor entendimento, e o GET,
+            Será mostrado um dado de <i>envio</i> e qual resposta será dada pelo servidor para melhor entendimento, e o GET,
             como demonstrado por padrão, retornará os dados requisitados.
           </p>
-          <p>Envio: </p>
+          <p><i>Envio</i>: </p>
           <pre>
             <code>
               GET http://localhost:3000/senacead/ 
@@ -593,14 +593,14 @@
             quatro alunos, com seus nomes e suas três menções de atividades. Pode-se continuar usando o GET, mas agora
             marcando um aluno, para ver suas menções.
           </p>
-          <p>Envio</p>
+          <p><i>Envio</i></p>
           <pre>
             <code>
               GET http://localhost:3000/senacead/2 
               Content-Type: application/json 
             </code>
           </pre>
-          <p>Retorno: </p>
+          <p><i>Retorno</i>: </p>
           <pre>
             <code>
               { 
@@ -660,6 +660,7 @@
                 Figura 6 – Ferramenta de desenvolvedor – Aba Cabeçalho de resposta <br>
                 Fonte: Google Chrome (2023)
               </p>
+              <p>As informações mais importantes para ler essa aba são: </p>
               <div class="acessivel no-print">
                 A imagem mostra a aba Cabeçalhos de resposta da ferramenta do desenvolvedor do Google CHROME.
               </div>
@@ -726,7 +727,7 @@
           <p>
             No caso do POST, ele enviará novos valores à base da dados. Será testada a inclusão de um novo aluno.
           </p>
-          <p>Envio: </p>
+          <p><i>Envio</i>: </p>
           <pre>
             <code>
               POST http://localhost:3000/senacead/ 
@@ -739,7 +740,7 @@
               } 
             </code>
           </pre>
-          <p>Retorno: </p>
+          <p><i>Retorno</i>: </p>
           <pre>
             <code>
               {    "id": 5 
@@ -757,7 +758,7 @@
           <p>
             No caso do PUT, foi alterado um produto por completo.
           </p>
-          <p>Envio: </p>
+          <p><i>Envio</i>: </p>
           <pre>
             <code>
               PUT http://localhost:3000/senacead/5 
@@ -770,7 +771,7 @@
               } 
             </code>
           </pre>
-          <p>Retorno: </p>
+          <p><i>Retorno</i>: </p>
           <pre>
             <code>
               {    "id": 5 
@@ -790,7 +791,7 @@
             No caso do PATCH, foi alterada apenas parte do produto. Será utilizado o PUT para alterar um sobrenome que
             está errado no aluno 5.
           </p>
-          <p>Envio: </p>
+          <p><i>Envio</i>: </p>
           <pre>
             <code>
               PATCH http://localhost:3000/senacead/5 
@@ -800,7 +801,7 @@
               } 
             </code>
           </pre>
-          <p>Retorno: </p>
+          <p><i>Retorno</i>: </p>
           <pre>
             <code>
               {    "id": 5 
@@ -819,14 +820,14 @@
           <p>
             No caso do DELETE, é usado para excluir um produto por completo.
           </p>
-          <p>Envio: </p>
+          <p><i>Envio</i>: </p>
           <pre>
             <code>
               DELETE http://localhost:3000/senacead/1 
               Content-Type: application/json 
             </code>
           </pre>
-          <p>Retorno: </p>
+          <p><i>Retorno</i>: </p>
           <pre>
             <code>
               Status: 200 OK 

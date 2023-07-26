@@ -113,16 +113,16 @@
                       <a href="#t8" class="fundo-item">Condicionais</a>
                     </li>
                     <li class="item9">
-                      <a href="#t8" class="fundo-item">Formulários</a>
+                      <a href="#t9" class="fundo-item">Formulários</a>
                     </li>
                     <li class="item10">
-                      <a href="#t8" class="fundo-item">Navegação entre páginas </a>
+                      <a href="#t10" class="fundo-item">Navegação entre páginas </a>
                     </li>
                     <li class="item11">
-                      <a href="#t8" class="fundo-item">Recursos estáticos</a>
+                      <a href="#t11" class="fundo-item">Recursos estáticos</a>
                     </li>
-                    <li class="item11">
-                      <a href="#t8" class="fundo-item">Encerramento</a>
+                    <li class="item12">
+                      <a href="#t12" class="fundo-item">Encerramento</a>
                     </li>
                   </ul>
                 </div>
@@ -133,89 +133,89 @@
               
               <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
               
-              <h2 class="acessivel print">Ambiente de desenvolvimento (Spring MVC) </h2>
+
+              <h2>Ambiente de desenvolvimento (Spring MVC) </h2>
               <h3 id="t1">Introdução</h3>              
               <p>A seguir, será abordado como instalar e configurar um ambiente de desenvolvimento para programar projetos Spring MVC. Nesse momento, não será dada atenção à persistência dos dados em um banco de dados. Assim que o ambiente estiver pronto, será iniciada a criação dos projetos, com muitas dicas úteis para ajudá-lo a ter sucesso nesse processo. </p>
-              <h3>Spring e Spring Boot</h3>
+              <h3 id="t2">Spring e Spring Boot</h3>
               <p>
-                Como você pôde conferir no conteúdo “Arquitetura Web” desta unidade, o Spring Framework permite o desenvolvimento muito mais eficiente de aplicações web do que as ferramentas nativas de Java (Servlets, JSP etc.). Essa ferramenta é amplamente adotada pelo mercado por trazer facilidade à configuração com o uso de injeção de dependência, o que permite uma boa modularização no sistema e favorece o desenvolvimento de serviços web. Além disso, conta com suporte para tarefas comuns em desenvolvimento web, como vinculação de dados (data-binding), conversão automática de tipos, validações de eventos, internacionalização e vários outros recursos.  
+                Como você pôde conferir no conteúdo “Arquitetura <i>Web</i>” desta unidade, o Spring Framework permite o desenvolvimento muito mais eficiente de aplicações <i>web</i> do que as ferramentas nativas de Java (Servlets, JSP etc.). Essa ferramenta é amplamente adotada pelo mercado por trazer facilidade à configuração com o uso de injeção de dependência, o que permite uma boa modularização no sistema e favorece o desenvolvimento de serviços <i>web</i>. Além disso, conta com suporte para tarefas comuns em desenvolvimento <i>web</i>, como vinculação de dados (<i>data-binding</i>), conversão automática de tipos, validações de eventos, internacionalização e vários outros recursos.  
               </p>
               <p>
-                O Spring Boot é uma ferramenta auxiliar ao Spring que visa tornar mais fácil e rápido o processo de criação e configuração de projetos. Seu uso é opcional, mas a principal vantagem é que torna possível criar rapidamente aplicações prontas para produção, com um mínimo de configuração e sem a necessidade de definir manualmente muitos detalhes técnicos. O Spring Boot oferece várias facilidades, como um servidor embutido e um amplo conjunto de ferramentas para ajudar a simplificar o processo de desenvolvimento. Assim, podem ser criadas aplicações que rodam por si próprias, sem necessidade de implantação em servidor web externo, como Tomcat. 
+                O Spring Boot é uma ferramenta auxiliar ao Spring que visa tornar mais fácil e rápido o processo de criação e configuração de projetos. Seu uso é opcional, mas a principal vantagem é que torna possível criar rapidamente aplicações prontas para produção, com um mínimo de configuração e sem a necessidade de definir manualmente muitos detalhes técnicos. O Spring Boot oferece várias facilidades, como um servidor embutido e um amplo conjunto de ferramentas para ajudar a simplificar o processo de desenvolvimento. Assim, podem ser criadas aplicações que rodam por si próprias, sem necessidade de implantação em servidor <i>web</i> externo, como Tomcat. 
               </p>
-              <h3> Instalação e configuração</h3>
+              <h3 id="t3"> Instalação e configuração</h3>
               <p>
-                Para implementação de projeto Spring, as etapas são um pouco diferentes das instalações e configurações-padrão de aplicativos. Como o Spring é um framework para projetos Java, é necessário um projeto Java para “instalar” o Spring nesse projeto. Geralmente, isso é feito criando um projeto do zero e, depois, fazendo a instalação do framework por meio de algum gerenciador de dependências. Isso pode ser um pouco demorado e muitos erros podem acontecer se cada etapa não for seguida à risca. Sendo assim, será usada outra abordagem. 
+                Para implementação de projeto Spring, as etapas são um pouco diferentes das instalações e configurações-padrão de aplicativos. Como o Spring é um <i>framework</i> para projetos Java, é necessário um projeto Java para “instalar” o Spring nesse projeto. Geralmente, isso é feito criando um projeto do zero e, depois, fazendo a instalação do <i>framework</i> por meio de algum gerenciador de dependências. Isso pode ser um pouco demorado e muitos erros podem acontecer se cada etapa não for seguida à risca. Sendo assim, será usada outra abordagem. 
               </p>
               <p>
-                A forma mais eficaz que se tem para criar um projeto com o Spring é utilizando o Spring Initializr, um serviço web que permite aos desenvolvedores criar rapidamente aplicativos Java com o Spring Framework. Ele fornece modelos de projeto pré-configurados, com uma variedade de opções para selecionar e construir o projeto do jeito que precisar. Como o serviço gera automaticamente o código de configuração necessário para iniciar o projeto, você economiza tempo e esforço. O primeiro passo é acessar a página do Spring Initializr (start.spring.io). 
+                A forma mais eficaz que se tem para criar um projeto com o Spring é utilizando o Spring Initializr, um serviço <i>web</i> que permite aos desenvolvedores criar rapidamente aplicativos Java com o Spring Framework. Ele fornece modelos de projeto pré-configurados, com uma variedade de opções para selecionar e construir o projeto do jeito que precisar. Como o serviço gera automaticamente o código de configuração necessário para iniciar o projeto, você economiza tempo e esforço. O primeiro passo é acessar a página do Spring Initializr (start.spring.io). 
               </p>
               <a href="imgs/fig-01.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-01.png" class="center-block img-responsive" alt="Página Spring Initializr, paniel à esquerda com opções: Project (opções Gradle – Groovy. Gradle – Kotlin, Maven), Language (Java, Kotlin ou Groovy), Spring Boot (opções 3.1.0 (SNAPSHOT), 3.1.0(M2), 3.0.8 (SNAPSHOT), 3.0.5, 2.7.11 (SNAPSHOT) 2.7.10), Project metadata com campos de texto para “Group”, “Artifact”, “Name”, “Description”, “Package name”. Abaixo, Packaging (opções Jar e War), e abaixo Java (com opções 20, 17, 11, 8). À direita, painel com título “Dependencies” e botão “Add Dependencies”. No rodabé botões “Generate”, “Explore” e “Share...”. "></a>
+                <img src="imgs/fig-01.png" class="imgBorder center-block img-responsive" alt="Página Spring Initializr, paniel à esquerda com opções: Project (opções Gradle – Groovy. Gradle – Kotlin, Maven), Language (Java, Kotlin ou Groovy), Spring Boot (opções 3.1.0 (SNAPSHOT), 3.1.0(M2), 3.0.8 (SNAPSHOT), 3.0.5, 2.7.11 (SNAPSHOT) 2.7.10), Project metadata com campos de texto para “Group”, “Artifact”, “Name”, “Description”, “Package name”. Abaixo, Packaging (opções Jar e War), e abaixo Java (com opções 20, 17, 11, 8). À direita, painel com título “Dependencies” e botão “Add Dependencies”. No rodabé botões “Generate”, “Explore” e “Share...”. "></a>
                             <p class="legenda-imagem">
-                              Figura 1 – Site do Spring Initializr 
+                              Figura 1 – <i>Site</i> do Spring Initializr 
                               Fonte: Spring Initializr (s.d.) 
                             </p>
               <p>
-                Nessa tela, serão definidas todas as configurações iniciais do projeto. Em Project, você deve escolher qual gerenciador de dependências utilizará. Um gerenciador de dependências facilita a construção de um projeto, baixando bibliotecas automaticamente a partir de algumas referências configuradas. Durante o curso, você já conheceu o Maven, e é com ele que seguirá nos próximos projetos. Por isso, nos exemplos, normalmente será selecionada a opção Maven. 
+                Nessa tela, serão definidas todas as configurações iniciais do projeto. Em <strong>Project</strong>, você deve escolher qual gerenciador de dependências utilizará. Um gerenciador de dependências facilita a construção de um projeto, baixando bibliotecas automaticamente a partir de algumas referências configuradas. Durante o curso, você já conheceu o Maven, e é com ele que seguirá nos próximos projetos. Por isso, nos exemplos, normalmente será selecionada a opção <strong>Maven</strong>. 
               </p>
               <p>
-                Em Language, é possível escolher qual linguagem de programação será utilizada no desenvolvimento do projeto. Nos projetos do curso, será escolhida sempre a opção Java. 
+                Em <strong>Language</strong>, é possível escolher qual linguagem de programação será utilizada no desenvolvimento do projeto. Nos projetos do curso, será escolhida sempre a opção </strong>Java</strong>. 
               </p>
               <a href="imgs/fig-02.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-02.png" class="center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Project”:  Gradle Goovy, Gradle Kotlin e Maven (selecionada). "></a>
+                <img src="imgs/fig-02.png" class="imgBorder center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Project”:  Gradle Goovy, Gradle Kotlin e Maven (selecionada). "></a>
               <p class="legenda-imagem">
-                Figura 2 – Site do Spring Initializr 
+                Figura 2 – <i>Site</i> do Spring Initializr 
                 Fonte: Spring Initializr (s.d.) 
               </p>
               <a href="imgs/fig-03.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-03.png" class="center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Language”:  Java (selecionada), Kotlin, Groovy ">
+                <img src="imgs/fig-03.png" class="imgBorder center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Language”:  Java (selecionada), Kotlin, Groovy ">
               </a>
               <p class="legenda-imagem">
-                Figura 3 – Site do Spring Initializr 
+                Figura 3 – <i>Site</i> do Spring Initializr 
                 Fonte: Spring Initializr (s.d.) 
               </p>
               <p>
-                Em Spring Boot, é escolhida a versão da biblioteca que se deseja utilizar. Por padrão, a opção 3.0.6 já vem selecionada por se tratar da última versão do Spring Boot nesta data. É possível selecionar versões mais antigas ou a versão atualmente em desenvolvimento, que se trata de uma versão mais atualizada, mas que pode apresentar alguns bugs em funcionalidades que não tenham sido testadas – não é recomendado selecioná-la. Para garantir que não ocorra nenhuma instabilidade ou imprevisto no desenvolvimento deste projeto, foi selecionada a última versão estável na data de produção deste material, que é a 3.0.6. 
+                Em <strong>Spring Boot</strong>, é escolhida a versão da biblioteca que se deseja utilizar. Por padrão, a opção <strong>3.0.6</strong> já vem selecionada por se tratar da última versão do Spring Boot nesta data. É possível selecionar versões mais antigas ou a versão atualmente em desenvolvimento, que se trata de uma versão mais atualizada, mas que pode apresentar alguns bugs em funcionalidades que não tenham sido testadas – não é recomendado selecioná-la. Para garantir que não ocorra nenhuma instabilidade ou imprevisto no desenvolvimento deste projeto, foi selecionada a última versão estável na data de produção deste material, que é a <strong>3.0.6</strong>. 
               </p>
               <a href="imgs/fig-04.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-04.png" class="center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Spring Boot”:  3.1.0 (SNAPSHOT), 3.1.0(RC1), 3.1.0 (M2), 3.0.7(SNAPSHOT), 3.0.6 (selecionada), 2.7.12 (SNAPSHOT) 2.7.11 ">
+                <img src="imgs/fig-04.png" class="imgBorder center-block img-responsive" alt="Detalhe da página Spring Initializr mostrando as opções de “Spring Boot”:  3.1.0 (SNAPSHOT), 3.1.0(RC1), 3.1.0 (M2), 3.0.7(SNAPSHOT), 3.0.6 (selecionada), 2.7.12 (SNAPSHOT) 2.7.11 ">
               </a>
-              <p class="legenda-imagem">Figura 4 – Site do Spring Initializr 
+              <p class="legenda-imagem">Figura 4 – <i>Site</i> do Spring Initializr 
                 Fonte Spring Initializr (s.d.) 
               </p>
               <p class="caixa-destaque icone-atencao"><strong>Atenção</strong> - As versões do Spring Boot podem variar dependendo de quando você estiver lendo este conteúdo. É recomendado que você utilize a última versão estável da biblioteca sempre que possível. </p>
               <p>
-                Em Project Metadata, é necessário definir alguns metadados para a criação deste projeto. Veja no infográfico a seguir. 
+                Em <strong>Project Metadata</strong>, é necessário definir alguns metadados para a criação deste projeto. Veja no infográfico a seguir. 
               </p>
-              <h1>img infográfico</h1>
-
+              <img src="imgs/infografico_pg02.png" class="imgBorder center-block img-responsive" alt="">
               <br>
               <p>
                 Veja a seguir um exemplo de preenchimento desses dados. 
               </p>
               <a href="imgs/fig-05.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-05.png" class="center-block img-responsive" alt="Seção “Project Metadata” da página Spring Initializr, mostrando campo “Group” com valor “com.api”, campo “Artifact” com valor “tarefas”, campo “Name” com valor “tarefas”, campo “Description” com valor “API Rest de Projeto de Tarefas”, campo “Package name” com valor “com.api.tarefas”, item “Packaging” com opção “Jar” selecionada, e item “Java” com opção “17” selecionada. ">
+                <img src="imgs/fig-05.png" class="imgBorder center-block img-responsive" alt="Seção “Project Metadata” da página Spring Initializr, mostrando campo “Group” com valor “com.api”, campo “Artifact” com valor “tarefas”, campo “Name” com valor “tarefas”, campo “Description” com valor “API Rest de Projeto de Tarefas”, campo “Package name” com valor “com.api.tarefas”, item “Packaging” com opção “Jar” selecionada, e item “Java” com opção “17” selecionada. ">
               </a>
-              <p class="legenda-imagem">Figura 5 – Site do Spring Initializr  
+              <p class="legenda-imagem">Figura 5 – <i>Site</i> do Spring Initializr  
                 Fonte Spring Initializr (s.d.) 
               </p>
               <p>
-                A seção Dependencies no Spring Initializr permite que você escolha as bibliotecas e os frameworks que deseja utilizar em seu projeto. Para adicionar uma dependência, clique no botão Add Dependencies. 
+                A seção <strong>Dependencies</strong> no Spring Initializr permite que você escolha as bibliotecas e os <i>frameworks</i> que deseja utilizar em seu projeto. Para adicionar uma dependência, clique no botão <strong>Add Dependencies</strong>. 
               </p>
               <a href="imgs/fig-06.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-06.png" class="center-block img-responsive" alt="Detalhe na página Spring Initializr do painel com título “Dependencies” e botão “Add Dependencies”. ">
+                <img src="imgs/fig-06.png" class="imgBorder center-block img-responsive" alt="Detalhe na página Spring Initializr do painel com título “Dependencies” e botão “Add Dependencies”. ">
               </a>
-              <p class="legenda-imagem">Figura 6 – Site do Spring Initializr 
+              <p class="legenda-imagem">Figura 6 – <i>Site</i> do Spring Initializr 
                 Fonte: Spring Initializr (s.d.) 
               </p>
               <p>
-                As dependências disponíveis no Spring Initializr incluem várias bibliotecas populares do ecossistema Spring, como Spring Web, Spring Data JPA, Spring Security e Spring Cloud, bem como outras bibliotecas populares, como o Apache Kafka, o Hibernate e o Thymeleaf. Você pode selecionar várias dependências clicando nas caixas de seleção correspondentes. Nos projetos web apresentados neste conteúdo, sempre será usado o Spring Web. 
+                As dependências disponíveis no Spring Initializr incluem várias bibliotecas populares do ecossistema Spring, como <strong>Spring Web</strong>, Spring Data JPA, Spring Security e Spring Cloud, bem como outras bibliotecas populares, como o Apache Kafka, o Hibernate e o Thymeleaf. Você pode selecionar várias dependências clicando nas caixas de seleção correspondentes. Nos projetos <i>web</i> apresentados neste conteúdo, sempre será usado o <strong>Spring Web</strong>. 
               </p>
               <a href="imgs/fig-07.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-07.png" class="center-block img-responsive" alt="Lista de dependências do Spring Initializr, mostrando uma lista com ”Spring Web”, selecionada, “Spring Reactive Web”, “Spring Web Servides” e outras. ">
+                <img src="imgs/fig-07.png" class="imgBorder center-block img-responsive" alt="Lista de dependências do Spring Initializr, mostrando uma lista com ”Spring Web”, selecionada, “Spring Reactive Web”, “Spring Web Servides” e outras. ">
               </a>
-              <p class="legenda-imagem">Figura 7 – Site do Spring Initializr  
+              <p class="legenda-imagem">Figura 7 – <i>Site</i> do Spring Initializr  
                 Fonte: Spring Initializr (s.d.) 
               </p>
               <p>
@@ -225,23 +225,23 @@
                 É importante notar que adicionar muitas dependências ao seu projeto pode torná-lo mais pesado e aumentar o tempo de construção. Por isso, é importante escolher apenas as dependências necessárias para o seu projeto e mantê-las atualizadas para garantir a segurança e o desempenho do seu aplicativo. 
               </p>
               <p>
-                Após selecionar o Spring Web, por exemplo, a dependência aparecerá abaixo na lista de dependências. 
+                Após selecionar o <strong>Spring Web</strong>, por exemplo, a dependência aparecerá abaixo na lista de dependências. 
               </p>
               <a href="imgs/fig-08.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-08.png" class="center-block img-responsive" alt="Detalhe na página Spring Initializr do painel com título “Dependencies” e botão “Add Dependencies”. Abaixo lista a dependência “Spring web” com descrição “Build web, including RESTful, applications using SpringMVC. Uses Apache Tomcat as the default embedded container” ">
+                <img src="imgs/fig-08.png" class="imgBorder center-block img-responsive" alt="Detalhe na página Spring Initializr do painel com título “Dependencies” e botão “Add Dependencies”. Abaixo lista a dependência “Spring web” com descrição “Build web, including RESTful, applications using SpringMVC. Uses Apache Tomcat as the default embedded container” ">
               </a>
-              <p class="legenda-imagem">Figura 8 – Site do Spring Initializr 
+              <p class="legenda-imagem">Figura 8 – <i>Site</i> do Spring Initializr 
                 Fonte: Spring Initializr (s.d.) 
               </p>
               <p>
-                Após concluir todas as configurações, clique em Generate, no rodapé da página, que será feito o download de uma pasta compactada (.zip) contendo o projeto completo. 
+                Após concluir todas as configurações, clique em <strong>Generate</strong>, no rodapé da página, que será feito o <i>download</i> de uma pasta compactada (.zip) contendo o projeto completo. 
               </p>
               <p>
-                Finalizado o download, é possível extrair o conteúdo em seu computador e abrir a pasta do projeto com sua IDE – nesse caso, o Apache NetBeans IDE. 
+                Finalizado o <i>download</i>, é possível extrair o conteúdo em seu computador e abrir a pasta do projeto com sua IDE – nesse caso, o <i>Apache NetBeans IDE</i>. 
               </p>
-              <h3>Spring MVC</h3>
+              <h3 id="t4">Spring MVC</h3>
               <p>
-                O framework Spring conta com uma variedade grande de ferramentas para desenvolvimento web e, entre essas ferramentas, uma das mais populares é o Spring MVC, uma implementação do padrão MVC para a construção de aplicações web, que usa anotações, convenções, pacotes e pastas para separar as camadas do padrão.  
+                O <i>framework</i> Spring conta com uma variedade grande de ferramentas para desenvolvimento <i>web</i> e, entre essas ferramentas, uma das mais populares é o Spring MVC, uma implementação do padrão MVC para a construção de aplicações <i>web</i>, que usa anotações, convenções, pacotes e pastas para separar as camadas do padrão.  
               </p>
               <p>
                 A construção de um projeto Spring MVC pode ser realizada a partir do Spring Boot, que inclui algumas configurações automaticamente. Assim, evita-se a escrita de arquivos XML para configurar. De maneira simplificada, o fluxo de uma requisição no Spring MVC é o seguinte: 
@@ -250,7 +250,7 @@
                 Clique ou toque para visualizar o conteúdo. 
               </p>
               
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div id="carousel-example-generic" class="carousel slide carouselDesktop" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0"  class="active"></li>
@@ -266,7 +266,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <p>Request é recebido pelo sistema e tratado internamente por um objeto da classe DispatcherServlet. </p>
+              <p style="padding: 30px;">Request é recebido pelo sistema e tratado internamente por um objeto da classe DispatcherServlet. </p>
               <img src="imgs/fig-09.png" alt="À esquerda, um computador tem uma seta com o texto http://localhost:8080/abc conectando a uma área com título “Spring MVC” à direita; dentro da área, há um retângulo escrito “DispatcherServlet”, onde a seta prossegue. " class="img-responsive center-block">
               <div class="carousel-caption">
                 Figura 9 – Request enviado ao sistema 
@@ -325,11 +325,9 @@ Fonte: Senac EAD (2023)
           </div>
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
@@ -341,7 +339,7 @@ Fonte: Senac EAD (2023)
           </p>
           <ul>
             <li>Usando o Spring Initializr, crie um projeto com as seguintes configurações: </li>
-            <ul>
+            <ul class="lista2">
               <li>Project: Maven </li>
               <li>Language: Java </li>
               <li>Spring Boot: maior versão estável disponível </li>
@@ -349,12 +347,12 @@ Fonte: Senac EAD (2023)
               <li>Artifact e Name: projetomvc </li>
               <li>Packaging: Jar </li>
               <li>Java: 17 (ou versão instalada em sua máquina)  </li>
-              <li>Dependencies: inclua Spring Web (categoria Web) e Thymeleaf (categoria Template Engines) </li>
+              <li>Dependencies: inclua <strong>Spring Web</strong> (categoria <i>Web</i>) e Thymeleaf (categoria Template Engines) </li>
             </ul>
             <li>Baixe o arquivo compactado gerado, extraia e abra a pasta no NetBeans. </li>
           </ul>
           <a href="imgs/fig-16.png" target="_blank"   aria-hidden="true">
-            <img src="imgs/fig-16.png" class="center-block img-responsive" alt="Página do Sprinc Initializr com as configurações citadas no texto. ">
+            <img src="imgs/fig-16.png" class="imgBorder center-block img-responsive" alt="Página do Sprinc Initializr com as configurações citadas no texto. ">
           </a>
           <p class="legenda-imagem">Figura 16 – Configurações no Spring Initializr 
 
@@ -367,7 +365,7 @@ Fonte: Senac EAD (2023)
             </li>
           </ul>
               <a href="imgs/fig-17.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-17.png" class="center-block img-responsive" alt="Detalhe da aba projetos do Netbeans, destacando as estruturas: Source Packages > com.senac.projetomvc > ProjetoMvcApplication.java; abaixo Other Sources > src/main/resources > “default package”, “static” e “templates”; Project Files > pom.xml.  ">
+                <img src="imgs/fig-17.png" class="imgBorder center-block img-responsive" alt="Detalhe da aba projetos do Netbeans, destacando as estruturas: Source Packages > com.senac.projetomvc > ProjetoMvcApplication.java; abaixo Other Sources > src/main/resources > “default package”, “static” e “templates”; Project Files > pom.xml.  ">
               </a>
               <p class="legenda-imagem">Figura 17 – Projeto Spring MVC 
                 Fonte: NetBeans (2023) 
@@ -378,6 +376,7 @@ Fonte: Senac EAD (2023)
           <p>
             Neste primeiro exemplo, a implementação será iniciada pela camada View, criando a página HTML que será exibida na tela. Na pasta src/main/resources/templates, clique com o botão direito do mouse e selecione New > HTML File, e na tela de criação, use como nome “saudacao”. O arquivo “saudacao.html” será criado na pasta, em que será escrito o seguinte código: 
           </p>
+          <pre>
           <code>
           <br>  &lt;!DOCTYPE html> 
           <br>  &lt;html> 
@@ -392,20 +391,22 @@ Fonte: Senac EAD (2023)
           <br>      &lt;/body> 
           <br>  &lt;/html> 
           </code>
+        </pre>
           <p class="caixa-destaque icone-dica"><strong>Dica</strong>
-            Ao criar a página HTML no NetBeans, a estrutura básica do documento e as tags meta importantes já são incluídas, o que facilita a escrita do código. O IDE ainda conta com sugestão e encerramento automático de tags. Use esses recursos para agilizar sua codificação. 
+            Ao criar a página HTML no NetBeans, a estrutura básica do documento e as <i>tags</i> meta importantes já são incluídas, o que facilita a escrita do código. O IDE ainda conta com sugestão e encerramento automático de <i>tags</i>. Use esses recursos para agilizar sua codificação. 
           </p>
           <p>
-            Essa é uma página simples, que pode ser acessada localmente abrindo o arquivo direto na pasta em que foi salvo. Um projeto web, no entanto, não funciona assim. Em vez disso, há uma URL que aponta para um servidor web que administra e entrega o recurso solicitado. No caso deste projeto, ainda não há como acessar o arquivo HTML direto pelo navegador. 
+            Essa é uma página simples, que pode ser acessada localmente abrindo o arquivo direto na pasta em que foi salvo. Um projeto <i>web</i>, no entanto, não funciona assim. Em vez disso, há uma URL que aponta para um servidor <i>web</i> que administra e entrega o recurso solicitado. No caso deste projeto, ainda não há como acessar o arquivo HTML direto pelo navegador. 
           </p>
           <p>
-            Para que isso seja possível, você precisa criar uma classe de controle, pois nela haverá um mapeamento para o endereço de web solicitado pelo usuário, que apontará para um método e alcançará o arquivo de visão (HTML). Deve-se, então, programar uma classe de controle primeiro criando um novo pacote “com.senac.projetomvc.controller” e depois, nesse pacote, criar a classe “MiscController.java”. 
+            Para que isso seja possível, você precisa criar uma classe de controle, pois nela haverá um mapeamento para o endereço de <i>web</i> solicitado pelo usuário, que apontará para um método e alcançará o arquivo de visão (HTML). Deve-se, então, programar uma classe de controle primeiro criando um novo pacote “com.senac.projetomvc.controller” e depois, nesse pacote, criar a classe “MiscController.java”. 
           </p>
           <p class="caixa-destaque icone-dica"><strong>Dica</strong>
             Para criar esse pacote, clique com o botão direito do mouse sobre o já existente “com.senac.ProjetoMvc” e apenas complete com “controller” no final. 
           </p>
           <p>Na classe MiscController, use o seguinte código: </p>
           
+        <pre>
           <code>
            <br> package com.senac.ProjetoMvc.controller; 
            <br> import org.springframework.stereotype.Controller; 
@@ -413,10 +414,11 @@ Fonte: Senac EAD (2023)
            <br> public class MiscController { 
            <br> } 
           </code>
+        </pre>
           <p>
             O código apenas declara uma classe, mas usa uma anotação especial “@Controller”, proveniente do pacote “org.springframework.stereotype” do Spring. Essa anotação é necessária para que o sistema busque nessa classe qual método deve ser executado a partir da URL, método esse escrito a seguir. 
           </p>
-          <code>package com.senac.ProjetoMvc.controller; 
+          <pre><code>package com.senac.ProjetoMvc.controller; 
           <br>  import org.springframework.stereotype.Controller; 
           <br>  import org.springframework.web.bind.annotation.GetMapping; 
           <br>  @Controller 
@@ -427,14 +429,16 @@ Fonte: Senac EAD (2023)
           <br>      } 
           <br>  } 
           </code>
+</pre>
+
           <p>
-            Há, então, o método “mostraSaudacao()”. O primeiro ponto a observar é a presença da anotação @GetMapping, que tem por argumento o valor “/saudacao”. Essa é a configuração que fará com que, quando o usuário digitar na URL http://<domínio>/saudacao, o novo método seja executado (<domínio>, nestes testes, sempre será localhost:8080).  
+            Há, então, o método “mostraSaudacao()”. O primeiro ponto a observar é a presença da anotação <strong>@GetMapping</strong>, que tem por argumento o valor “/saudacao”. Essa é a configuração que fará com que, quando o usuário digitar na URL http://<domínio>/saudacao, o novo método seja executado (<domínio>, nestes testes, sempre será localhost:8080).  
           </p>
-          <p>O método em si não tem nenhum processamento específico, apenas um retorno de um texto “saudacao”. Este é exatamente o nome dessa visão, o arquivo HTML criado há pouco, e isso não é por acaso: a partir desse retorno, o sistema localizará e exibirá a visão correta – nesse caso, “saudacao.html”. 
+          <p>O método em si não tem nenhum processamento específico, apenas um <strong>retorno</strong> de um texto “saudacao”. Este é exatamente o <strong>nome dessa visão</strong>, o arquivo HTML criado há pouco, e isso não é por acaso: a partir desse retorno, o sistema localizará e exibirá a visão correta – nesse caso, “saudacao.html”. 
 
           </p>
           <p>
-            Você já pode testar esse primeiro exemplo simples. Para isso, clique com o botão direito do mouse sobre a classe “ProjetomvcApplication” e escolha “Run File”. A aba output do NetBeans deve mostrar um log semelhante ao da figura a seguir, indicando que o servidor interno Tomcat do Spring está rodando. Note ainda que o processo não encerra, segue rodando, mas você pode interrompê-lo clicando no botão “stop” na lateral esquerda dessa aba. 
+            Você já pode testar esse primeiro exemplo simples. Para isso, clique com o botão direito do mouse sobre a classe “ProjetomvcApplication” e escolha <strong>“Run File”</strong>. A aba output do NetBeans deve mostrar um <i>log</i> semelhante ao da figura a seguir, indicando que o servidor interno Tomcat do Spring está rodando. Note ainda que o processo não encerra, segue rodando, mas você pode interrompê-lo clicando no botão “stop” na lateral esquerda dessa aba. 
           </p>
           <p>
 
@@ -443,7 +447,7 @@ Fonte: Senac EAD (2023)
           
 
               <a href="imgs/fig-18.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-18.png" class="center-block img-responsive" alt="Aba output do NetBeans mostra, à esquerda, botões desativados e o botão “Stop” ativo. Na área principal, “Spring” escrito estilizado com caracteres de pontuação e, abaixo, informações de execução, com data, hora e nomes de classes. ">
+                <img src="imgs/fig-18.png" class="imgBorder center-block img-responsive" alt="Aba output do NetBeans mostra, à esquerda, botões desativados e o botão “Stop” ativo. Na área principal, “Spring” escrito estilizado com caracteres de pontuação e, abaixo, informações de execução, com data, hora e nomes de classes. ">
               </a>
               <p class="legenda-imagem">Figura 18 – Oputput do Netbeans com o projeto em execução 
                 Fonte: NetBeans (2023) 
@@ -454,40 +458,43 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-19.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-19.png" class="center-block img-responsive" alt="Página com título “Boas Vindas!” e parágrafo “Parabéns, este é seu primeiro projeto MVC em ação!”. ">
+                <img src="imgs/fig-19.png" class="imgBorder center-block img-responsive" alt="Página com título “Boas Vindas!” e parágrafo “Parabéns, este é seu primeiro projeto MVC em ação!”. ">
               </a>
               <p class="legenda-imagem">Figura 19 – Página de boas-vindas 
                 Fonte: Senac EAD (2023) 
               </p>
-              <p class="caixa-destaque icone-pergunta">
-                <ul>
-                  <li>Sua requisição GET para http://localhost:8080/saudacao atingiu o servidor Tomcat iniciado pela execução de seu projeto. </li>
-                  <li>O servidor redirecionou o processamento ao DispatcherServlet, interno ao projeto, que encontrou seu controller “MiscController”. </li>
-                  <li>Na classe de controle, encontrou o método com anotação @GetMapping("/saudacao"), ou seja, a URL informada na requisição, e executou mostraSaudacao(), retornando o texto “saudacao”. </li>
-                  <li>DispatcherServlet, internamente, com base no retorno “saudacao” que recebeu do controller, procurou na pasta src/main/resources/templates por um arquivo “saudacao.html” e o encontrou. </li>
-                  <li>Com isso, a classe preparou o conteúdo HTML presente nesse arquivo e retornou como reposta da requisição. </li>
-                  <li>O navegador então renderizou a página na tela. </li>
-                </ul>
-              </p>
+              <div class="caixa-destaque icone-pergunta">
+                <p>O que aconteceu aqui? </p>
+              </div>
+              <ul>
+                <li>Sua requisição GET para http://localhost:8080/saudacao atingiu o servidor Tomcat iniciado pela execução de seu projeto. </li>
+                <li>O servidor redirecionou o processamento ao DispatcherServlet, interno ao projeto, que encontrou seu controller “MiscController”. </li>
+                <li>Na classe de controle, encontrou o método com anotação @GetMapping("/saudacao"), ou seja, a URL informada na requisição, e executou mostraSaudacao(), retornando o texto “saudacao”. </li>
+                <li>DispatcherServlet, internamente, com base no retorno “saudacao” que recebeu do controller, procurou na pasta src/main/resources/templates por um arquivo “saudacao.html” e o encontrou. </li>
+                <li>Com isso, a classe preparou o conteúdo HTML presente nesse arquivo e retornou como reposta da requisição. </li>
+                <li>O navegador então renderizou a página na tela. </li>
+              </ul>
               <p class="caixa-destaque icone-dica">
-                Note que o nome do arquivo HTML depende do retorno do método executado no controller, mas não depende da URL. Experimente trocar o argumento de @GetMapping para “/ola”, pare a execução com “stop” na aba “output” e rode de novo a aplicação usando a URL http://localhost:8080/ola no navegador. A resposta será idêntica, provando que a URL não interfere no nome dos arquivos de visão (HTML) usados, e vice-versa.  
+                Note que o nome do arquivo HTML depende do retorno do método executado no <i>controller</i>, mas não depende da URL. Experimente trocar o argumento de @GetMapping para “/ola”, pare a execução com “stop” na aba “output” e rode de novo a aplicação usando a URL http://localhost:8080/ola no navegador. A resposta será idêntica, provando que a URL não interfere no nome dos arquivos de visão (HTML) usados, e vice-versa.  
               </p>
               <p class="caixa-destaque icone-desafio">
-                Crie um projeto Spring MVC com duas páginas estáticas apenas. Cada página deve ter um link apontando para a outra (em href, use algo como “/pagina1” ou “/pagina2” para referenciar a página). 
+                Crie um projeto Spring MVC com duas páginas estáticas apenas. Cada página deve ter um <i>link</i> apontando para a outra (em href, use algo como “/pagina1” ou “/pagina2” para referenciar a página). 
               </p>
               <p>
-                No exemplo, serve-se apenas uma página estática, mas se fosse ser criado um site tão simples, não necessitaria de tamanho aparato. O objetivo de programar back-end é criar um sistema web dinâmico, que ajusta informações da página HTML de acordo com um processamento ou dados de usuário. Para experimentar de maneira simples esse aspecto, será criado um novo método na classe MiscController. 
+                No exemplo, serve-se apenas uma página estática, mas se fosse ser criado um <i>site</i> tão simples, não necessitaria de tamanho aparato. O objetivo de programar <i>back-end</i> é criar um sistema <i>web</i> dinâmico, que ajusta informações da página HTML de acordo com um processamento ou dados de usuário. Para experimentar de maneira simples esse aspecto, será criado um novo método na classe MiscController. 
               </p>
-              <code>
+              <pre><code>
               <br>  @GetMapping("/diahora") 
               <br>  public String mostraDiaHora(){ 
               <br>      return "data"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 Na pasta “templates”, será criado o arquivo “data.html”. 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html> 
               <br>      &lt;head> 
@@ -501,40 +508,46 @@ Fonte: Senac EAD (2023)
               <br>      &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
                 Devem ser mostrados dentro do <span> o dia e a hora atuais. Mas enquanto isso não ocorre, trata-se apenas de mais uma página estática. Como enviar dados da camada de controle para a de visão? No método mostraDiaHora(), primeiro  são calculadas a data e a hora atuais. 
               </p>
-              <code>
+              <pre><code>
               <br>  @GetMapping("/diahora") 
               <br>  public String mostraDiaHora(){ 
               <br>      <div class="destaque_code">LocalDateTime diaHora = LocalDateTime.now();</div> 
               <br>      return "data"; 
               <br>  } 
               </code>
+</pre>
+
               <p>É necessário “import java.time.LocalDateTime;”. </p>
               <p>
                 Já existe o objeto “diaHora” com a informação necessária. No entanto, ela ainda não foi enviada para a visão. Isso ocorre por meio da classe Model do Spring MVC. Cada requisição tem acesso a um objeto dessa classe com informações que trafegarão entre camadas. Neste método, para ter acesso a ele, é necessário incluir um parâmetro do tipo Model; o objeto desse parâmetro então receberá a informação que se deseja trafegar. 
               </p>
-              <code>@GetMapping("/diahora") 
+              <pre><code>@GetMapping("/diahora") 
               <br>  public String mostraDiaHora(<div class="destaque_code">Model model</div>){ 
               <br>      LocalDateTime diaHora = LocalDateTime.now(); 
               <br>      <div class="destaque_code">model.addAttribute("dataHora", diaHora.toString()); </div>
               <br>      return "data"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
-                Model necessita de “import org.springframework.ui.Model;”. 
+                <i>Model necessita de “import org.springframework.ui.Model;”. </i>
               </p>
               <p>
                 Note no código que primeiro há um parâmetro com nome “model” do tipo “Model” (o nome pode ser outro, se necessário). Model é uma interface do SpringMVC usada para transferir dados da camada Controller para a camada View. Ela trabalha com um mapa de chaves-valores, ou seja, dados identificados por uma chave única. Por isso, usa-se o método “addAttibute()”, em que são informados uma chave (“dataHora”) e o valor (o objeto diaHora convertido para texto). Dessa forma, está sendo adicionado o atributo “dataHora” que será usado na visão. 
               </p>
               <p>
-                Já está sendo enviada a informação pelo controle, mas como recebê-la na visão? Existem algumas abordagens para isso. A mais clássica é usar a linguagem JSP em vez de HTML e aplicar tags específicos para essa comunicação. 
+                Já está sendo enviada a informação pelo controle, mas como recebê-la na visão? Existem algumas abordagens para isso. A mais clássica é usar a linguagem JSP em vez de HTML e aplicar <i>tags</i> específicos para essa comunicação. 
               </p>
               <p>
-                Neste caso, será usada a biblioteca Thymeleaf, incluída na criação do projeto, para ajudar nessa comunicação. A vantagem sobre o JSP é que o Thymeleaf preserva a estrutura HTML com mudanças muito pontuais. Em “data.html”, inclua a seguinte alteração: 
+                Neste caso, será usada a biblioteca <strong>Thymeleaf</strong>, incluída na criação do projeto, para ajudar nessa comunicação. A vantagem sobre o JSP é que o Thymeleaf preserva a estrutura HTML com mudanças muito pontuais. Em “data.html”, inclua a seguinte alteração: 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>      &lt;head> 
@@ -548,8 +561,10 @@ Fonte: Senac EAD (2023)
               <br>      &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
-                A primeira alteração acontece no tag &lt;html>, que recebe atributos para reconhecer os outros atributos especiais de Thymeleaf. A segunda alteração é em &lt;span>: usa-se “th:text” para alterar o conteúdo do span; a notação “${ }” serve para indicar que o valor vem do back-end (da interface Model, mais precisamente); dataHora é exatamente a chave do valor incluído no objeto de Model. Assim o que th:text="${dataHora}" faz é trocar o texto “dd/mm/aaaa hh:mm” para o valor da data calculado no controller. 
+                A primeira alteração acontece no <i>tag</i> &lt;html>, que recebe atributos para reconhecer os outros atributos especiais de Thymeleaf. A segunda alteração é em &lt;span>: usa-se <strong>“th:text”</strong> para alterar o conteúdo do span; a notação “${ }” serve para indicar que o valor vem do <i>back-end</i> (da interface <strong>Model</strong>, mais precisamente); dataHora é exatamente a chave do valor incluído no objeto de Model. Assim o que th:text="${dataHora}" faz é trocar o texto “dd/mm/aaaa hh:mm” para o valor da data calculado no <i>controller</i>. 
               </p>
               <p>
                 Reinicie a execução e digite http://localhost:8080/diahora no navegador. O resultado deve ser parecido com a figura a seguir. 
@@ -558,7 +573,7 @@ Fonte: Senac EAD (2023)
               
 
               <a href="imgs/fig-20.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-20.png" class="center-block img-responsive" alt="">
+                <img src="imgs/fig-20.png" class="imgBorder center-block img-responsive" alt="">
               </a>
               <p class="legenda-imagem">Figura 20 – Resultado da requisição a “localhost:8080/diahora” 
                 Fonte: Senac EAD (2023) 
@@ -567,7 +582,7 @@ Fonte: Senac EAD (2023)
                 E se você quisesse separar, mostrar em uma linha o dia e em outra a hora? Basta informar duas chaves em Model e incluir modificações no HTML. 
               </p>
               <p>Em MiscController: </p>
-              <code>@GetMapping("/diahora") 
+              <pre><code>@GetMapping("/diahora") 
               <br>  public String mostraDiaHora(Model model){ 
               <br>      LocalDateTime diaHora = LocalDateTime.now(); 
               <br>    <div class="destaque_code">  model.addAttribute("data", diaHora.toLocalDate().toString()); 
@@ -575,10 +590,12 @@ Fonte: Senac EAD (2023)
               <br>      return "data"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 Em data.html: 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>      &lt;head> 
@@ -593,11 +610,13 @@ Fonte: Senac EAD (2023)
               <br>      &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
                 O resultado será algo próximo a seguinte figura:  
               </p>
               <a href="imgs/fig-21.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-21.png" class="center-block img-responsive" alt="Título em letra destacada “Qual dia é hoje? Que horas são”, abaixo, o parágrafo “Hoje é dia: 2023-05-11” e abaixo “A hora certa é: 12:14:54.212565800”. ">
+                <img src="imgs/fig-21.png" class="imgBorder center-block img-responsive" alt="Título em letra destacada “Qual dia é hoje? Que horas são”, abaixo, o parágrafo “Hoje é dia: 2023-05-11” e abaixo “A hora certa é: 12:14:54.212565800”. ">
               </a>
               <p class="legenda-imagem">Figura 21 – Resultado da requisição a “localhost:8080/diahora” após ajustes 
                 Fonte: Senac EAD (2023) 
@@ -605,7 +624,7 @@ Fonte: Senac EAD (2023)
               <p>
                 Ótimo, você já sabe como comunicar dados da camada de controle para a camada de visão, mas, nesse exemplo, foi informado um dado computado pelo próprio método. Então como receber dados do usuário? A maneira mais simples é informando diretamente na URL, como, por exemplo, em “http://localhost:8080/temperatura?valor=20”, em que está sendo informado “20” para o parâmetro “valor”. Coloque isso em prática criando um novo método na classe MiscController que receba uma temperatura em Celsius e mostre na tela a temperatura em Fahrenheit e em Kelvin. 
               </p>
-              <code>@GetMapping("/temperatura") 
+              <pre><code>@GetMapping("/temperatura") 
               <br>  public String converteTemperatura(Model model, int valor){ 
               <br>      float farenheit, kelvin; 
               <br>      kelvin = valor + 273; 
@@ -616,6 +635,8 @@ Fonte: Senac EAD (2023)
               <br>      return "temperatura"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 Nota-se, pelo código, que é muito simples usar parâmetros de requisição, basta defini-los como um parâmetro do próprio método, desde que tenham tipo primitivo ou String (nesse caso, há “int valor”). O parâmetro de tipos internos do Spring ou de Java Web, como Model no código acima, não são considerados como parâmetros de usuário.  
               </p>
@@ -625,7 +646,7 @@ Fonte: Senac EAD (2023)
               <p>
                 Na pasta “templates”, é criado o arquivo “temperatura.html”. 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE HTML> 
               <br>  &lt;html xmlns:th="http://www.thymeleaf.org"> 
               <br>  &lt;head>  
@@ -641,6 +662,8 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
                 Há uma particularidade nesse exemplo na hora de montar o texto dos elementos HTML. Deve-se concatenar um texto fixo com um valor variável que será recebido por Model. Assim, resulta a expressão:  
               </p>
@@ -648,7 +671,7 @@ Fonte: Senac EAD (2023)
                 'Convertendo '  + ${celsius} + ' graus Celsius' 
               </p>
               <p>
-                Note a necessidade de aspas simples: elas delimitam o texto literal. Além disso, são necessárias aspas duplas envolvendo toda a expressão por conta da sintaxe do HTML. Assim, a expressão completa fica: 
+                Note a necessidade de <strong>aspas simples</strong>: elas delimitam o texto literal. Além disso, são necessárias <strong>aspas duplas</strong> envolvendo toda a expressão por conta da sintaxe do HTML. Assim, a expressão completa fica: 
               </p>
               <p>
                 " 'Convertendo '  + ${celsius} + ' graus Celsius' " 
@@ -657,19 +680,19 @@ Fonte: Senac EAD (2023)
                 A atenção a essas aspas é muito importante, pois pode gerar erro na hora de executar o projeto. 
               </p>
               <p class="caixa-destaque icone-dica">
-                Caso você tenha se esquecido de alguma aspa nas expressões de Thymeleaf com concatenação, ocorrerá um erro na aba output do NetBeans com a exceção “TemplateProcessingException”. Por exemplo: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "${farenheit} + ' graus Farenheit" (template: "temperatura" - line 10, col 13). 
+                Caso você tenha se esquecido de alguma aspa nas expressões de Thymeleaf com concatenação, ocorrerá um erro na aba <i>output</i> do NetBeans com a exceção “TemplateProcessingException”. Por exemplo: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "${farenheit} + ' graus Farenheit" (template: "temperatura" - line 10, col 13). 
               </p>
               <p>
                 Agora você pode testar a aplicação. Rode o projeto no NetBeans e experimente a URL “http://localhost:8080/temperatura?valor=15” no navegador.  
               </p>
               <a href="imgs/fig-22.png" target="_blank" class="" aria-hidden="true">
-                <img src="imgs/fig-22.png" class="center-block img-responsive" alt="Página sem estilo com título “Convertendo 15 graus celsius”, abaixo, há as frases “59.0 graus Farenheit” e “288.0 graus Kelvin”. ">
+                <img src="imgs/fig-22.png" class="imgBorder center-block img-responsive" alt="Página sem estilo com título “Convertendo 15 graus celsius”, abaixo, há as frases “59.0 graus Farenheit” e “288.0 graus Kelvin”. ">
               </a>
               <p class="legenda-imagem">Figura 22 – Resultado do teste de conversão de temperatura 
                 Fonte: Senac EAD (2023) 
               </p>
               <p>
-                Um problema acontece se você simplesmente não informar o parâmetro “valor” na URL. Ele é obrigatório, pois “int” não permite valor nulo. Você pode usar a anotação @RequestParam para configurar um valor padrão para o parâmetro, além de outras opções. Essa anotação conta com os seguintes elementos opcionais: 
+                Um problema acontece se você simplesmente não informar o parâmetro “valor” na URL. Ele é obrigatório, pois “int” não permite valor nulo. Você pode usar a anotação <strong>@RequestParam</strong> para configurar um valor padrão para o parâmetro, além de outras opções. Essa anotação conta com os seguintes elementos opcionais: 
               </p>
               <ul>
                 <li>defaultValue: valor-padrão quando não é informado na URL. Exemplo: @RequestParam(defaultValue=“0”)int valor. Nesse caso, passará o valor 0 ao parâmetro “valor” quando não for informado nada na requisição. </li>
@@ -679,7 +702,7 @@ Fonte: Senac EAD (2023)
               <p>
                 Aplique a anotação @RequestParam ao parâmetro “valor” do método converteTemperatura() na classe MiscController de maneira que “valor” receba um valor-padrão quando não informado. 
               </p>
-              <code>@GetMapping("/temperatura") 
+              <pre><code>@GetMapping("/temperatura") 
               <br>  public String converteTemperatura(Model model, <div class="destaque_code"> @RequestParam(defaultValue="0")</div>int valor){ 
               <br>      float farenheit, kelvin; 
               <br>      kelvin = valor + 273; 
@@ -690,22 +713,24 @@ Fonte: Senac EAD (2023)
               <br>      return "temperatura"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
-                Para @RequestParam, é necessário incluir import org.springframework.web.bind.annotation.RequestParam. 
+                <i> Para @RequestParam, é necessário incluir import org.springframework.web.bind.annotation.RequestParam. </i>
               </p>
               <p>
                 Agora é possível usar a URL http://localhost:8080/temperatura para não ocorrer erros. 
               </p>
-              <p class="caixa-destaque icone-nota"><strong>Dica</strong>
+              <p class="caixa-destaque icone-doc">
                 Lembre-se sempre de parar e rodar novamente o projeto quando fizer alterações e for testá-las. 
                             </p>
-              <p class="caixa-destaque icone-desafio"><strong>Desafio</strong>
+              <p class="caixa-destaque icone-desafio">
                 Crie um projeto Spring MVC com uma página de cálculo, que receba dois valores inteiros pelo parâmetro da URL e mostre na tela a adição, a subtração, a multiplicação e a divisão desses valores.     
               </p>
               <p>
                 Thymeleaf também suporta objetos em sua sintaxe para embutir valores em uma página HTML. Agora em um novo exemplo, primeiramente você criará uma classe de camada Model. No projeto “Projetomvc”, crie o pacote “com.senac.projetomvc.controller.model” e, nele, a classe “Pessoa.java”, com o seguinte código: 
               </p>
-              <code> package com.senac.projetomvc.controller.model; 
+              <pre><code> package com.senac.projetomvc.controller.model; 
               <br>  public class Pessoa { 
               <br>      String nome; 
               <br>      String sobrenome; 
@@ -718,10 +743,12 @@ Fonte: Senac EAD (2023)
               <br>      public void setIdade(int idade) { this.idade = idade; } 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 Agora em MiscController, crie uma nova ação, com o seguinte método: 
               </p>
-              <code>@GetMapping("/pessoa") 
+              <pre><code>@GetMapping("/pessoa") 
               <br>  public String mostraPessoa(Model model, String nome, @RequestParam(defaultValue="0") int idade){ 
               <br>      Pessoa p = new Pessoa(); 
               <br>      if(nome != null && !nome.isBlank()) { 
@@ -737,13 +764,15 @@ Fonte: Senac EAD (2023)
               <br>      return "pessoa"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 Nesse método, recebe-se um nome completo por parâmetro (String nome), quebrando em nome e sobrenome para preencher um novo objeto Pessoa. Também é recebida uma idade (int idade), que será passada ao objeto Pessoa criado. 
               </p>
               <p>
                 Agora crie a visão pessoa.html na pasta “templates”. 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE HTML> 
               <br>  &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>  &lt;head>  
@@ -758,6 +787,8 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
                 Note que está sendo usado ${pessoa.nome}, por exemplo, onde “pessoa” é o nome do atributo de Model informado no método mostraPessoa() do controle, nesta linha: 
               </p>
@@ -768,36 +799,38 @@ Fonte: Senac EAD (2023)
                 Ao atributo “pessoa”, então vai um objeto “p” do tipo Pessoa e “nome” é uma de suas propriedades. Assim, ${pessoa.nome} obtém o valor da propriedade “nome” do objeto de tipo “Pessoa” presente no atributo “pessoa” de Model.  
               </p>
               <p>
-                Importante notar que é necessário que, na classe desse objeto, haja getters e setters para a propriedade referenciada. 
+                Importante notar que é necessário que, na classe desse objeto, haja <i>getters</i> e <i>setters</i> para a propriedade referenciada. 
               </p>
               <p>
                 Ao testar com a URL “localhost:8080/pessoa?nome=José da Silva&idade=45”, o resultado deve ser próximo ao da figura a seguir. 
               </p>
               <a href="imgs/fig-23.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-23.png" class="center-block img-responsive" alt="Página de teste com o título “Dados da pessoa”, abaixo, há os parágrafos “Nome: José”, “Sobrenome: da Silva”, “Idade: 45”. ">
+                <img src="imgs/fig-23.png" class="imgBorder center-block img-responsive" alt="Página de teste com o título “Dados da pessoa”, abaixo, há os parágrafos “Nome: José”, “Sobrenome: da Silva”, “Idade: 45”. ">
               </a>
               <p class="legenda-imagem">Figura 23 – Resultado do teste  
                 Fonte: Senac EAD (2023) 
               </p>
-              <p class="caixa-destaque icone-nota"><strong>Nota</strong>
+              <p class="caixa-destaque icone-doc">
                 Ao executar uma página, caso apareça a mensagem “Whitelabel Error Page”, informando algo como “There was an unexpected error (type=Internal Server Error, status=500)”, volte ao Netbeans e verifique na aba Output se há Stack de exceção informando erros. A partir dessa informação, você poderá compreender o que aconteceu de errado com a página e corrigir para executá-la. 
               </p>
               <p>
-                Em um último teste do “projetomvc”, será mostrada uma página com formulário e estudado como realizar a postagem dos valores digitados pelo usuário para o back-end. Primeiramente, será criado, na classe MiscController, um método mostraCadastro() que responderá pela URL “/cadastro”. 
+                Em um último teste do “projetomvc”, será mostrada uma página com formulário e estudado como realizar a postagem dos valores digitados pelo usuário para o <i>back-end</i>. Primeiramente, será criado, na classe MiscController, um método mostraCadastro() que responderá pela URL “/cadastro”. 
               </p>
-              <code>@GetMapping("/cadastro") 
+              <pre><code>@GetMapping("/cadastro") 
               <br>  public String mostraCadastro(Model model){ 
               <br>      model.addAttribute("pessoa", new Pessoa()); 
               <br>      return "cadastro"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 Nada diferente do que você aprendeu até agora.  
               </p>
               <p>
                 Será criada a visão “cadastro.html” na pasta “templates”, essa sim com características bem específicas. 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>      &lt;head>  
@@ -816,31 +849,35 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/html> 
               <br>  
               </code>
+</pre>
+
               <p>
                 A página tem um formulário simples com campo para nome, sobrenome e idade, mas algumas marcações do Thymeleaf chamam a atenção: 
               </p>
               <ul>
-                <li>th:action="@{/cadastro}" forma o atributo “action” do tag &lt;form>. </li>
-                <li>th:object="${pessoa}" associa o formulário ao objeto Pessoa recebido por Model. Caso ele venha com dados, eles aparecerão nos elementos &lt;input> associados a cada propriedade do objeto. </li>
-                <li>th:field="*{nome}" associa um elemento de input com uma propriedade do objeto Pessoa associado ao formulário. Isso significa que: 1) os elementos receberão os valores informados pelo objeto ao executar a requisição (e o método mostraCadastro(), no caso) e 2) preencherá a propriedade associada do objeto Pessoa que será enviado quando a postagem for realizada. </li>
+                <li><strong>th:action="@{/cadastro}"</strong> forma o atributo “action” do <i>tag</i> &lt;form>. </li>
+                <li><strong>th:object="${pessoa}"</strong> associa o formulário ao objeto Pessoa recebido por Model. Caso ele venha com dados, eles aparecerão nos elementos &lt;input> associados a cada propriedade do objeto. </li>
+                <li><strong>th:field="*{nome}"</strong> associa um elemento de <i>input</i> com uma propriedade do objeto Pessoa associado ao formulário. Isso significa que: 1) os elementos receberão os valores informados pelo objeto ao executar a requisição (e o método mostraCadastro(), no caso) e 2) preencherá a propriedade associada do objeto Pessoa que será enviado quando a postagem for realizada. </li>
               </ul>
               <p>
                 Por agora, você pode até testar a página, verificar se está tudo certo. Mas, para a postagem de dados, ainda são necessários alguns passos. Será criado um novo método na classe MiscController: 
               </p>
-              <code>@PostMapping("/cadastro") 
+              <pre><code>@PostMapping("/cadastro") 
               <br>  public String recebeCadastro(Model model, @ModelAttribute Pessoa pessoa){ 
               <br>      model.addAttribute("pessoa", pessoa); 
               <br>      return "pessoa"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
                 É necessário incluir “import org.springframework.web.bind.annotation.ModelAttribute;” e “import org.springframework.web.bind.annotation.PostMapping;”. 
               </p>
               <p>
-                Note aqui duas características importantes. A primeira é a presença da anotação @PostMapping. Ela indica que o método só será executado quando a requisição for do tipo “POST” para a URL “localhost:8080/cadastro”. Não por acaso, “/cadastro” também é o valor incluído no atributo “action” do formulário na visão cadastro.html (em th:action="@{/cadastro}"). Caso esteja na visão um nome diferente, não alcançará o método e ele não executará. 
+                Note aqui duas características importantes. A primeira é a presença da anotação <strong>@PostMapping</strong>. Ela indica que o método só será executado quando a requisição for do tipo “POST” para a URL “localhost:8080/cadastro”. Não por acaso, “/cadastro” também é o valor incluído no atributo “action” do formulário na visão cadastro.html (em th:action="@{/cadastro}"). Caso esteja na visão um nome diferente, não alcançará o método e ele não executará. 
               </p>
               <p>
-                A outra é @ModelAttribute, indicando que os dados do formulário que virão no Model por conta da postagem estarão no objeto “pessoa” do parâmetro. Na prática, significa que o objeto “pessoa” conterá as informações que o usuário digitou no formulário ao realizar a postagem. 
+                A outra é <strong>@ModelAttribute</strong>, indicando que os dados do formulário que virão no Model por conta da postagem estarão no objeto “pessoa” do parâmetro. Na prática, significa que o objeto “pessoa” conterá as informações que o usuário digitou no formulário ao realizar a postagem. 
               </p>
               <p>
                 Nesse caso, seria possível validar os dados recebidos, calcular sobre eles ou incluí-los no banco de dados. No entanto, como o exemplo é simples, apenas será reexibido o que foi postado e, para isso, usa-se novamente a visão “pessoa.html”. Por isso, ‘return “pessoa”’ ao fim do método. 
@@ -850,7 +887,7 @@ Fonte: Senac EAD (2023)
               </p>
 
               <a href="imgs/fig-24.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-24.png" class="center-block img-responsive" alt=" Página com o título “Cadastro de pessoa”, rótulo “Nome” e campo de texto com valor “Antonio”, rótulo “Sobrenome” e campo de texto com valor “Nóbrega”, rótulo “Idade” e campo de texto com valor “30” e botão “Cadastrar”. ">
+                <img src="imgs/fig-24.png" class="imgBorder center-block img-responsive" alt=" Página com o título “Cadastro de pessoa”, rótulo “Nome” e campo de texto com valor “Antonio”, rótulo “Sobrenome” e campo de texto com valor “Nóbrega”, rótulo “Idade” e campo de texto com valor “30” e botão “Cadastrar”. ">
               </a>
               <p class="legenda-imagem">Figura 24 – Página mostrando formulário desenvolvido  
                 Fonte: Senac EAD (2023) 
@@ -858,26 +895,26 @@ Fonte: Senac EAD (2023)
               <p>Depois de clicar em “Cadastrar”, os dados passam por “recebeCadastro()”, que redireciona para a página pessoa.html com as informações digitadas no formulário. Assim, o resultado será: </p>
 
               <a href="imgs/fig-25.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-25.png" class="center-block img-responsive" alt="Página com título “Dados da pessoa” e parágrafos “Nome: Antonio”, “Sobrenome: Nóbrega”, “idade: 30”. ">
+                <img src="imgs/fig-25.png" class="imgBorder center-block img-responsive" alt="Página com título “Dados da pessoa” e parágrafos “Nome: Antonio”, “Sobrenome: Nóbrega”, “idade: 30”. ">
               </a>
               <p class="legenda-imagem">Figura 25 – Resultado após postagem  
                 Fonte: Senac EAD (2023) 
               </p>
-              <p class="caixa-destaque icone-desafio"><strong>Desafio</strong>
+              <p class="caixa-destaque icone-desafio">
                 Ajuste o projeto de calculadora do desafio anterior para agora receber os dois números a partir de um formulário. Ao submeter, mostre as quatro operações matemáticas sobre eles. 
               </p>
               <p>
                 Com isso, você experimentou os aspectos fundamentais do Spring MVC. A seguir, serão aprofundados o Thymeleaf e outros temas do framework, trabalhando em novos exemplos. 
               </p>
-              <h3 id="5">THYMELEAF</h3>
+              <h3 id="t5">THYMELEAF</h3>
               <p>
-                Nesta seção, será explorada a fundo a biblioteca Thymeleaf, uma poderosa ferramenta de renderização de templates que permite a criação de aplicações web dinâmicas em Java. Ao longo do conteúdo, você foi introduzido ao Thymeleaft e, até mesmo, fez uso dos seus recursos para construir sua aplicação web. Agora você entenderá como ele funciona e aprenderá a aplicá-lo em um exemplo de projeto utilizando, em conjunto, o Spring Web e os conceitos de padrão de projeto com a arquitetura MVC. 
+                Nesta seção, será explorada a fundo a biblioteca <strong>Thymeleaf</strong>, uma poderosa ferramenta de renderização de <i>templates</i> que permite a criação de aplicações <i>web</i> dinâmicas em Java. Ao longo do conteúdo, você foi introduzido ao Thymeleaft e, até mesmo, fez uso dos seus recursos para construir sua aplicação <i>web</i>. Agora você entenderá como ele funciona e aprenderá a aplicá-lo em um exemplo de projeto utilizando, em conjunto, o <strong>Spring Web</strong> e os conceitos de padrão de projeto com a arquitetura MVC. 
               </p>
               <p>
-                O Thymeleaf é uma biblioteca de templates para desenvolvimento de aplicações web em Java. Ele permite a criação de páginas HTML dinâmicas, em que é possível integrar facilmente conteúdo estático e dinâmico. O Thymeleaf é altamente flexível, facilitando a criação de layouts reutilizáveis e a integração com outros frameworks e bibliotecas. 
+                O Thymeleaf é uma biblioteca de <i>templates</i> para desenvolvimento de aplicações <i>web</i> em Java. Ele permite a criação de páginas HTML dinâmicas, em que é possível integrar facilmente conteúdo estático e dinâmico. O Thymeleaf é altamente flexível, facilitando a criação de <i>layouts</i> reutilizáveis e a integração com outros <i>frameworks</i> e bibliotecas. 
               </p>
               <p>
-                O Thymeleaf é amplamente utilizado no desenvolvimento de aplicações web com Java devido a sua facilidade de uso e poder de expressão. Algumas vantagens de se utilizar o Thymeleaf incluem a sua integração com o framework Spring, sua sintaxe simples baseada em atributos HTML e a criação de templates reutilizáveis e personalizáveis. 
+                O Thymeleaf é amplamente utilizado no desenvolvimento de aplicações <i>web</i> com Java devido a sua facilidade de uso e poder de expressão. Algumas vantagens de se utilizar o Thymeleaf incluem a sua integração com o <i>framework</i> Spring, sua sintaxe simples baseada em atributos HTML e a criação de <i>templates</i> reutilizáveis e personalizáveis. 
               </p>
               <h4>Criação de um novo projeto</h4>
               <p>
@@ -893,42 +930,43 @@ Fonte: Senac EAD (2023)
                 <li>Java: 17 (ou versão superior instalada em sua máquina) </li>
                 <li>Dependencies: 
                   <ul>
-                    <li>Spring Web </li>
+                    <li><strong>Spring Web</strong> </li>
                     <li>Thymeleaf </li>
                   </ul>
                 </li>
               </ul>
+              <p>Baixe o arquivo compactado gerado, extraia o conteúdo e abra a pasta no NetBeans. </p>
 
               <h4>Estrutura do projeto</h4>
               <p>
-                Neste projeto, será usada a arquitetura MVC como padrão de projeto. Para isso, é necessário dividir o conteúdo em três camadas: Model, View e Controller. Na teoria, seriam criados três pacotes na estrutura do projeto, mas, na prática, isso não será feito, já que a biblioteca Thymeleaf será responsável pelo conteúdo de front-end, ou seja, a camada View. Será usada a sua estrutura pré-configurada para desenvolver essa camada. Tal estrutura pode ser acessada no NetBeans, no caminho “Other Sources > src/main/resources”. Se você acessá-la agora, encontrará dois pacotes vazios: 
+                Neste projeto, será usada a arquitetura MVC como padrão de projeto. Para isso, é necessário dividir o conteúdo em três camadas: Model, View e Controller. Na teoria, seriam criados três pacotes na estrutura do projeto, mas, na prática, isso não será feito, já que a biblioteca Thymeleaf será responsável pelo conteúdo de <i>front-end</i>, ou seja, a camada <i>View</i>. Será usada a sua estrutura pré-configurada para desenvolver essa camada. Tal estrutura pode ser acessada no NetBeans, no caminho “Other Sources > src/main/resources”. Se você acessá-la agora, encontrará dois pacotes vazios: 
               </p>
               <ul>
-                <li>static: pacote destinado a recursos estáticos, como arquivos CSS, Javascript, imagens ou qualquer outro tipo de arquivo multimídia. </li>
-                <li>templates: pacote destinado aos arquivos HTML que contêm marcações HTML combinadas com expressões e atributos especiais do Thymeleaf. Aqui ficarão os templates que serão processados pelo Thymeleaf no lado do servidor para gerar o conteúdo dinâmico que será enviado para o navegador do usuário. </li>
+                <li><i>static</i>: pacote destinado a recursos estáticos, como arquivos CSS, Javascript, imagens ou qualquer outro tipo de arquivo multimídia. </li>
+                <li><i>templates</i>: pacote destinado aos arquivos HTML que contêm marcações HTML combinadas com expressões e atributos especiais do Thymeleaf. Aqui ficarão os <i>templates</i> que serão processados pelo Thymeleaf no lado do servidor para gerar o conteúdo dinâmico que será enviado para o navegador do usuário. </li>
               </ul>
-              <p class="caixa-destaque icone-nota"><strong>Nota</strong>
-                “Templates” no Thymeleaf são códigos HTML com elementos próprios da ferramenta para incluir dados de back-end.  
+              <p class="caixa-destaque icone-doc">
+                “<i>Templates</i>” no Thymeleaf são códigos HTML com elementos próprios da ferramenta para incluir dados de <i>back-end</i>.  
               </p>
               <p>
-                Isso significa que só será necessário criar dois pacotes em “com.senac.exemplothymeleaf” para a arquitetura MVC: o pacote model e o pacote controller. A estrutura do projeto ficará da seguinte maneira: 
+                Isso significa que só será necessário criar dois pacotes em “com.senac.exemplothymeleaf” para a arquitetura MVC: o pacote <i>model</i> e o pacote <i>controller</i>. A estrutura do projeto ficará da seguinte maneira: 
               </p>
 
 
               <a href="imgs/fig-26.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-26.png" class="center-block img-responsive" alt="Detalhe da aba “Projects” do NetBeans, com projeto exemplothymeleaf, pacote com.senac.exemplothymeleaf com classe ExemplothymeleafApplication.java, pacotes com.senac.exemplothymeleaf.controller e com.senac.exemplothymeleaf.model vazios. Abaixo, pasta “Other Sources” e, dentro dela, “src/main/resources”, contendo “<default package>”, “static” e “templates”. ">
+                <img src="imgs/fig-26.png" class="imgBorder center-block img-responsive" alt="Detalhe da aba “Projects” do NetBeans, com projeto exemplothymeleaf, pacote com.senac.exemplothymeleaf com classe ExemplothymeleafApplication.java, pacotes com.senac.exemplothymeleaf.controller e com.senac.exemplothymeleaf.model vazios. Abaixo, pasta “Other Sources” e, dentro dela, “src/main/resources”, contendo “<default package>”, “static” e “templates”. ">
               </a>
               <p class="legenda-imagem">Figura 26 – Projeto exemplothymeleaf no NetBeans  
                 Fonte: Senac EAD (2023) 
               </p>
               <p>
-                Nesse exemplo, será criado um projeto de lista de tarefas como contexto para explorar recursos do Thymeleaf, como a manipulação de dados dinâmicos, loops, condicionais e formulários. Mas antes, serão criadas mais duas classes muito úteis para esse projeto. 
+                Nesse exemplo, será criado um projeto de lista de tarefas como contexto para explorar recursos do Thymeleaf, como a manipulação de dados dinâmicos, <i>loops</i>, condicionais e formulários. Mas antes, serão criadas mais duas classes muito úteis para esse projeto. 
               </p>
               <h4>Model</h4>
               <p>
                 A classe modelo será criada dentro do pacote “model” com o nome “Tarefa” e terá o seguinte código: 
               </p>
-              <code>package com.senac.exemplothymeleaf.model; 
+              <pre><code>package com.senac.exemplothymeleaf.model; 
               <br> public class Tarefa { 
               <br>     private int id; 
               <br>     private String descricao; 
@@ -948,29 +986,33 @@ Fonte: Senac EAD (2023)
               <br>     public void setCompleta(boolean completa) { this.completa = completa; } 
               <br> } 
               </code>
+</pre>
+
               <h4>Controller</h4>
               <p>
                 A classe de controle será criada dentro do pacote “controller” com o nome “TarefaController” e terá o seguinte código: 
               </p>
-              <code>@Controller 
+              <pre><code>@Controller 
                 public class TarefaController { 
                     private List&lt;Tarefa> tarefas = new ArrayList(); 
                     // Abaixo, criaremos nossos métodos novos 
                 } 
               </code>
+</pre>
+
               <p>
                 Perceba que, além da estrutura-base, também foi criada uma lista de tarefas, que será bastante útil para métodos futuros. 
               </p>
-              <h3>
+              <h3 id="t6">
                 Manipulação de dados dinâmicos
               </h3>
               <p>
-                Uma das principais vantagens do Thymeleaf é a capacidade de manipular dados dinâmicos em templates HTML. Esse recurso permite exibir e modificar valores de variáveis, propriedades de objetos e, até mesmo, trabalhar com coleções de dados.  
+                Uma das principais vantagens do Thymeleaf é a capacidade de manipular dados dinâmicos em <i>templates</i> HTML. Esse recurso permite exibir e modificar valores de variáveis, propriedades de objetos e, até mesmo, trabalhar com coleções de dados.  
               </p>
               <p>
                 Para exemplificar a manipulação de dados, será criado um arquivo HTML no diretório “src/main/resources/templates” com o nome “exibir-tarefa.html”. Nesse arquivo, haverá o seguinte conteúdo: 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>  &lt;head> 
@@ -987,26 +1029,32 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
                 Serão desmembrados alguns trechos desse código: 
               </p>
-              <code>
+              <pre><code>
                 xmlns="w3.org/1999/xhtml" 
               </code>
+</pre>
+
               <p>
-                Para começar, veja algumas definições. O XML (Extensible Markup Language) é uma linguagem de marcação que permite a criação de documentos com dados estruturados. O XHTML (Extensible Hypertext Markup Language) é uma variação do XML que segue as regras de sintaxe do HTML, tornando-o compatível com navegadores web. 
+                Para começar, veja algumas definições. O XML (<i>Extensible Markup Language</i>) é uma linguagem de marcação que permite a criação de documentos com dados estruturados. O XHTML (<i>Extensible Hypertext Markup Language</i>) é uma variação do XML que segue as regras de sintaxe do HTML, tornando-o compatível com navegadores <i>web</i>. 
               </p>
               <p>
-                A declaração do namespace "xmlns="w3.org/1999/xhtml" indica que o documento XML ou XHTML está utilizando os elementos e atributos definidos pelo padrão XHTML, especificados pela World Wide Web Consortium (W3C). A finalidade dessa declaração de namespace é garantir que os elementos e os atributos utilizados no documento XML ou XHTML estejam corretamente interpretados. Na prática, está sendo usada essa declaração para que o NetBeans consiga diferenciar a sintaxe HTML comum e a sintaxe XML. Do contrário, a IDE apontará erros de sintaxe nos trechos de código XML que estiverem no documento “.html”. 
+                A declaração do namespace <strong>"xmlns="w3.org/1999/xhtml"</strong> indica que o documento XML ou XHTML está utilizando os elementos e atributos definidos pelo padrão XHTML, especificados pela <i>World Wide Web Consortium</i> (W3C). A finalidade dessa declaração de namespace é garantir que os elementos e os atributos utilizados no documento XML ou XHTML estejam corretamente interpretados. Na prática, está sendo usada essa declaração para que o NetBeans consiga diferenciar a sintaxe HTML comum e a sintaxe XML. Do contrário, a IDE apontará erros de sintaxe nos trechos de código XML que estiverem no documento “.html”. 
               </p>
               <p>
                 Logo em seguida, há outro namespace: 
               </p>
-              <code>
+              <pre><code>
                 xmlns:th="http://www.thymeleaf.org" 
               </code>
+</pre>
+
               <p>
-                Nessa linha, existe o atributo xmlns:th definido para o elemento html. Para entender melhor o que isso significa, veja essa declaração em partes: 
+                Nessa linha, existe o atributo <strong>xmlns:th</strong> definido para o elemento <strong>html</strong>. Para entender melhor o que isso significa, veja essa declaração em partes: 
               </p>
               <ul>
                 <li>xmlns: é uma abreviação de "XML namespace".  </li>
@@ -1014,12 +1062,12 @@ Fonte: Senac EAD (2023)
                 <li>"http://www.thymeleaf.org": é o URL do namespace do Thymeleaf. O URL é uma sequência de caracteres que identifica de forma exclusiva o namespace. </li>
               </ul>
               <p>
-                Quando o Thymeleaf é usado em um documento HTML, é necessário declarar o namespace do Thymeleaf para que o HTML possa reconhecer e interpretar corretamente os atributos e as expressões Thymeleaf usados no documento. Essa declaração informa ao analisador HTML que todos os atributos que começam com th: são atributos específicos do Thymeleaf e devem ser interpretados pelo mecanismo de processamento do Thymeleaf. Isso permite que você use recursos e funcionalidades do Thymeleaf, como expressões, loops, condicionais e assim por diante, dentro do seu documento HTML. Portanto, a declaração html xmlns:th="http://www.thymeleaf.org" no início do código HTML garante que o Thymeleaf seja ativado e habilitado para processar as tags e os atributos Thymeleaf usados no documento. 
+                Quando o Thymeleaf é usado em um documento HTML, é necessário declarar o namespace do Thymeleaf para que o HTML possa reconhecer e interpretar corretamente os atributos e as expressões Thymeleaf usados no documento. Essa declaração informa ao analisador HTML que todos os atributos que começam com <strong>th:</strong> são atributos específicos do Thymeleaf e devem ser interpretados pelo mecanismo de processamento do Thymeleaf. Isso permite que você use recursos e funcionalidades do Thymeleaf, como expressões, <i>loops</i>, condicionais e assim por diante, dentro do seu documento HTML. Portanto, a declaração html xmlns:th="http://www.thymeleaf.org" no início do código HTML garante que o Thymeleaf seja ativado e habilitado para processar as <i>tags</i> e os atributos Thymeleaf usados no documento. 
               </p>
               <p>
-                E ainda nesse código, pode ser visto na prática como exibir o valor de uma variável e como acessar as propriedades de objetos, usando a variável ${nome} e o objeto tarefa. Mas esses valores ainda não têm nenhum dado, e para que tudo funcione, é necessário fazer essa definição antes de renderizar a página. Portanto, deve ser adicionado no controlador o seguinte trecho de código: 
+                E ainda nesse código, pode ser visto na prática como exibir o valor de uma variável e como acessar as propriedades de objetos, usando a variável <strong>${nome}</strong> e o objeto <strong>tarefa</strong>. Mas esses valores ainda não têm nenhum dado, e para que tudo funcione, é necessário fazer essa definição antes de renderizar a página. Portanto, deve ser adicionado no controlador o seguinte trecho de código: 
               </p>
-              <code>@GetMapping("/exibir-tarefa") 
+              <pre><code>@GetMapping("/exibir-tarefa") 
               <br>  public String exibirTarefa(Model model) { 
               <br>      // Definindo o valor da variável "nome" 
               <br>      String nome = "Lucas"; 
@@ -1033,26 +1081,28 @@ Fonte: Senac EAD (2023)
               <br>      return "exibir-tarefa"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
-                Salve tudo e execute a classe principal do seu projeto para iniciar o servidor web.  
+                Salve tudo e execute a classe principal do seu projeto para iniciar o servidor <i>web</i>.  
               </p>
               <p>
-                Após isso, abra o navegador web e acesse a URL http://localhost:8080/exibir-tarefa. 
+                Após isso, abra o navegador <i>web</i> e acesse a URL http://localhost:8080/exibir-tarefa. 
               </p>
               <a href="imgs/fig-27.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-27.png" class="center-block img-responsive" alt="Página com título “Tarefas”, e parágrafos “Bem-vindo Lucas!”, “ID:1”, “Descrição: Aprender como usar dados dinâmicos com Thymeleaf”, “Completa: true”.   ">
+                <img src="imgs/fig-27.png" class="imgBorder center-block img-responsive" alt="Página com título “Tarefas”, e parágrafos “Bem-vindo Lucas!”, “ID:1”, “Descrição: Aprender como usar dados dinâmicos com Thymeleaf”, “Completa: true”.   ">
               </a>
               <p class="legenda-imagem">Figura 27 – Resultado do projeto em execução 
                 Fonte: Senac EAD (2023) 
               </p>
-              <h3>Loops</h3>
+              <h3 id="t7">Loops</h3>
               <p>
-                No Thymeleaf, os loops são usados para iterar sobre uma coleção de elementos e processá-los repetidamente. O Thymeleaf fornece uma diretiva específica chamada th:each para implementar loops. Você verá isso em um exemplo prático. 
+                No Thymeleaf, os <i>loops</i> são usados para iterar sobre uma coleção de elementos e processá-los repetidamente. O Thymeleaf fornece uma diretiva específica chamada <strong>th:each</strong> para implementar <i>loops</i>. Você verá isso em um exemplo prático. 
               </p>
               <p>
                 Crie um novo arquivo HTML chamado “lista-tarefas” e adicione o seguinte conteúdo: 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>  &lt;head> 
@@ -1080,32 +1130,36 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
                 Nesse exemplo, você tem uma página HTML que renderiza uma lista de tarefas usando Thymeleaf. Veja a análise do trecho específico que trata do loop: 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;tr th:each="tarefa : ${tarefas}"> 
               <br>        &lt;td th:text="${tarefa.id}">&lt;/td> 
               <br>        &lt;td th:text="${tarefa.descricao}">&lt;/td> 
               <br>        &lt;td th:text="${tarefa.completa}">&lt;/td> 
-              <br>    &lt;/tr> 
+              <br>    /tr> 
               </code>
+</pre>
+
               <p>
-                Aqui, está sendo usada a diretiva th:each para iterar sobre a coleção de tarefas ${tarefas}. Cada elemento da coleção é atribuído à variável local tarefa destacada no código acima. 
+                Aqui, está sendo usada a diretiva <strong>th:each</strong> para iterar sobre a coleção de tarefas <strong>${tarefas}</strong>. Cada elemento da coleção é atribuído à variável local tarefa destacada no código acima. 
               </p>
               <p>
-                Dentro do loop, está sendo definida uma linha da tabela para cada tarefa. Usa-se a diretiva th:text para definir o conteúdo de cada célula da tabela com os atributos da tarefa correspondente. ${tarefa.id} representa o ID da tarefa, ${tarefa.descricao} representa a descrição da tarefa e ${tarefa.completa} representa se a tarefa está completa ou não. 
+                Dentro do <i>loop</i>, está sendo definida uma linha da tabela para cada tarefa. Usa-se a diretiva <strong>th:text</strong> para definir o conteúdo de cada célula da tabela com os atributos da tarefa correspondente. <strong>${tarefa.id}</strong> representa o ID da tarefa, <strong>${tarefa.descricao}</strong> representa a descrição da tarefa e <strong>${tarefa.completa}</strong> representa se a tarefa está completa ou não. 
               </p>
               <p>
-                A estrutura básica da tabela é definida fora do loop, com as colunas de cabeçalho “ID”, “Nome” e “Completa”. Dentro do loop, a tag <tr> é repetida para cada tarefa, resultando em uma nova linha na tabela para cada elemento da coleção. 
+                A estrutura básica da tabela é definida fora do <i>loop</i>, com as colunas de cabeçalho “ID”, “Nome” e “Completa”. Dentro do <i>loop</i>, a tag &lt;tr> é repetida para cada tarefa, resultando em uma nova linha na tabela para cada elemento da coleção. 
               </p>
               <p>
-                É importante que a variável ${tarefas} contenha a coleção de tarefas que se deseja exibir na tabela e, para isso, será usada aquela lista de tarefas inserida no controlador quando foi criada a classe TarefaController.  
+                É importante que a variável <strong>${tarefas}</strong> contenha a coleção de tarefas que se deseja exibir na tabela e, para isso, será usada aquela lista de tarefas inserida no controlador quando foi criada a classe TarefaController.  
               </p>
               <p>
                 Adicione o seguinte trecho de código à classe TarefaController: 
               </p>
-              <code>@GetMapping("/lista-tarefas") 
+              <pre><code>@GetMapping("/lista-tarefas") 
               <br>  public String listaTarefas(Model model) { 
               <br>      // Criação de objetos Tarefa e adição à coleção tarefas 
               <br>      tarefas.add(new Tarefa(1, "Aprender como usar dados dinâmicos com o Thymeleaf", true)); 
@@ -1117,23 +1171,25 @@ Fonte: Senac EAD (2023)
               <br>      return "lista-tarefas"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
-                Salve tudo e reinicie o servidor web. Ao acessar a URL http://localhost:8080/lista-tarefas, você deve ter o seguinte resultado: 
+                Salve tudo e reinicie o servidor <i>web</i>. Ao acessar a URL http://localhost:8080/lista-tarefas, você deve ter o seguinte resultado: 
               </p>
               <a href="imgs/fig-28.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-28.png" class="center-block img-responsive" alt="Página com o título “Lista de tarefas”, parágrafo “Essas são todas as suas tarefas:” e tabela com colunas ID, Nome e Completa e com os Dados: 1, Aprender como usar dados dinâmicos com Thymelead, true; 2, Aprender como usar loops com o Thymelead, true; 3, Aprender como usar condicionais com o Thymelead, false. ">
+                <img src="imgs/fig-28.png" class="imgBorder center-block img-responsive" alt="Página com o título “Lista de tarefas”, parágrafo “Essas são todas as suas tarefas:” e tabela com colunas ID, Nome e Completa e com os Dados: 1, Aprender como usar dados dinâmicos com Thymelead, true; 2, Aprender como usar loops com o Thymelead, true; 3, Aprender como usar condicionais com o Thymelead, false. ">
               </a>
               <p class="legenda-imagem">Figura 28 – Listagem de tarefas  
                 Fonte: Senac EAD (2023) 
               </p>
-              <h3>Condicionais</h3>
+              <h3 id="t8">Condicionais</h3>
               <p>
                 No Thymeleaf, você pode usar condicionais para exibir ou ocultar elementos HTML com base em certas condições. Existem várias maneiras de usar condicionais no Thymeleaf, mas a abordagem mais comum é usar a diretiva th:if. 
               </p>
               <p>
-                Será usado o arquivo “lista-tarefas.html” para esse exemplo. Nele há uma lista de tarefas ${tarefas} que será iterada usando a diretiva th:each. Para cada tarefa na lista, exibimos seu ID, descrição e se está concluída ou não (true/false) em células da tabela. Mas apresentar esse true/false não seria muito amigável para o usuário final. Então, serão usadas condicionais para personalizar o status da tarefa. 
+                Será usado o arquivo “lista-tarefas.html” para esse exemplo. Nele há uma lista de tarefas <strong>${tarefas}</strong> que será iterada usando a diretiva <strong>th:each</strong>. Para cada tarefa na lista, exibimos seu ID, descrição e se está concluída ou não (<i>true/false</i>) em células da tabela. Mas apresentar esse <strong>true/false</strong> não seria muito amigável para o usuário final. Então, serão usadas condicionais para personalizar o <i>status</i> da tarefa. 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>  &lt;head> 
@@ -1166,13 +1222,15 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>
-                É usada a diretiva th:if para verificar se o valor de ${tarefa.completa} é verdadeiro. Se for verdadeiro, é exibida a mensagem "Concluída". Caso contrário, usa-se a diretiva th:unless para verificar se o valor é falso e, nesse caso, é exibida a mensagem "Pendente". 
+                É usada a diretiva <strong>th:if</strong> para verificar se o valor de <strong>${tarefa.completa}</strong> é verdadeiro. Se for verdadeiro, é exibida a mensagem "Concluída". Caso contrário, usa-se a diretiva <strong>th:unless</strong> para verificar se o valor é falso e, nesse caso, é exibida a mensagem "Pendente". 
               </p>
 
 
               <a href="imgs/fig-29.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-29.png" class="center-block img-responsive" alt="Página descrita na Figura 28, mas em vez de true, aparece “Concluída”, e em vez de false, aparece “Pendente”. ">
+                <img src="imgs/fig-29.png" class="imgBorder center-block img-responsive" alt="Página descrita na Figura 28, mas em vez de true, aparece “Concluída”, e em vez de false, aparece “Pendente”. ">
               </a>
               <p class="legenda-imagem">Figura 29 – Lista de tarefas com texto adequado na coluna “Completa”  
                 Fonte: Senac EAD (2023) 
@@ -1181,16 +1239,18 @@ Fonte: Senac EAD (2023)
               <p>
                 Você também pode usar condicionais para iterar sobre uma lista de elementos e exibir apenas os que atendem a determinadas condições. Veja um exemplo: 
               </p>
-              <code>
+              <pre><code>
                 &lt;!-- Usamos a condicional exibir apenas as tarefas pendentes --&gt; 
                 &lt;tr th:each="tarefa : ${tarefas}" th:if="${!tarefa.completa}"> 
               </code>
+</pre>
 
-              <h3>Formulários</h3>
+
+              <h3 id="t9">Formulários</h3>
               <p>
                 Agora você verá como trabalhar com formulários usando o Thymeleaf. Crie um novo arquivo HTML chamado “cadastro” e adicione o seguinte conteúdo: 
               </p>
-              <code>
+              <pre><code>
                 &lt;!DOCTYPE html> 
                 &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
                 &lt;head> 
@@ -1208,16 +1268,18 @@ Fonte: Senac EAD (2023)
                 &lt;/body> 
                 &lt;/html> 
               </code>
+</pre>
+
               <p>
-                Repare que, nesse exemplo, está sendo usado o atributo th:field. O th:field permite associar um campo de formulário a um atributo específico em um objeto. Na prática, ao usar o th:field, o Thymeleaf gera o HTML com o atributo name. Isso significa que, ao utilizar o “th:field”, você evita a necessidade de escrever manualmente os atributos “name” para cada campo do formulário, pois o Thymeleaf cuida disso automaticamente com base no atributo associado ao campo, garantindo que o valor do campo seja transmitido corretamente durante o envio do formulário e também ao exibir o formulário preenchido com os valores corretos.  
+                Repare que, nesse exemplo, está sendo usado o atributo <strong>th:field</strong>. O <strong>th:field</strong> permite associar um campo de formulário a um atributo específico em um objeto. Na prática, ao usar o th:field, o Thymeleaf gera o HTML com o atributo name. Isso significa que, ao utilizar o “th:field”, você evita a necessidade de escrever manualmente os atributos <i>“name”</i> para cada campo do formulário, pois o Thymeleaf cuida disso automaticamente com base no atributo associado ao campo, garantindo que o valor do campo seja transmitido corretamente durante o envio do formulário e também ao exibir o formulário preenchido com os valores corretos.  
               </p>
               <p>
-                Quando o formulário for enviado, o Thymeleaf fará o binding dos valores preenchidos nos campos diretamente nos atributos correspondentes do objeto tarefa. Isso permite acessar e usar esses valores no controlador como desejado. Aqui você também é apresentado a uma nova sintaxe do Thymeleaf, que é @{...}.  
+                Quando o formulário for enviado, o Thymeleaf fará o <i>binding</i> dos valores preenchidos nos campos diretamente nos atributos correspondentes do objeto <strong>tarefa</strong>. Isso permite acessar e usar esses valores no controlador como desejado. Aqui você também é apresentado a uma nova sintaxe do Thymeleaf, que é <strong>@{...}</strong>.  
               </p>
-              <div class="caixa-destaque"><strong>Dica</strong>
+              <div class="caixa-destaque"><strong>Diferença entre ${...} e @{...} </strong><br>
                 No Thymeleaf, as expressões @{...} e ${...} têm finalidades diferentes: 
                 <ul>
-                  <li>@{...}: Essa sintaxe é usada para fazer referências a URLs relativas ou absolutas. É comumente usada em links, formulários e outras tags HTML que exigem URLs. As expressões @{...} são avaliadas pelo Thymeleaf e substituídas por URLs correspondentes com base na configuração do aplicativo. A vantagem dessa sintaxe é que ela leva em consideração o contexto da URL e pode lidar com a resolução de URLs relativas automaticamente. 
+                  <li>@{...}: Essa sintaxe é usada para fazer referências a URLs relativas ou absolutas. É comumente usada em <i>links</i>, formulários e outras <i>tags</i> HTML que exigem URLs. As expressões @{...} são avaliadas pelo Thymeleaf e substituídas por URLs correspondentes com base na configuração do aplicativo. A vantagem dessa sintaxe é que ela leva em consideração o contexto da URL e pode lidar com a resolução de URLs relativas automaticamente. 
                   </li>
                   <li>
                   ${...}: Essa sintaxe é usada para acessar variáveis ou expressões avaliadas no contexto do modelo Thymeleaf. As expressões ${...} são avaliadas no lado do servidor e substituídas pelo valor correspondente. Essa sintaxe é útil para acessar dados dinâmicos no modelo ou realizar operações em tempo de execução. 
@@ -1230,7 +1292,7 @@ Fonte: Senac EAD (2023)
               <p>
                 O que leva ao próximo passo, que é configurar o controlador. Nele, serão criados dois métodos: um para exibir a tela do formulário e outro para processar o envio do formulário. Em TarefaController, adicione o código abaixo. 
               </p>
-              <code>@GetMapping("/cadastro") 
+              <pre><code>@GetMapping("/cadastro") 
               <br>  public String exibirFormulario(Model model) { 
               <br>      // Cria uma nova instância da classe Tarefa e a adiciona ao modelo 
               <br>      model.addAttribute("tarefa", new Tarefa()); 
@@ -1249,15 +1311,17 @@ Fonte: Senac EAD (2023)
               <br>      return "exibir-tarefa"; 
               <br>  } 
               </code>
+</pre>
+
               <p>
-                Agora salve tudo, reinicie o servidor web e acesse a URL http://localhost:8080/cadastro para testar o formulário. 
+                Agora salve tudo, reinicie o servidor <i>web</i> e acesse a URL http://localhost:8080/cadastro para testar o formulário. 
               </p>
               <p>
                 Ao acessar a tela de cadastro, preencha os campos “ID” e “Descrição” como desejar. Após isso, clique em “Enviar”. 
               </p>
 
               <a href="imgs/fig-30.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-30.png" class="center-block img-responsive" alt=" Página com o título “Cadastro de tarefas” e abaixo formulário com rótulo “ID” e campo texto com valor “4”; abaixo, o rótulo “Descrição” e o campo de texto com valor “Cadastrar uma tarefa”. Abaixo botão “Enviar”. ">
+                <img src="imgs/fig-30.png" class="imgBorder center-block img-responsive" alt=" Página com o título “Cadastro de tarefas” e abaixo formulário com rótulo “ID” e campo texto com valor “4”; abaixo, o rótulo “Descrição” e o campo de texto com valor “Cadastrar uma tarefa”. Abaixo botão “Enviar”. ">
               </a>
               <p class="legenda-imagem">Figura 30 – Formulário de cadastro  
                 Fonte: Senac EAD (2023) 
@@ -1268,31 +1332,33 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-31.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-31.png" class="center-block img-responsive" alt="Página com o título “Tarefas”, e parágrafos “Bem-vindo, !”, “ID: 4”, “Descrição: Cadastrar uma tarefa”, “Completa: false.   ">
+                <img src="imgs/fig-31.png" class="imgBorder center-block img-responsive" alt="Página com o título “Tarefas”, e parágrafos “Bem-vindo, !”, “ID: 4”, “Descrição: Cadastrar uma tarefa”, “Completa: false.   ">
               </a>
               <p class="legenda-imagem">Figura 31 – Dados da tarefa cadastrada Fonte: Senac EAD (2023) 
               </p>
-              <p class="caixa-destaque icone-dica"><strong>Dica</strong>
-                Agora que o cadastro e a listagem de dados estão funcionando, você pode comentar alguns trechos de código do projeto para deixá-lo mais consistente. O primeiro deles é no controlador, no trecho que faz a criação de objetos Tarefa e adição à lista de tarefas em listaTarefas(). Se manter como está, toda vez que você acessar a página “Lista de tarefas”, o método será acionado e a coleção “tarefas” receberá dados duplicados. 
-                Outro método que pode ser editado é o exibirTarefa(), comentando o trecho que passa o valor para a variável nome e removendo, também, a linha que exibe essa informação na View exibir-tarefa. Dessa forma, não haverá um texto "solto" na tela de exibição da tarefa. 
+              <p class="caixa-destaque icone-dica">
+                Agora que o cadastro e a listagem de dados estão funcionando, você pode comentar alguns trechos de código do projeto para deixá-lo mais consistente. O primeiro deles é no controlador, no trecho que faz a criação de objetos Tarefa e adição à lista de tarefas em <strong>listaTarefas()</strong>. Se manter como está, toda vez que você acessar a página “Lista de tarefas”, o método será acionado e a coleção “tarefas” receberá dados duplicados. 
+                Outro método que pode ser editado é o <strong>exibirTarefa()</strong>, comentando o trecho que passa o valor para a variável <strong>nome</strong> e removendo, também, a linha que exibe essa informação na View <strong>exibir-tarefa</strong>. Dessa forma, não haverá um texto "solto" na tela de exibição da tarefa. 
               </p>
-              <p class="caixa-destaque icone-desafio"><strong>Desafio</strong>
+              <p class="caixa-destaque icone-desafio">
                 Crie um projeto de agenda pessoal que permita cadastrar e consultar nome e telefone de pessoas. O cadastro usará &lt;form> e a consulta &lt;table>. Experimente ainda implementar exclusão de registro. 
               </p>
-              <h3> Navegação entre páginas</h3>
+              <h3 id="t10"> Navegação entre páginas</h3>
               <p>
-                Com o Thymeleaf, é possível criar uma barra de navegação reutilizável em várias páginas utilizando fragmentos. Os fragmentos são partes de um template que podem ser incluídas em outros templates. Veja na prática como fazer isso.  
+                Com o Thymeleaf, é possível criar uma barra de navegação reutilizável em várias páginas utilizando fragmentos. Os fragmentos são partes de um <i>template</i> que podem ser incluídas em outros <i>templates</i>. Veja na prática como fazer isso.  
               </p>
               <ol>
                 <li>Crie um novo arquivo HTML chamado “navbar” e insira o seguinte código: </li>
-                <code>
+                <pre><code>
                   &lt;nav> 
                       &lt;a th:href="@{/lista-tarefas}">Lista de tarefas&lt;/a> 
                       &lt;a th:href="@{/cadastro}">Cadastro&lt;/a> 
                   &lt;/nav> 
                 </code>
-                <li>Agora, nos outros templates de página, inclua o fragmento da barra de navegação usando a diretiva th:insert, como no exemplo a seguir: </li>
-                <code>
+</pre>
+
+                <li>Agora, nos outros <i>templates</i> de página, inclua o fragmento da barra de navegação usando a diretiva <strong>th:insert</strong>, como no exemplo a seguir: </li>
+                <pre><code>
                 <br>  &lt;!DOCTYPE html> 
                 <br>  &lt;html xmlns:th="http://www.thymeleaf.org"> 
                 <br>  &lt;head> 
@@ -1305,12 +1371,14 @@ Fonte: Senac EAD (2023)
                 <br>  &lt;/body> 
                 <br>  &lt;/html> 
                 </code>
+</pre>
+
               </ol>
               <p>
-                Nesse exemplo, o fragmento da barra de navegação é incluído usando a diretiva th:insert. A sintaxe "navbar.html :: nav" especifica que você deseja incluir o fragmento com o nome "nav" do arquivo navbar.html. O conteúdo desse fragmento será renderizado no local onde a diretiva th:insert está definida no template da página. 
+                Nesse exemplo, o fragmento da barra de navegação é incluído usando a diretiva <strong>th:insert</strong>. A sintaxe <strong>"navbar.html :: nav"</strong> especifica que você deseja incluir o fragmento com o nome <strong>"nav"</strong> do arquivo <strong>navbar.html.</strong> O conteúdo desse fragmento será renderizado no local onde a diretiva <strong>th:insert</strong> está definida no <i>template</i> da página. 
               </p>
               <p>
-                Certifique-se de que o arquivo navbar.html e os templates de página estão no mesmo diretório para que o Thymeleaf possa encontrá-los corretamente. Dessa forma, você pode criar uma barra de navegação em um único arquivo e reutilizá-la em várias páginas do seu projeto Thymeleaf. Isso facilita a manutenção e evita a duplicação de código.  
+                Certifique-se de que o arquivo <strong>navbar.html</strong> e os <i>templates</i> de página estão no mesmo diretório para que o Thymeleaf possa encontrá-los corretamente. Dessa forma, você pode criar uma barra de navegação em um único arquivo e reutilizá-la em várias páginas do seu projeto Thymeleaf. Isso facilita a manutenção e evita a duplicação de código.  
               </p>
               <p>
                 Veja a seguir um exemplo de como a sua página “lista-tarefas” deve ficar após essa adição. 
@@ -1320,30 +1388,30 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-32.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-32.png" class="center-block img-responsive" alt="Formulário da figura 30, mas agora com links “Lista de tarefas” e “Cadastro” na parte superior. ">
+                <img src="imgs/fig-32.png" class="imgBorder center-block img-responsive" alt="Formulário da figura 30, mas agora com links “Lista de tarefas” e “Cadastro” na parte superior. ">
               </a>
-              <p class="legenda-imagem">Figura 32 – Formulário com links de navegação  
+              <p class="legenda-imagem">Figura 32 – Formulário com <i>links</i> de navegação  
                 Fonte: Senac EAD (2023) 
               </p>
-              <h3>Recursos estáticos</h3>
+              <h3 id="t11">Recursos estáticos</h3>
               <p>
-                Dentro da pasta de recursos do Thymeleaf, há o diretório static, que é utilizado para guardar recursos estáticos que serão referenciados e usados no código HTML, como arquivos CSS, Javascript, imagens, fontes etc. 
+                Dentro da pasta de recursos do Thymeleaf, há o diretório <strong>static</strong>, que é utilizado para guardar recursos estáticos que serão referenciados e usados no código HTML, como arquivos CSS, Javascript, imagens, fontes etc. 
               </p>
               <p>
                 É de boa prática criar subdiretórios nesse local de acordo com os tipos de recursos que se deseja guardar. Por exemplo, você pode ter os subdiretórios “css”, “js” e “images” para armazenar arquivos CSS, Javascript e imagens, respectivamente. Essa organização ajuda a manter os recursos estáticos estruturados e facilita o acesso e a manutenção. 
               </p>
               <p>
-                O Spring MVC tem a capacidade de mapear e servir automaticamente os recursos estáticos do diretório src/main/resources/static para as solicitações HTTP correspondentes. Isso significa que você pode simplesmente referenciar os recursos estáticos nos seus templates ou páginas HTML e o framework se encarregará de servir esses arquivos corretamente. 
+                O Spring MVC tem a capacidade de mapear e servir automaticamente os recursos estáticos do diretório <strong>src/main/resources/static</strong> para as solicitações HTTP correspondentes. Isso significa que você pode simplesmente referenciar os recursos estáticos nos seus <i>templates</i> ou páginas HTML e o <i>framework</i> se encarregará de servir esses arquivos corretamente. 
               </p>
               <p>
                 Veja isso na prática! 
               </p>
               <h4>Criação de pastas</h4>
               <p>
-                Para começar, serão criadas três novas pastas: “css”, “js” e “images”. Crie uma nova pasta dentro do diretório static chamada “css” por meio do NetBeans clicando com o botão direito do mouse sobre “Other Sources > src/main/resources > static” e selecionando “New” > “Folder...”. 
+                Para começar, serão criadas três novas pastas: “css”, “js” e “images”. Crie uma nova pasta dentro do diretório <strong>static</strong> chamada “css” por meio do NetBeans clicando com o botão direito do mouse sobre “Other Sources > src/main/resources > static” e selecionando “New” > “Folder...”. 
               </p>
               <p>
-                Você perceberá que o diretório passará a se chamar static.css. Isso acontece, pois a pasta static não tem nenhum arquivo, apenas uma subpasta, então o NetBeans ignora essa pasta vazia. Se você tentar criar uma nova pasta agora, por exemplo, “js”, o NetBeans entenderá que quer criá-la dentro de “css”. Então atenção ao próximo passo! 
+                Você perceberá que o diretório passará a se chamar <strong>static.css</strong>. Isso acontece, pois a pasta <i>static</i> não tem nenhum arquivo, apenas uma subpasta, então o NetBeans ignora essa pasta vazia. Se você tentar criar uma nova pasta agora, por exemplo, “js”, o NetBeans entenderá que quer criá-la dentro de “css”. Então atenção ao próximo passo! 
               </p>
               <p>
                 Na janela de criação da nova pasta, altere o conteúdo “Parent Folder” e remova o trecho que aponta para a pasta “css”. O conteúdo deve ficar “src\main\resources\static” conforme a imagem a seguir. 
@@ -1351,7 +1419,7 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-33.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-33.png" class="center-block img-responsive" alt="Tela “New Folder” do NetBeans, com campo “Parent Folder” destacado com o valor “src\main\resources\static”. ">
+                <img src="imgs/fig-33.png" class="imgBorder center-block img-responsive" alt="Tela “New Folder” do NetBeans, com campo “Parent Folder” destacado com o valor “src\main\resources\static”. ">
               </a>
               <p class="legenda-imagem">Figura 33 – Campo “Parent Folder” na criação de pasta  
                   Fonte: NetBeans (2023) 
@@ -1363,63 +1431,69 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-34.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-34.png" class="center-block img-responsive" alt="Detalhe do projeto NetBeans na pasta Other Sources, expandida com “src/main/resources”, dentro dela, há “&lt;default package>, “static.css”, “static.images”, “Static.js” e “templates”. ">
+                <img src="imgs/fig-34.png" class="imgBorder center-block img-responsive" alt="Detalhe do projeto NetBeans na pasta Other Sources, expandida com “src/main/resources”, dentro dela, há “&lt;default package>, “static.css”, “static.images”, “Static.js” e “templates”. ">
               </a>
               <p class="legenda-imagem">Figura 34 – Estrutura de pastas estáticas  
               Fonte: NetBeans (2023) 
               </p>
               <h4>Arquivo CSS</h4>
               <p>
-                Após isso, crie dentro do diretório “css” um arquivo chamado style.css. Esse será o arquivo de estilização. 
+                Após isso, crie dentro do diretório “css” um arquivo chamado <strong>style.css</strong>. Esse será o arquivo de estilização. 
               </p>
               <p>
                 Para esse exemplo, você fará algo bem simples! Lembre-se de que as tarefas estão sendo listadas com as mensagens “Concluída” e “Pendente”. Destaque esses textos aplicando a cor azul para as tarefas concluídas e laranja para as tarefas pendentes. O código CSS ficará assim: 
               </p>
-              <code>.tarefa-concluida { 
+              <pre><code>.tarefa-concluida { 
               <br>      color: blue; 
               <br>  } 
               <br>  .tarefa-pendente { 
               <br>      color: orange; 
               <br>  } 
               </code>
+</pre>
+
               <p>
-                Agora volte para o arquivo lista-tarefas.html. Nele, serão feitas duas mudanças: 
+                Agora volte para o arquivo <strong>lista-tarefas.html</strong>. Nele, serão feitas duas mudanças: 
               </p>
               <ol>
                 <li>
-                Primeiramente, será chamado o arquivo CSS que acabou de ser criado. Para isso, adicione entre as tags &lt;head>&lt;/head> o seguinte conteúdo: 
+                Primeiramente, será chamado o arquivo CSS que acabou de ser criado. Para isso, adicione entre as <i>tags</i> <strong>&lt;head>&lt;/head></strong> o seguinte conteúdo: 
                 </li>
-                <code>&lt;link rel="stylesheet" th:href="@{/css/style.css}" /> 
+                <pre><code>&lt;link rel="stylesheet" th:href="@{/css/style.css}" /> 
 
                 </code>
-                <p>O uso da expressão @{...} é uma sintaxe específica do Thymeleaf para resolver caminhos de recursos estáticos. Quando o Thymeleaf processa o template, ele substituirá a expressão @{/css/style.css} pelo caminho correto para o arquivo CSS no contexto do seu aplicativo. Durante a execução do aplicativo, o navegador carregará o arquivo CSS com base no caminho fornecido pelo Thymeleaf e aplicará as regras de estilo definidas no arquivo "style.css". </p>
-                <p class="caixa-destaque icone-atencao"><strong>Atenção</strong>O uso da expressão @{...} é necessário apenas para arquivos estáticos que estão dentro da estrutura do projeto. Caso você deseje referenciar um caminho externo, como o CDN da biblioteca Bootstrap, utilize a sintaxe padrão do HTML. 
+</pre>
+
+                <p>O uso da expressão @{...} é uma sintaxe específica do Thymeleaf para resolver caminhos de recursos estáticos. Quando o Thymeleaf processa o <i>template</i>, ele substituirá a expressão @{/css/style.css} pelo caminho correto para o arquivo CSS no contexto do seu aplicativo. Durante a execução do aplicativo, o navegador carregará o arquivo CSS com base no caminho fornecido pelo Thymeleaf e aplicará as regras de estilo definidas no arquivo "style.css". </p>
+                <p class="caixa-destaque icone-atencao">O uso da expressão @{...} é necessário apenas para arquivos estáticos que estão dentro da estrutura do projeto. Caso você deseje referenciar um caminho externo, como o CDN da biblioteca <i>Bootstrap</i>, utilize a sintaxe padrão do HTML. 
                 </p>
-                <li>Agora serão aplicadas as classes de estilo nas tags &lt;span> onde estão os textos “Concluída” e “Pendente”. Esse trecho de código ficará assim: </li>
-                <code>
+                <li>Agora serão aplicadas as classes de estilo nas <i>tags</i> &lt;span> onde estão os textos “Concluída” e “Pendente”. Esse trecho de código ficará assim: </li>
+                <pre><code>
                 <br>  &lt;td> 
                 <br>      &lt;span th:if="${tarefa.completa}" class="tarefa-concluida">Concluída&lt;/span> 
                 <br>      &lt;span th:unless="${tarefa.completa}" class="tarefa-pendente">Pendente&lt;/span> 
                 <br>  &lt;/td>
                 </code>
+</pre>
+
                 <p>O resultado final será esse: </p>
               </ol>
 
 
               <a href="imgs/fig-35.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-35.png" class="center-block img-responsive" alt="Lista de tarefa agora com a palavra “Pendente” em amarelo. ">
+                <img src="imgs/fig-35.png" class="imgBorder center-block img-responsive" alt="Lista de tarefa agora com a palavra “Pendente” em amarelo. ">
               </a>
               <p class="legenda-imagem">Figura 35 – Lista de tarefas estilizada 
                 Fonte: Senac EAD (2023) 
               </p>
-              <p class="caixa-destaque icone-dica"><strong>Dica</strong>Você pode criar um novo fragmento (igual foi feito com a navegação) para o seu &lt;head>. Assim, você não precisará atualizar todos os seus arquivos HTML para chamar o CSS em cada um deles. Essa dica também vale para os scripts JS. 
+              <p class="caixa-destaque icone-dica">Você pode criar um novo fragmento (igual foi feito com a navegação) para o seu &lt;head>. Assim, você não precisará atualizar todos os seus arquivos HTML para chamar o CSS em cada um deles. Essa dica também vale para os <i>scripts</i> JS. 
                           
               </p>
               <h4>Arquivo JS</h4>
               <p>
-                Crie um novo arquivo chamado script.js dentro do diretório js e adicione o seguinte trecho de código: 
+                Crie um novo arquivo chamado <strong>script.js</strong> dentro do diretório <strong>js</strong> e adicione o seguinte trecho de código: 
               </p>
-              <code>function atualizarTarefa(element) { 
+              <pre><code>function atualizarTarefa(element) { 
               <br>      if (element.innerHTML === 'Concluída') { 
               <br>          element.innerHTML = 'Pendente'; 
               <br>          element.className = 'tarefa-pendente'; 
@@ -1430,21 +1504,23 @@ Fonte: Senac EAD (2023)
               <br>  } 
 
               </code>
+</pre>
+
               <p>
                 Veja o que será feito a seguir: 
               </p>
               <ol>
-                <li>Criar a função “atualizarTarefa” para ser acionada quando o usuário clicar sobre o status de uma tarefa. </li>
-                <li>Quando o usuário “clicar” sobre o status da tarefa, será atualizado o valor. Se o status estiver “Pendente”, após o clique ficará como “Concluída”, e vice-versa. </li>
+                <li>Criar a função “atualizarTarefa” para ser acionada quando o usuário clicar sobre o <i>status</i> de uma tarefa. </li>
+                <li>Quando o usuário “clicar” sobre o <i>status</i> da tarefa, será atualizado o valor. Se o <i>status</i> estiver “Pendente”, após o clique ficará como “Concluída”, e vice-versa. </li>
                 <li>Além disso, usar o className para atualizar a classe de estilo do elemento. Dessa forma, a estilização ainda destacará o texto. Será usada a propriedade className. </li>
               </ol>
               <p>
-                Perceba que o código não atualizará de fato o conteúdo da lista de tarefas que está no back-end. Ele apenas atualizará a visualização no front-end. 
+                Perceba que o código não atualizará de fato o conteúdo da lista de tarefas que está no <i>back-end</i>. Ele apenas atualizará a visualização no <i>front-end</i>. 
               </p>
               <p>
                 Agora será atualizado o lista-tarefas.html: 
               </p>
-              <code>
+              <pre><code>
                 &lt;!DOCTYPE html> 
                 &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
                 &lt;head> 
@@ -1484,18 +1560,22 @@ Fonte: Senac EAD (2023)
                 &lt;/html> 
 
               </code>
+</pre>
+
               <p>
-                Além de adicionar o evento “onclick” à tag <td> que corresponde ao status da tarefa, também foi feita a chamada do arquivo script.js na penúltima linha de código: 
+                Além de adicionar o evento “onclick” à <i>tag</i> &lt;td> que corresponde ao <i>status</i> da tarefa, também foi feita a chamada do arquivo script.js na penúltima linha de código: 
               </p>
-              <code>  
+              <pre><code>  
                 &lt;script th:src="@{/js/script.js}">&lt;/script> 
               </code>
+</pre>
+
 
 
 
 
               <a href="imgs/fig-36.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-36.png" class="center-block img-responsive" alt="Lista de tarefas como descrita anteriormente, mas agora mostrando apenas um registro como “Pendente”. ">
+                <img src="imgs/fig-36.png" class="imgBorder center-block img-responsive" alt="Lista de tarefas como descrita anteriormente, mas agora mostrando apenas um registro como “Pendente”. ">
               </a>
               <p class="legenda-imagem">Figura 36 – Lista de tarefas atualizada  
                 Fonte: Senac EAD (2023) 
@@ -1503,15 +1583,15 @@ Fonte: Senac EAD (2023)
               </p>
               <h4>Arquivos de imagem</h4>
               <p>
-                Existem duas formas de inserir imagens nas páginas web. Uma é por meio do HTML e a outra do CSS. 
+                Existem duas formas de inserir imagens nas páginas <i>web</i>. Uma é por meio do HTML e a outra do CSS. 
               </p>
               <p>
-                Para esse exemplo, as imagens foram salvas dentro do diretório images criado em src/main/resources/static/: 
+                Para esse exemplo, as imagens foram salvas dentro do diretório <strong>images</strong> criado em src/main/resources/static/: 
               </p>
 
 
               <a href="imgs/fig-37.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-37.png" class="center-block img-responsive" alt=" Ícone com fundo circular azul, ao centro, uma prancheta com um checkmark.">
+                <img src="imgs/fig-37.png" class="imgBorder center-block img-responsive" alt=" Ícone com fundo circular azul, ao centro, uma prancheta com um checkmark.">
               </a>
               <p class="legenda-imagem">Figura 37 – Ícone de Tarefa 
                 Fonte: Icon Shop (c2020) 
@@ -1519,7 +1599,7 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-38.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-38.png" class="center-block img-responsive" alt="Superfície branca com um celular em cima, uma agenda aberta, um lápis, óculos e parte de um laptop. ">
+                <img src="imgs/fig-38.png" class="imgBorder center-block img-responsive" alt="Superfície branca com um celular em cima, uma agenda aberta, um lápis, óculos e parte de um laptop. ">
               </a>
               <p class="legenda-imagem">Figura 38 – Banner de tarefas 
 
@@ -1529,13 +1609,18 @@ Fonte: Senac EAD (2023)
               <p>
                 Na página “lista-tarefas.html”, adicione o seguinte trecho de código abaixo do título “Lista de tarefas”: 
               </p>
+              <pre>
+                <code>
+                  &lt;img th:src="@{/images/tarefa-icone.png}" height="50px">  
+                </code>
+              </pre>
               <p>
-                Com isso, o arquivo tarefa-icone.png será chamado com o seguinte resultado: 
+                Com isso, o arquivo <strong>tarefa-icone.png</strong> será chamado com o seguinte resultado: 
               </p>
 
 
-              <a href="imgs/figura_1.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/figura_1.png" class="center-block img-responsive" alt="Página descrita anteriormente, mas agora com o ícone de tarefas abaixo do título “Lista de tarefas”. ">
+              <a href="imgs/fig-39.png" target="_blank"   aria-hidden="true">
+                <img src="imgs/fig-39.png" class="imgBorder center-block img-responsive" alt="Página descrita anteriormente, mas agora com o ícone de tarefas abaixo do título “Lista de tarefas”. ">
               </a>
               <p class="legenda-imagem">Figura 39 – Página de listagem de tarefas agora com um ícone 
                 Fonte: Senac EAD (2023) 
@@ -1544,24 +1629,28 @@ Fonte: Senac EAD (2023)
                 Agora você verá como fazer o mesmo utilizando a propriedade background-image no CSS. Mas antes serão exploradas algumas situações que podem ocorrer no seu dia a dia como programador. 
               </p>
               <p>
-                Imagine que você está trabalhando em um projeto web com o Spring Web e o Thymeleaf. Você precisa criar um banner, que ficará no topo da página e terá 200px de altura. Esse banner precisa ser exibido em todas as páginas do sistema. Veja como seria possível solucionar esse problema. 
+                Imagine que você está trabalhando em um projeto <i>web</i> com o Spring Web e o Thymeleaf. Você precisa criar um <i>banner</i>, que ficará no topo da página e terá 200px de altura. Esse <i>banner</i> precisa ser exibido em todas as páginas do sistema. Veja como seria possível solucionar esse problema. 
               </p>
               <p>
-                Primeiramente, o mais apropriado aqui seria usar fragmentos para ter reaproveitamento de código. No caso deste exemplo de projeto, já há um fragmento, que é o arquivo navbar.html. Então nele será feita uma pequena adição. No início do código, adicione o seguinte trecho antes da tag <nav>: 
+                Primeiramente, o mais apropriado aqui seria usar fragmentos para ter reaproveitamento de código. No caso deste exemplo de projeto, já há um fragmento, que é o arquivo navbar.html. Então nele será feita uma pequena adição. No início do código, adicione o seguinte trecho antes da tag <nav>
               </p>
-              <code>
+              <pre><code>
                 &lt;div class="banner">&lt;/div> 
               </code>
+              </pre>
+
               <p>
-                Isso criará uma área que está sendo referenciada com a classe de estilização “banner”. Com isso, não há mais apenas o conteúdo das tags <nav>. Isso significa que é necessário atualizar o trecho em que é chamado esse fragmento nos arquivos HTML, removendo a chamada exclusiva ::nav. O código atualizado ficará assim: 
+                Isso criará uma área que está sendo referenciada com a classe de estilização “banner”. Com isso, não há mais apenas o conteúdo das tags &lt;nav>. Isso significa que é necessário atualizar o trecho em que é chamado esse fragmento nos arquivos HTML, removendo a chamada exclusiva   <strong>::nav</strong>. O código atualizado ficará assim: 
               </p>
-              <code>
+              <pre><code>
                 &lt;header th:insert="navbar.html">&lt;/header> 
               </code>
+</pre>
+
               <p>
                 Agora, crie essa classe no CSS adicionando o seguinte trecho de código: 
               </p>
-              <code>.banner { 
+              <pre><code>.banner { 
                     background-image: url('../images/banner.jpg'); 
                     background-repeat: no-repeat; 
                     background-size: cover; 
@@ -1569,8 +1658,10 @@ Fonte: Senac EAD (2023)
                 } 
 
               </code>
+</pre>
+
               <p>
-                Perceba que aqui não foi utilizada a sintaxe @{...} do Thymeleaf, e o motivo é bem simples: o CSS é um arquivo separado e não tem suporte direto ao processamento de expressões do Thymeleaf. Portanto, não se pode usar a sintaxe @{...} dentro do CSS. No entanto, pode-se usar a notação relativa de caminho dentro do CSS para referenciar corretamente a imagem. Ao usar ../ no caminho da imagem, volta-se um nível no diretório em relação ao arquivo CSS e, em seguida, pode-se acessar a pasta "static/images" para encontrar o arquivo desejado. 
+                Perceba que aqui não foi utilizada a sintaxe <strong>@{...}</strong> do Thymeleaf, e o motivo é bem simples: o CSS é um arquivo separado e não tem suporte direto ao processamento de expressões do Thymeleaf. Portanto, não se pode usar a sintaxe @{...} dentro do CSS. No entanto, pode-se usar a notação relativa de caminho dentro do CSS para referenciar corretamente a imagem. Ao usar ../ no caminho da imagem, volta-se um nível no diretório em relação ao arquivo CSS e, em seguida, pode-se acessar a pasta "static/images" para encontrar o arquivo desejado. 
               </p>
               <p>
                 Dessa forma, a imagem deve ser exibida corretamente como plano de fundo com o seguinte resultado: 
@@ -1579,7 +1670,7 @@ Fonte: Senac EAD (2023)
 
 
               <a href="imgs/fig-40.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-40.png" class="center-block img-responsive" alt="No topo, há a imagem descrita na Figura 38, abaixo, a página de Lista de Tarefas conforme descrito anteriormente. ">
+                <img src="imgs/fig-40.png" class="imgBorder center-block img-responsive" alt="No topo, há a imagem descrita na Figura 38, abaixo, a página de Lista de Tarefas conforme descrito anteriormente. ">
               </a>
               <p class="legenda-imagem">Figura 40 – Listagem de tarefas agora com banner 
 
@@ -1589,18 +1680,20 @@ Fonte: Senac EAD (2023)
               <p>
                 Confira a seguir o código completo dos arquivos HTML alterados.  
               </p>
-              <p>
+              <p><i>
                 navbar.html 
-              </p>
-              <code>
+              </p></i>
+              <pre><code>
               <br>  &lt;div class="banner">&lt;/div> 
               <br>  &lt;nav> 
               <br>      &lt;a th:href="@{/lista-tarefas}">Lista de tarefas&lt;/a> 
               <br>      &lt;a th:href="@{/cadastro}">Cadastro&lt;/a> 
               <br>  &lt;/nav> 
               </code>
-              <p>lista-tarefa.html </p>
-              <code>
+</pre>
+
+              <p><i>lista-tarefa.html</i> </p>
+              <pre><code>
                 &lt;!DOCTYPE html> 
                 &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
                 &lt;head> 
@@ -1635,49 +1728,58 @@ Fonte: Senac EAD (2023)
                 &lt;/body> 
 
               </code>
+</pre>
+
               <h4>Bibliotecas externas </h4>
               <p>
-                No desenvolvimento de projetos de software, é comum fazer uso de várias bibliotecas para auxiliar no processo. Neste exemplo de projeto que está sendo desenvolvido, foram usadas duas bibliotecas para essa finalidade: o Spring Web e o Thymeleaf. Mas isso não significa que há apenas essas duas opções. 
+                No desenvolvimento de projetos de <i>software</i>, é comum fazer uso de várias bibliotecas para auxiliar no processo. Neste exemplo de projeto que está sendo desenvolvido, foram usadas duas bibliotecas para essa finalidade: o Spring Web e o Thymeleaf. Mas isso não significa que há apenas essas duas opções. 
               </p>
               <p>
-                Por exemplo, no estágio atual deste projeto de tarefas, existe uma sólida implementação do back-end e um front-end simples, porém funcional, que atende às interações necessárias para acionar as funcionalidades do back-end. Para melhorar a interface visual do projeto, seria necessária uma grande dedicação de tempo na construção do CSS que aplica a estilização e torna a página mais bonita. Ou, para economizar tempo, pode-se usar uma biblioteca de estilização para auxiliar nessa tarefa, como o Bootstrap. 
+                Por exemplo, no estágio atual deste projeto de tarefas, existe uma sólida implementação do <i>back-end</i> e um <i>front-end </i>simples, porém funcional, que atende às interações necessárias para acionar as funcionalidades do <i>back-end</i>. Para melhorar a interface visual do projeto, seria necessária uma grande dedicação de tempo na construção do CSS que aplica a estilização e torna a página mais bonita. Ou, para economizar tempo, pode-se usar uma biblioteca de estilização para auxiliar nessa tarefa, como o <i>Bootstrap</i>. 
               </p>
               <p>
-                Agora, como adicionar a biblioteca do Boostrap ao projeto? É o que você verá a seguir. 
+                Agora, como adicionar a biblioteca do <i>Boostrap</i> ao projeto? É o que você verá a seguir. 
               </p>
               <p class="caixa-destaque">
                 Existem duas formas de fazer isso: 
               </p>
               <ol>
-                <li>Adicionar a biblioteca via CDN: essa abordagem permite incluir o Bootstrap rapidamente no projeto fazendo a referência dos arquivos com as URLs públicas disponíveis oficialmente. Para isso, basta adicionar a referência do arquivo CSS na tag <head> do HTML: 
-                  <code>
-                    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
-                    <p>
-                      Mas fazer isso significa tornar o projeto dependente de um provedor externo para entregar os arquivos, o que pode resultar em problemas de desempenho, disponibilidade e carregamento do site. Apesar de essa prática ser conveniente no ambiente de desenvolvimento de software, pois permite o uso da biblioteca mais rápido, em algum momento, os arquivos terão que ser adicionados à estrutura do projeto para que o software não seja entregue com essa dependência de provedores externos. 
-                    </p>
+                <li>Adicionar a biblioteca via CDN: essa abordagem permite incluir o Bootstrap rapidamente no projeto fazendo a referência dos arquivos com as URLs públicas disponíveis oficialmente. Para isso, basta adicionar a referência do arquivo CSS na <i>tag</i> &lt;head> do HTML: 
+                  <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
+                    
                   </code>
+                </pre>
+                <p>
+                  E também adicionar a referência do arquivo Javascript no final do arquivo HTML antes do fechamento da <i>tag</i> &lt;/body>: 
+                </p>
+                <pre>
+                  <code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
+                  </code>
+                </pre>
+                <p>Mas fazer isso significa tornar o projeto dependente de um provedor externo para entregar os arquivos, o que pode resultar em problemas de desempenho, disponibilidade e carregamento do <i>site</i>. Apesar de essa prática ser conveniente no ambiente de desenvolvimento de <i>software</i>, pois permite o uso da biblioteca mais rápido, em algum momento, os arquivos terão que ser adicionados à estrutura do projeto para que o <i>software</i> não seja entregue com essa dependência de provedores externos. </p>
+
                 </li>
-                <li>Adicionar os arquivos ao diretório do projeto: nessa abordagem, é feito o download dos arquivos CSS e JS diretamente do site oficial da biblioteca e extraídos os arquivos dentro do diretório do src/main/resources/static do projeto. Essa é a abordagem mais apropriada, pois o projeto não dependerá de provedores externos para requisitar os arquivos estáticos. Por isso, será usada essa abordagem para este exemplo de projeto. 
-                  <p>Primeiramente, é necessário acessar o site oficial do Bootstrap e fazer o download dos arquivos CSS e JS compilados – você encontrará o botão de download desses arquivos na seção “Compiled CSS and JS”. Nesse exemplo, foi usada a versão 5.3, pois essa é a última versão disponibilizada até então da biblioteca. </p>
+                <li>Adicionar os arquivos ao diretório do projeto: nessa abordagem, é feito o <i>download</i> dos arquivos CSS e JS diretamente do <i>site</i> oficial da biblioteca e extraídos os arquivos dentro do diretório do src/main/resources/static do projeto. Essa é a abordagem mais apropriada, pois o projeto não dependerá de provedores externos para requisitar os arquivos estáticos. Por isso, será usada essa abordagem para este exemplo de projeto. 
+                  <p>Primeiramente, é necessário acessar o <i>site</i> oficial do Bootstrap e fazer o <i>download</i> dos arquivos CSS e JS compilados – você encontrará o botão de <i>download</i> desses arquivos na seção “Compiled CSS and JS”. Nesse exemplo, foi usada a versão 5.3, pois essa é a última versão disponibilizada até então da biblioteca. </p>
                 </li>
               </ol>
 
 
 
               <a href="imgs/fig-41.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-41.png" class="center-block img-responsive" alt="Página com título “download” e seção “Compiled CSS and JS”. Abaixo, há um texto descritivo e um botão “download”. ">
+                <img src="imgs/fig-41.png" class="imgBorder center-block img-responsive" alt="Página com título “download” e seção “Compiled CSS and JS”. Abaixo, há um texto descritivo e um botão “download”. ">
               </a>
-              <p class="legenda-imagem">Figura 41 – Página de download do Bootstrap 
+              <p class="legenda-imagem">Figura 41 – Página de <i>download</i> do Bootstrap 
                 Fonte: Bootstrap (s.d.) 
               </p>
               <p>
-                Após clicar no botão de download, será baixada uma pasta compactada (.zip) contendo uma pasta chamada Bootstrap e o número da versão baixada. Extraia essa pasta no diretório “src/main/resources/static” do seu projeto e renomeie apenas para “bootstrap” – isso facilitará ao escrever o nome do diretório no código. Se você fez tudo corretamente, terá a seguinte estrutura aparecendo no seu NetBeans: 
+                Após clicar no botão de <i>download</i>, será baixada uma pasta compactada (.zip) contendo uma pasta chamada Bootstrap e o número da versão baixada. Extraia essa pasta no diretório “src/main/resources/static” do seu projeto e renomeie apenas para “bootstrap” – isso facilitará ao escrever o nome do diretório no código. Se você fez tudo corretamente, terá a seguinte estrutura aparecendo no seu NetBeans: 
               </p>
 
 
 
               <a href="imgs/fig-42.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-42.png" class="center-block img-responsive" alt="Detalhe do projeto exemplothymeleaf no NetBeans, com a seguinte estrutura: Source Packages expande com os pacotes com.senac.exemplothymeleaf, com.senac.exemplothymeleaf.controller, com.senac.exemplothymeleaf.model; Other Sources, expande com “src/main/resources”, que expande com os pacotes &lt;default package>, static.bootstrap.css, static.bootstrap.js, static.css, static.images, static.js, templates. ">
+                <img src="imgs/fig-42.png" class="imgBorder center-block img-responsive" alt="Detalhe do projeto exemplothymeleaf no NetBeans, com a seguinte estrutura: Source Packages expande com os pacotes com.senac.exemplothymeleaf, com.senac.exemplothymeleaf.controller, com.senac.exemplothymeleaf.model; Other Sources, expande com “src/main/resources”, que expande com os pacotes &lt;default package>, static.bootstrap.css, static.bootstrap.js, static.css, static.images, static.js, templates. ">
               </a>
               <p class="legenda-imagem">Figura 42 – Estrutura de arquivos do projeto  
                 Fonte: NetBeans (2023) 
@@ -1685,7 +1787,7 @@ Fonte: Senac EAD (2023)
               <p>
                 Se algum erro aparecer no seu “static.bootstrap.css” ou “static.bootstrap.js”, como na imagem, não se preocupe. Provavelmente, a versão baixada do Bootstrap trata-se de uma versão que ainda está em desenvolvimento e não foi totalmente revisada. Por isso, alguns trechos de código podem conter a sintaxe errada e o NetBeans se encarregará de apontar esses erros, mas nada disso afetará a compilação do seu projeto. 
               </p>
-              <p class="caixa-destaque icone-ob"><strong>Observação</strong>
+              <p class="caixa-destaque icone-atencao">
                 Nesse exemplo, as subpastas “css” e “js” estão dentro da pasta “bootstrap” para deixar os arquivos isolados, e não misturados com os próprios arquivos “css/style.css” e “js/script.js”. É comum as pastas “css” e “js” serem extraídas diretamente no repositório “static”, deixando de lado a pasta “bootstrap” para simplificar a hierarquia de arquivos. Mas essa organização não é uma regra e cada desenvolvedor pode organizar seus arquivos estáticos da maneira que melhor atende à estrutura do seu projeto. Em caso de muitas bibliotecas externas serem utilizadas, por exemplo, é comum ser criada uma pasta “libraries” ou “lib” para se referir a toda biblioteca externa sendo utilizada pelo projeto. Se apenas uma biblioteca externa estiver sendo utilizada, o uso da pasta “libraries” acaba sendo apenas mais um caminho no diretório que precisa ser acessado para chegar aos arquivos da biblioteca desejada. Então tudo depende do que melhor atende às necessidades dos desenvolvedores e melhor se enquadra com a complexidade do projeto. 
                           
               </p>
@@ -1693,25 +1795,29 @@ Fonte: Senac EAD (2023)
                 Agora basta fazer a chamada dos arquivos no projeto. Para esse exemplo, serão adicionados o CSS e o JS do Bootstrap na “página lista-tarefas.html”.  
               </p>
               <p>
-                Como os arquivos da estrutura do projeto são estáticos, segue-se com o uso da sintaxe @{...} para referenciar o caminho dos arquivos. Então serão usados os seguintes trechos de código para adicionar os arquivos. 
+                Como os arquivos da estrutura do projeto são estáticos, segue-se com o uso da sintaxe <strong>@{...}</strong> para referenciar o caminho dos arquivos. Então serão usados os seguintes trechos de código para adicionar os arquivos. 
               </p>
               <p>
                 Para o CSS: 
               </p>
-              <code>
+              <pre><code>
                 &lt;link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"> 
               </code>
+</pre>
+
               <p>Para o JS: </p>
-              <code>
+              <pre><code>
                 &lt;script th:src="@{/bootstrap/js/bootstrap.min.js}">&lt;/script> 
               </code>
+</pre>
+
               <p>
                 Lembrando que é importante que a chamada desses arquivos ocorra antes da chamada dos arquivos CSS e JS próprios. Do contrário, o CSS do Bootstrap pode reescrever a estilização de uma classe com o mesmo nome que esteja em “style.css”, por exemplo. O mesmo vale para as funções do Javascript. 
               </p>
               <p>
                 Logo, o código deve ficar assim: 
               </p>
-              <code>
+              <pre><code>
               <br>  &lt;!DOCTYPE html> 
               <br>  &lt;html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
               <br>  &lt;head> 
@@ -1751,25 +1857,27 @@ Fonte: Senac EAD (2023)
               <br>  &lt;/body> 
               <br>  &lt;/html> 
               </code>
+</pre>
+
               <p>Executando o projeto agora, já é possível perceber que tudo está funcionando corretamente devido a estilização do Bootstrap no elemento “body”: </p>
 
 
 
 
               <a href="imgs/fig-43.png" target="_blank"   aria-hidden="true">
-                <img src="imgs/fig-43.png" class="center-block img-responsive" alt="Página lista de tarefas agora com fonte estilizada e links de acordo com estilo padrão do Booststrap. ">
+                <img src="imgs/fig-43.png" class="imgBorder center-block img-responsive" alt="Página lista de tarefas agora com fonte estilizada e links de acordo com estilo padrão do Booststrap. ">
               </a>
               <p class="legenda-imagem">Figura 43 – Página estilizada com Bootstrap  
                 Fonte: Senac EAD (2023) 
               </p>
-              <p class="caixa-destaque icone-desafio"><strong>Desafio</strong>Incremente o sistema de agenda proposto no desafio anterior, incluindo nele a biblioteca Bootstrap e imagens. Também teste implementar funcionalidades JavaScript onde considerar conveniente e adequado. 
+              <p class="caixa-destaque icone-desafio">Incremente o sistema de agenda proposto no desafio anterior, incluindo nele a biblioteca Bootstrap e imagens. Também teste implementar funcionalidades JavaScript onde considerar conveniente e adequado. 
               </p>
               <h3 id="t8">Encerramento</h3>
               <p>
-                O Spring MVC é uma poderosa ferramenta que permite a construção de sistemas web completos sob o padrão MVC.  
+                O Spring MVC é uma poderosa ferramenta que permite a construção de sistemas <i>web</i> completos sob o padrão MVC.  
               </p>
               <p>
-                Ferramentas de templates são necessárias, e aqui foi trabalhado bastante com o Thymeleaf, uma das ferramentas mais usadas atualmente. Por meio de seus recursos, é possível construir páginas dinâmicas com facilidade, sem alterar a estrutura do documento HTML. 
+                Ferramentas de <i>templates</i> são necessárias, e aqui foi trabalhado bastante com o Thymeleaf, uma das ferramentas mais usadas atualmente. Por meio de seus recursos, é possível construir páginas dinâmicas com facilidade, sem alterar a estrutura do documento HTML. 
               </p>
               <p>
                 A partir dos exemplos estudados, você poderá experimentar com seus próprios projetos e expandir seus conhecimentos – a própria documentação do Spring pode ser um bom caminho para aprofundar seus conhecimentos. 
