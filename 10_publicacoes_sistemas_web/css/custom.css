@@ -78,7 +78,7 @@ li{
 .item{
   background: url("../imgs/slide.svg") no-repeat;
   max-width: 800px;
-  height: 463px;
+  height: 503px;
   position: relative;
   background-size: 95%;
   margin-left: 7%;
@@ -99,6 +99,7 @@ top: 40%;
  left: 10px;
  padding-left: 15px;
  padding-right: 60px;
+ text-shadow: none;
 }
 
 .carousel-caption p{

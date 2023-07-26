@@ -60,6 +60,7 @@ header{margin-top: 100px;}
 }
 .bt-01:hover{
   opacity: 0.6;
+  transform: scale(1.1);
   color: #fff;
 }
 .bt-02{
@@ -75,6 +76,7 @@ header{margin-top: 100px;}
 .bt-02:hover{
   opacity: 0.6;
   color: #fff;
+  transform: scale(1.1);
 }
 .bt-03{
   background: url("../imgs/bt3.png") no-repeat;
@@ -89,6 +91,7 @@ header{margin-top: 100px;}
 .bt-03:hover{
   opacity: 0.6;
   color: #fff;
+  transform: scale(1.1);
 }
 .bt-04{
   background: url("../imgs/bt4.png") no-repeat;
@@ -103,6 +106,7 @@ header{margin-top: 100px;}
 .bt-04:hover{
   opacity: 0.6;
   color: #fff;
+  transform: scale(1.1);
 }
 .imgPainel{
   position: absolute;

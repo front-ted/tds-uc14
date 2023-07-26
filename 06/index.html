@@ -123,19 +123,19 @@
               
               <h2>MVC (MODEL-VIEW-CONTROLLER)</h2>
               <p>
-                Durante esta jornada de aprendizado, você estudou diversas maneiras de criar projetos, incluindo o uso de conexões e a criação de interfaces com Java ou na web. No entanto, para que um projeto possa ser constantemente melhorado e ampliado para poder oferecer mais recursos aos usuários da aplicação, é essencial compreender um modelo que permeia muitos projetos, seja na web ou em desktops, o padrão de projeto Model-View-Controller (MVC). 
+                Durante esta jornada de aprendizado, você estudou diversas maneiras de criar projetos, incluindo o uso de conexões e a criação de interfaces com Java ou na <i>web</i>. No entanto, para que um projeto possa ser constantemente melhorado e ampliado para poder oferecer mais recursos aos usuários da aplicação, é essencial compreender um modelo que permeia muitos projetos, seja na <i>web</i> ou em <i>desktops</i>, o padrão de projeto Model-View-Controller (MVC). 
               </p>
               <p>
-                O padrão Model-View-Controller (MVC) ajuda a estruturar o seu código de maneira lógica e eficiente, separando as preocupações e permitindo desenvolvimento, manutenção e escalabilidade mais fáceis. Este estudo se concentrará em como o MVC é aplicado no desenvolvimento de aplicações web usando o Spring. Você vai estudar também a relação do padrão MVC com projetos já desenvolvidos em outras UCs. Além disso, será explorado como as camadas de modelo, visão e controlador do MVC se relacionam entre si e como usar o Spring para implementar efetivamente esse padrão. 
+                <strong>O padrão Model-View-Controller (MVC)</strong> ajuda a estruturar o seu código de maneira lógica e eficiente, separando as preocupações e permitindo desenvolvimento, manutenção e escalabilidade mais fáceis. Este estudo se concentrará em como o MVC é aplicado no desenvolvimento de aplicações <i>web</i> usando o Spring. Você vai estudar também a relação do padrão MVC com projetos já desenvolvidos em outras UCs. Além disso, será explorado como as camadas de modelo, visão e controlador do MVC se relacionam entre si e como usar o Spring para implementar efetivamente esse padrão. 
               </p>
               <h3>Conceitos</h3>
               <p>
-                O padrão MVC de arquitetura de software propõe uma maneira de se pensar na divisão das responsabilidades de diferentes componentes que formam o sistema. No caso, separam-se três componentes principais: Modelo (manipulação de dados e regras de negócio), Visão (interface gráfica de interação) e Controle (orquestração entre as duas camadas). O modelo é amplamente utilizado no desenvolvimento de aplicações web, pois esse tipo de aplicação tem, por sua natureza, uma separação bastante clara de processamento (back-end) e visão (front-end). Muitos frameworks modernos de aplicação web, como o Spring Framework, incorporam o padrão MVC em sua arquitetura. Veja mais detalhadamente as definições a seguir. 
-              </p>       
-              <p>
-                Clique ou toque para visualizar o conteúdo. 
-              </p>
+                O padrão MVC de arquitetura de <i>software</i> propõe uma maneira de se pensar na divisão das responsabilidades de diferentes componentes que formam o sistema. No caso, separam-se três componentes principais: Modelo (manipulação de dados e regras de negócio), Visão (interface gráfica de interação) e Controle (orquestração entre as duas camadas). O modelo é amplamente utilizado no desenvolvimento de aplicações <i>web</i>, pois esse tipo de aplicação tem, por sua natureza, uma separação bastante clara de processamento (<i>back-end</i>) e visão (<i>front-end</i>). Muitos <i>frameworks</i> modernos de aplicação <i>web</i>, como o Spring Framework, incorporam o padrão MVC em sua arquitetura. Veja mais detalhadamente as definições a seguir. 
+              </p>      
               <a href="imgs/layout_fig1.png" target="_blank" class="" aria-hidden="true"><img src="imgs/layout_fig1.png" class="center-block img-responsive" alt="Ciclo da ligação do MVC em três etapas, uma no topo e duas abaixo, à direita e à esquerda. Na parte superior, há o “Model”, com o seguinte texto: “Model representa os dados e a lógica de negócio da aplicação. É responsável por armazenar e manipular informações, além de notificar a View quando houver alterações nos dados.”. Abaixo, à esquerda, há o “View”, com o seguinte texto: “View, por sua vez, representa a interface gráfica do usuário (GUI). É responsável por exibir as informações provenientes do Model e receber a interação do usuário.”. Abaixo, à direita, há o “Controller”, com o seguinte texto: “Controller atua como intermediário entre o Model e a View. É responsável por receber as requisições do usuário, processá-las e atualizar o Model e/ou a View de acordo.”. "></a>
+              <p class="legenda-imagem">Figura 1 – Estrutura do padrão MVC com relação entre Model, View e Controller <br>
+
+                Fonte: Senac EAD (2023) </p>
               <ul class="acessivel only-print">
                 <li><strong>Model</strong> representa os dados e a lógica de negócio da aplicação. É responsável por armazenar e manipular informações, além de notificar a View quando houver alterações nos dados. 
                 </li>
@@ -166,10 +166,10 @@
             </tr>
           </tbody>
         </table>
-        <p class="legenda-imagem">Tabela 1 – Definição das camadas MVC (Model, View e Controller)  Fonte: Senac EAD (2023) </p>
+        <p class="legenda-imagem">Tabela 1 – Definição das camadas MVC (Model, View e Controller) <br> Fonte: Senac EAD (2023) </p>
         <h4>História do MVC </h4>
         <p>
-          O padrão Model-View-Controller (MVC) foi inicialmente proposto por Trygve Reenskaug, em 1979, durante seu trabalho com Smalltalk-80 no Xerox PARC. Essa proposta de design representou uma inovação significativa para a época, ao introduzir a ideia de separar as responsabilidades na estruturação do software. Esse conceito ganhou amplo reconhecimento e passou a influenciar diversas tecnologias e frameworks que surgiram posteriormente. Entre eles, destacam-se Ruby on Rails, ASP.NET MVC e Java Web com uso do Spring. O MVC se tornou assim uma abordagem fundamental, que é utilizada em inúmeros frameworks e aplicações de sistemas em geral. 
+          O padrão Model-View-Controller (MVC) foi inicialmente proposto por Trygve Reenskaug, em 1979, durante seu trabalho com Smalltalk-80 no Xerox PARC. Essa proposta de design representou uma inovação significativa para a época, ao introduzir a ideia de separar as responsabilidades na estruturação do <i>software</i>. Esse conceito ganhou amplo reconhecimento e passou a influenciar diversas tecnologias e <i>frameworks</i> que surgiram posteriormente. Entre eles, destacam-se Ruby on Rails, ASP.NET MVC e Java Web com uso do Spring. O MVC se tornou assim uma abordagem fundamental, que é utilizada em inúmeros <i>frameworks</i> e aplicações de sistemas em geral. 
         </p>
         <h4>Vantagens no uso do padrão MVC </h4>
         <p>
@@ -181,34 +181,34 @@
         <p>
           Veja suas principais vantagens: 
         </p>
-        <div class="caixa-destaque">
-            <ul>
-              <li><strong> Facilidade:</strong>  MVC facilita a gestão de diferentes interfaces de usuário. </li>
-              <li><strong>Não modificação de código:</strong> não há necessidade de modificar o código de lógica de negócios ao adicionar novas interfaces.</li>
-              <li><strong>Escalabilidade:</strong> a arquitetura modular do MVC torna a aplicação escalável e permite o desenvolvimento em paralelo. </li>
-              <li><strong>Reúso de código:</strong> o reúso de código é facilitado e o processo de desenvolvimento é mais ágil e econômico. </li>
-              <li><strong>Simplificação da interface:</strong> a transformação da interface é simplificada sem a necessidade de modificar a lógica de negócios. </li>
-              <li><strong>Melhora de desempenho:</strong> a estrutura de pacotes modulares melhora o desempenho e a produtividade da aplicação. </li>
-              <li><strong>Trabalho em paralelo:</strong> a arquitetura modular permite que desenvolvedores e designers trabalhem em paralelo, acelerando o processo de desenvolvimento. </li>
-              <li><strong>Eficiência na manutenção:</strong> partes específicas da aplicação podem ser modificadas sem alterar outras, tornando a manutenção mais eficiente e econômica. </li>
-            </ul>
+        <div class="caixa-destaque destaqueInfo1">
+          <img src="imgs/destaque1_2.png" class="img1" alt="">
+          <img src="imgs/destaque1_1.png" class="img2" alt="">
+            <img src="imgs/destaque1_3.png" class="img3" alt="">
+            <p><strong> Facilidade:</strong>  MVC facilita a gestão de diferentes interfaces de usuário.  </p>
+            <p><strong>Não modificação de código:</strong> não há necessidade de modificar o código de lógica de negócios ao adicionar novas interfaces. </p>
+            <p><strong>Escalabilidade:</strong> a arquitetura modular do MVC torna a aplicação escalável e permite o desenvolvimento em paralelo.  </p>
+            <p><strong>Reúso de código:</strong> o reúso de código é facilitado e o processo de desenvolvimento é mais ágil e econômico.  </p>
+            <p><strong>Simplificação da interface:</strong> a transformação da interface é simplificada sem a necessidade de modificar a lógica de negócios.  </p>
+            <p><strong>Melhora de desempenho:</strong> a estrutura de pacotes modulares melhora o desempenho e a produtividade da aplicação.  </p>
+            <p><strong>Trabalho em paralelo:</strong> a arquitetura modular permite que desenvolvedores e designers trabalhem em paralelo, acelerando o processo de desenvolvimento.  </p>
+            <p><strong>Eficiência na manutenção:</strong> partes específicas da aplicação podem ser modificadas sem alterar outras, tornando a manutenção mais eficiente e econômica.  </p>
 
           </div>
         <h4>Desvantagens no uso do padrão MVC </h4>
         <p>
           Por outro lado, uma das desvantagens do padrão MVC é que pode haver uma sobrecarga de trabalho e complexidade adicionais no processo de desenvolvimento, o que pode não ser justificável para projetos simples ou pequenos. Isso pode levar a um aumento no tempo e no custo do desenvolvimento, além de aumentar a curva de aprendizado para a equipe. Pode-se considerar também como desvantagem que se o padrão MVC não for bem implementado, pode levar a um código acoplado, ou seja, componentes do sistema que estão fortemente interconectados e dependem uns dos outros. Isso pode tornar o código difícil de entender, testar e manter, além de tornar a evolução do sistema mais difícil. Portanto, é importante que os desenvolvedores sigam boas práticas de implementação do padrão MVC para evitar o acoplamento excessivo e garantir um código modular e escalável. 
         </p>
-        <div class="caixa-destaque">
-          <ul>
-            <li><strong> Sobrecarga de trabalho e complexidade:</strong> MVC pode adicionar complexidade desnecessária a projetos simples ou pequenos. </li>
-            <li><strong>Custo e tempo:</strong> a sobrecarga do MVC pode aumentar o tempo e custo do desenvolvimento. </li>
-            <li><strong>Código acoplado:</strong> a implementação ruim do MVC pode levar a código acoplado e dificultar sua compreensão, teste e manutenção. </li>
-            <li><strong>Boas práticas:</strong> desenvolvedores devem seguir boas práticas para evitar o acoplamento excessivo e garantir um código modular e escalável. </li>
-          </ul>
+        <div class="caixa-destaque destaqueInfo1" style="background-color: #E8E8E8;">
+          <img src="imgs/destaque2.png" class="img4" alt="">
+          <p> <strong> Sobrecarga de trabalho e complexidade:</strong> MVC pode adicionar complexidade desnecessária a projetos simples ou pequenos. </p>
+          <p> <strong>Custo e tempo:</strong> a sobrecarga do MVC pode aumentar o tempo e custo do desenvolvimento. </p>
+          <p> <strong>Código acoplado:</strong> a implementação ruim do MVC pode levar a código acoplado e dificultar sua compreensão, teste e manutenção. </p>
+          <p> <strong>Boas práticas:</strong> desenvolvedores devem seguir boas práticas para evitar o acoplamento excessivo e garantir um código modular e escalável. </p>
         </div>
         <h3>Aplicabilidade</h3>
         <p>
-          Como mencionado anteriormente, MVC pode ser aplicado em uma variedade de tipos de projetos de software. Em projetos Java, é possível aplicar tanto para desktop quanto para web, e a separação das classes acontece por pacotes. É importante uma estruturação adequada do projeto para a boa utilização do padrão MVC. A seguir, veja um comparativo entre a estrutura de projetos Java desktop e web. 
+          Como mencionado anteriormente, MVC pode ser aplicado em uma variedade de tipos de projetos de <i>software</i>. Em projetos Java, é possível aplicar tanto para <i>desktop</i> quanto para <i>web</i>, e a separação das classes acontece por pacotes. É importante uma estruturação adequada do projeto para a boa utilização do padrão MVC. A seguir, veja um comparativo entre a estrutura de projetos Java desktop e <i>web</i>. 
         </p>
         <p>
           Clique ou toque para visualizar o conteúdo. 
@@ -219,7 +219,7 @@
   <img src="imgs/bt1.png" class="imgbt1"  data-toggle="modal" data-target="#myModal" alt="">
   <img src="imgs/bt2.png" class="imgbt2"  data-toggle="modal" data-target="#myModal2" alt="">
 
-</div>>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -227,13 +227,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"></h4>
+        <h4 class="modal-title" id="myModalLabel">MVC no JAVA Desktop com JPA</h4>
       </div>
       <div class="modal-body">
         
         <div>
           <p>
-            No exemplo a seguir, será demonstrada a implementação prática do padrão MVC em um exemplo de aplicação desktop em Java com uso do JPA, explorando a dinâmica de interação entre esses componentes. 
+            No exemplo a seguir, será demonstrada a implementação prática do padrão MVC em um exemplo de aplicação <i>desktop</i> em Java com uso do JPA, explorando a dinâmica de interação entre esses componentes. 
           </p>
           <p><strong>Model</strong>: as classes de entidade representam objetos de domínio e são mapeadas para registros de banco de dados usando JPA. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, endereço e número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. 
 
@@ -245,7 +245,7 @@
           <strong>Controller</strong>: a interação entre o Model e a View é implementada em classes separadas, chamadas de controllers. Os controladores são responsáveis por gerenciar as ações do usuário, atualizar o modelo e visualizar conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. 
           </p>
           <a href="imgs/assets/fig-02.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-02.png" class="center-block img-responsive" alt="Projeto Netbeans com nome ModeloMVC_JPA apresentando pacotes br.com.controller com classe ClienteController.java; br.com.model com classe Cliente.java; br.com.utils com classe JAPUtils e br.com.view com classe ClienteForm.java.  "></a>
-        <p class="legenda-imagem">Figura 2 – Exemplo de Estrutura de pacotes em um projeto Java desktop com JPA  
+        <p class="legenda-imagem">Figura 2 – Exemplo de Estrutura de pacotes em um projeto Java <i>desktop</i> com JPA <br> 
 
           Fonte: Senac EAD (2023) </p>
           <p>
@@ -265,20 +265,20 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModal2Label"></h4>
+        <h4 class="modal-title" id="myModal2Label">MVC em aplicações Java web</h4>
       </div>
       <div class="modal-body">
         
         <div>
-          <p>O desenvolvimento de aplicações web em Java é um processo complexo que exige a interação de diversas camadas de software. O uso do padrão de arquitetura MVC (Model-View-Controller) é uma abordagem comum e eficaz para estruturar projetos de aplicações web em Java.  </p>
-          <p>A utilização do framework Spring em projetos Java web oferece aos desenvolvedores uma plataforma poderosa e flexível, que simplifica várias tarefas comuns, como o mapeamento objeto-relacional e o processamento de solicitações HTTP. Ao utilizar o padrão MVC, em conjunto com o Spring, é possível desenvolver aplicações web Java escaláveis e fáceis de manter. A organização clara do código e a separação eficiente das responsabilidades em camadas bem definidas tornam a aplicação mais modular e flexível.  </p>
+          <p>O desenvolvimento de aplicações <i>web</i> em Java é um processo complexo que exige a interação de diversas camadas de <i>software</i>. O uso do padrão de arquitetura MVC (Model-View-Controller) é uma abordagem comum e eficaz para estruturar projetos de aplicações <i>web</i> em Java.  </p>
+          <p>A utilização do framework Spring em projetos Java <i>web</i> oferece aos desenvolvedores uma plataforma poderosa e flexível, que simplifica várias tarefas comuns, como o mapeamento objeto-relacional e o processamento de solicitações HTTP. Ao utilizar o padrão MVC, em conjunto com o Spring, é possível desenvolver aplicações <i>web</i> Java escaláveis e fáceis de manter. A organização clara do código e a separação eficiente das responsabilidades em camadas bem definidas tornam a aplicação mais modular e flexível.  </p>
           <p>A seguir, será demonstrado como o padrão MVC pode ser organizado dentro da estrutura de pacotes em uma aplicação Java Web. </p>
-          <p><strong> Model:</strong> em projetos para web, as classes de entidade também representam objetos de domínio e podem ser mapeadas para registros de banco de dados usando diferentes abordagens, como JPA ou DAO. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, o endereço e o número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. </p>
-          <p><strong> View:</strong>  a interface do usuário é criada usando tecnologias como HTML, CSS e JavaScript. A parte de visualização de uma aplicação web tem a função de apresentar dados ao usuário e, ocasionalmente, coletar dados do usuário. Uma alternativa popular para gerar essas visualizações em aplicações Spring é usar o Thymeleaf, uma biblioteca para processamento de templates HTML, que possibilita a criação de páginas web dinâmicas e interativas, que são renderizadas pelo navegador. Por exemplo, uma view de cliente usando Thymeleaf pode exibir uma lista de clientes ou um formulário para a criação de um novo cliente. </p>
-          <p><strong> Controller:</strong> em aplicativos da web, os controladores geralmente são implementados como classes de controle. Eles são responsáveis por receber as solicitações dos usuários, processar a lógica de negócios e atualizar o modelo e a visualização conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. </p>
+          <p><strong> Model:</strong> em projetos para <i>web</i>, as classes de entidade também representam objetos de domínio e podem ser mapeadas para registros de banco de dados usando diferentes abordagens, como JPA ou DAO. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, o endereço e o número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. </p>
+          <p><strong> View:</strong>  a interface do usuário é criada usando tecnologias como HTML, CSS e JavaScript. A parte de visualização de uma aplicação <i>web</i> tem a função de apresentar dados ao usuário e, ocasionalmente, coletar dados do usuário. Uma alternativa popular para gerar essas visualizações em aplicações Spring é usar o Thymeleaf, uma biblioteca para processamento de templates HTML, que possibilita a criação de páginas <i>web</i> dinâmicas e interativas, que são renderizadas pelo navegador. Por exemplo, uma view de cliente usando Thymeleaf pode exibir uma lista de clientes ou um formulário para a criação de um novo cliente. </p>
+          <p><strong> Controller:</strong> em aplicativos da <i>web</i>, os controladores geralmente são implementados como classes de controle. Eles são responsáveis por receber as solicitações dos usuários, processar a lógica de negócios e atualizar o modelo e a visualização conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. </p>
 
           <a href="imgs/assets/fig-03.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-03.png" class="center-block img-responsive" alt="Projeto Netbeans com nome ModeloMVC_Spring, com a criação de pacotes e classes que são descritos em sequência no parágrafo seguinte."></a>
-          <p class="legenda-imagem">Figura 3 – Estrutura de pacotes em um projeto Java Spring WEB  
+          <p class="legenda-imagem">Figura 3 – Estrutura de pacotes em um projeto Java Spring WEB <br> 
 
             Fonte: Senac EAD (2023) </p>
             <p>
@@ -295,29 +295,29 @@
 
         <h3> Outros padrões de projeto </h3>
         <p>
-          Uma alternativa ao padrão MVC é o Model-View-ViewModel (MVVM), largamente aplicado em aplicações móveis e de desktop. Nesse padrão, a View é responsável apenas pela apresentação dos dados e pela interação com o usuário, enquanto uma camada chamada ViewModel faz a comunicação com o Model, transformando os dados e disponibilizando-os para a View. O Model, por sua vez, mantém as regras de negócio e a lógica de armazenamento dos dados. 
+          Uma alternativa ao padrão MVC é o Model-View-ViewModel (MVVM), largamente aplicado em aplicações móveis e de <i>desktop</i>. Nesse padrão, a View é responsável apenas pela apresentação dos dados e pela interação com o usuário, enquanto uma camada chamada ViewModel faz a comunicação com o Model, transformando os dados e disponibilizando-os para a View. O Model, por sua vez, mantém as regras de negócio e a lógica de armazenamento dos dados. 
         </p>
         
         <a href="imgs/assets/fig-04.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-04.png" class="center-block img-responsive" alt="Fluxograma ilustrando a arquitetura MVVM com três componentes principais: View, ViewModel e Model. A View se comunica com o ViewModel através de “Ligação de Dados e Comandos”. O ViewModel interage com a Model.  "></a>
-        <p class="legenda-imagem">Figura 4 – Fluxograma do modelo e MVVM 
+        <p class="legenda-imagem">Figura 4 – Fluxograma do modelo e MVVM <br>
 
           Fonte: Web Programiranje (s.d.) </p>
           <p>
             No fluxograma da figura, é demonstrado, de forma resumida, o fluxo entre os três componentes principais da arquitetura MVVM da seguinte forma: 
           </p>
           
-        <div class="caixa-destaque">
-          <ul>
-            <li>
+        <div class="caixa-destaque bgcolor2">
+          <div class="listnum">
+            <img src="imgs/destaque3_1.png" alt=""><p><br>
               <strong> View:</strong> é a representação visual da aplicação, responsável pela interface do usuário e pela apresentação dos dados. 
-            </li>
-            <li>
+            </p>
+            <img src="imgs/destaque3_2.png" alt=""><p><br>
               <strong> ViewModel:</strong> atua como intermediário entre a View e a Model. Gerencia a lógica de apresentação, como a manipulação de dados e comandos, e envia notificações para a View quando há atualizações. 
-            </li>
-            <li>
+            </p>
+            <img src="imgs/destaque3_3.png" alt=""><p><br>
               <strong> Model:</strong> representa os dados e a lógica de negócios da aplicação. Ela é responsável por armazenar e gerenciar os dados, bem como realizar operações e validações. 
-            </li>
-          </ul>
+            </p>
+          </div>
         </div>
         <p>O fluxograma mostra a interação entre esses componentes da seguinte forma: </p>
         <ul>
@@ -330,10 +330,10 @@
         </p>
         <h3>Encerramento</h3>
         <p>
-          O estudo do padrão de arquitetura MVC aplicado a projetos em Java, tanto desktop quanto web, ao longo deste material, permitiram uma compreensão mais profunda da importância do design de software eficaz.  Ao explorar o uso do padrão MVC em conjunto com o framework Spring para aplicações web em Java, ficou demonstrado o quão versátil e robusto esse padrão pode ser.  
+          O estudo do padrão de arquitetura MVC aplicado a projetos em Java, tanto <i>desktop</i> quanto <i>web</i>, ao longo deste material, permitiram uma compreensão mais profunda da importância do design de <i>software</i> eficaz.  Ao explorar o uso do padrão MVC em conjunto com o framework Spring para aplicações <i>web</i> em Java, ficou demonstrado o quão versátil e robusto esse padrão pode ser.  
         </p>
         <p>
-          O padrão não apenas contribui para a criação de software de alta qualidade, mas também serve como um guia para a organização efetiva do código e para a implementação de práticas de programação eficientes e sustentáveis.  
+          O padrão não apenas contribui para a criação de <i>software</i> de alta qualidade, mas também serve como um guia para a organização efetiva do código e para a implementação de práticas de programação eficientes e sustentáveis.  
         </p>
 
 
