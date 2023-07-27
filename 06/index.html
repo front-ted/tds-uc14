@@ -325,6 +325,75 @@
   </div>
 </div>
 
+
+<div class="acessivel no-print">
+  <!--  -->
+<!-- Modal -->
+        <h4 class="modal-title" id="myModalLabel">MVC no JAVA Desktop com JPA</h4>
+     
+          <p>
+            No exemplo a seguir, será demonstrada a implementação prática do padrão MVC em um exemplo de aplicação <i>desktop</i> em Java com uso do JPA, explorando a dinâmica de interação entre esses componentes. 
+          </p>
+          <p><strong>Model</strong>: as classes de entidade representam objetos de domínio e são mapeadas para registros de banco de dados usando JPA. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, endereço e número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. 
+
+          </p>
+          <p>
+          <strong>View</strong>: a interface do usuário é construída usando componentes gráficos como o Swing. Nessa camada, são criadas telas e formulários, como JForms, que permitem a interação do usuário com a aplicação. Por exemplo, uma visão do cliente pode exibir uma lista de clientes ou um formulário que permite aos usuários criar um novo cliente. 
+          </p>
+          <p>
+          <strong>Controller</strong>: a interação entre o Model e a View é implementada em classes separadas, chamadas de controllers. Os controladores são responsáveis por gerenciar as ações do usuário, atualizar o modelo e visualizar conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. 
+          </p>
+
+          <!-- imgnova         -->
+<div class="no-print">
+  <img src="imgs/assets/fig-02.png" class="img-responsive center-block hidden-xs no-print imgBorder" alt="Projeto Netbeans com nome ModeloMVC_JPA apresentando pacotes br.com.controller com classe ClienteController.java; br.com.model com classe Cliente.java; br.com.utils com classe JAPUtils e br.com.view com classe ClienteForm.java.  ">
+  <a href="imgs/assets/fig-02.png" target="_blank" class="visible-xs mt-20">
+    <p class="no-print">Clique ou toque para ampliar.</p>
+    <img src="imgs/assets/fig-02.png" class="img-responsive center-block no-print" alt="Projeto Netbeans com nome ModeloMVC_JPA apresentando pacotes br.com.controller com classe ClienteController.java; br.com.model com classe Cliente.java; br.com.utils com classe JAPUtils e br.com.view com classe ClienteForm.java.  ">
+  </a>
+</div>
+<div class="acessivel print">
+  <img src="imgs/assets/fig-02.png" class="img-responsive center-block" data-aos="zoom-in" alt="Projeto Netbeans com nome ModeloMVC_JPA apresentando pacotes br.com.controller com classe ClienteController.java; br.com.model com classe Cliente.java; br.com.utils com classe JAPUtils e br.com.view com classe ClienteForm.java.  ">
+</div>
+        <p class="legenda-imagem">Figura 2 – Exemplo de Estrutura de pacotes em um projeto Java <i>desktop</i> com JPA <br> 
+
+          Fonte: Senac EAD (2023) </p>
+          <p>
+            Nesta estrutura, o pacote model contém a classe Cliente.java, que representa a entidade Cliente mapeada para a tabela correspondente no banco de dados via JPA. A classe ClienteForm.java, no pacote view, é responsável pela interface do usuário, criada com Swing, para inserir ou editar informações do cliente. A classe ClienteController.java, no pacote controller, manipula as interações do usuário com a interface, atualiza o modelo Cliente e reflete as mudanças na visão. A classe JPAUtil.java, no pacote utils, administra a conexão com o banco de dados usando JPA. 
+          </p>
+  <!--  -->
+</div>
+<div class="acessivel no-print">
+  <!--  -->
+<!-- Modal -->
+        <h4 class="modal-title" id="myModal2Label">MVC em aplicações Java web</h4>
+          <p>O desenvolvimento de aplicações <i>web</i> em Java é um processo complexo que exige a interação de diversas camadas de <i>software</i>. O uso do padrão de arquitetura MVC (Model-View-Controller) é uma abordagem comum e eficaz para estruturar projetos de aplicações <i>web</i> em Java.  </p>
+          <p>A utilização do framework Spring em projetos Java <i>web</i> oferece aos desenvolvedores uma plataforma poderosa e flexível, que simplifica várias tarefas comuns, como o mapeamento objeto-relacional e o processamento de solicitações HTTP. Ao utilizar o padrão MVC, em conjunto com o Spring, é possível desenvolver aplicações <i>web</i> Java escaláveis e fáceis de manter. A organização clara do código e a separação eficiente das responsabilidades em camadas bem definidas tornam a aplicação mais modular e flexível.  </p>
+          <p>A seguir, será demonstrado como o padrão MVC pode ser organizado dentro da estrutura de pacotes em uma aplicação Java Web. </p>
+          <p><strong> Model:</strong> em projetos para <i>web</i>, as classes de entidade também representam objetos de domínio e podem ser mapeadas para registros de banco de dados usando diferentes abordagens, como JPA ou DAO. Por exemplo, uma classe de entidade de cliente pode ter propriedades para o nome, o endereço e o número de telefone do cliente. As classes de entidade são armazenadas em um banco de dados, como MySQL ou Oracle. </p>
+          <p><strong> View:</strong>  a interface do usuário é criada usando tecnologias como HTML, CSS e JavaScript. A parte de visualização de uma aplicação <i>web</i> tem a função de apresentar dados ao usuário e, ocasionalmente, coletar dados do usuário. Uma alternativa popular para gerar essas visualizações em aplicações Spring é usar o Thymeleaf, uma biblioteca para processamento de templates HTML, que possibilita a criação de páginas <i>web</i> dinâmicas e interativas, que são renderizadas pelo navegador. Por exemplo, uma view de cliente usando Thymeleaf pode exibir uma lista de clientes ou um formulário para a criação de um novo cliente. </p>
+          <p><strong> Controller:</strong> em aplicativos da <i>web</i>, os controladores geralmente são implementados como classes de controle. Eles são responsáveis por receber as solicitações dos usuários, processar a lógica de negócios e atualizar o modelo e a visualização conforme necessário. Por exemplo, um controlador de cliente pode manipular solicitações para visualizar uma lista de clientes, criar um novo cliente ou atualizar as informações de um cliente. </p>
+
+          <!-- imgnova         -->
+<div class="no-print">
+  <img src="imgs/assets/fig-03.png" class="img-responsive center-block hidden-xs no-print imgBorder" alt="Projeto Netbeans com nome ModeloMVC_Spring, com a criação de pacotes e classes que são descritos em sequência no parágrafo seguinte.">
+  <a href="imgs/assets/fig-03.png" target="_blank" class="visible-xs mt-20">
+    <p class="no-print">Clique ou toque para ampliar.</p>
+    <img src="imgs/assets/fig-03.png" class="img-responsive center-block no-print" alt="Projeto Netbeans com nome ModeloMVC_Spring, com a criação de pacotes e classes que são descritos em sequência no parágrafo seguinte.">
+  </a>
+</div>
+<div class="acessivel print">
+  <img src="imgs/assets/fig-03.png" class="img-responsive center-block" data-aos="zoom-in" alt="Projeto Netbeans com nome ModeloMVC_Spring, com a criação de pacotes e classes que são descritos em sequência no parágrafo seguinte.">
+</div>
+          <p class="legenda-imagem">Figura 3 – Estrutura de pacotes em um projeto Java Spring WEB <br> 
+
+            Fonte: Senac EAD (2023) </p>
+            <p>
+              Na estrutura apresentada na figura, a classe UsuarioController.java corresponde à camada Controller do padrão MVC, sendo responsável por gerenciar as requisições e as respostas HTTP. A classe Usuario.java é a camada Model, representando a estrutura de dados e regras de negócio. No diretório resources, há arquivos de configuração (application.properties), recursos estáticos (css, js, images), que são utilizados na apresentação dos dados, e os templates (home.html), que compõem a camada View, responsáveis pela representação visual das informações ao usuário, sendo, nesse caso específico, gerados por meio do Thymeleaf, um motor de templates para aplicações Spring. 
+            </p>
+  <!--  -->
+</div>
+
         <h3> Outros padrões de projeto </h3>
         <p>
           Uma alternativa ao padrão MVC é o Model-View-ViewModel (MVVM), largamente aplicado em aplicações móveis e de <i>desktop</i>. Nesse padrão, a View é responsável apenas pela apresentação dos dados e pela interação com o usuário, enquanto uma camada chamada ViewModel faz a comunicação com o Model, transformando os dados e disponibilizando-os para a View. O Model, por sua vez, mantém as regras de negócio e a lógica de armazenamento dos dados. 
