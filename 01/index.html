@@ -80,15 +80,36 @@
               <p>Aplicações <i>web</i> são, por fundamento, baseadas nas interações cliente-servidor, que ocorrem de forma recorrente (cliente solicita, servidor responde). Nesse modelo, é possível desenvolver aplicações <i>web</i> de diferentes formas, destacando as estáticas e as dinâmicas. </p>
               <p>Um sistema <i>web</i> estático, em grande parte, é menos complexo, pois o conteúdo retornado é igual para todos os clientes que fizerem solicitações ao servidor, ou seja, retorna uma página fixa, sem informações personalizadas ou mutáveis ao usuário. A página usará HTML (marcação), CSS (estilização) e JavaScript (eventos, interações e animações). Veja a seguir um exemplo de interação com um sistema estático. </p>
               
+              <h1>teste1</h1>
+              <div class="no-print">
+                <img src="imgs/fig-01.png" class="img-responsive center-block hidden-xs no-print imgBorder" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor.">
+                <a href="imgs/fig-01.png" target="_blank" class="visible-xs mt-20">
+                  <p class="no-print">Clique ou toque para ampliar.</p>
+                  <img src="imgs/fig-01.png" class="img-responsive center-block no-print" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor.">
+                </a>
+              </div>
               
-          
-
-                <img src="imgs/fig-01.png" class="only-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor.">
-              <a href="imgs/fig-01.png" target="_blank" aria-hidden="true" class="no-print"><img src="imgs/fig-01.png" class="no-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
               <p class="legenda-imagem">
                 Figura 1 – Funcionamento de um <i>site</i> estático  <br>
                 Fonte: Nethmal (2020) 
               </p>
+              
+              <div class="acessivel print">
+                <img src="imgs/fig-01.png" class="img-responsive center-block" data-aos="zoom-in" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor.">
+              </div>
+              <h2>teste2</h2>
+          
+              <figure>
+                
+                <img src="imgs/fig-01.png" class="acessivel only-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor.">
+              <a href="imgs/fig-01.png" target="_blank" aria-hidden="true" class="no-print"><img src="imgs/fig-01.png" class="no-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
+              <figcaption>
+              <p class="legenda-imagem">
+                Figura 1 – Funcionamento de um <i>site</i> estático  <br>
+                Fonte: Nethmal (2020) 
+              </p>
+            </figcaption>
+            </figure>
               <p>
                 Em contrapartida, os chamados <i>sites</i> dinâmicos são aqueles em que parte do seu conteúdo é produzida dinamicamente para cada cliente que interage com o servidor. São sistemas que contam, geralmente, com o auxílio de uma base de dados. Além das <strong>linguagens de</strong> <i>front-end</i> (HTML, CSS, JS), precisa contar com uma linguagem de <i>back-end</i> capaz de tratar a requisição, processar as informações, eventualmente conectar a um banco de dados, montar e retornar a página como reposta ao usuário. Veja a seguir um exemplo de interação com um sistema dinâmico. 
               </p>
