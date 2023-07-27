@@ -246,8 +246,11 @@ margin: unset;
 }
 
 
+@media screen and (max-width: 1800px){
+  .paginas{background-size: 15%;}
+}
 @media screen and (max-width: 1445px){
- .paginas{background: unset;}
+  .paginas{background-size: 10%;}
  .carousel-caption.slideCentro p{
   font-size: 13px;
 }
@@ -256,6 +259,9 @@ font-size: 13px;
 }
 }
 
+@media screen and (max-width: 1245px){
+  .paginas{background: unset;}
+}
 
 
 

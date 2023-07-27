@@ -79,7 +79,12 @@
               <h3>Introdução</h3>
               <p>Aplicações <i>web</i> são, por fundamento, baseadas nas interações cliente-servidor, que ocorrem de forma recorrente (cliente solicita, servidor responde). Nesse modelo, é possível desenvolver aplicações <i>web</i> de diferentes formas, destacando as estáticas e as dinâmicas. </p>
               <p>Um sistema <i>web</i> estático, em grande parte, é menos complexo, pois o conteúdo retornado é igual para todos os clientes que fizerem solicitações ao servidor, ou seja, retorna uma página fixa, sem informações personalizadas ou mutáveis ao usuário. A página usará HTML (marcação), CSS (estilização) e JavaScript (eventos, interações e animações). Veja a seguir um exemplo de interação com um sistema estático. </p>
-              <a href="imgs/fig-01.png" target="_blank" aria-hidden="true"><img src="imgs/fig-01.png" class="center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
+              
+              
+          
+
+                <img src="imgs/fig-01.png" class="only-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor.">
+              <a href="imgs/fig-01.png" target="_blank" aria-hidden="true" class="no-print"><img src="imgs/fig-01.png" class="no-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site estático, mostrando a comunicação de um usuário (request) com um servidor."></a>
               <p class="legenda-imagem">
                 Figura 1 – Funcionamento de um <i>site</i> estático  <br>
                 Fonte: Nethmal (2020) 
@@ -87,7 +92,8 @@
               <p>
                 Em contrapartida, os chamados <i>sites</i> dinâmicos são aqueles em que parte do seu conteúdo é produzida dinamicamente para cada cliente que interage com o servidor. São sistemas que contam, geralmente, com o auxílio de uma base de dados. Além das <strong>linguagens de</strong> <i>front-end</i> (HTML, CSS, JS), precisa contar com uma linguagem de <i>back-end</i> capaz de tratar a requisição, processar as informações, eventualmente conectar a um banco de dados, montar e retornar a página como reposta ao usuário. Veja a seguir um exemplo de interação com um sistema dinâmico. 
               </p>
-              <a href="imgs/fig-02.png" target="_blank" aria-hidden="true"><img src="imgs/fig-02.png" class="center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site dinâmico, mostrando a comunicação de um usuário (request) com um servidor que se comunica com uma base de dados e uma engine de templates antes de responder ao usuário."></a>
+              <img src="imgs/fig-02.png" class="only-print center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site dinâmico, mostrando a comunicação de um usuário (request) com um servidor que se comunica com uma base de dados e uma engine de templates antes de responder ao usuário.">
+              <a href="imgs/fig-02.png" target="_blank" aria-hidden="true" class="no-print"><img src="imgs/fig-02.png" class="center-block imgBorder img-responsive" alt="Ilustração do funcionamento de um site dinâmico, mostrando a comunicação de um usuário (request) com um servidor que se comunica com uma base de dados e uma engine de templates antes de responder ao usuário."></a>
               <p class="legenda-imagem">
                 Figura 2 – Funcionamento de um <i>site</i> dinâmico <br>
                 Fonte: Nethmal (2020) 
@@ -117,13 +123,14 @@
               <p>
                 Essa comunicação ocorre da seguinte maneira: o cliente faz uma requisição para o servidor (<i>request</i>), com os dados dessa requisição, o servidor então apresenta uma resposta ao cliente (<i>response</i>) de acordo com o solicitado. Esse conteúdo será visto a seguir. Também serão abordados os principais verbos utilizados no HTTP (GET e POST). 
               </p>
-              <a href="imgs/fig-03.png" target="_blank" aria-hidden="true"><img src="imgs/fig-03.png" class="center-block imgBorder img-responsive" alt="Ilustração do campo de URL presente no navegador, a fim de destacar o protocolo HTTP. "></a>
+              <img src="imgs/fig-03.png" class="only-print center-block imgBorder img-responsive" alt="Ilustração do campo de URL presente no navegador, a fim de destacar o protocolo HTTP. ">
+              <a href="imgs/fig-03.png" target="_blank" aria-hidden="true" class="no-print"><img src="imgs/fig-03.png" class="center-block imgBorder img-responsive" alt="Ilustração do campo de URL presente no navegador, a fim de destacar o protocolo HTTP. "></a>
               <p class="legenda-imagem">
                 Figura 3 – Ilustração didática do protocolo HTTP <br>
                 Fonte: Souza (2019) 
               </p>
-              <div class="no-print" aria-hidden="true">
-                <p>Clique ou toque para visualizar o conteúdo.</p>
+              <div aria-hidden="true">
+                <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                   <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
@@ -170,7 +177,10 @@
                           <li>400 – 499 – Erros no lado do cliente </li>
                           <li>500 – 599 – Erros no lado do servidor </li>
                         </ul>
-                        <a href="imgs/fig-04.png" target="_blank" class="" aria-hidden="true"><img src="imgs/fig-04.png" class="center-block imgBorder img-responsive" alt="Ilustração de uma interação presente no modelo cliente-servidor demonstrando, por meio de duas figuras (uma representando o cliente e outra o servidor), como ocorre a requisição e a resposta nesse modelo. "></a>
+                        <img src="imgs/fig-04.png" class="only-print center-block imgBorder img-responsive" alt="Ilustração de uma interação presente no modelo cliente-servidor demonstrando, por meio de duas figuras (uma representando o cliente e outra o servidor), como ocorre a requisição e a resposta nesse modelo. ">
+                        <a href="imgs/fig-04.png" target="_blank" class="no-print"  aria-hidden="true">
+                          <img src="imgs/fig-04.png" class="center-block imgBorder img-responsive" alt="Ilustração de uma interação presente no modelo cliente-servidor demonstrando, por meio de duas figuras (uma representando o cliente e outra o servidor), como ocorre a requisição e a resposta nesse modelo. ">
+                        </a>
                         <p class="legenda-imagem">
                           Figura 4 – Modelo cliente-servidor, com requisição e resposta <br>
 Fonte: Hanashiro (2019) 
@@ -189,7 +199,10 @@ Fonte: Hanashiro (2019)
               <p>
                 Quando o usuário requisita algo ao servidor através de URL, o cliente (um navegador como Chrome ou Firefox, por exemplo) monta uma requisição e envia ao servidor, que aciona o <i>web</i> <i>server</i>, que processa a requisição montando uma resposta, muitas vezes, com base em arquivos HTML mapeados pelo <i>software</i>. Essa resposta é enviada ao cliente, que a decodifica e a apresenta ao usuário. 
               </p>
-              <a href="imgs/fig-05.png" target="_blank" aria-hidden="true"><img src="imgs/fig-05.png" class="center-block imgBorder img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. "></a>
+              <img src="imgs/fig-05.png" class="only-print center-block imgBorder img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. ">
+              <a href="imgs/fig-05.png" target="_blank" aria-hidden="true" class="no-print">
+                <img src="imgs/fig-05.png" class="center-block imgBorder img-responsive" alt="À esquerda, um laptop representando o cliente, de onde sai uma seta com o rótulo “http://localhost/pagina” para a direita, onde está um ícone de servidor. Dentro dele, há uma área com ícone de engrenagem e o rótulo “Web Server”, de onde parte uma seta para um ícone de documento com rótulo “HTML”. Desse, retorna uma seta para “WebServer” e, do servidor, uma seta para o laptop com rótulo “HTML”. ">
+              </a>
               <p class="legenda-imagem">
                 Figura 5 – Requisição de uma página estática <br>
 
@@ -214,7 +227,7 @@ Fonte: Hanashiro (2019)
                 <p>
                   A plataforma Java EE é extensa e cobre funcionalidades de persistência, XML, trocas de mensagens, autenticação e autorização. Em relação ao desenvolvimento <i>web</i>, destacam-se os seguintes conceitos: 
                 </p>
-                <p>
+                <p class="no-print">
                   Clique ou toque para visualizar o conteúdo.  
                 </p>
                 <div class="no-print" aria-hidden="true">
@@ -297,7 +310,10 @@ Fonte: Hanashiro (2019)
                 <h3>Spring Framework </h3>
                 <p>O Spring é um extenso framework Java, que visa facilitar o desenvolvimento com base em técnicas de injeção de dependências e inversão de controle. O Spring é hoje o framework Java mais popular do mundo. Esse framework tem como objetivo facilitar muitos aspectos da programação Java, tornando-a mais fácil, rápida e segura, contando com aproximadamente 20 módulos para diferentes propósitos. </p>
                 
-              <a href="imgs/fig-06.png" target="_blank" aria-hidden="true"><img src="imgs/fig-06.png" class="center-block imgBorder img-responsive" alt="Círculo de cor verde com uma folha branca dentro. À direita o nome “Spring” em verde. "></a>
+                <img src="imgs/fig-06.png" class="only-print center-block imgBorder img-responsive" alt="Círculo de cor verde com uma folha branca dentro. À direita o nome “Spring” em verde. ">
+              <a href="imgs/fig-06.png" target="_blank" class="no-print" aria-hidden="true">
+                <img src="imgs/fig-06.png" class="center-block imgBorder img-responsive" alt="Círculo de cor verde com uma folha branca dentro. À direita o nome “Spring” em verde. ">
+              </a>
               <p class="legenda-imagem">
                 Figura 6 – Logo do Spring Framework <br>
                 Fonte: Spring (c2023)
@@ -305,7 +321,10 @@ Fonte: Hanashiro (2019)
               <p>
                 Entre muitos aspectos, o Spring ainda conta com um módulo de banco de dados de forma integrada, o Spring Data. Vale ressaltar que esse framework ainda conta com um módulo MVC (Model, View e Controller), que facilita o desenvolvimento de aplicação <i>web</i> utilizando esse padrão.  
               </p>
-              <a href="imgs/fig-07.png" target="_blank"  aria-hidden="true"><img src="imgs/fig-07.png" class="center-block imgBorder img-responsive" alt="Quadro verde com título “Spring Framework Runtime”. Dentro dele, há um quadro lilás com título “Data Access/Integration”, com quadros menores com os nomes “JDBC“, “ORM”, “OXM”, “JMS” e “Transactions” internamente. Ao lado, área turquesa com título “Web (MVC/Remoting)”, com quadros menores com os nomes “Web”, “Servlet”, “Portlet” e “Struts”. Abaixo, na área verde, quadros menores com os nomes “AOP”, “Aspects” e “Instrumentation”, lado a lado. Abaixo, área verde limão com título “Core Container” e quadros menores com os nomes “Beans”, “Core”, “Context”, “Expression Language”. Abaixo, uma quadro largo na área verde principal com título “Test”. "></a>
+              <img src="imgs/fig-07.png" class="only-print center-block imgBorder img-responsive" alt="Quadro verde com título “Spring Framework Runtime”. Dentro dele, há um quadro lilás com título “Data Access/Integration”, com quadros menores com os nomes “JDBC“, “ORM”, “OXM”, “JMS” e “Transactions” internamente. Ao lado, área turquesa com título “Web (MVC/Remoting)”, com quadros menores com os nomes “Web”, “Servlet”, “Portlet” e “Struts”. Abaixo, na área verde, quadros menores com os nomes “AOP”, “Aspects” e “Instrumentation”, lado a lado. Abaixo, área verde limão com título “Core Container” e quadros menores com os nomes “Beans”, “Core”, “Context”, “Expression Language”. Abaixo, uma quadro largo na área verde principal com título “Test”. ">
+              <a href="imgs/fig-07.png" target="_blank"  class="no-print" aria-hidden="true">
+                <img src="imgs/fig-07.png" class="center-block imgBorder img-responsive" alt="Quadro verde com título “Spring Framework Runtime”. Dentro dele, há um quadro lilás com título “Data Access/Integration”, com quadros menores com os nomes “JDBC“, “ORM”, “OXM”, “JMS” e “Transactions” internamente. Ao lado, área turquesa com título “Web (MVC/Remoting)”, com quadros menores com os nomes “Web”, “Servlet”, “Portlet” e “Struts”. Abaixo, na área verde, quadros menores com os nomes “AOP”, “Aspects” e “Instrumentation”, lado a lado. Abaixo, área verde limão com título “Core Container” e quadros menores com os nomes “Beans”, “Core”, “Context”, “Expression Language”. Abaixo, uma quadro largo na área verde principal com título “Test”. ">
+              </a>
               <p class="legenda-imagem">
                 Figura 7 – Arquitetura geral do Spring Framework<br>
 
@@ -321,7 +340,7 @@ Fonte: Spring (c2023)
               <p>
                 Quando o servidor <i>web</i> é iniciado, o Spring Boot procura componentes e configurações do Spring no seu projeto e cria o contexto do aplicativo Spring. Em seguida, o Spring Boot cria e registra vários beans (objetos Java para fins específicos) no contexto do aplicativo, incluindo controladores, serviços, repositórios etc. Esses objetos serão gerenciados pelo contêiner do Spring e injetados em outras partes do aplicativo quando necessário. Nesse processo, três conceitos são importantes para Spring: a Inversão de Controle, a Injeção de Dependência e os Java Beans. 
               </p>
-              <p>
+              <p class="no-print">
                 Clique ou toque para visualizar o conteúdo: 
               </p>
               <p>

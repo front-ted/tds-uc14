@@ -245,13 +245,11 @@
                 Para começar, será criada uma classe Java chamada “Tarefa”, que representará uma tarefa dentro do pacote <strong>com.api.tarefas.model</strong>. Antes de escrever os atributos e os métodos dessa classe, adicione a anotação @Component para indicar que essa classe é um componente Spring. Essa anotação é feita em cima da declaração da classe.  
               </p>
               <pre><code>
-
-
-                package com.api.tarefas.model; <br>
-                import org.springframework.stereotype.Component; <br>
-                @Component <br>
-                public class Tarefa { <br>
-                } <br>
+package com.api.tarefas.model; 
+import org.springframework.stereotype.Component; 
+@Component 
+public class Tarefa { 
+} 
               </code></pre>
 
 
@@ -279,56 +277,32 @@
                 Também será implementado o método construtor da classe e os métodos <i>getters</i> e <i>setters</i> de cada atributo. O código ficará da seguinte maneira: 
               </p>
               <pre><code>
-
-
-                <br>                 package com.api.tarefas.model; 
-                <br> import org.springframework.stereotype.Component; 
-                <br> @Component 
-                <br> public class Tarefa { 
-                <br> 
-                <br>     // Atributos 
-                <br> 
-                <br>     private int id; 
-                <br> 
-                <br>     private String descricao; 
-                <br> 
-                <br>     private boolean completa; 
-                <br> 
-                <br>  
-                <br> 
-                <br>     // Construtores 
-                <br> 
-                <br>     public Tarefa() {} 
-                <br> 
-                <br>      
-                <br> 
-                <br>     public Tarefa(int id, String descricao, boolean completa) { 
-                <br> 
-                <br>         this.id = id; 
-                <br> 
-                <br>         this.descricao = descricao; 
-                <br> 
-                <br>         this.completa = completa; 
-                <br> 
-                <br>     }     
-                <br> 
-                <br>      
-                <br> 
-                <br>     // Métodos Getters e Setters 
-                <br> 
-                <br>     public int getId() { return id; } 
-                <br> 
-                <br>     public void setId(int id) { this.id = id; } 
-                <br> 
-                <br>     public String getDescricao() { return descricao; } 
-                <br> 
-                <br>     public void setDescricao(String descricao) { this.descricao = descricao; } 
-                <br> 
-                <br>     public boolean isCompleta() { return completa; } 
-                <br> 
-                <br>     public void setCompleta(boolean completa) { this.completa = completa; } 
-                <br> 
-                <br> } 
+package com.api.tarefas.model; 
+ import org.springframework.stereotype.Component; 
+ @Component 
+ public class Tarefa { 
+     // Atributos 
+     private int id; 
+     private String descricao; 
+     private boolean completa; 
+ 
+     // Construtores 
+     public Tarefa() {} 
+ 
+     public Tarefa(int id, String descricao, boolean completa) { 
+         this.id = id; 
+         this.descricao = descricao; 
+         this.completa = completa; 
+     }     
+ 
+     // Métodos Getters e Setters 
+     public int getId() { return id; } 
+     public void setId(int id) { this.id = id; } 
+     public String getDescricao() { return descricao; } 
+     public void setDescricao(String descricao) { this.descricao = descricao; } 
+     public boolean isCompleta() { return completa; } 
+     public void setCompleta(boolean completa) { this.completa = completa; } 
+ } 
               </code></pre>
 
 
@@ -340,15 +314,13 @@
                 Crie uma classe chamada <strong>TarefaController</strong> em <strong>com.api.tarefas.controller</strong> que será responsável por lidar com as requisições HTTP feitas na API.  
               </p>
               <pre><code>
+package com.api.tarefas.controller; 
+import org.springframework.web.bind.annotation.*; 
+@RestController 
+@RequestMapping("/tarefas") 
+public class TarefaController { 
 
-
-                package com.api.tarefas.controller; 
-              <br>  import org.springframework.web.bind.annotation.*; 
-              <br>  @RestController 
-              <br>  @RequestMapping("/tarefas") 
-              <br>  public class TarefaController { 
-              <br>  
-              <br>  } 
+} 
               </code></pre>
 
 
@@ -360,20 +332,18 @@
                 Como seu projeto não utiliza banco de dados, serão armazenadas as tarefas criadas em uma lista dentro da classe TarefaController. Isso permitirá que as tarefas sejam mantidas na memória durante a execução do programa. Além disso, também será criada uma variável auxiliar para garantir que o id das tarefas não se repita quando for feito o cadastro – caso estivesse sendo utilizado um banco de dados, isso seria feito automaticamente pela propriedade AUTO_INCREMENT. 
               </p>
               <pre><code>
-
-
-                package com.api.tarefas.controller; 
-              <br>  import java.util.ArrayList; 
-              <br>  import java.util.List; 
-              <br>  import org.springframework.web.bind.annotation.*; 
-              <br>  import com.api.tarefas.model.Tarefa; 
-              <br>  @RestController 
-              <br>  @RequestMapping("/tarefas") 
-              <br>  public class TarefaController { 
-              <br>      // Variáveis auxiliares 
-              <br>      private List<Tarefa> tarefas = new ArrayList<>(); 
-              <br>      private int proximoId = 1; 
-              <br>  } 
+package com.api.tarefas.controller; 
+import java.util.ArrayList; 
+import java.util.List; 
+import org.springframework.web.bind.annotation.*; 
+import com.api.tarefas.model.Tarefa; 
+@RestController 
+@RequestMapping("/tarefas") 
+public class TarefaController { 
+    // Variáveis auxiliares 
+    private List<Tarefa> tarefas = new ArrayList&lt;>(); 
+    private int proximoId = 1; 
+} 
               </code></pre>
 
 
@@ -425,12 +395,10 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
               <div class="panel-body">
                 <pre><code>
-
-
-                  <br> @GetMapping 
-                  <br> public List<Tarefa> buscarTodasTarefas() { 
-                  <br>     return tarefas; 
-                  <br> } 
+@GetMapping 
+public List<Tarefa> buscarTodasTarefas() { 
+    return tarefas; 
+} 
                 </code></pre>
 
 
@@ -438,17 +406,15 @@
                   Esse método é um <i>endpoint</i> do tipo GET que retorna todas as tarefas cadastradas na API. Ele simplesmente retorna a lista de tarefas que está armazenada na variável tarefas. 
                 </p>
                 <pre><code>
-
-
-                  @GetMapping("/{id}") 
-                <br>  public Tarefa buscarTarefaPorId(@PathVariable int id) { 
-                <br>      for (Tarefa tarefa : tarefas) { 
-                <br>          if (tarefa.getId() == id) { 
-                <br>              return tarefa; 
-                <br>          } 
-                <br>      } 
-                <br>      return null; 
-                <br>  }   
+@GetMapping("/{id}") 
+public Tarefa buscarTarefaPorId(@PathVariable int id) { 
+    for (Tarefa tarefa : tarefas) { 
+        if (tarefa.getId() == id) { 
+            return tarefa; 
+        } 
+    } 
+    return null; 
+}   
                 </code></pre>
 
 
@@ -472,15 +438,13 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
                 <pre><code>
-
-
-                <br>  @PostMapping 
-                <br>  public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
-                <br>      int id = tarefas.size() + 1; 
-                <br>      tarefa.setId(id); 
-                <br>      tarefas.add(tarefa); 
-                <br>      return tarefa; 
-                <br>  } 
+ @PostMapping 
+ public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
+     int id = tarefas.size() + 1; 
+     tarefa.setId(id); 
+     tarefas.add(tarefa); 
+     return tarefa; 
+ } 
                 </code></pre>
 
 
@@ -514,20 +478,18 @@
               <div class="panel-body">
                 <div class="icone-atencao texto-com-icone">
                   <pre><code>
-
-
-                    @PutMapping("/{id}") 
-                  <br>  public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefaAtualizada) { 
-                  <br>      for (int i = 0; i < tarefas.size(); i++) { 
-                  <br>          Tarefa tarefa = tarefas.get(i); 
-                  <br>          if (tarefa.getId() == id) { 
-                  <br>              tarefa.setDescricao(tarefaAtualizada.getDescricao()); 
-                  <br>              tarefa.setCompleta(tarefaAtualizada.isCompleta()); 
-                  <br>              return tarefa; 
-                  <br>          } 
-                  <br>      } 
-                  <br>      return null; 
-                  <br>  }   
+@PutMapping("/{id}") 
+public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefaAtualizada) { 
+    for (int i = 0; i < tarefas.size(); i++) { 
+        Tarefa tarefa = tarefas.get(i); 
+        if (tarefa.getId() == id) { 
+            tarefa.setDescricao(tarefaAtualizada.getDescricao()); 
+            tarefa.setCompleta(tarefaAtualizada.isCompleta()); 
+            return tarefa; 
+        } 
+    } 
+    return null; 
+}   
                   </code></pre>
                   <p>
                     Perceba que aqui há o uso em conjunto de duas anotações vistas na criação dos métodos anteriores: <i>@PathVariable</i> e <i>@RequestBody</i>. Isso porque esse método receberá dois parâmetros: primeiro é um inteiro que representa o ID da tarefa e é obtido a partir da anotação @PathVariable. O segundo parâmetro é um objeto da classe Tarefa que representa a nova versão da tarefa e é obtido a partir da anotação @RequestBody. 
@@ -553,18 +515,17 @@
               <div class="panel-body">
                 <div class="icone-atencao texto-com-icone">
                   <pre><code>
-
 @DeleteMapping("/{id}") 
-                  <br>  public boolean deletarTarefa(@PathVariable int id) { 
-                  <br>      for (int i = 0; i < tarefas.size(); i++) { 
-                  <br>          Tarefa tarefa = tarefas.get(i); 
-                  <br>          if (tarefa.getId() == id) { 
-                  <br>              tarefas.remove(i); 
-                  <br>              return true; 
-                  <br>          } 
-                  <br>      } 
-                  <br>      return false; 
-                  <br>  }  
+public boolean deletarTarefa(@PathVariable int id) { 
+    for (int i = 0; i < tarefas.size(); i++) { 
+        Tarefa tarefa = tarefas.get(i); 
+        if (tarefa.getId() == id) { 
+            tarefas.remove(i); 
+            return true; 
+        } 
+    } 
+    return false; 
+}  
                     
                   </code></pre>
                   <p>
@@ -598,60 +559,59 @@
         <pre><code>
 
 package com.api.tarefas.controller; 
-        <br>  import java.util.ArrayList; 
-        <br>  import java.util.List; 
-        <br>  import org.springframework.web.bind.annotation.*; 
-        <br>  import com.api.tarefas.model.Tarefa; 
-        <br>  @RestController 
-        <br>  @CrossOrigin(origins = "*") 
-        <br>  @RequestMapping("/tarefas") 
-        <br>  public class TarefaController { 
-        <br>      private List<Tarefa> tarefas = new ArrayList<>(); 
-        <br>      private int proximoId = 1; 
-        <br>      @PostMapping("") 
-        <br>      public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
-        <br>          tarefa.setId(proximoId++); 
-        <br>          tarefas.add(tarefa); 
-        <br>          return tarefa; 
-        <br>      } 
-        <br>      @GetMapping("") 
-        <br>      public List<Tarefa> buscarTarefas() { 
-        <br>          return tarefas; 
-        <br>      } 
-        <br>      @GetMapping("/{id}") 
-        <br>      public Tarefa buscarTarefa(@PathVariable int id) { 
-        <br>          for (Tarefa tarefa : tarefas) { 
-        <br>              if (tarefa.getId() == id) { 
-        <br>                  return tarefa; 
-        <br>              } 
-        <br>          } 
-        <br>          return null; 
-        <br>      } 
-        <br>      @PutMapping("/{id}") 
-        <br>      public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefa) { 
-        <br>          for (int i = 0; i < tarefas.size(); i++) { 
-        <br>              Tarefa t = tarefas.get(i); 
-        <br>              if (t.getId() == id) { 
-        <br>                  t.setDescricao(tarefa.getDescricao()); 
-        <br>                  t.setCompleta(tarefa.isCompleta()); 
-        <br>                  return t; 
-        <br>              } 
-        <br>          } 
-        <br>          return null; 
-        <br>      } 
-        <br>      @DeleteMapping("/{id}") 
-        <br>      public boolean deletarTarefa(@PathVariable int id) { 
-        <br>          for (int i = 0; i < tarefas.size(); i++) { 
-        <br>              Tarefa tarefa = tarefas.get(i); 
-        <br>              if (tarefa.getId() == id) { 
-        <br>                  tarefas.remove(i); 
-        <br>                  return true; 
-        <br>              } 
-        <br>          } 
-        <br>          return false; 
-        <br>      } 
-        <br>  } 
-
+import java.util.ArrayList; 
+import java.util.List; 
+import org.springframework.web.bind.annotation.*; 
+import com.api.tarefas.model.Tarefa; 
+@RestController 
+@CrossOrigin(origins = "*") 
+@RequestMapping("/tarefas") 
+public class TarefaController { 
+    private List<Tarefa> tarefas = new ArrayList<>(); 
+    private int proximoId = 1; 
+    @PostMapping("") 
+    public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
+        tarefa.setId(proximoId++); 
+        tarefas.add(tarefa); 
+        return tarefa; 
+    } 
+    @GetMapping("") 
+    public List<Tarefa> buscarTarefas() { 
+        return tarefas; 
+    } 
+    @GetMapping("/{id}") 
+    public Tarefa buscarTarefa(@PathVariable int id) { 
+        for (Tarefa tarefa : tarefas) { 
+            if (tarefa.getId() == id) { 
+                return tarefa; 
+            } 
+        } 
+        return null; 
+    } 
+    @PutMapping("/{id}") 
+    public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefa) { 
+        for (int i = 0; i < tarefas.size(); i++) { 
+            Tarefa t = tarefas.get(i); 
+            if (t.getId() == id) { 
+                t.setDescricao(tarefa.getDescricao()); 
+                t.setCompleta(tarefa.isCompleta()); 
+                return t; 
+            } 
+        } 
+        return null; 
+    } 
+    @DeleteMapping("/{id}") 
+    public boolean deletarTarefa(@PathVariable int id) { 
+        for (int i = 0; i < tarefas.size(); i++) { 
+            Tarefa tarefa = tarefas.get(i); 
+            if (tarefa.getId() == id) { 
+                tarefas.remove(i); 
+                return true; 
+            } 
+        } 
+        return false; 
+    } 
+} 
         </code></pre>
         <p>
           Com isso, está concluída a criação da classe <strong>Controller</strong> e da API. 
@@ -704,9 +664,9 @@ package com.api.tarefas.controller;
             <pre><code>
 
 { 
-            <br>      "descricao": "Fazer compras", 
-            <br>      "completa": false 
-            <br>  } 
+     "descricao": "Fazer compras", 
+     "completa": false 
+ } 
             </code></pre>
           </li>
           <li>Clique no botão “Send” para enviar a solicitação. </li>
@@ -757,11 +717,10 @@ package com.api.tarefas.controller;
           <li>Em seguida, digite o corpo da solicitação. Nesse exemplo, será alterada a descrição da tarefa e também o seu <i>status</i> de completa para <i>true</i>. 
             <br>
             <pre><code>
-
 { 
-            <br>      "descricao": "Fazer compras no mercado", 
-            <br>      "completa": true 
-            <br>  } 
+     "descricao": "Fazer compras no mercado", 
+     "completa": true 
+ } 
             </code></pre>
           </li>
           <li>Clique no botão “Send” para enviar a solicitação. </li>
@@ -807,37 +766,36 @@ package com.api.tarefas.controller;
         <pre><code>
 
 &lt;!DOCTYPE html> 
-          &lt;html> 
-          &lt;head> 
-              &lt;meta charset="UTF-8"> 
-              &lt;title>Minha Lista de Tarefas&lt;/title> 
-          &lt;/head> 
-          &lt;body> 
-          <br>     &lt;h1>Minha Lista de Tarefas&lt;/h1> 
-          <br>     &lt;h2>Cadastro de tarefas&lt;/h2> 
-          <br>     &lt;form id="formCriarTarefa"> 
-          <br>         &lt;label for="descricao">Descrição:&lt;/label> 
-          <br>         &lt;input type="text" id="descricao" name="descricao"> 
-          <br>         &lt;button type="submit">Adicionar&lt;/button> 
-          <br>     &lt;/form> 
-          <br>     &lt;h2>Tarefas cadastradas&lt;/h2> 
-          <br>     &lt;table id="tabelaTarefas"> 
-          <br>     &lt;thead> 
-          <br>         &lt;tr> 
-          <br>         &lt;th>ID&lt;/th> 
-          <br>         &lt;th>Descrição&lt;/th> 
-          <br>         &lt;th>Concluída&lt;/th> 
-          <br>         &lt;th>Excluir&lt;/th> 
-          <br>         &lt;/tr> 
-          <br>     &lt;/thead> 
-          <br>     &lt;tbody>&lt;/tbody> 
-          <br>     &lt;/table> 
-          <br>      
-          <br>     &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script> 
-          <br>     &lt;script src="script.js">&lt;/script> 
-          <br> &lt;/body> 
-          <br> &lt;/html> 
-
+&lt;html> 
+&lt;head> 
+    &lt;meta charset="UTF-8"> 
+    &lt;title>Minha Lista de Tarefas&lt;/title> 
+&lt;/head> 
+&lt;body> 
+     &lt;h1>Minha Lista de Tarefas&lt;/h1> 
+     &lt;h2>Cadastro de tarefas&lt;/h2> 
+     &lt;form id="formCriarTarefa"> 
+         &lt;label for="descricao">Descrição:&lt;/label> 
+         &lt;input type="text" id="descricao" name="descricao"> 
+         &lt;button type="submit">Adicionar&lt;/button> 
+     &lt;/form> 
+     &lt;h2>Tarefas cadastradas&lt;/h2> 
+     &lt;table id="tabelaTarefas"> 
+     &lt;thead> 
+         &lt;tr> 
+         &lt;th>ID&lt;/th> 
+         &lt;th>Descrição&lt;/th> 
+         &lt;th>Concluída&lt;/th> 
+         &lt;th>Excluir&lt;/th> 
+         &lt;/tr> 
+     &lt;/thead> 
+     &lt;tbody>&lt;/tbody> 
+     &lt;/table> 
+      
+     &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script> 
+     &lt;script src="script.js">&lt;/script> 
+ &lt;/body> 
+ &lt;/html> 
         </code></pre>
         <p>
           Esse é um código HTML básico para criar uma página <i>web</i> simples. Ele tem um título "Minha Lista de Tarefas", um formulário para criar novas tarefas e uma área para a lista de tarefas que será preenchida com as tarefas da API. O código HTML também inclui dois <i>scripts</i> JavaScript - um para usar a biblioteca jQuery e outro para o <i>script</i> personalizado que será criado a seguir. 
@@ -846,132 +804,131 @@ package com.api.tarefas.controller;
           Agora, crie um arquivo chamado <strong>script.js</strong> e insira o seguinte código: 
         </p>
         <pre><code>
-
 $(document).ready(function () { 
-        <br>      // Função para carregar as tarefas da API e exibi-las na tela 
-        <br>      function carregarTarefas() { 
-        <br>          $.ajax({ 
-        <br>              url: 'http://localhost:8080/tarefas', 
-        <br>              method: 'GET', 
-        <br>              success: function (data) { 
-        <br>                  // Limpa a tabela de tarefas 
-        <br>                  $('#tabelaTarefas tbody').empty(); 
-        <br>                  // Adiciona cada tarefa à tabela 
-        <br>                  for (let i = 0; i < data.length; i++) { 
-        <br>                      let tarefa = data[i]; 
-        <br>                      let checkbox = $('&lt;input>') 
-        <br>                          .attr('type', 'checkbox') 
-        <br>                          .prop('checked', tarefa.completa) 
-        <br>                          .change(function () { 
-        <br>                              atualizarTarefa($(this).parent().parent().attr('data-id'), { 
-        <br>                                  descricao: tarefa.descricao, 
-        <br>                                  completa: $(this).prop('checked') 
-        <br>                              }); 
-        <br>                          }); 
-        <br>                      let id = $('&lt;td>') 
-        <br>                          .text(tarefa.id); 
-        <br>                      let descricao = $('&lt;input>') 
-        <br>                          .attr('type', 'text') 
-        <br>                          .val(tarefa.descricao) 
-        <br>                          .blur(function () { 
-        <br>                              atualizarTarefa($(this).parent().attr('data-id'), { 
-        <br>                                  descricao: $(this).val(), 
-        <br>                                  completa: tarefa.completa 
-        <br>                              }); 
-        <br>                          }); 
-        <br>                      let concluida = $('&lt;td>') 
-        <br>                          .append(checkbox); 
-        <br>                      let botaoDeletar = $('&lt;button>') 
-        <br>                          .text('Excluir') 
-        <br>                          .click(function () { 
-        <br>                              deletarTarefa($(this).parent().parent().attr('data-id')); 
-        <br>                          }); 
-        <br>                      let excluir = $('&lt;td>') 
-        <br>                          .append(botaoDeletar); 
-        <br>                      let tr = $('&lt;tr>') 
-        <br>                          .attr('data-id', tarefa.id) 
-        <br>                          .append(id) 
-        <br>                          .append(descricao) 
-        <br>                          .append(concluida) 
-        <br>                          .append(excluir); 
-        <br>                      $('#tabelaTarefas tbody').append(tr); 
-        <br>                  } 
-        <br>              }, 
-        <br>              error: function () { 
-        <br>                  alert('Não foi possível carregar as tarefas da API.'); 
-        <br>              } 
-        <br>          }); 
-        <br>      } 
-        <br>
-      <br>  // Função para criar uma nova tarefa na API 
-      <br>      function criarTarefa(tarefa) { 
-      <br>          $.ajax({ 
-      <br>              url: 'http://localhost:8080/tarefas', 
-      <br>              method: 'POST', 
-      <br>              contentType: 'application/json', 
-      <br>              data: JSON.stringify(tarefa), 
-      <br>              success: function (data) { 
-      <br>                  // Limpa o formulário e recarrega a lista de tarefas 
-      <br>                  $('#descricao').val(''); 
-      <br>                  carregarTarefas(); 
-      <br>              }, 
-      <br>              error: function () { 
-      <br>                  alert('Não foi possível criar a tarefa na API.'); 
-      <br>              } 
-      <br>          }); 
-      <br>      } 
-      <br>      // Adiciona uma tarefa ao enviar o formulário 
-      <br>      $('#formCriarTarefa').submit(function (event) { 
-      <br>          event.preventDefault(); 
-      <br>          let descricao = $('#descricao').val(); 
-      <br>          if (!descricao) { 
-      <br>              alert('Por favor, preencha a descrição da tarefa.'); 
-      <br>              return; 
-      <br>          } 
-      <br>          let tarefa = { 
-      <br>              descricao: descricao, 
-      <br>              completa: false 
-      <br>          }; 
-      <br>          criarTarefa(tarefa); 
-      <br>      }); 
-      <br>      // Atualiza uma tarefa na API 
-      <br>      function atualizarTarefa(id, tarefa) { 
-      <br>          $.ajax({ 
-      <br>              url: 'http://localhost:8080/tarefas/' + id, 
-      <br>              method: 'PUT', 
-      <br>              contentType: 'application/json', 
-      <br>              data: JSON.stringify({ 
-      <br>                  descricao: tarefa.descricao, 
-      <br>                  completa: tarefa.completa 
-      <br>              }), 
-      <br>              success: function (data) { 
-      <br>                  // Recarrega a lista de tarefas 
-      <br>                  alert('Tarefa atualizada na API com sucesso!'); 
-      <br>                  carregarTarefas(); 
-      <br>              }, 
-      <br>              error: function () { 
-      <br>                  alert('Não foi possível atualizar a tarefa na API.'); 
-      <br>              } 
-      <br>          }); 
-      <br>      } 
-      <br>      // Deleta uma tarefa na API 
-      <br>      function deletarTarefa(id) { 
-      <br>          $.ajax({ 
-      <br>              url: 'http://localhost:8080/tarefas/' + id, 
-      <br>              method: 'DELETE', 
-      <br>              success: function (data) { 
-      <br>                  alert('Tarefa removida na API com sucesso!'); 
-      <br>                  // Recarrega a lista de tarefas 
-      <br>                  carregarTarefas(); 
-      <br>              }, 
-      <br>              error: function () { 
-      <br>                  alert('Não foi possível deletar a tarefa na API.'); 
-      <br>              } 
-      <br>          }); 
-      <br>      } 
-      <br>      // Carrega as tarefas ao abrir a página 
-      <br>      carregarTarefas(); 
-      <br>  }); 
+// Função para carregar as tarefas da API e exibi-las na tela 
+function carregarTarefas() { 
+ $.ajax({ 
+   url: 'http://localhost:8080/tarefas', 
+   method: 'GET', 
+   success: function (data) { 
+       // Limpa a tabela de tarefas 
+       $('#tabelaTarefas tbody').empty(); 
+       // Adiciona cada tarefa à tabela 
+       for (let i = 0; i < data.length; i++) { 
+           let tarefa = data[i]; 
+           let checkbox = $('&lt;input>') 
+               .attr('type', 'checkbox') 
+               .prop('checked', tarefa.completa) 
+               .change(function () { 
+                   atualizarTarefa($(this).parent().parent().attr('data-id'), { 
+                       descricao: tarefa.descricao, 
+                       completa: $(this).prop('checked') 
+                   }); 
+               }); 
+           let id = $('&lt;td>') 
+               .text(tarefa.id); 
+           let descricao = $('&lt;input>') 
+               .attr('type', 'text') 
+               .val(tarefa.descricao) 
+               .blur(function () { 
+                   atualizarTarefa($(this).parent().attr('data-id'), { 
+                       descricao: $(this).val(), 
+                       completa: tarefa.completa 
+                   }); 
+               }); 
+           let concluida = $('&lt;td>') 
+               .append(checkbox); 
+           let botaoDeletar = $('&lt;button>') 
+               .text('Excluir') 
+               .click(function () { 
+                   deletarTarefa($(this).parent().parent().attr('data-id')); 
+               }); 
+           let excluir = $('&lt;td>') 
+               .append(botaoDeletar); 
+           let tr = $('&lt;tr>') 
+               .attr('data-id', tarefa.id) 
+               .append(id) 
+               .append(descricao) 
+               .append(concluida) 
+               .append(excluir); 
+           $('#tabelaTarefas tbody').append(tr); 
+       } 
+   }, 
+   error: function () { 
+       alert('Não foi possível carregar as tarefas da API.'); 
+   } 
+ }); 
+} 
+
+//Função para criar uma nova tarefa na API 
+ function criarTarefa(tarefa) { 
+     $.ajax({ 
+         url: 'http://localhost:8080/tarefas', 
+         method: 'POST', 
+         contentType: 'application/json', 
+         data: JSON.stringify(tarefa), 
+         success: function (data) { 
+             // Limpa o formulário e recarrega a lista de tarefas 
+             $('#descricao').val(''); 
+             carregarTarefas(); 
+         }, 
+         error: function () { 
+             alert('Não foi possível criar a tarefa na API.'); 
+         } 
+     }); 
+ } 
+ // Adiciona uma tarefa ao enviar o formulário 
+ $('#formCriarTarefa').submit(function (event) { 
+     event.preventDefault(); 
+     let descricao = $('#descricao').val(); 
+     if (!descricao) { 
+         alert('Por favor, preencha a descrição da tarefa.'); 
+         return; 
+     } 
+     let tarefa = { 
+         descricao: descricao, 
+         completa: false 
+     }; 
+     criarTarefa(tarefa); 
+ }); 
+ // Atualiza uma tarefa na API 
+ function atualizarTarefa(id, tarefa) { 
+     $.ajax({ 
+         url: 'http://localhost:8080/tarefas/' + id, 
+         method: 'PUT', 
+         contentType: 'application/json', 
+         data: JSON.stringify({ 
+             descricao: tarefa.descricao, 
+             completa: tarefa.completa 
+         }), 
+         success: function (data) { 
+             // Recarrega a lista de tarefas 
+             alert('Tarefa atualizada na API com sucesso!'); 
+             carregarTarefas(); 
+         }, 
+         error: function () { 
+             alert('Não foi possível atualizar a tarefa na API.'); 
+         } 
+     }); 
+ } 
+ // Deleta uma tarefa na API 
+ function deletarTarefa(id) { 
+     $.ajax({ 
+         url: 'http://localhost:8080/tarefas/' + id, 
+         method: 'DELETE', 
+         success: function (data) { 
+             alert('Tarefa removida na API com sucesso!'); 
+             // Recarrega a lista de tarefas 
+             carregarTarefas(); 
+         }, 
+         error: function () { 
+             alert('Não foi possível deletar a tarefa na API.'); 
+         } 
+     }); 
+ } 
+ // Carrega as tarefas ao abrir a página 
+ carregarTarefas(); 
+}); 
 
         </code></pre>
         <p>

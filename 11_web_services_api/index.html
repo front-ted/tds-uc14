@@ -296,7 +296,7 @@
           </p>
           <a href="imgs/infografico1.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
             aria-hidden="true"><img src="imgs/infografico1.png" class="center-block img-responsive imgBorder"></a>
-          <div class="acessivel print">
+          <div class="acessivel no-print">
             <ol>
               <li>O cliente envia uma solicitação ao servidor usando a URL correspondente
                 (http://servicos.api.com/algum-servico, por exemplo), o método adequado (POST, GET...) e os dados de
@@ -647,7 +647,7 @@
             Ainda que a estruturação tenha sua complexidade aumentada em determinados contextos, ainda é possível
             afirmar que é uma formatação mais simples e rápida em relação ao XML. Veja nos exemplos a seguir:
           </p>
-          <div class="row">
+          <div class="row no-print">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <pre>
               <code class="language-json">
@@ -711,16 +711,84 @@
               </pre>
             </div>
           </div>
+          
+          <div class="only-print">
+            <div class="">
+              <pre>
+              <code class="language-json">
+{ 
+      "Emprestimos" : [ 
+  
+          { 
+  
+              "Nome": "Leticia Soares ", 
+  
+              "Endereco": "Avenida Alameda das Rosas 314", 
+  
+          }, 
+  
+          { 
+  
+              "Nome": "Vanessa da Silva", 
+  
+              "Endereco": "Rua Exemplar dos Exemplos 1001", 
+  
+          }, 
+  
+          { 
+  
+              "Nome": "João Pedro Tavares", 
+  
+              "Endereco": "Rua José Bonifácio 380", 
+  
+          } 
+  
+      ] 
+  
+  } 
+              </code>
+            </pre>
+            </div>
+            <div class="">
+              <pre>
+                <code class="language-xml">
+&lt;emprestimos> 
+    &lt;cliente> 
+  
+        &lt;nome>Leticia Soares&lt;/nome>&lt;endereco>Avenida Alameda das Rosas 314&lt;/endereco> 
+  
+    &lt;/cliente> 
+  
+    &lt;cliente> 
+  
+        &lt;nome>Vanessa da Silva&lt;/nome>&lt;endereco>Rua Exemplar dos Exemplos 1001&lt;/endereco> 
+  
+    &lt;/cliente> 
+  
+    &lt;cliente> 
+  
+       &lt;nome>João Pedro Tavares&lt;/nome>&lt;endereco>Rua José Bonifácio 380&lt;/endereco> 
+  
+     &lt;/cliente> 
+  
+   &lt;/emprestimos> 
+                </code>
+              </pre>
+            </div>
+          </div>
           <p>
             Comparando o JSON e o XML lado a lado, é possível perceber que existe uma maior simplicidade no JSON. A
             leitura e a manipulação de dados acontecem mais rapidamente, sendo, portanto, uma forma que recentemente tem
             sido muito utilizada na hora de transmitir grandes volumes de dados. Veja como ocorre essa requisição:
           </p>
-          <img src="imgs/fig-06.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg">
+          
+          <!--  -->
+          <img src="imgs/fig-06.png" class="center-block img-responsive hidden-sm hidden-xs print imgBorder espacoimg" style="max-width: 500px;">
           <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.
           </p>
-          <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs imgBorder"
-            aria-hidden="true"><img src="imgs/fig-06.png" class="center-block img-responsive espacoimg imgBorder"></a>
+          <a href="imgs/fig-06.png" target="_blank" class="no-print visible-sm visible-xs imgBorder" aria-hidden="true">
+            <img src="imgs/fig-06.png" class="center-block img-responsive espacoimg imgBorder">
+          </a>
           <p class="legenda-imagem">
             Figura 6 – Comunicação entre cliente e servidor utilizando arquivo JSON para requisição e resposta <br>
             Fonte: Javarevisited (2018)
