@@ -321,7 +321,7 @@
                 <p class="no-print">
                   Clique ou toque para visualizar o conteúdo.  
                 </p>
-                <div class="no-print">
+                <div class="no-print" aria-hidden="true">
                   <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingOne2">
@@ -397,6 +397,52 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                
+                <div class="no-print acessivel">
+                          <p>
+                            Servlets  
+                          </p>
+                          <p>
+                            São objetos capazes de processar requisições de um servidor, tratando-as e respondendo-as de acordo. A classe HttpServlet é base para qualquer Servlet. O desenvolvimento básico em Java para <i>web</i> é realizado por classes Servlet que constroem por código a resposta (HTML) às requisições. 
+                          </p>
+
+                        <p>
+                            EJB
+                          </p>
+                          <p>
+                            Enterprise Java Beans é um componente que reúne especificações de objetos reutilizáveis para soluções rápidas de desenvolvimento, como sessões e mensagens. 
+                          </p>
+                        
+                          <p>
+                            JSP (JavaServer Pages) e JSF (JavaServer Faces)
+                          </p>
+                          <p>São tecnologias de Java para a criação de páginas <i>web</i> geradas dinamicamente, permitindo incluir informações processadas dentro de uma estrutura HTML. São linguagens, semelhantes a outras como PHP e ASP, que incluem trechos Java em meio a código HTML e substituem a criação via código dos Servlets e facilitam o desenvolvimento de sistemas <i>web</i>. </p>
+                          <pre>
+                          <code class="hljs language-java">
+ <br>  &lt;%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII" %> 
+ <br>  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd"> 
+ <br>  &lt;html> 
+ <br>  &lt;head> 
+ <br>      &lt;meta http-equiv="Content-Type" content="text/html; charset=US-ASCII"> 
+ <br>      &lt;title>Página JSP&lt;/title> 
+ <br>  &lt;/head> 
+ <br>  &lt;%@ page import="java.util.Date" %> 
+ <br>      &lt;body> 
+ <br>          &lt;h3>Bem vindo!&lt;/h3><br> 
+ <br>          &lt;strong>Date e hora atuais: &lt;/strong>: <%=new Date() %> 
+ <br>      &lt;/body> 
+ <br>  &lt;/html> 
+                          </code>
+                          </pre>
+                          <p class="legenda-imagem">
+                            Tabela 1 – Exemplo de código JSP 
+
+                            Fonte: Senac EAD (2023) 
+                          </p>
+                          <p>Para acessar aplicações <i>web</i> Java, é necessário ter um servidor específico que consiga se comunicar com os módulos Java EE e executar os Servlets. Os mais conhecidos são o Glassfish e, principalmente, o Tomcat, o servidor Java mais usado. Ele é mantido pelo Apache Software Foundation. Por padrão, opera na porta 8080. </p>
+                          <p>O desenvolvimento de Java <i>web</i> com Servlets puros, com JSP, e mesmo com JSP, evolução dessa linguagem, já são pouco utilizados em novos projetos atualmente. Em vez disso, as equipes preferem optar por frameworks com base em Java <i>web</i> que facilitam o desenvolvimento de sistemas, sendo o principal deles o Spring Framework. </p>
+                                         
                 </div>
                 <h3>Spring Framework </h3>
                 <p>O Spring é um extenso <i>framework</i> Java, que visa facilitar o desenvolvimento com base em técnicas de injeção de dependências e inversão de controle. O Spring é hoje o <i>framework</i> Java mais popular do mundo. Esse <i>framework</i> tem como objetivo facilitar muitos aspectos da programação Java, tornando-a mais fácil, rápida e segura, contando com aproximadamente 20 módulos para diferentes propósitos. </p>
