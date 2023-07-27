@@ -602,35 +602,60 @@ Fonte: Senac EAD (2023)
                 E se você quisesse separar, mostrar em uma linha o dia e em outra a hora? Basta informar duas chaves em Model e incluir modificações no HTML. 
               </p>
               <p>Em MiscController: </p>
-              <pre><code>@GetMapping("/diahora") 
-              <br>  public String mostraDiaHora(Model model){ 
-              <br>      LocalDateTime diaHora = LocalDateTime.now(); 
-              <br>    <div class="destaque_code">  model.addAttribute("data", diaHora.toLocalDate().toString()); 
-              <br>      model.addAttribute("hora", diaHora.toLocalTime().toString()); </div>
-              <br>      return "data"; 
-              <br>  } 
+              <!-- <pre><code>@GetMapping("/diahora") 
+  public String mostraDiaHora(Model model){ 
+      LocalDateTime diaHora = LocalDateTime.now(); 
+      model.addAttribute("data", diaHora.toLocalDate().toString()); 
+      model.addAttribute("hora", diaHora.toLocalTime().toString()); 
+      return "data"; 
+  } 
               </code>
-</pre>
+</pre> -->
+  <code class="hljs language-typescript destaque_code"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/diahora"</span>) 
+ <br>  <span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">mostraDiaHora</span>(<span class="hljs-params">Model model</span>){ 
+ <br>      <span class="hljs-title class_">LocalDateTime</span> diaHora = <span class="hljs-title class_">LocalDateTime</span>.<span class="hljs-title function_">now</span>(); 
+ <br>      <span class="hljs-dstq">model.<span class="hljs-title function_">addAttribute</span>(<span class="hljs-string">"data"</span>, diaHora.<span class="hljs-title function_">toLocalDate</span>().<span class="hljs-title function_">toString</span>()); </span>
+ <br>      <span class="hljs-dstq">model.<span class="hljs-title function_">addAttribute</span>(<span class="hljs-string">"hora"</span>, diaHora.<span class="hljs-title function_">toLocalTime</span>().<span class="hljs-title function_">toString</span>()); </span>
+ <br>      <span class="hljs-keyword">return</span> <span class="hljs-string">"data"</span>; 
+ <br>  } 
+                </code>
 
               <p>
                 Em data.html: 
               </p>
-              <pre><code>
-              <br>  &lt;!DOCTYPE html> 
-              <br>  &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
-              <br>      &lt;head> 
-              <br>          &lt;title>Data e Hora&lt;/title> 
-              <br>          &lt;meta charset="UTF-8"> 
-              <br>          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-              <br>      &lt;/head> 
-              <br>      &lt;body> 
-              <br>          &lt;h1>Que dia é hoje? Que horas são?&lt;/h1> 
-              <br><div class="destaque_code">          &lt;p>&lt;strong>Hoje é dia:&lt;/strong>&lt;span id="spnData" th:text="${data}" >&lt;/span>&lt;/p> 
-              <br>          &lt;p>&lt;strong>A hora certa é:&lt;/strong>&lt;span id="spnHora" th:text="${hora}" >&lt;/span>&lt;/p> </div>
-              <br>      &lt;/body> 
-              <br>  &lt;/html> 
-              </code>
+<pre><code>
+&lt;!DOCTYPE html> 
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    &lt;head> 
+        &lt;title>Data e Hora&lt;/title> 
+        &lt;meta charset="UTF-8"> 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    &lt;/head> 
+    &lt;body> 
+        &lt;h1>Que dia é hoje? Que horas são?&lt;/h1> 
+        &lt;p>&lt;strong>Hoje é dia:&lt;/strong>&lt;span id="spnData" th:text="${data}" >&lt;/span>&lt;/p> 
+        &lt;p>&lt;strong>A hora certa é:&lt;/strong>&lt;span id="spnHora" th:text="${hora}" >&lt;/span>&lt;/p> 
+    &lt;/body> 
+&lt;/html> 
+</code>
 </pre>
+<!--  -->
+<code class="hljs language-xml destaque_code">
+<br>  <span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span> 
+<br>  <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/1999/xhtml"</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">"http://www.thymeleaf.org"</span>&gt;</span> 
+<br>      <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span> 
+<br>          <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Data e Hora<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span> 
+<br>          <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span> 
+<br>          <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span> 
+<br>      <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span> 
+<br>      <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span> 
+<br>          <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Que dia é hoje? Que horas são?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span> 
+<br>          <span class="hljs-dstq"> <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Hoje é dia:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"spnData"</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">"${data}"</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> </span>
+<br>          <span class="hljs-dstq"> <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>A hora certa é:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"spnHora"</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">"${hora}"</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> </span>
+<br>      <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span> 
+<br>  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span> 
+  </code>
+
 
               <p>
                 O resultado será algo próximo a seguinte figura:  
