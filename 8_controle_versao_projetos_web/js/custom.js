@@ -16,3 +16,8 @@ $(".fundo-item").click(function(){
     $('body').removeClass('overflow');
     $('.menu').removeClass('fade-check');
 });
+$(function (){
+    $('#myCarousel').carousel({
+        interval: 900000
+      })
+  });

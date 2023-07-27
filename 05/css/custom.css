@@ -5,6 +5,20 @@ body{
   background-color: #fff;
   overflow-x: hidden;
 }
+.bg1{
+  background: url('../../05/imgs/bg1.png') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+.bg2{
+  background: url('../../05/imgs/bg2.png') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+}
 
 .imgBorder {
   border: #004b8a 3px solid;

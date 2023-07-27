@@ -581,12 +581,12 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
                 </div>
               </div>
               <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
               <a class="right carousel-control" href="#myCarousel" data-slide="next">
                 
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
               </a>
             </div>
@@ -1272,6 +1272,13 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
               </li>
             </ul>
           </div>
+          <p>
+            É importante notar que as opções de hospedagem gratuita podem ter limitações em termos de recursos disponíveis, enquanto as opções de hospedagens pagas geralmente oferecem mais recursos e suporte técnico. A escolha da opção de hospedagem depende das necessidades específicas de seu projeto e orçamento disponível.  
+          </p>
+          <img src="imgs/desafio.png" class="img-responsive desafio no-print">
+          <div class="caixa-destaque2">
+            <p>Pesquise os passos para publicação em pelo menos um dos serviços citados. </p>
+          </div>
           <h3>CD (Continuous Delivery) </h3>
           <p>
             Continuous Delivery (CD) é uma prática de desenvolvimento de <i>software</i> que busca garantir a entrega
@@ -1283,37 +1290,41 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
             logo as funcionalidades e os ajustes estejam prontos. Para implementar o Continuous Delivery em um projeto
             Java usando o NetBeans como IDE, você pode seguir os seguintes passos:
           </p>
-          <p>
+          <ul>
+          <li>
             <i>Utilize um sistema de controle de versão</i>, como o GIT/GitHub, preferivelmente com auxílio de
             serviços como o GitHub Actions.
-          </p>
-          <p>
+          </li>
+          <li>
             <i>Configure um servidor de integração contínua</i> usando ferramentas como o Jenkins para automatizar a
             compilação e os testes do código a cada alteração incluída.
-          </p>
-          <p>
+          </li>
+          <li>
             <i> Automatize a construção do software</i> com ferramentas como o Maven, que pode ser usado para
             automatizar o
             processo de construção do <i>software</i>, definindo dependências, compilação, testes e empacotamento do
             código
             em um arquivo JAR ou WAR.
-          </p>
-          <p>
+          </li>
+          <li>
             <i>Configure o ambiente de deploy</i>, que deve estar devidamente testado para que o <i>deploy</i> ocorra
             sem problemas. Ferramentas como Docker podem ser usadas.
-          </p>
-          <p>
+          </li>
+          <li>
             <i>Crie testes automatizados</i> para garantir que o <i>software</i> está funcionando corretamente em
             todos os aspectos, incluindo funcionalidade, desempenho e segurança.
-          </p>
-          <p>
+          </li>
+          <li>
             <i>Configure o Continuous Delivery</i> a partir das ferramentas aplicadas. Geralmente, a configuração
             passa por <i>scripts</i> próprios.
-          </p>
-          <p>
+          </li>
+          <li>
             <i>Monitore o processo de Continuous Delivery</i> para identificar possíveis problemas e melhorias na
             automação.
-          </p>
+          </li></ul>
+          
+          <img src="imgs/atencao.png" class="img-responsive desafio no-print">
+          <div class="caixa-destaque2">
           <p>
             É importante lembrar-se de que o processo de implementação pode variar dependendo das necessidades
             específicas do projeto e da equipe de desenvolvimento. É possível fazer o Continuous Delivery usando
@@ -1321,6 +1332,7 @@ scp /caminho/do/arquivo.war root@ &lt;endereço-IP-da-instância>:/caminho/do/di
             ferramentas que
             podem facilitar a implementação do CD em seus projetos.
           </p>
+          </div>
           <h3>Encerramento</h3>
           <p>
             Em resumo, a publicação de sistemas <i>web</i> em Java envolve uma série de conceitos e ferramentas que

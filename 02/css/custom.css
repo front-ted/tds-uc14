@@ -8,9 +8,9 @@ body{
 .container{
   background-color: #fff;
 }
-.code1 .hljs-meta{
+/* .code1 .hljs-meta{
   background-color:darkolivegreen!important;
-}
+} */
 
 /*  */
 .destaque_code{
@@ -18,9 +18,12 @@ body{
   padding: 6px 25px;
   margin-top: -20px;
   margin-bottom: -25px;
+  display: block;
 }
-.destaque_code span{
-  background-color: aquamarine !important;}
+/* .destaque_code span{
+  background-color: aquamarine !important;} */
+  .hljs-dstq{
+    background-color: aquamarine !important;}
 
 .lista2 li{
   list-style: none;

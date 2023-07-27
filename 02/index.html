@@ -707,18 +707,19 @@ Fonte: Senac EAD (2023)
               <p>
                 Aplique a anotação @RequestParam ao parâmetro “valor” do método converteTemperatura() na classe MiscController de maneira que “valor” receba um valor-padrão quando não informado. 
               </p>
-              <pre><code>@GetMapping("/temperatura") 
-              <br>  public String converteTemperatura(Model model, <div class="destaque_code"> @RequestParam(defaultValue="0")</div>int valor){ 
-              <br>      float farenheit, kelvin; 
-              <br>      kelvin = valor + 273; 
-              <br>      farenheit = 1.8f*valor + 32; 
-              <br>      model.addAttribute("celsius", valor); 
-              <br>      model.addAttribute("farenheit", farenheit); 
-              <br>      model.addAttribute("kelvin", kelvin); 
-              <br>      return "temperatura"; 
-              <br>  } 
-              </code>
-</pre>
+<!-- <pre> -->
+<br>  <code class="hljs language-typescript destaque_code"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/temperatura"</span>) 
+<br>    <span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">converteTemperatura</span>(<span class="hljs-params">Model model, <span class="hljs-dstq"><span class="hljs-meta">@RequestParam</span>(defaultValue=<span class="hljs-string">"0"</span></span>)int valor</span>){ 
+<br>        float farenheit, kelvin; 
+<br>        kelvin = valor + <span class="hljs-number">273</span>; 
+<br>        farenheit = <span class="hljs-number">1.</span>8f*valor + <span class="hljs-number">32</span>; 
+<br>        model.<span class="hljs-title function_">addAttribute</span>(<span class="hljs-string">"celsius"</span>, valor); 
+<br>        model.<span class="hljs-title function_">addAttribute</span>(<span class="hljs-string">"farenheit"</span>, farenheit); 
+<br>        model.<span class="hljs-title function_">addAttribute</span>(<span class="hljs-string">"kelvin"</span>, kelvin); 
+<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">"temperatura"</span>; 
+<br>    } 
+<br>  </code>
+<!-- </pre> -->
 
               <p>
                 <i> Para @RequestParam, é necessário incluir import org.springframework.web.bind.annotation.RequestParam. </i>
@@ -876,7 +877,7 @@ Fonte: Senac EAD (2023)
 </pre>
 
               <p>
-                É necessário incluir “import org.springframework.web.bind.annotation.ModelAttribute;” e “import org.springframework.web.bind.annotation.PostMapping;”. 
+                É necessário incluir <i>“import org.springframework.web.bind.annotation.ModelAttribute;”</i> e </i>“import org.springframework.web.bind.annotation.PostMapping;”</i>. 
               </p>
               <p>
                 Note aqui duas características importantes. A primeira é a presença da anotação <strong>@PostMapping</strong>. Ela indica que o método só será executado quando a requisição for do tipo “POST” para a URL “localhost:8080/cadastro”. Não por acaso, “/cadastro” também é o valor incluído no atributo “action” do formulário na visão cadastro.html (em th:action="@{/cadastro}"). Caso esteja na visão um nome diferente, não alcançará o método e ele não executará. 

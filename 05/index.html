@@ -8,7 +8,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>
      Memória da aplicação web 
-
     </title>
 
     <!-- Bootstrap -->
@@ -79,8 +78,9 @@
             <div class="bg-fundo"></div>
             <!-- <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
             <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label> -->
-            
-            <div class="container">
+            <div class="bg1">
+
+              <div class="container">
              
             <p class="acessivel no-print">Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do NVDA (NonVisual Desktop Access), para localizar a opção Grau de pontuação/símbolos, acesse Preferências – Configurações – Fala. Altere o padrão Pouco para Tudo. Dessa forma, o leitor passará a ler os segmentos de código em sua totalidade. </p>
             
@@ -116,12 +116,12 @@
             <a href="imgs/assets/fig-01.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-01.png" class="imgBorder center-block img-responsive" alt="Página inicial do site BBC News Brasil mostrando, na parte de baixo, uma faixa sobreposta ao conteúdo com o texto “Diga-nos se concorda com o uso de cookies” em destaque, um texto descritivo abaixo e, no rodapé, um botão “Concordo” e um link “Não concordo, volte para Configurações”. "></a>
             <p class="legenda-imagem">
               Figura 1 – Consentimento de uso de <i>cookies</i> no <i>site</i> da BBC Brasil  
-              Fonte: https://www.bbc.com/portuguese  
+              <br>Fonte: https://www.bbc.com/portuguese  
             </p>
             <p>
               Tecnicamente, <i>cookies</i> são pequenos arquivos de texto contendo informações únicas que identificam o computador ou o usuário de um <i>site</i>. Esses arquivos são armazenados pelo navegador e são criados quando se acessa pela primeira vez um <i>site</i> que use <i>cookies</i>. Nas vezes posteriores em que se acessa esse mesmo <i>site</i>, os dados de <i>cookie</i> serão transmitidos e o <i>site</i> identificará o usuário de alguma maneira, usará esses dados para alguma personalização no <i>website</i> ou registrará em banco de dados alguma informação relativa. 
             </p>
-            <a href="imgs/infografico1.png" target="_blank" class="" aria-hidden="true"><img src="imgs/assets/fig-02.png" class="imgBorder center-block img-responsive" alt="Infográfico com um ícone de computador com seta com o texto “1- Você conecta à internet”, aponta para um globo de onde sai uma seta com texto “2- ... e requisita uma informação de um website” apontando para um ícone de servidor, de onde sai uma seta com texto “3- Quando o servidor website responde, ele te envia um cookie” apontando para um ícone de interrogação, de onde sai uma seta apontando para um ícone de globo, de onde sai uma seta com texto “4- ...que é gravado no seu computador” apontando para um ícone de computador. Em seguida, um ícone de computador apresenta uma seta com texto “5- Quando você fica online e volta a acessar o website”, de onde sai uma seta com texto “6-...seu computador envia o cookie de volta...” apontando para um ícone de globo, que aponta uma seta para um ícone de interrogação, de onde sai uma seta com texto “7-...e então o servidor do website identifica você e suas informações gravados no cookie que podem ser usadas pelo site ou compartilhadas com sites parceiros” apontando para um ícone de servidor. "></a>
+            <a href="imgs/infografico1.png" target="_blank" class="" aria-hidden="true"><img src="imgs/infografico1.png" class="imgBorder center-block img-responsive" alt="Infográfico com um ícone de computador com seta com o texto “1- Você conecta à internet”, aponta para um globo de onde sai uma seta com texto “2- ... e requisita uma informação de um website” apontando para um ícone de servidor, de onde sai uma seta com texto “3- Quando o servidor website responde, ele te envia um cookie” apontando para um ícone de interrogação, de onde sai uma seta apontando para um ícone de globo, de onde sai uma seta com texto “4- ...que é gravado no seu computador” apontando para um ícone de computador. Em seguida, um ícone de computador apresenta uma seta com texto “5- Quando você fica online e volta a acessar o website”, de onde sai uma seta com texto “6-...seu computador envia o cookie de volta...” apontando para um ícone de globo, que aponta uma seta para um ícone de interrogação, de onde sai uma seta com texto “7-...e então o servidor do website identifica você e suas informações gravados no cookie que podem ser usadas pelo site ou compartilhadas com sites parceiros” apontando para um ícone de servidor. "></a>
             <p class="legenda-imagem">Figura 2 – Funcionamento de <i>cookies </i><br>
 
               Fonte: Rai (2019)</p>
@@ -453,6 +453,13 @@ public String excluiCookie(HttpServletResponse response){
             <p class="caixa-destaque icone-desafio">Crie um projeto Spring MVC com uma página que registre <i>cookie</i> com a data e a hora atuais e outra página que resgate esse <i>cookie</i>, mostrando a data e a hora armazenadas. Experimente também calcular quantos segundos se passaram desde a hora armazenada anteriormente no <i>cookie</i> (estude sobre a classe LocalDate para entender como converter texto para data e operar sobre os valores). 
 
             </p>
+            
+              </div>
+            
+            </div>
+            <div class="bg2">
+
+              <div class="container">
             <h4>Aplicabilidade: <i>cookies</i> em projeto Spring MVC
 
             </h4>
@@ -964,7 +971,7 @@ public String autentica(HttpServletRequest request, Usuario usuario){
        </a>
        <p class="legenda-imagem">Figura 6 – Retorno página 
 
-        Fonte: Senac EAD (2023)  
+        <br>Fonte: Senac EAD (2023)  
        
        </p>
        <p>
@@ -1134,7 +1141,8 @@ public class SessaoController {
                 <!-- painel clicavel -->
          
               
-            </div>
+              </div>
+          </div>
             
           </div>
 

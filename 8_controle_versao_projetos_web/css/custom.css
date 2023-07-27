@@ -107,8 +107,14 @@ table.senac {
   .informacoesPessoais p{font-size: 10px;}
 
 }
-@media screen and (max-width: 1441px){
+
+@media screen and (max-width: 1641px){
+  .pagina{background-size: 10%;}
+  .bloco2{background-size: 10%;}
+}
+@media screen and (max-width: 1241px){
   .pagina{background: unset;}
+  .bloco2{background: unset;}
 }
 
 @media screen and (max-width: 1030px){
