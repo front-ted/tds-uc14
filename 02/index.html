@@ -528,31 +528,44 @@ Fonte: Senac EAD (2023)
               <p>
                 Devem ser mostrados dentro do <span> o dia e a hora atuais. Mas enquanto isso não ocorre, trata-se apenas de mais uma página estática. Como enviar dados da camada de controle para a de visão? No método mostraDiaHora(), primeiro  são calculadas a data e a hora atuais. 
               </p>
-              <pre><code class="code1">
-<br>  @GetMapping("/diahora") 
-<br>  public String mostraDiaHora(){ 
-</code>
-<div class="destaque_code"><span>LocalDateTime diaHora = LocalDateTime.now();</span></div> 
-<code>
-    return "data"; 
-<br>  } 
+ <!-- <pre><code>
+ @GetMapping("/diahora") 
+ public String mostraDiaHora(){ 
+ LocalDateTime diaHora = LocalDateTime.now();
+   return "data"; 
+ } 
               </code>
-</pre>
+</pre> -->
+<!--  -->
+<code class="hljs language-typescript destaque_code">
+<br>      <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/diahora"</span>) 
+<br>      <span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">mostraDiaHora</span>(<span class="hljs-params"></span>){ 
+<br>      <span class="hljs-dstq"><span class="hljs-title class_">LocalDateTime</span> diaHora = <span class="hljs-title class_">LocalDateTime</span>.<span class="hljs-title function_">now</span>();</span>
+<br>        <span class="hljs-keyword"> return</span> <span class="hljs-string">"data"</span>; 
+<br>      } 
+</code>
 
               <p>É necessário “import java.time.LocalDateTime;”. </p>
               <p>
                 Já existe o objeto “diaHora” com a informação necessária. No entanto, ela ainda não foi enviada para a visão. Isso ocorre por meio da classe Model do Spring MVC. Cada requisição tem acesso a um objeto dessa classe com informações que trafegarão entre camadas. Neste método, para ter acesso a ele, é necessário incluir um parâmetro do tipo Model; o objeto desse parâmetro então receberá a informação que se deseja trafegar. 
               </p>
-              <pre><code class="code1">
+<!-- <pre><code>
   @GetMapping("/diahora") 
-<br>  public String mostraDiaHora(<div class="destaque_code">Model model</div>){ 
-<br>      LocalDateTime diaHora = LocalDateTime.now(); 
-</code>      <div class="destaque_code"><span>model.addAttribute("dataHora", diaHora.toString()); </span></div>
-<code>
-<br>      return "data"; 
-<br>  } 
+  public String mostraDiaHora(Model model){ 
+      LocalDateTime diaHora = LocalDateTime.now(); 
+      model.addAttribute("dataHora", diaHora.toString()); 
+      return "data"; 
+  } 
               </code>
-</pre>
+</pre> -->
+<code class="hljs language-typescript destaque_code">
+<br>  <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/diahora"</span>) 
+<br>  <span class="hljs-keyword">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">mostraDiaHora</span>(<span class="hljs-params"><span class="hljs-dstq">Model model</span></span>){ 
+<br>      <span class="hljs-title class_">LocalDateTime</span> diaHora = <span class="hljs-title class_">LocalDateTime</span>.<span class="hljs-title function_">now</span>(); 
+<br>      <span class="hljs-dstq"> model.<span class="hljs-title function_">addAttribute</span>(<span class="hljs-string">"dataHora"</span>, diaHora.<span class="hljs-title function_">toString</span>()); </span>
+<br>      <span class="hljs-keyword">return</span> <span class="hljs-string">"data"</span>; 
+<br>  } 
+</code>
 
               <p>
                 <i>Model necessita de “import org.springframework.ui.Model;”. </i>
