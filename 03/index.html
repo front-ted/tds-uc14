@@ -625,6 +625,115 @@ public boolean deletarTarefa(@PathVariable int id) {
           </div>
           </div>
         </div>
+<!--  -->
+
+<div class="acessivel print">
+        <p>GET </p>
+        <pre><code>
+@GetMapping 
+public List<Tarefa> buscarTodasTarefas() { 
+    return tarefas; 
+} 
+        </code></pre>
+
+
+        <p>
+          Esse método é um <i>endpoint</i> do tipo GET que retorna todas as tarefas cadastradas na API. Ele simplesmente retorna a lista de tarefas que está armazenada na variável tarefas. 
+        </p>
+        <pre><code>
+@GetMapping("/{id}") 
+public Tarefa buscarTarefaPorId(@PathVariable int id) { 
+    for (Tarefa tarefa : tarefas) { 
+        if (tarefa.getId() == id) { 
+            return tarefa; 
+        } 
+    } 
+    return null; 
+}   
+        </code></pre>
+
+
+        <p>
+          Esse método também é um endpoint do tipo GET, porém ele recebe um parâmetro na URL que indica o ID da tarefa que se deseja buscar. O parâmetro “id” é capturado pela anotação <i>@PathVariable</i> – essa anotação é responsável por extrair valores de variáveis de caminho em uma URL. O método faz uma iteração sobre a lista de tarefas até encontrar a tarefa com o ID informado, e então retorna essa tarefa. Caso nenhuma tarefa seja encontrada com o ID informado, ele retorna “null”. 
+        </p>
+        <p>
+          Em suma, quando uma requisição não trouxer um parâmetro extra, buscarTodasTarefas() será executado. Caso haja um parâmetro, o método buscarTarefaPorId() é que executará.  
+        </p>
+      <p>POST </p>
+          <pre><code>
+@PostMapping 
+public Tarefa criarTarefa(@RequestBody Tarefa tarefa) { 
+    int id = tarefas.size() + 1; 
+    tarefa.setId(id); 
+    tarefas.add(tarefa); 
+    return tarefa; 
+} 
+        </code></pre>
+
+
+        <p>
+          Esse método é um <i>endpoint</i> do tipo POST que recebe um JSON no corpo da requisição contendo as informações de uma nova tarefa. Ele gera um novo ID para a tarefa (o ID é igual ao número de tarefas cadastradas mais um), adiciona a tarefa na lista de tarefas e então retorna a tarefa que acabou de ser criada.  
+        </p>
+        <p>
+          Aqui, é usada a anotação <i>@RequestBody</i>, que é uma anotação usada para indicar que o parâmetro de um método deve ser extraído do corpo da requisição HTTP – nesse caso, refere-se ao parâmetro “tarefa”. 
+        </p>
+        <p>
+          Ao usar essa anotação, o Spring mapeia o corpo da requisição HTTP para o objeto Java correspondente ao tipo do parâmetro anotado com <i>@RequestBody</i>. Em outras palavras, o Spring converte o conteúdo do corpo da requisição em um objeto Java. 
+        </p>
+
+      
+
+
+  <p>DELETE </p>
+          <pre><code>
+@PutMapping("/{id}") 
+public Tarefa atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefaAtualizada) { 
+    for (int i = 0; i < tarefas.size(); i++) { 
+        Tarefa tarefa = tarefas.get(i); 
+        if (tarefa.getId() == id) { 
+            tarefa.setDescricao(tarefaAtualizada.getDescricao()); 
+            tarefa.setCompleta(tarefaAtualizada.isCompleta()); 
+            return tarefa; 
+        } 
+    } 
+    return null; 
+}   
+          </code></pre>
+          <p>
+            Perceba que aqui há o uso em conjunto de duas anotações vistas na criação dos métodos anteriores: <i>@PathVariable</i> e <i>@RequestBody</i>. Isso porque esse método receberá dois parâmetros: primeiro é um inteiro que representa o ID da tarefa e é obtido a partir da anotação @PathVariable. O segundo parâmetro é um objeto da classe Tarefa que representa a nova versão da tarefa e é obtido a partir da anotação @RequestBody. 
+          </p>
+          <p>
+            Esse método é um <i>endpoint</i> do tipo PUT que recebe um parâmetro na URL indicando o ID da tarefa que se deseja atualizar, e um JSON no corpo da requisição contendo as informações atualizadas da tarefa. Ele faz uma iteração sobre a lista de tarefas até encontrar a tarefa com o ID informado, atualiza as informações da tarefa com as informações que foram passadas no JSON e então retorna a tarefa atualizada. Caso nenhuma tarefa seja encontrada com o ID informado, ele retorna “null”.  
+          </p>
+        <p> PUT </p>
+          <pre><code>
+@DeleteMapping("/{id}") 
+public boolean deletarTarefa(@PathVariable int id) { 
+    for (int i = 0; i < tarefas.size(); i++) { 
+        Tarefa tarefa = tarefas.get(i); 
+        if (tarefa.getId() == id) { 
+            tarefas.remove(i); 
+            return true; 
+        } 
+    } 
+    return false; 
+}  
+            
+          </code></pre>
+          <p>
+            Esse método é um <i>endpoint</i> do tipo DELETE que recebe um parâmetro na URL indicando o ID da tarefa que se deseja deletar. Ele faz uma iteração sobre a lista de tarefas até encontrar a tarefa com o ID informado, remove a tarefa da lista e retorna <i>true</i>. Caso nenhuma tarefa seja encontrada com o ID informado, ele retorna <i>false</i>. Note que como o método retorna um booleano, é possível utilizá-lo para saber se a tarefa foi deletada com sucesso ou não. 
+          </p>
+          <p>
+            Para finalizar, é necessário adicionar mais duas anotações à classe Controller.  
+          </p>
+          <p>
+            A primeira é a anotação <i>@RequestMapping</i> para mapear uma URL específica para que a classe “controller” seja acessada. Para esse exemplo, será usada a URL <strong>/tarefas</strong>. Assim, se um cliente fizer uma requisição GET para a URL “/tarefas”, o Spring vai automaticamente chamar o método <i>listarTarefas</i> da classe <i>TarefaController</i>. Da mesma forma, se o cliente fizer uma requisição POST para a URL “/tarefas”, o Spring vai chamar o método <i>adicionarTarefa</i>. 
+          </p>
+          <p>
+            A segunda anotação é a <i>@CrossOrigin</i>, que permitirá o acesso à API a partir de um domínio diferente. Quando rodar o arquivo <i>TarefasApplication.java</i>, a API será iniciada em um servidor <i>web</i> Tomcat com o endereço http://localhost:8080 – esse endereço eletrônico é o domínio da API. Se você criar um arquivo <strong>index.html</strong>, por exemplo, na área de trabalho do Windows, e abrir esse arquivo, o domínio dessa página web será o caminho do arquivo, algo como <strong>C:/Users/MeuUsuario/Desktop/index.html</strong>. Perceba que os domínios são bem diferentes um do outro. 
+          </p>
+</div>
+<!--  -->
         <p>
           Por padrão, as solicitações HTTP entre diferentes domínios são bloqueadas pelos navegadores como medida de segurança, isso é conhecido como política de segurança de mesma origem (Same-origin policy). Essa política impede que <i>scripts</i> de um <i>site</i> mal-intencionado tenham acesso aos dados de outro <i>site</i>.  
         </p>
