@@ -202,9 +202,10 @@ table.senac {
   background-color: #071772 !important;
 }
 .codDestaque{
-  font-size: 14px;
-  word-break: break-word;
+  font-size: 8px !important;
+  /* word-break: break-word; */
 }
+.hljs.language-xml{font-size: 10px !important;}
 .conteudoEncerramento{padding-top: 50px;}
 /*---------- MENU ----------*/
 .eng-item-menu {

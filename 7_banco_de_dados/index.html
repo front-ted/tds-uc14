@@ -465,135 +465,74 @@
                   <pre>
             <code>
 &lt;?xml version="1.0" encoding="UTF-8"?> 
-
-&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> 
-
-    &lt;modelVersion>4.0.0&lt;/modelVersion> 
-
-    &lt;parent> 
-
-        &lt;groupId>org.springframework.boot&lt;/groupId> 
-
-        &lt;artifactId>spring-boot-starter-parent&lt;/artifactId> 
-
-        &lt;version>3.0.6&lt;/version> 
-
-        &lt;relativePath/> <!-- lookup parent from repository --> 
-
-    &lt;/parent> 
-
-    &lt;groupId>com.api&lt;/groupId> 
-
-    &lt;artifactId>senac&lt;/artifactId> 
-
-    &lt;version>0.0.1-SNAPSHOT&lt;/version> 
-
-    &lt;name>senac&lt;/name> 
-
-    &lt;description>API Rest de Projeto de Funcionários&lt;/description> 
-
-    &lt;properties> 
-
-        &lt;java.version>17&lt;/java.version> 
-
-    &lt;/properties> 
-
-    &lt;dependencies> 
-
-        &lt;dependency> 
-
-            &lt;groupId>org.springframework.boot&lt;/groupId> 
-
-            &lt;artifactId>spring-boot-starter-data-jpa&lt;/artifactId> 
-
-        &lt;/dependency> 
-
-        &lt;dependency> 
-
-            &lt;groupId>org.springframework.boot&lt;/groupId> 
-
-            &lt;artifactId>spring-boot-starter-validation&lt;/artifactId> 
-
-        &lt;/dependency> 
-
-        &lt;dependency> 
-
-            &lt;groupId>org.springframework.boot&lt;/groupId> 
-
-            &lt;artifactId>spring-boot-starter-web&lt;/artifactId> 
-
-        &lt;/dependency> 
-
- 
-
-        &lt;dependency> 
-
-            &lt;groupId>com.mysql&lt;/groupId> 
-
-            &lt;artifactId>mysql-connector-j&lt;/artifactId> 
-
-            &lt;scope>runtime&lt;/scope> 
-
-        &lt;/dependency> 
-
-        &lt;dependency> 
-
-            &lt;groupId>org.projectlombok&lt;/groupId> 
-
-            &lt;artifactId>lombok&lt;/artifactId> 
-
-            &lt;optional>true&lt;/optional> 
-
-        &lt;/dependency> 
-
-        &lt;dependency> 
-
-            &lt;groupId>org.springframework.boot&lt;/groupId> 
-
-            &lt;artifactId>spring-boot-starter-test&lt;/artifactId> 
-
-            &lt;scope>test&lt;/scope> 
-
-        &lt;/dependency> 
-
-    &lt;/dependencies> 
-
- 
-
-    &lt;build> 
-
-        &lt;plugins> 
-
-            &lt;plugin> 
-
-                &lt;groupId>org.springframework.boot&lt;/groupId> 
-
-                &lt;artifactId>spring-boot-maven-plugin&lt;/artifactId> 
-
-                &lt;configuration> 
-
-                    &lt;excludes> 
-
-                        &lt;exclude> 
-
-                            &lt;groupId>org.projectlombok&lt;/groupId> 
-
-                            &lt;artifactId>lombok&lt;/artifactId> 
-
-                        &lt;/exclude> 
-
-                    &lt;/excludes> 
-
-                &lt;/configuration> 
-
-            &lt;/plugin> 
-
-        &lt;/plugins> 
-
-    &lt;/build> 
-
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    https://maven.apache.org/xsd/maven-4.0.0.xsd"> 
+  &lt;modelVersion>4.0.0&lt;/modelVersion> 
+  &lt;parent> 
+    &lt;groupId>org.springframework.boot&lt;/groupId> 
+    &lt;artifactId>spring-boot-starter-parent&lt;/artifactId> 
+    &lt;version>3.0.6&lt;/version> 
+    &lt;relativePath/> <!-- lookup parent from repository --> 
+  &lt;/parent> 
+  &lt;groupId>com.api&lt;/groupId> 
+  &lt;artifactId>senac&lt;/artifactId> 
+  &lt;version>0.0.1-SNAPSHOT&lt;/version> 
+  &lt;name>senac&lt;/name> 
+  &lt;description>API Rest de Projeto de Funcionários&lt;/description> 
+  &lt;properties> 
+    &lt;java.version>17&lt;/java.version> 
+  &lt;/properties> 
+  &lt;dependencies> 
+    &lt;dependency> 
+      &lt;groupId>org.springframework.boot&lt;/groupId> 
+      &lt;artifactId>spring-boot-starter-data-jpa&lt;/artifactId> 
+    &lt;/dependency> 
+    &lt;dependency> 
+      &lt;groupId>org.springframework.boot&lt;/groupId> 
+      &lt;artifactId>spring-boot-starter-validation&lt;/artifactId> 
+    &lt;/dependency> 
+    &lt;dependency> 
+      &lt;groupId>org.springframework.boot&lt;/groupId> 
+      &lt;artifactId>spring-boot-starter-web&lt;/artifactId> 
+    &lt;/dependency> 
+
+    &lt;dependency> 
+      &lt;groupId>com.mysql&lt;/groupId> 
+      &lt;artifactId>mysql-connector-j&lt;/artifactId> 
+      &lt;scope>runtime&lt;/scope> 
+    &lt;/dependency> 
+
+    &lt;dependency> 
+      &lt;groupId>org.projectlombok&lt;/groupId> 
+      &lt;artifactId>lombok&lt;/artifactId> 
+      &lt;optional>true&lt;/optional> 
+    &lt;/dependency> 
+
+    &lt;dependency> 
+      &lt;groupId>org.springframework.boot&lt;/groupId> 
+      &lt;artifactId>spring-boot-starter-test&lt;/artifactId> 
+      &lt;scope>test&lt;/scope> 
+    &lt;/dependency> 
+  &lt;/dependencies> 
+
+  &lt;build> 
+    &lt;plugins> 
+      &lt;plugin> 
+        &lt;groupId>org.springframework.boot&lt;/groupId> 
+        &lt;artifactId>spring-boot-maven-plugin&lt;/artifactId> 
+        &lt;configuration> 
+          &lt;excludes> 
+            &lt;exclude> 
+              &lt;groupId>org.projectlombok&lt;/groupId> 
+              &lt;artifactId>lombok&lt;/artifactId> 
+            &lt;/exclude> 
+          &lt;/excludes> 
+        &lt;/configuration> 
+      &lt;/plugin> 
+    &lt;/plugins> 
+  &lt;/build> 
 &lt;/project> 
             </code>
           </pre>
@@ -791,43 +730,24 @@ server.error.include-message = Always
                   <pre>
             <code>
 package com.api.senac.data; 
-
 import jakarta.persistence.Entity; 
-
 import jakarta.persistence.GeneratedValue; 
-
 import jakarta.persistence.GenerationType; 
-
 import jakarta.persistence.Id; 
-
 import jakarta.persistence.Table; 
-
 import lombok.Data; 
-
 @Data 
-
 @Entity 
-
 @Table(name="Funcionario") 
-
 public class FuncionarioEntity { 
-
     @Id 
-
     @GeneratedValue(strategy = GenerationType.AUTO) 
-
     private Integer id; 
-
     private String cpf; 
-
     private String nome; 
-
     private String telefone; 
-
     private String email; 
-
     private double salario; 
-
 } 
             </code>
           </pre>
@@ -2631,6 +2551,7 @@ public interface FuncionarioRepository extends JpaRepository&lt;FuncionarioEntit
                     </li>
                     <p class=" hidden-lg hidden-sm visible-xs">Arraste para ver o restante do código </p>
                     <pre class="codigo-destaque codDestaque">
+<code>
 <span class="hljs-string">&lt;?xml> version="<span class="hljs-number">1.0</span>" encoding="UTF-8"?> </span>
 
 <span class="hljs-string">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" 
@@ -2648,7 +2569,7 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd"> </span>
 
          <span class="hljs-name">&lt;version></span> 3.0.6 <span class="hljs-name">&lt;/version> </span>
 
-         <span class="hljs-name">&lt;relativePath/> </span> &lt!-- lookup parent from repository --> 
+         <span class="hljs-name">&lt;relativePath/> </span> &lt!-- lookup parent from repository --&lt; 
 
      <span class="hljs-name">&lt;/parent> </span>
 
@@ -2769,6 +2690,7 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd"> </span>
       <span class="hljs-name">&lt;/build> </span>
 
   <span class="hljs-name">&lt;/project> </span>
+</code>
             </pre>
                     <li>Salve o arquivo pom.xml. O Maven agora baixará automaticamente a nova dependência para o seu
                       projeto.
@@ -2805,67 +2727,40 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd"> </span>
                   <pre>
             <code>
 package com.api.senac.controller; 
-
 import com.api.senac.data.FuncionarioEntity; 
-
 import com.api.senac.service.FuncionarioService; 
-
 import jakarta.validation.Valid; 
-
 import org.springframework.beans.factory.annotation.Autowired; 
-
 import org.springframework.stereotype.Controller; 
-
 import org.springframework.ui.Model; 
-
 import org.springframework.validation.BindingResult; 
-
 import org.springframework.web.bind.annotation.GetMapping; 
-
 import org.springframework.web.bind.annotation.ModelAttribute; 
-
 import org.springframework.web.bind.annotation.PathVariable; 
-
 import org.springframework.web.bind.annotation.PostMapping; 
 
 @Controller 
 
 public class FuncController { 
-
     @Autowired 
-
     FuncionarioService funcionarioService; 
-
     @GetMapping("/") 
-
     public String viewHomePage(Model model) { 
-
         model.addAttribute("listarFuncionarios", funcionarioService.listarTodosFuncionarios()); 
-
         return "index"; 
-
     } 
 
     @GetMapping("/deletarFuncionario/{id}") 
-
     public String deletarFuncionario(@PathVariable(value = "id") Integer id) { 
-
         funcionarioService.deletarFuncionario(id); 
-
         return "redirect:/"; 
-
     } 
 
     @GetMapping("/criarFuncionarioForm") 
-
     public String criarFuncionarioForm(Model model) { 
-
         FuncionarioEntity func = new FuncionarioEntity(); 
-
         model.addAttribute("funcionario", func); 
-
         return "inserir"; 
-
     } 
 
     @PostMapping("/salvarFuncionario") 
@@ -3082,9 +2977,15 @@ public String criarFuncionarioForm(Model model) {
                     Thymeleaf.
                   </p>
                   <pre class="codigo-destaque">
-<span class="hljs-keyword"> &lt;input type=</span> <span class="hljs-title function_"> "text" </span> <span class="hljs-keyword">th:field=</span> <span class="hljs-title function_"> "*{nome}" </span> <span class="hljs-keyword">placeholder=</span> <span class="hljs-title function_"> "Insira o nome" </span> <span class="hljs-keyword">class=</span> <span class="hljs-title function_"> "form-control mt-4 col-4"> </span>
-<span class="hljs-keyword">&lt;span class=</span> <span class="hljs-title function_"> "text-danger" <span class="code-destaque">th:if=</span>"${#fields.hasErrors('nome')}" <span class="code-destaque">th:errors=</span>"*{nome}">&lt;/span> </span>                
-          </pre>
+<code>
+<br> <span class="hljs-keyword"> &lt;input type=</span> <span class="hljs-title function_"> "text" </span> <span class="hljs-keyword">th:field=</span> 
+<span class="hljs-title function_"> "*{nome}" </span> <span class="hljs-keyword">placeholder=</span> 
+<span class="hljs-title function_"> "Insira o nome" </span> <span class="hljs-keyword">class=</span> 
+<span class="hljs-title function_"> "form-control mt-4 col-4"> </span>
+<br> <span class="hljs-keyword">&lt;span class=</span> 
+<span class="hljs-title function_"> "text-danger" <span class="code-destaque">th:if=</span>"${#fields.hasErrors('nome')}" <span class="code-destaque">th:errors=</span>"*{nome}">&lt;/span> </span>                
+</code>
+</pre>
                   <ul class="marcador">
                     <li><strong>th:if = ”${#fields.hasErros(‘nome’)}”</strong>: habilita o componente em HTML, por ter
                       ocorrido
